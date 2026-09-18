@@ -1,0 +1,180 @@
+{
+  "schema_version": "0.1-alpha",
+  "record_id": "review-coa-001",
+  "cultivation_batch_id": "review-batch-001",
+  "created_at": "2026-09-18T15:00:00Z",
+  "updated_at": "2026-09-18T15:00:00Z",
+  "producer": {
+    "organization_name": "Desert Green Farm",
+    "organization_id": "dgf-review-001",
+    "jurisdiction": "US-NM"
+  },
+  "cultivar": {
+    "reported_name": "cherry lemon",
+    "identity_status": "reported",
+    "genetic_verification": null,
+    "notes": "Cultivar name as reported on grower-supplied COA / lot description. Not genetically verified."
+  },
+  "lab_results": {
+    "lab_name": null,
+    "lab_id": "external-lab-001",
+    "certificate_id": "redacted-coa-001",
+    "tested_at": "2025-10-23T00:00:00Z",
+    "sample_id": "DGF-001",
+    "method": "HPLC",
+    "sample_material": "Cured Flower",
+    "notes": "Mapped from a grower-supplied Certificate of Analysis for WeedDAO interoperability review. Original certificate artwork/signatures not republished. Laboratory branded as external-lab-001. Below-reporting-limit cannabinoid/terpene values from the COA are omitted here because v0.1-alpha CannabinoidMeasurement/TerpeneEntry cannot express a '<' qualifier without collapsing to 0 or false not_measured. See docs/review-cases/coa-001-gaps.md.",
+    "provenance": "laboratory_verified",
+    "cannabinoids": {
+      "thc": {
+        "value": 3.0,
+        "unit": "mg/g",
+        "provenance": "laboratory_verified"
+      },
+      "thca": {
+        "value": 236.9,
+        "unit": "mg/g",
+        "provenance": "laboratory_verified"
+      },
+      "cbga": {
+        "value": 8.4,
+        "unit": "mg/g",
+        "provenance": "laboratory_verified"
+      },
+      "total_thc": {
+        "value": 21.1,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "total_cannabinoids": {
+        "value": 24.8,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      }
+    },
+    "terpenes": [
+      {
+        "name": "alpha-pinene",
+        "value": 0.06,
+        "unit": "%"
+      },
+      {
+        "name": "beta-pinene",
+        "value": 0.02,
+        "unit": "%"
+      },
+      {
+        "name": "myrcene",
+        "value": 0.34,
+        "unit": "%"
+      },
+      {
+        "name": "d-limonene",
+        "value": 0.25,
+        "unit": "%"
+      },
+      {
+        "name": "gamma-terpinene",
+        "value": 0.11,
+        "unit": "%"
+      },
+      {
+        "name": "isopulegol",
+        "value": 0.02,
+        "unit": "%"
+      },
+      {
+        "name": "geraniol",
+        "value": 0.01,
+        "unit": "%"
+      },
+      {
+        "name": "beta-caryophyllene",
+        "value": 1.31,
+        "unit": "%"
+      },
+      {
+        "name": "alpha-humulene",
+        "value": 0.08,
+        "unit": "%"
+      },
+      {
+        "name": "nerolidol",
+        "value": 0.02,
+        "unit": "%"
+      }
+    ],
+    "total_terpenes": {
+      "value": 2.23,
+      "unit": "%"
+    },
+    "safety": {
+      "pesticides": {
+        "status": "pass",
+        "notes": "COA states Passed Pesticide Analysis. Per-analyte threshold rows with '<' values not encoded as numeric zeros."
+      },
+      "microbials": {
+        "status": "partial",
+        "method": "qPCR Analysis",
+        "notes": "Panel overall reported as Passed Microbial Analysis; P. aeruginosa was Not Performed (status=partial).",
+        "analytes": [
+          {
+            "name": "E. coli (STEC)",
+            "result": "pass"
+          },
+          {
+            "name": "A. niger",
+            "result": "pass"
+          },
+          {
+            "name": "A. flavus",
+            "result": "pass"
+          },
+          {
+            "name": "A. fumigatus",
+            "result": "pass"
+          },
+          {
+            "name": "A. terreus",
+            "result": "pass"
+          },
+          {
+            "name": "Salmonella",
+            "result": "pass"
+          },
+          {
+            "name": "P. aeruginosa",
+            "result": null,
+            "notes": "Test Not Performed \u2014 cannot use pass/fail/not_detected/detected"
+          }
+        ]
+      },
+      "residual_solvents": {
+        "status": "not_tested",
+        "notes": "COA: Residual Solvent Analysis Not Performed. Not interpreted as pass/fail/zero."
+      }
+    }
+  },
+  "provenance": {
+    "record": "third_party_verified",
+    "lab_results": "laboratory_verified",
+    "cultivar": "self_reported",
+    "notes": "Laboratory results transcribed from a grower-authorized COA for WeedDAO development/review. WeedDAO does not independently re-verify laboratory measurements. Grower/producer identity disclosed with permission; laboratory branded identity redacted to external-lab-001."
+  },
+  "data_gaps": {
+    "/lab_results/moisture": "not_measured"
+  },
+  "extensions": {
+    "weeddao_review": {
+      "case_id": "COA-001",
+      "material_type_coa": "Cured Flower",
+      "sample_received_date_coa": "2025-10-17",
+      "sample_collection_coa": "Sample Collected by Client",
+      "coa_approved_date": "2025-10-23",
+      "foreign_material_inspection_coa": "Passed Visual Inspection",
+      "moisture_coa": "Not Performed",
+      "total_cannabinoids_mg_g_table": 248.2,
+      "note": "Extension bag for COA facts not faithfully representable in core v0.1-alpha fields. Not a schema change."
+    }
+  }
+}

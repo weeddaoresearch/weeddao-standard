@@ -7,5 +7,23 @@
   "RESEARCH_REVIEW": [],
   "SOFTWARE_REVIEW": [],
   "FIRST_EXTERNAL_VALID_RECORD": [],
-  "FIRST_EXTERNAL_IMPLEMENTATION": []
+  "FIRST_EXTERNAL_IMPLEMENTATION": [],
+  "FIRST_REAL_WORLD_COA_MAPPING": [
+    {
+      "case_id": "COA-001",
+      "case_type": "REAL_WORLD_COA_MAPPING",
+      "source": "GROWER_SUPPLIED",
+      "permission": "CONFIRMED",
+      "original_image_public": false,
+      "schema_version_tested": "0.1-alpha",
+      "status": "COMPLETED",
+      "mapping_result": "PARTIAL",
+      "first_external_implementation": false,
+      "paths": {
+        "case": "docs/review-cases/coa-001.md",
+        "gaps": "docs/review-cases/coa-001-gaps.md",
+        "record": "review-data/coa-001-weeddao-record.json"
+      }
+    }
+  ]
 }
