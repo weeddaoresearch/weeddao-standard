@@ -1,0 +1,1224 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://weeddao.org/schemas/weeddao-cultivation-record-v0.1-alpha.schema.json",
+  "title": "WeedDAO Cultivation Record v0.1-alpha",
+  "description": "Open Cannabis Data Standard cultivation record schema (experimental, proposed). A coordination and data-exchange layer for growers, laboratories, researchers, and software systems. Not a regulatory standard, certification scheme, or claim of industry adoption.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "record_id",
+    "cultivation_batch_id",
+    "created_at"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "schema_version": {
+      "const": "0.1-alpha",
+      "description": "Schema version identifier. Must be exactly \"0.1-alpha\" for this draft."
+    },
+    "record_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Unique identifier for this cultivation record within the producing system. Opaque string; format is implementation-defined (UUID recommended)."
+    },
+    "cultivation_batch_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Identifier for the cultivation batch this record describes. Opaque string; format is implementation-defined."
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 date-time when this record was created (UTC recommended)."
+    },
+    "updated_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "ISO 8601 date-time of the most recent update, or null if never updated."
+    },
+    "producer": {
+      "$ref": "#/$defs/Producer"
+    },
+    "cultivar": {
+      "$ref": "#/$defs/Cultivar"
+    },
+    "cultivation": {
+      "$ref": "#/$defs/Cultivation"
+    },
+    "environment": {
+      "$ref": "#/$defs/Environment"
+    },
+    "irrigation_nutrition": {
+      "$ref": "#/$defs/IrrigationNutrition"
+    },
+    "harvest": {
+      "$ref": "#/$defs/Harvest"
+    },
+    "post_harvest": {
+      "$ref": "#/$defs/PostHarvest"
+    },
+    "lab_results": {
+      "$ref": "#/$defs/LabResults"
+    },
+    "outcomes": {
+      "$ref": "#/$defs/Outcomes"
+    },
+    "provenance": {
+      "$ref": "#/$defs/Provenance"
+    },
+    "extensions": {
+      "$ref": "#/$defs/Extensions",
+      "description": "Namespaced extension data. Prefer this over inventing conflicting top-level keys."
+    },
+    "data_gaps": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Optional map documenting why fields are absent. Keys are JSON Pointers or dotted paths; values are gap reason enums.",
+      "additionalProperties": {
+        "$ref": "#/$defs/DataGapReason"
+      }
+    }
+  },
+  "$defs": {
+    "DataGapReason": {
+      "type": "string",
+      "enum": [
+        "not_measured",
+        "not_applicable",
+        "withheld"
+      ],
+      "description": "Semantic reason a value is missing. Use null on the field itself; document the reason here or via companion *_status fields. Do not use magic numbers (-1, 0, 999)."
+    },
+    "ProvenanceMethod": {
+      "type": "string",
+      "enum": [
+        "self_reported",
+        "sensor_measured",
+        "laboratory_verified",
+        "third_party_verified",
+        "derived"
+      ],
+      "description": "How a value or set of values was obtained."
+    },
+    "QuantityWithUnit": {
+      "type": "object",
+      "required": [
+        "value",
+        "unit"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "Numeric measurement, or null if not available."
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Unit of measure for value."
+        },
+        "status": {
+          "$ref": "#/$defs/DataGapReason",
+          "description": "Optional gap reason when value is null."
+        }
+      }
+    },
+    "CannabinoidMeasurement": {
+      "type": "object",
+      "required": [
+        "value",
+        "unit"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "Cannabinoid concentration, or null if not measured/withheld."
+        },
+        "unit": {
+          "type": "string",
+          "enum": [
+            "%",
+            "mg/g",
+            "mg/ml",
+            "mg/serving"
+          ],
+          "description": "Concentration unit."
+        },
+        "status": {
+          "$ref": "#/$defs/DataGapReason"
+        },
+        "provenance": {
+          "$ref": "#/$defs/ProvenanceMethod"
+        }
+      }
+    },
+    "TerpeneEntry": {
+      "type": "object",
+      "required": [
+        "name",
+        "value",
+        "unit"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Terpene common or IUPAC-adjacent name (e.g. myrcene, limonene)."
+        },
+        "value": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "unit": {
+          "type": "string",
+          "enum": [
+            "%",
+            "mg/g",
+            "ppm"
+          ]
+        },
+        "status": {
+          "$ref": "#/$defs/DataGapReason"
+        }
+      }
+    },
+    "Producer": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Producer / facility metadata. No personally identifiable information is required. Prefer organizational identifiers over personal contact details.",
+      "additionalProperties": true,
+      "properties": {
+        "organization_name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Public or trade name of the producing organization. Optional; omit or null rather than including personal names."
+        },
+        "organization_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Opaque organizational identifier assigned by the producing system."
+        },
+        "facility_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Opaque facility identifier. Do not embed street addresses or personal contact info."
+        },
+        "jurisdiction": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Optional jurisdiction code or label (e.g. ISO 3166-2 style) without precise location PII."
+        },
+        "license_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Optional public license or registration identifier where disclosure is appropriate."
+        }
+      }
+    },
+    "Cultivar": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Cultivar / genetics identity. Distinguishes reported names from genetically verified identity.",
+      "additionalProperties": true,
+      "properties": {
+        "reported_name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Name as reported by the grower or source (marketing or common name)."
+        },
+        "reported_type": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "indica",
+            "sativa",
+            "hybrid",
+            "ruderalis",
+            "hemp",
+            "unknown",
+            null
+          ],
+          "description": "Broad type as reported. Not a genetic verification."
+        },
+        "breeder_reported": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Breeder or seed source as reported."
+        },
+        "identity_status": {
+          "type": "string",
+          "enum": [
+            "reported",
+            "genetically_verified",
+            "unknown"
+          ],
+          "description": "Whether cultivar identity is self/source-reported or genetically verified.",
+          "default": "reported"
+        },
+        "genetic_verification": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "method": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "Verification method (e.g. SNP panel, STR, whole-genome comparison)."
+            },
+            "laboratory": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "Lab or service that performed genetic verification."
+            },
+            "reference_id": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "Opaque reference to verification report or accession."
+            },
+            "verified_name": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "Name or accession assigned after genetic verification, if different from reported_name."
+            },
+            "verified_at": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            }
+          }
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "Cultivation": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "High-level cultivation method and cycle metadata.",
+      "additionalProperties": true,
+      "properties": {
+        "method": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "indoor",
+            "outdoor",
+            "greenhouse",
+            "mixed",
+            "other",
+            null
+          ]
+        },
+        "medium": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "soil",
+            "coco",
+            "rockwool",
+            "hydroponic",
+            "aeroponic",
+            "living_soil",
+            "other",
+            null
+          ]
+        },
+        "cycle_start": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "cycle_end": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "veg_days": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "flower_days": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "plant_count": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "Environment": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Environmental parameters with explicit unit suffixes in field names. Temperatures in Celsius; humidity in %; VPD in kPa; CO2 in ppm; PPFD in \u00b5mol/m\u00b2/s; DLI in mol/m\u00b2/day.",
+      "additionalProperties": true,
+      "properties": {
+        "average_day_temp_c": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "Average daytime temperature in Celsius."
+        },
+        "average_night_temp_c": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "Average nighttime temperature in Celsius."
+        },
+        "min_temp_c": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "max_temp_c": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "average_rh_percent": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "Average relative humidity in percent (%).",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "min_rh_percent": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "max_rh_percent": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "average_vpd_kpa": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "Average vapor pressure deficit in kilopascals (kPa)."
+        },
+        "co2_ppm": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "Average or target CO2 concentration in parts per million (ppm)."
+        },
+        "ppfd_umol_m2_s": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "Photosynthetic photon flux density in \u00b5mol/m\u00b2/s."
+        },
+        "dli_mol_m2_day": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "Daily light integral in mol/m\u00b2/day."
+        },
+        "photoperiod_hours": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 24
+        },
+        "phase": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "veg",
+            "flower",
+            "full_cycle",
+            "other",
+            null
+          ],
+          "description": "Growth phase these environment values summarize."
+        },
+        "provenance": {
+          "$ref": "#/$defs/ProvenanceMethod"
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "IrrigationNutrition": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Irrigation and nutrition summary. Units are explicit in field names or QuantityWithUnit.",
+      "additionalProperties": true,
+      "properties": {
+        "method": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "hand_water",
+            "drip",
+            "flood",
+            "ebb_flow",
+            "nft",
+            "dwc",
+            "other",
+            null
+          ]
+        },
+        "water_source": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "average_ph": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 14
+        },
+        "average_ec_ms_cm": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "Average electrical conductivity in mS/cm."
+        },
+        "average_ppm": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "Average dissolved solids in ppm (scale should be noted in notes if nonstandard)."
+        },
+        "nutrient_program": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Free-text or product-line summary of nutrition program."
+        },
+        "organic": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "runoff_ph": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "runoff_ec_ms_cm": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "provenance": {
+          "$ref": "#/$defs/ProvenanceMethod"
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "Harvest": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "harvest_date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "wet_weight_g": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "description": "Wet harvest weight in grams."
+        },
+        "dry_weight_g": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "description": "Dry weight in grams."
+        },
+        "trim_weight_g": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "plant_count_harvested": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "PostHarvest": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "dry_method": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "dry_temp_c": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "Drying temperature in Celsius."
+        },
+        "dry_rh_percent": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "dry_days": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "cure_days": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "cure_rh_percent": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "cure_temp_c": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "LabResults": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Laboratory analytical results. Safety subsections are optional.",
+      "additionalProperties": true,
+      "properties": {
+        "lab_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "lab_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "certificate_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Certificate of analysis or report identifier."
+        },
+        "tested_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "sample_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "cannabinoids": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "thc": {
+              "$ref": "#/$defs/CannabinoidMeasurement"
+            },
+            "thca": {
+              "$ref": "#/$defs/CannabinoidMeasurement"
+            },
+            "cbd": {
+              "$ref": "#/$defs/CannabinoidMeasurement"
+            },
+            "cbda": {
+              "$ref": "#/$defs/CannabinoidMeasurement"
+            },
+            "cbg": {
+              "$ref": "#/$defs/CannabinoidMeasurement"
+            },
+            "cbga": {
+              "$ref": "#/$defs/CannabinoidMeasurement"
+            },
+            "cbc": {
+              "$ref": "#/$defs/CannabinoidMeasurement"
+            },
+            "cbn": {
+              "$ref": "#/$defs/CannabinoidMeasurement"
+            },
+            "thcv": {
+              "$ref": "#/$defs/CannabinoidMeasurement"
+            },
+            "total_thc": {
+              "$ref": "#/$defs/CannabinoidMeasurement"
+            },
+            "total_cbd": {
+              "$ref": "#/$defs/CannabinoidMeasurement"
+            },
+            "total_cannabinoids": {
+              "$ref": "#/$defs/CannabinoidMeasurement"
+            }
+          }
+        },
+        "terpenes": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "description": "Extensible array of terpene measurements.",
+          "items": {
+            "$ref": "#/$defs/TerpeneEntry"
+          }
+        },
+        "safety": {
+          "$ref": "#/$defs/LabSafety"
+        },
+        "provenance": {
+          "$ref": "#/$defs/ProvenanceMethod"
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "LabSafety": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Optional laboratory safety / contaminant screening structures.",
+      "additionalProperties": true,
+      "properties": {
+        "pesticides": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "status": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "pass",
+                "fail",
+                "not_tested",
+                "partial",
+                "not_applicable",
+                null
+              ]
+            },
+            "method": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "analytes": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "additionalProperties": true,
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "unit": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "limit": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "result": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "enum": [
+                      "pass",
+                      "fail",
+                      "not_detected",
+                      "detected",
+                      null
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "heavy_metals": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "status": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "pass",
+                "fail",
+                "not_tested",
+                "partial",
+                "not_applicable",
+                null
+              ]
+            },
+            "analytes": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "additionalProperties": true,
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "unit": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "limit": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "result": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "enum": [
+                      "pass",
+                      "fail",
+                      "not_detected",
+                      "detected",
+                      null
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "microbials": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "status": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "pass",
+                "fail",
+                "not_tested",
+                "partial",
+                "not_applicable",
+                null
+              ]
+            },
+            "analytes": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "additionalProperties": true,
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "unit": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "result": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "enum": [
+                      "pass",
+                      "fail",
+                      "not_detected",
+                      "detected",
+                      null
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "mycotoxins": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "status": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "pass",
+                "fail",
+                "not_tested",
+                "partial",
+                "not_applicable",
+                null
+              ]
+            }
+          }
+        },
+        "residual_solvents": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "status": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "pass",
+                "fail",
+                "not_tested",
+                "partial",
+                "not_applicable",
+                null
+              ]
+            }
+          }
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "Outcomes": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Yield and quality outcome summaries.",
+      "additionalProperties": true,
+      "properties": {
+        "yield_g_per_plant": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "yield_g_per_m2": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "yield_g_per_watt": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "quality_grade": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Implementation-defined quality grade label."
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "Provenance": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Record-level and section-level provenance. Values use the ProvenanceMethod enum.",
+      "additionalProperties": true,
+      "properties": {
+        "record": {
+          "$ref": "#/$defs/ProvenanceMethod"
+        },
+        "environment": {
+          "$ref": "#/$defs/ProvenanceMethod"
+        },
+        "irrigation_nutrition": {
+          "$ref": "#/$defs/ProvenanceMethod"
+        },
+        "lab_results": {
+          "$ref": "#/$defs/ProvenanceMethod"
+        },
+        "cultivar": {
+          "$ref": "#/$defs/ProvenanceMethod"
+        },
+        "harvest": {
+          "$ref": "#/$defs/ProvenanceMethod"
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "Extensions": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Namespaced extensions. Use reverse-DNS or org-prefixed keys to avoid collisions (e.g. \"com.example.sensor_log\").",
+      "additionalProperties": true
+    }
+  }
+}

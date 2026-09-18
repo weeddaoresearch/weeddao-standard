@@ -1,0 +1,14 @@
+{
+  "schema_version": "0.1-alpha",
+  "record_id": "rec-bad-unit",
+  "cultivation_batch_id": "batch-bad-unit",
+  "created_at": "2026-09-18T10:00:00Z",
+  "lab_results": {
+    "cannabinoids": {
+      "thc": {
+        "value": 20.0,
+        "unit": "grams"
+      }
+    }
+  }
+}

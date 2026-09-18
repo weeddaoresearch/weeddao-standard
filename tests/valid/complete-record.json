@@ -1,0 +1,240 @@
+{
+  "schema_version": "0.1-alpha",
+  "record_id": "rec-002-complete",
+  "cultivation_batch_id": "batch-2026-042",
+  "created_at": "2026-09-01T14:30:00Z",
+  "updated_at": "2026-09-15T09:00:00Z",
+  "producer": {
+    "organization_name": "Example Cultivation Co-op",
+    "organization_id": "org-ex-001",
+    "facility_id": "fac-north-3",
+    "jurisdiction": "US-OR",
+    "license_id": "LIC-EX-12345"
+  },
+  "cultivar": {
+    "reported_name": "Example Haze",
+    "reported_type": "hybrid",
+    "breeder_reported": "Example Genetics",
+    "identity_status": "reported",
+    "genetic_verification": null,
+    "notes": "Identity is grower-reported; genetic verification not performed."
+  },
+  "cultivation": {
+    "method": "indoor",
+    "medium": "coco",
+    "cycle_start": "2026-06-01",
+    "cycle_end": "2026-08-28",
+    "veg_days": 28,
+    "flower_days": 63,
+    "plant_count": 48,
+    "notes": null
+  },
+  "environment": {
+    "average_day_temp_c": 26.5,
+    "average_night_temp_c": 20.0,
+    "min_temp_c": 18.5,
+    "max_temp_c": 28.0,
+    "average_rh_percent": 55.0,
+    "min_rh_percent": 45.0,
+    "max_rh_percent": 65.0,
+    "average_vpd_kpa": 1.2,
+    "co2_ppm": 900,
+    "ppfd_umol_m2_s": 850,
+    "dli_mol_m2_day": 35.0,
+    "photoperiod_hours": 12,
+    "phase": "flower",
+    "provenance": "sensor_measured",
+    "notes": null
+  },
+  "irrigation_nutrition": {
+    "method": "drip",
+    "water_source": "RO",
+    "average_ph": 5.8,
+    "average_ec_ms_cm": 1.8,
+    "average_ppm": 900,
+    "nutrient_program": "Example base + calmag",
+    "organic": false,
+    "runoff_ph": 6.1,
+    "runoff_ec_ms_cm": 2.0,
+    "provenance": "sensor_measured",
+    "notes": null
+  },
+  "harvest": {
+    "harvest_date": "2026-08-28",
+    "wet_weight_g": 12500,
+    "dry_weight_g": 2800,
+    "trim_weight_g": 400,
+    "plant_count_harvested": 48,
+    "notes": null
+  },
+  "post_harvest": {
+    "dry_method": "hang_dry",
+    "dry_temp_c": 18.0,
+    "dry_rh_percent": 55.0,
+    "dry_days": 10,
+    "cure_days": 21,
+    "cure_rh_percent": 58.0,
+    "cure_temp_c": 18.0,
+    "notes": null
+  },
+  "lab_results": {
+    "lab_name": "Example Analytical Lab",
+    "lab_id": "lab-ex-01",
+    "certificate_id": "COA-2026-88991",
+    "tested_at": "2026-09-10T16:00:00Z",
+    "sample_id": "smp-042-a",
+    "cannabinoids": {
+      "thc": {
+        "value": 0.8,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "thca": {
+        "value": 22.4,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbd": {
+        "value": 0.1,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbda": {
+        "value": null,
+        "unit": "%",
+        "status": "not_measured"
+      },
+      "cbg": {
+        "value": 0.4,
+        "unit": "%"
+      },
+      "cbga": {
+        "value": 0.9,
+        "unit": "%"
+      },
+      "cbc": {
+        "value": 0.2,
+        "unit": "%"
+      },
+      "cbn": {
+        "value": 0.05,
+        "unit": "%"
+      },
+      "thcv": {
+        "value": null,
+        "unit": "%",
+        "status": "not_measured"
+      },
+      "total_thc": {
+        "value": 20.4,
+        "unit": "%"
+      },
+      "total_cbd": {
+        "value": 0.1,
+        "unit": "%"
+      },
+      "total_cannabinoids": {
+        "value": 24.85,
+        "unit": "%"
+      }
+    },
+    "terpenes": [
+      {
+        "name": "myrcene",
+        "value": 0.45,
+        "unit": "%"
+      },
+      {
+        "name": "limonene",
+        "value": 0.32,
+        "unit": "%"
+      },
+      {
+        "name": "caryophyllene",
+        "value": 0.28,
+        "unit": "%"
+      },
+      {
+        "name": "pinene",
+        "value": null,
+        "unit": "%",
+        "status": "not_measured"
+      }
+    ],
+    "safety": {
+      "pesticides": {
+        "status": "pass",
+        "method": "LC-MS/MS panel",
+        "analytes": [
+          {
+            "name": "myclobutanil",
+            "value": null,
+            "unit": "ppm",
+            "limit": 0.2,
+            "result": "not_detected"
+          }
+        ]
+      },
+      "heavy_metals": {
+        "status": "pass",
+        "analytes": [
+          {
+            "name": "lead",
+            "value": 0.05,
+            "unit": "ppm",
+            "limit": 0.5,
+            "result": "pass"
+          }
+        ]
+      },
+      "microbials": {
+        "status": "pass",
+        "analytes": [
+          {
+            "name": "aspergillus",
+            "value": null,
+            "unit": "CFU/g",
+            "result": "not_detected"
+          }
+        ]
+      },
+      "mycotoxins": {
+        "status": "not_tested"
+      },
+      "residual_solvents": {
+        "status": "not_applicable"
+      },
+      "notes": "Flower matrix; residual solvents not applicable."
+    },
+    "provenance": "laboratory_verified",
+    "notes": null
+  },
+  "outcomes": {
+    "yield_g_per_plant": 58.3,
+    "yield_g_per_m2": 466.0,
+    "yield_g_per_watt": 1.1,
+    "quality_grade": "A",
+    "notes": null
+  },
+  "provenance": {
+    "record": "self_reported",
+    "environment": "sensor_measured",
+    "irrigation_nutrition": "sensor_measured",
+    "lab_results": "laboratory_verified",
+    "cultivar": "self_reported",
+    "harvest": "self_reported",
+    "notes": null
+  },
+  "data_gaps": {
+    "lab_results.cannabinoids.cbda": "not_measured",
+    "lab_results.cannabinoids.thcv": "not_measured",
+    "lab_results.safety.mycotoxins": "not_measured",
+    "lab_results.safety.residual_solvents": "not_applicable"
+  },
+  "extensions": {
+    "org.example.lighting": {
+      "fixture_model": "Example LED 600W",
+      "spectrum": "full"
+    }
+  }
+}
