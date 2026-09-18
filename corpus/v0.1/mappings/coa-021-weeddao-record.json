@@ -1,0 +1,85 @@
+{
+  "schema_version": "0.1-alpha",
+  "record_id": "corpus-coa-021",
+  "cultivation_batch_id": "Date",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "producer": {
+    "organization_name": "BakPak",
+    "jurisdiction": "US-CA"
+  },
+  "cultivar": {
+    "reported_name": "Muscle & Joint Cream",
+    "identity_status": "reported"
+  },
+  "lab_results": {
+    "lab_name": null,
+    "sample_id": "260714Q003",
+    "provenance": "laboratory_verified",
+    "notes": "Mapped from public COA corpus case COA-021. WeedDAO does not independently re-verify laboratory measurements.",
+    "cannabinoids": {
+      "total_thc": {
+        "value": 19.26,
+        "unit": "mg/serving",
+        "provenance": "laboratory_verified"
+      },
+      "total_cbd": {
+        "value": 849.36,
+        "unit": "mg/serving",
+        "provenance": "laboratory_verified"
+      },
+      "total_cannabinoids": {
+        "value": 1677.06,
+        "unit": "mg/serving",
+        "provenance": "laboratory_verified"
+      },
+      "thca": {
+        "value": 0.001,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbg": {
+        "value": 0.002,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbga": {
+        "value": 0.002,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbc": {
+        "value": 0.003,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      }
+    }
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-021",
+      "source_url": "https://cdn.shopify.com/s/files/1/0802/6731/3461/files/MJC_COA.pdf?v=1785962828",
+      "source_tier": "primary",
+      "source_group": "BakPak",
+      "product_hint": "Muscle & Joint Cream",
+      "product_type_hint": "topical",
+      "title_verified": "Muscle & Joint Cream",
+      "overall_result_observed": null,
+      "units_observed": [
+        "%",
+        "mg/g",
+        "mg/unit",
+        "mg/serving",
+        "ppm"
+      ],
+      "panels_observed": [
+        "cannabinoid"
+      ]
+    }
+  }
+}

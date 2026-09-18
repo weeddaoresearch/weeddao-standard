@@ -1,0 +1,110 @@
+{
+  "schema_version": "0.1-alpha",
+  "record_id": "corpus-coa-024",
+  "cultivation_batch_id": "Description",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "producer": {
+    "organization_name": "BakPak",
+    "jurisdiction": "US-LA"
+  },
+  "cultivar": {
+    "reported_name": "Rest Extra Strength edible",
+    "identity_status": "reported"
+  },
+  "lab_results": {
+    "lab_name": null,
+    "sample_id": "AIT-SAMP-45",
+    "provenance": "laboratory_verified",
+    "notes": "Mapped from public COA corpus case COA-024. WeedDAO does not independently re-verify laboratory measurements.",
+    "cannabinoids": {
+      "thca": {
+        "value": 0.04,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "thc": {
+        "value": 0.04,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbd": {
+        "value": 0.04,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbda": {
+        "value": 0.04,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbg": {
+        "value": 0.04,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbga": {
+        "value": 0.04,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbc": {
+        "value": 0.04,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbn": {
+        "value": 0.04,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "thcv": {
+        "value": 0.04,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      }
+    }
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-024",
+      "source_url": "https://cdn.shopify.com/s/files/1/0802/6731/3461/files/Rest_MN_Product_COA.pdf?v=1786025253",
+      "source_tier": "primary",
+      "source_group": "BakPak",
+      "product_hint": "Rest Extra Strength edible",
+      "product_type_hint": "edible",
+      "title_verified": "Rest Gummies",
+      "overall_result_observed": null,
+      "units_observed": [
+        "%",
+        "mg/g",
+        "mg/unit",
+        "mg/serving",
+        "ppm"
+      ],
+      "panels_observed": [
+        "cannabinoid"
+      ],
+      "cannabinoids_alt_units": {
+        "thc": {
+          "mg/g": 0.78879305
+        },
+        "cbd": {
+          "mg/g": 4.04606225
+        },
+        "cbg": {
+          "mg/g": 3.91399343
+        },
+        "cbc": {
+          "mg/g": 0.06023244
+        }
+      },
+      "water_activity": 0.85
+    }
+  }
+}

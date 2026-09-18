@@ -1,0 +1,48 @@
+{
+  "schema_version": "0.1-alpha",
+  "record_id": "corpus-coa-045",
+  "cultivation_batch_id": "corpus-coa-045-unknown-batch",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "producer": {
+    "organization_name": "OpenCOA",
+    "jurisdiction": "US-CT"
+  },
+  "cultivar": {
+    "reported_name": "CTPharma Moisture pre-roll",
+    "identity_status": "reported"
+  },
+  "lab_results": {
+    "lab_name": null,
+    "sample_id": null,
+    "provenance": "laboratory_verified",
+    "notes": "Mapped from public COA corpus case COA-045. WeedDAO does not independently re-verify laboratory measurements."
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-045",
+      "source_url": "https://opencoa.org/coa/019ee4a5-c643-7389-872b-21444af4ad6a/3291906791395891",
+      "source_tier": "secondary",
+      "source_group": "OpenCOA",
+      "product_hint": "CTPharma Moisture pre-roll",
+      "product_type_hint": "pre-roll",
+      "title_verified": "CTPharma Moisture pre-roll",
+      "overall_result_observed": null,
+      "units_observed": [
+        "%"
+      ],
+      "panels_observed": [
+        "cannabinoid",
+        "terpene",
+        "microbial",
+        "pesticide",
+        "heavy_metal"
+      ]
+    }
+  }
+}

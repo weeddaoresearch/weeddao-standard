@@ -1,0 +1,49 @@
+{
+  "schema_version": "0.1-alpha",
+  "record_id": "corpus-coa-044",
+  "cultivation_batch_id": "corpus-coa-044-unknown-batch",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "producer": {
+    "organization_name": "OpenCOA",
+    "jurisdiction": "US-MA"
+  },
+  "cultivar": {
+    "reported_name": "Cloud Cover White 99 bulk flower",
+    "identity_status": "reported"
+  },
+  "lab_results": {
+    "lab_name": null,
+    "sample_id": null,
+    "provenance": "derived",
+    "notes": "Mapped from public COA corpus case COA-044. WeedDAO does not independently re-verify laboratory measurements. SOURCE_UNAVAILABLE at corpus fetch time."
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "derived",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-044",
+      "source_url": "https://opencoa.org/coa/01a086f4-f32e-7053-b0f7-ce099f9e5f43/w99-3-24-8-12-26",
+      "source_tier": "secondary",
+      "source_group": "OpenCOA",
+      "product_hint": "Cloud Cover White 99 bulk flower",
+      "product_type_hint": "flower",
+      "title_verified": "Cloud Cover White 99 bulk flower",
+      "overall_result_observed": null,
+      "units_observed": [
+        "%"
+      ],
+      "panels_observed": [
+        "cannabinoid",
+        "terpene",
+        "microbial",
+        "pesticide",
+        "heavy_metal"
+      ],
+      "source_unavailable": true
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "case_id": "COA-048",
+  "schema_version": "0.1-alpha",
+  "mapped_record_valid": true,
+  "mapping_result": "PARTIAL",
+  "exact_mapping_count": 0,
+  "partial_mapping_count": 1,
+  "not_representable_count": 3,
+  "gaps": [
+    {
+      "gap_key": "batch_id_missing_placeholder",
+      "observed_source_semantics": "No batch/sample id; deterministic placeholder",
+      "severity": "IMPORTANT",
+      "existing_issue_if_any": null
+    },
+    {
+      "gap_key": "nd_not_representable",
+      "observed_source_semantics": "ND examples=[]",
+      "severity": "CRITICAL_INTEROPERABILITY",
+      "existing_issue_if_any": 3
+    },
+    {
+      "gap_key": "analyte_tables_unparsed",
+      "observed_source_semantics": "Fetch ok but analyte tables not reliably parsed",
+      "severity": "IMPORTANT",
+      "existing_issue_if_any": null
+    }
+  ],
+  "source_unavailable": false,
+  "notes": "Automated corpus mapping against frozen v0.1-alpha; numeric values only when parseable; no fabrication."
+}

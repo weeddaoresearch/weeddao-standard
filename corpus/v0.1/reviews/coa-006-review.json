@@ -1,0 +1,49 @@
+{
+  "case_id": "COA-006",
+  "schema_version": "0.1-alpha",
+  "mapped_record_valid": true,
+  "mapping_result": "PARTIAL",
+  "exact_mapping_count": 20,
+  "partial_mapping_count": 2,
+  "not_representable_count": 6,
+  "gaps": [
+    {
+      "gap_key": "nd_not_representable",
+      "observed_source_semantics": "ND examples=['thca', 'cbda', 'CBCA', 'CBDV', 'THCVA', 'CBDVA']",
+      "severity": "CRITICAL_INTEROPERABILITY",
+      "existing_issue_if_any": 3
+    },
+    {
+      "gap_key": "below_reporting_limit_qualifier",
+      "observed_source_semantics": "Below-limit examples=[]",
+      "severity": "CRITICAL_INTEROPERABILITY",
+      "existing_issue_if_any": 1
+    },
+    {
+      "gap_key": "multi_unit_cannabinoid",
+      "observed_source_semantics": "units_observed=['%', 'mg/g', 'mg/serving', 'µg/g']",
+      "severity": "CRITICAL_INTEROPERABILITY",
+      "existing_issue_if_any": 4
+    },
+    {
+      "gap_key": "regulatory_tracking",
+      "observed_source_semantics": "METRC/regulatory tracking",
+      "severity": "JURISDICTION_SPECIFIC",
+      "existing_issue_if_any": null
+    },
+    {
+      "gap_key": "sample_lifecycle_metadata",
+      "observed_source_semantics": "Collected/received lifecycle metadata",
+      "severity": "IMPORTANT",
+      "existing_issue_if_any": null
+    },
+    {
+      "gap_key": "foreign_material",
+      "observed_source_semantics": "Foreign material / visual inspection",
+      "severity": "IMPORTANT",
+      "existing_issue_if_any": null
+    }
+  ],
+  "source_unavailable": false,
+  "notes": "Automated corpus mapping against frozen v0.1-alpha; numeric values only when parseable; no fabrication."
+}

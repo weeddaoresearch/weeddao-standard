@@ -1,0 +1,111 @@
+{
+  "schema_version": "0.1-alpha",
+  "record_id": "corpus-coa-035",
+  "cultivation_batch_id": "402",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "producer": {
+    "organization_name": "8th Avenue / ChemHistory",
+    "jurisdiction": "US-OR"
+  },
+  "cultivar": {
+    "reported_name": "Banana Sunday",
+    "identity_status": "reported"
+  },
+  "lab_results": {
+    "lab_name": "ChemHistory",
+    "sample_id": "2605CH0094.0497",
+    "provenance": "laboratory_verified",
+    "notes": "Mapped from public COA corpus case COA-035. WeedDAO does not independently re-verify laboratory measurements.",
+    "cannabinoids": {
+      "thc": {
+        "value": 0.08,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbd": {
+        "value": 4.02,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbda": {
+        "value": 0.5,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbg": {
+        "value": 0.09,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbga": {
+        "value": 0.11,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbc": {
+        "value": 0.2,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbn": {
+        "value": 0.07,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "thcv": {
+        "value": 0.5,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      }
+    }
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-035",
+      "source_url": "https://www.8thavenue.us/coas/newCOAS/2605CH0094.0497%20-%20Sammie%20Rizk%20%20-%20Banana%20Sunday%20(Batch%20402).pdf",
+      "source_tier": "primary",
+      "source_group": "8th Avenue / ChemHistory",
+      "product_hint": "Banana Sunday (Batch 402)",
+      "product_type_hint": "flower/biomass",
+      "title_verified": "Banana Sunday (Batch 402)",
+      "overall_result_observed": null,
+      "units_observed": [
+        "%",
+        "mg/g"
+      ],
+      "panels_observed": [
+        "cannabinoid",
+        "microbial",
+        "pesticide",
+        "residual_solvent",
+        "moisture"
+      ],
+      "cannabinoids_alt_units": {
+        "thc": {
+          "mg/g": 0.8
+        },
+        "cbd": {
+          "mg/g": 40.2
+        },
+        "cbg": {
+          "mg/g": 0.9
+        },
+        "cbga": {
+          "mg/g": 1.1
+        },
+        "cbc": {
+          "mg/g": 2.0
+        },
+        "cbn": {
+          "mg/g": 0.7
+        }
+      }
+    }
+  }
+}

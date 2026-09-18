@@ -1,0 +1,187 @@
+{
+  "schema_version": "0.1-alpha",
+  "record_id": "corpus-coa-013",
+  "cultivation_batch_id": "TCR-5P-BL-901",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "producer": {
+    "organization_name": "Grams Brooklyn",
+    "jurisdiction": "US-NY"
+  },
+  "cultivar": {
+    "reported_name": "Boussera Lemons Sativa 5-Pack Preroll 2.5g",
+    "identity_status": "reported"
+  },
+  "lab_results": {
+    "lab_name": "ACT Laboratories (NY)",
+    "sample_id": "SNYTCO0903-PPRE-0030483",
+    "provenance": "laboratory_verified",
+    "notes": "Mapped from public COA corpus case COA-013. WeedDAO does not independently re-verify laboratory measurements.",
+    "cannabinoids": {
+      "total_thc": {
+        "value": 862.13,
+        "unit": "mg/serving",
+        "provenance": "laboratory_verified"
+      },
+      "total_cannabinoids": {
+        "value": 34.485,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "thca": {
+        "value": 20.202,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "thc": {
+        "value": 12.015,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbg": {
+        "value": 0.463,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbga": {
+        "value": 1.806,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      }
+    },
+    "terpenes": [
+      {
+        "name": "humulene",
+        "value": 0.1373,
+        "unit": "%"
+      },
+      {
+        "name": "camphene",
+        "value": 80.0,
+        "unit": "%"
+      },
+      {
+        "name": "terpinolene",
+        "value": 80.0,
+        "unit": "%"
+      },
+      {
+        "name": "ocimene",
+        "value": 80.0,
+        "unit": "%"
+      },
+      {
+        "name": "bisabolol",
+        "value": 80.0,
+        "unit": "%"
+      },
+      {
+        "name": "myrcene",
+        "value": 80.0,
+        "unit": "%"
+      },
+      {
+        "name": "limonene",
+        "value": 80.0,
+        "unit": "%"
+      },
+      {
+        "name": "geraniol",
+        "value": 80.0,
+        "unit": "%"
+      },
+      {
+        "name": "fenchol",
+        "value": 80.0,
+        "unit": "%"
+      },
+      {
+        "name": "valencene",
+        "value": 80.0,
+        "unit": "%"
+      },
+      {
+        "name": "nerolidol",
+        "value": 80.0,
+        "unit": "%"
+      },
+      {
+        "name": "linalool",
+        "value": 80.0,
+        "unit": "%"
+      },
+      {
+        "name": "guaiol",
+        "value": 80.0,
+        "unit": "%"
+      }
+    ],
+    "safety": {
+      "microbials": {
+        "status": "pass"
+      },
+      "pesticides": {
+        "status": "pass"
+      },
+      "heavy_metals": {
+        "status": "pass"
+      },
+      "mycotoxins": {
+        "status": "pass"
+      }
+    }
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-013",
+      "source_url": "https://www.gramsbk.com/coa/COA-SNYTCO0903PPRE0030483-GramsBousseraLemonsSativa5PackPreroll25g-TCR5PBL901-002.pdf",
+      "source_tier": "primary",
+      "source_group": "Grams Brooklyn",
+      "product_hint": "Boussera Lemons Sativa 5-Pack Preroll 2.5g",
+      "product_type_hint": "pre-roll",
+      "title_verified": "Grams Boussera Lemons Sativa 5-Pack Preroll 2.5g",
+      "overall_result_observed": null,
+      "units_observed": [
+        "%",
+        "mg/g",
+        "mg/unit",
+        "CFU/g",
+        "µg/g",
+        "ng/g"
+      ],
+      "panels_observed": [
+        "cannabinoid",
+        "terpene",
+        "microbial",
+        "pesticide",
+        "heavy_metal",
+        "residual_solvent",
+        "mycotoxin",
+        "moisture",
+        "water_activity",
+        "foreign_matter"
+      ],
+      "cannabinoids_alt_units": {
+        "thca": {
+          "mg/g": 202.02
+        },
+        "thc": {
+          "mg/g": 120.15
+        },
+        "cbg": {
+          "mg/g": 4.63
+        },
+        "cbga": {
+          "mg/g": 18.06
+        }
+      },
+      "foreign_material": "observed",
+      "water_activity": 0.65
+    }
+  }
+}

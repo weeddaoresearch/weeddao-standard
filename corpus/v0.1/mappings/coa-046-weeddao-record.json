@@ -1,0 +1,49 @@
+{
+  "schema_version": "0.1-alpha",
+  "record_id": "corpus-coa-046",
+  "cultivation_batch_id": "corpus-coa-046-unknown-batch",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "producer": {
+    "organization_name": "OpenCOA",
+    "jurisdiction": "US-MA"
+  },
+  "cultivar": {
+    "reported_name": "Good News Fast Asleep 5mg gummies",
+    "identity_status": "reported"
+  },
+  "lab_results": {
+    "lab_name": null,
+    "sample_id": null,
+    "provenance": "derived",
+    "notes": "Mapped from public COA corpus case COA-046. WeedDAO does not independently re-verify laboratory measurements. SOURCE_UNAVAILABLE at corpus fetch time."
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "derived",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-046",
+      "source_url": "https://opencoa.org/coa/01a0b418-f545-7214-b637-3c67dd23c1d0/77845",
+      "source_tier": "secondary",
+      "source_group": "OpenCOA",
+      "product_hint": "Good News Fast Asleep 5mg gummies",
+      "product_type_hint": "edible",
+      "title_verified": "Good News Fast Asleep 5mg gummies",
+      "overall_result_observed": null,
+      "units_observed": [
+        "%"
+      ],
+      "panels_observed": [
+        "cannabinoid",
+        "terpene",
+        "microbial",
+        "pesticide",
+        "heavy_metal"
+      ],
+      "source_unavailable": true
+    }
+  }
+}

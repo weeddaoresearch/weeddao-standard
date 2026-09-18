@@ -1,0 +1,77 @@
+{
+  "schema_version": "0.1-alpha",
+  "record_id": "corpus-coa-032",
+  "cultivation_batch_id": "9004",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "producer": {
+    "organization_name": "OpenCOA",
+    "jurisdiction": "US-CT"
+  },
+  "cultivar": {
+    "reported_name": "Scorpion Bowl",
+    "identity_status": "reported"
+  },
+  "lab_results": {
+    "lab_name": null,
+    "sample_id": "2509ANSCT0730-4183",
+    "provenance": "laboratory_verified",
+    "notes": "Mapped from public COA corpus case COA-032. WeedDAO does not independently re-verify laboratory measurements.",
+    "cannabinoids": {
+      "thc": {
+        "value": 0.11,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbg": {
+        "value": 0.0,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      }
+    },
+    "safety": {
+      "microbials": {
+        "status": "pass"
+      },
+      "pesticides": {
+        "status": "pass"
+      },
+      "heavy_metals": {
+        "status": "pass"
+      },
+      "residual_solvents": {
+        "status": "pass"
+      },
+      "mycotoxins": {
+        "status": "pass"
+      }
+    }
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-032",
+      "source_url": "https://opencoa.org/coa/019ee4ef-9640-739b-a15a-1a1719916a3b/9004-6560-4182-5908",
+      "source_tier": "secondary",
+      "source_group": "OpenCOA",
+      "product_hint": "Scorpion Bowl (H) Gummies",
+      "product_type_hint": "edible",
+      "title_verified": "Scorpion Bowl (H) Gummies",
+      "overall_result_observed": null,
+      "units_observed": [
+        "%"
+      ],
+      "panels_observed": [
+        "cannabinoid",
+        "terpene",
+        "microbial",
+        "pesticide",
+        "heavy_metal"
+      ]
+    }
+  }
+}

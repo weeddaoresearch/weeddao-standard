@@ -1,0 +1,16 @@
+{
+  "total_cases": 50,
+  "seed_cases": 3,
+  "new_public_cases": 47,
+  "new_primary_sources": 37,
+  "new_secondary_sources": 10,
+  "summary_only_cases": 0,
+  "unreachable_cases": 0,
+  "verification_status": "COMPLETE",
+  "notes": [
+    "All 47 new corpus slots now point to reachable public sources.",
+    "Seven weak/summary-only candidates were replaced with richer primary-source COAs from Vivid/TagLeaf, Grams/ACT, and 8th Avenue/ChemHistory.",
+    "These files contain source verification and interoperability metadata, not full reproduced COA documents.",
+    "Full analyte-by-analyte numeric mapping remains the next schema-validation step."
+  ]
+}

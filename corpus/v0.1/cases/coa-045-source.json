@@ -1,0 +1,39 @@
+{
+  "case_id": "COA-045",
+  "source_url": "https://opencoa.org/coa/019ee4a5-c643-7389-872b-21444af4ad6a/3291906791395891",
+  "source_tier": "secondary",
+  "source_group": "OpenCOA",
+  "retrieved_at": "2026-09-18T17:10:32Z",
+  "fetch_status": 200,
+  "fetch_ok": true,
+  "source_unavailable": false,
+  "jurisdiction_hint": "Connecticut",
+  "producer_or_brand": "OpenCOA",
+  "laboratory": null,
+  "product_name": "CTPharma Moisture pre-roll",
+  "product_type": "pre-roll",
+  "batch_or_lot_id": null,
+  "sample_id": null,
+  "overall_status": null,
+  "title_verified": "CTPharma Moisture pre-roll",
+  "panels_observed": [
+    "cannabinoid",
+    "terpene",
+    "microbial",
+    "pesticide",
+    "heavy_metal"
+  ],
+  "units_observed": [
+    "%"
+  ],
+  "uses_nd": true,
+  "uses_below_limit": false,
+  "uses_not_tested": false,
+  "uses_not_reported": false,
+  "uses_not_performed": false,
+  "has_regulatory_tracking": false,
+  "has_sample_lifecycle": false,
+  "detail_level": "medium",
+  "verification_method": "Live public-content fetch on 2026-09-18",
+  "notes": "Interoperability metadata extracted from the public source; full numeric analyte mapping remains for the schema-validation batch step."
+}

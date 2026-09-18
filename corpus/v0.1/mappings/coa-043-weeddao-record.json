@@ -1,0 +1,49 @@
+{
+  "schema_version": "0.1-alpha",
+  "record_id": "corpus-coa-043",
+  "cultivation_batch_id": "corpus-coa-043-unknown-batch",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "producer": {
+    "organization_name": "OpenCOA",
+    "jurisdiction": "US-NY"
+  },
+  "cultivar": {
+    "reported_name": "Tangieland Sun Grown 14g",
+    "identity_status": "reported"
+  },
+  "lab_results": {
+    "lab_name": null,
+    "sample_id": null,
+    "provenance": "derived",
+    "notes": "Mapped from public COA corpus case COA-043. WeedDAO does not independently re-verify laboratory measurements. SOURCE_UNAVAILABLE at corpus fetch time."
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "derived",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-043",
+      "source_url": "https://opencoa.org/coa/019c8845-7be0-7156-a98c-e8f0a3993905/tl0d11725",
+      "source_tier": "secondary",
+      "source_group": "OpenCOA",
+      "product_hint": "Tangieland Sun Grown 14g",
+      "product_type_hint": "flower",
+      "title_verified": "Tangieland Sun Grown 14g",
+      "overall_result_observed": null,
+      "units_observed": [
+        "%"
+      ],
+      "panels_observed": [
+        "cannabinoid",
+        "terpene",
+        "microbial",
+        "pesticide",
+        "heavy_metal"
+      ],
+      "source_unavailable": true
+    }
+  }
+}

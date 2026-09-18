@@ -1,0 +1,95 @@
+{
+  "schema_version": "0.1-alpha",
+  "record_id": "corpus-coa-041",
+  "cultivation_batch_id": "402",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "producer": {
+    "organization_name": "8th Avenue / ChemHistory",
+    "jurisdiction": "US-OR"
+  },
+  "cultivar": {
+    "reported_name": "Strawberry Mimosa",
+    "identity_status": "reported"
+  },
+  "lab_results": {
+    "lab_name": "ChemHistory",
+    "sample_id": "2605CH0094.0500",
+    "provenance": "laboratory_verified",
+    "notes": "Mapped from public COA corpus case COA-041. WeedDAO does not independently re-verify laboratory measurements.",
+    "cannabinoids": {
+      "cbd": {
+        "value": 0.12,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbda": {
+        "value": 0.5,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbg": {
+        "value": 0.21,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbga": {
+        "value": 2.09,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbc": {
+        "value": 0.06,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "thcv": {
+        "value": 0.5,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      }
+    }
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-041",
+      "source_url": "https://www.8thavenue.us/coas/newCOAS/2605CH0094.0500%20-%20Sammie%20Rizk%20%20-%20Strawberry%20Mimosa%20(Batch%20402).pdf",
+      "source_tier": "primary",
+      "source_group": "8th Avenue / ChemHistory",
+      "product_hint": "Strawberry Mimosa (Batch 402)",
+      "product_type_hint": "flower/biomass",
+      "title_verified": "Strawberry Mimosa (Batch 402)",
+      "overall_result_observed": null,
+      "units_observed": [
+        "%",
+        "mg/g"
+      ],
+      "panels_observed": [
+        "cannabinoid",
+        "microbial",
+        "pesticide",
+        "residual_solvent",
+        "moisture"
+      ],
+      "cannabinoids_alt_units": {
+        "cbd": {
+          "mg/g": 1.2
+        },
+        "cbg": {
+          "mg/g": 2.1
+        },
+        "cbga": {
+          "mg/g": 20.9
+        },
+        "cbc": {
+          "mg/g": 0.6
+        }
+      }
+    }
+  }
+}

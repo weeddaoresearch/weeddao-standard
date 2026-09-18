@@ -1,0 +1,163 @@
+{
+  "schema_version": "0.1-alpha",
+  "record_id": "corpus-coa-017",
+  "cultivation_batch_id": "MUZ-G-2P-5-1225",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "producer": {
+    "organization_name": "Grams Brooklyn",
+    "jurisdiction": "US-NY"
+  },
+  "cultivar": {
+    "reported_name": "Muz Muz Strawberry 2-Pack",
+    "identity_status": "reported"
+  },
+  "lab_results": {
+    "lab_name": "Kaycha Labs",
+    "sample_id": "AL51224003-002",
+    "provenance": "laboratory_verified",
+    "notes": "Mapped from public COA corpus case COA-017. WeedDAO does not independently re-verify laboratory measurements.",
+    "cannabinoids": {
+      "total_thc": {
+        "value": 21.67,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "total_cbd": {
+        "value": 1.21,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "total_cannabinoids": {
+        "value": 0.197,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      }
+    },
+    "terpenes": [
+      {
+        "name": "beta-caryophyllene",
+        "value": 0.004,
+        "unit": "%"
+      },
+      {
+        "name": "camphene",
+        "value": 0.004,
+        "unit": "%"
+      },
+      {
+        "name": "geraniol",
+        "value": 0.004,
+        "unit": "%"
+      },
+      {
+        "name": "guaiol",
+        "value": 0.004,
+        "unit": "%"
+      },
+      {
+        "name": "limonene",
+        "value": 0.004,
+        "unit": "%"
+      },
+      {
+        "name": "linalool",
+        "value": 0.004,
+        "unit": "%"
+      },
+      {
+        "name": "ocimene",
+        "value": 0.004,
+        "unit": "%"
+      },
+      {
+        "name": "terpinolene",
+        "value": 0.004,
+        "unit": "%"
+      },
+      {
+        "name": "valencene",
+        "value": 0.004,
+        "unit": "%"
+      },
+      {
+        "name": "bisabolol",
+        "value": 0.004,
+        "unit": "%"
+      },
+      {
+        "name": "alpha-humulene",
+        "value": 0.004,
+        "unit": "%"
+      },
+      {
+        "name": "alpha-pinene",
+        "value": 0.004,
+        "unit": "%"
+      },
+      {
+        "name": "beta-myrcene",
+        "value": 0.004,
+        "unit": "%"
+      },
+      {
+        "name": "beta-pinene",
+        "value": 0.004,
+        "unit": "%"
+      }
+    ],
+    "safety": {
+      "microbials": {
+        "status": "pass"
+      },
+      "pesticides": {
+        "status": "pass"
+      },
+      "heavy_metals": {
+        "status": "pass"
+      },
+      "residual_solvents": {
+        "status": "pass"
+      },
+      "mycotoxins": {
+        "status": "pass"
+      }
+    }
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-017",
+      "source_url": "https://docs.wixstatic.com/ugd/43c248_e187113ca4f74c7c8b0eb595faeae5b2.pdf",
+      "source_tier": "primary",
+      "source_group": "Grams Brooklyn",
+      "product_hint": "Muz Muz Strawberry 2-Pack",
+      "product_type_hint": "edible",
+      "title_verified": "Muz Muz Strawberry 2-Pack",
+      "overall_result_observed": null,
+      "units_observed": [
+        "%",
+        "mg/unit",
+        "ppm",
+        "CFU/g",
+        "µg/g"
+      ],
+      "panels_observed": [
+        "cannabinoid",
+        "terpene",
+        "microbial",
+        "pesticide",
+        "heavy_metal",
+        "residual_solvent",
+        "mycotoxin",
+        "moisture",
+        "water_activity"
+      ],
+      "water_activity": 0.1
+    }
+  }
+}

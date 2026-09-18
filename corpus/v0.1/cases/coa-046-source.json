@@ -1,0 +1,39 @@
+{
+  "case_id": "COA-046",
+  "source_url": "https://opencoa.org/coa/01a0b418-f545-7214-b637-3c67dd23c1d0/77845",
+  "source_tier": "secondary",
+  "source_group": "OpenCOA",
+  "retrieved_at": "2026-09-18T17:10:32Z",
+  "fetch_status": 429,
+  "fetch_ok": false,
+  "source_unavailable": true,
+  "jurisdiction_hint": "Massachusetts",
+  "producer_or_brand": "OpenCOA",
+  "laboratory": null,
+  "product_name": "Good News Fast Asleep 5mg gummies",
+  "product_type": "edible",
+  "batch_or_lot_id": null,
+  "sample_id": null,
+  "overall_status": null,
+  "title_verified": "Good News Fast Asleep 5mg gummies",
+  "panels_observed": [
+    "cannabinoid",
+    "terpene",
+    "microbial",
+    "pesticide",
+    "heavy_metal"
+  ],
+  "units_observed": [
+    "%"
+  ],
+  "uses_nd": true,
+  "uses_below_limit": false,
+  "uses_not_tested": false,
+  "uses_not_reported": false,
+  "uses_not_performed": false,
+  "has_regulatory_tracking": false,
+  "has_sample_lifecycle": false,
+  "detail_level": "medium",
+  "verification_method": "Live public-content fetch on 2026-09-18",
+  "notes": "Interoperability metadata extracted from the public source; full numeric analyte mapping remains for the schema-validation batch step."
+}

@@ -1,0 +1,152 @@
+{
+  "schema_version": "0.1-alpha",
+  "record_id": "corpus-coa-018",
+  "cultivation_batch_id": "TCR-V-B-701",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "producer": {
+    "organization_name": "Grams Brooklyn",
+    "jurisdiction": "US-NY"
+  },
+  "cultivar": {
+    "reported_name": "Biscotti AIO Vape",
+    "identity_status": "reported"
+  },
+  "lab_results": {
+    "lab_name": "Kaycha Labs",
+    "sample_id": "AL60709014-018",
+    "provenance": "laboratory_verified",
+    "notes": "Mapped from public COA corpus case COA-018. WeedDAO does not independently re-verify laboratory measurements.",
+    "cannabinoids": {
+      "total_cannabinoids": {
+        "value": 85.2642,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      }
+    },
+    "terpenes": [
+      {
+        "name": "beta-myrcene",
+        "value": 0.1,
+        "unit": "%"
+      },
+      {
+        "name": "beta-caryophyllene",
+        "value": 0.04,
+        "unit": "%"
+      },
+      {
+        "name": "terpinolene",
+        "value": 0.04,
+        "unit": "%"
+      },
+      {
+        "name": "limonene",
+        "value": 0.1,
+        "unit": "%"
+      },
+      {
+        "name": "alpha-humulene",
+        "value": 0.04,
+        "unit": "%"
+      },
+      {
+        "name": "camphene",
+        "value": 0.1,
+        "unit": "%"
+      },
+      {
+        "name": "geraniol",
+        "value": 0.04,
+        "unit": "%"
+      },
+      {
+        "name": "guaiol",
+        "value": 0.04,
+        "unit": "%"
+      },
+      {
+        "name": "linalool",
+        "value": 0.1,
+        "unit": "%"
+      },
+      {
+        "name": "ocimene",
+        "value": 0.1,
+        "unit": "%"
+      },
+      {
+        "name": "valencene",
+        "value": 0.1,
+        "unit": "%"
+      },
+      {
+        "name": "bisabolol",
+        "value": 0.04,
+        "unit": "%"
+      },
+      {
+        "name": "alpha-pinene",
+        "value": 0.1,
+        "unit": "%"
+      },
+      {
+        "name": "beta-pinene",
+        "value": 0.1,
+        "unit": "%"
+      }
+    ],
+    "safety": {
+      "microbials": {
+        "status": "pass"
+      },
+      "pesticides": {
+        "status": "pass"
+      },
+      "heavy_metals": {
+        "status": "pass"
+      },
+      "residual_solvents": {
+        "status": "pass"
+      },
+      "mycotoxins": {
+        "status": "pass"
+      }
+    }
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-018",
+      "source_url": "https://docs.wixstatic.com/ugd/43c248_6e1ceaf2e5f049c19fad4912b84a52b0.pdf",
+      "source_tier": "primary",
+      "source_group": "Grams Brooklyn",
+      "product_hint": "Biscotti AIO Vape",
+      "product_type_hint": "vape",
+      "title_verified": "Biscotti AIO Vape",
+      "overall_result_observed": null,
+      "units_observed": [
+        "%",
+        "mg/unit",
+        "ppm",
+        "CFU/g",
+        "µg/g"
+      ],
+      "panels_observed": [
+        "cannabinoid",
+        "terpene",
+        "microbial",
+        "pesticide",
+        "heavy_metal",
+        "residual_solvent",
+        "mycotoxin",
+        "moisture",
+        "water_activity"
+      ]
+    }
+  }
+}

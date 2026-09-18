@@ -1,0 +1,98 @@
+{
+  "schema_version": "0.1-alpha",
+  "record_id": "corpus-coa-040",
+  "cultivation_batch_id": "Size",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "producer": {
+    "organization_name": "8th Avenue",
+    "jurisdiction": "US-OR"
+  },
+  "cultivar": {
+    "reported_name": "Trainwreck",
+    "identity_status": "reported"
+  },
+  "lab_results": {
+    "lab_name": "ChemHistory",
+    "sample_id": "2511CH0605.2686",
+    "provenance": "laboratory_verified",
+    "notes": "Mapped from public COA corpus case COA-040. WeedDAO does not independently re-verify laboratory measurements.",
+    "cannabinoids": {
+      "thc": {
+        "value": 0.11,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbd": {
+        "value": 3.85,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbda": {
+        "value": 3.59,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbg": {
+        "value": 0.15,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbc": {
+        "value": 0.29,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "thcv": {
+        "value": 0.4,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      }
+    }
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-040",
+      "source_url": "https://www.8thavenue.us/coas/2511CH0605.2686%20-%20Anderson%20Technology%20and%20Supply%20-%20Trainwreck.pdf",
+      "source_tier": "primary",
+      "source_group": "8th Avenue",
+      "product_hint": "Trainwreck",
+      "product_type_hint": "flower/biomass",
+      "title_verified": "Trainwreck",
+      "overall_result_observed": null,
+      "units_observed": [
+        "%",
+        "mg/g"
+      ],
+      "panels_observed": [
+        "cannabinoid",
+        "microbial",
+        "pesticide",
+        "residual_solvent",
+        "moisture"
+      ],
+      "cannabinoids_alt_units": {
+        "thc": {
+          "mg/g": 1.1
+        },
+        "cbd": {
+          "mg/g": 38.5
+        },
+        "cbda": {
+          "mg/g": 35.9
+        },
+        "cbg": {
+          "mg/g": 1.5
+        },
+        "cbc": {
+          "mg/g": 2.9
+        }
+      }
+    }
+  }
+}

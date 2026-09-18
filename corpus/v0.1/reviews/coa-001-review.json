@@ -1,0 +1,55 @@
+{
+  "case_id": "COA-001",
+  "schema_version": "0.1-alpha",
+  "mapped_record_valid": true,
+  "mapping_result": "PARTIAL",
+  "exact_mapping_count": 12,
+  "partial_mapping_count": 6,
+  "not_representable_count": 7,
+  "gaps": [
+    {
+      "gap_key": "below_reporting_limit_qualifier",
+      "observed_source_semantics": "Cannabinoid/terpene <LOQ",
+      "severity": "CRITICAL_INTEROPERABILITY",
+      "existing_issue_if_any": 1
+    },
+    {
+      "gap_key": "analyte_level_not_performed",
+      "observed_source_semantics": "Not Performed analytes",
+      "severity": "CRITICAL_INTEROPERABILITY",
+      "existing_issue_if_any": 2
+    },
+    {
+      "gap_key": "extended_cannabinoid_vocabulary",
+      "observed_source_semantics": "Δ8/Δ10/THCP/CBDV",
+      "severity": "IMPORTANT",
+      "existing_issue_if_any": null
+    },
+    {
+      "gap_key": "sample_lifecycle_metadata",
+      "observed_source_semantics": "Received/collected metadata",
+      "severity": "IMPORTANT",
+      "existing_issue_if_any": null
+    },
+    {
+      "gap_key": "foreign_material",
+      "observed_source_semantics": "Passed Visual Inspection",
+      "severity": "IMPORTANT",
+      "existing_issue_if_any": null
+    },
+    {
+      "gap_key": "multi_unit_cannabinoid",
+      "observed_source_semantics": "mg/g + %",
+      "severity": "CRITICAL_INTEROPERABILITY",
+      "existing_issue_if_any": 4
+    },
+    {
+      "gap_key": "moisture_not_in_core",
+      "observed_source_semantics": "Moisture Not Performed",
+      "severity": "OPTIONAL",
+      "existing_issue_if_any": null
+    }
+  ],
+  "source_unavailable": false,
+  "notes": "Seed hand-reviewed PARTIAL mapping; confirms issues #1-#4 as applicable."
+}

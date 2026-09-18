@@ -1,0 +1,147 @@
+{
+  "schema_version": "0.1-alpha",
+  "record_id": "corpus-coa-030",
+  "cultivation_batch_id": "VHR00270",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "producer": {
+    "organization_name": "Show-Me GP",
+    "jurisdiction": "US-MO"
+  },
+  "cultivar": {
+    "reported_name": "Vivid Alien Mintz Live Hash Rosin",
+    "identity_status": "reported"
+  },
+  "lab_results": {
+    "lab_name": "Green Precision Analytics",
+    "sample_id": "GPA-260901-036",
+    "provenance": "laboratory_verified",
+    "notes": "Mapped from public COA corpus case COA-030. WeedDAO does not independently re-verify laboratory measurements.",
+    "cannabinoids": {
+      "total_cannabinoids": {
+        "value": 83.05,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "thca": {
+        "value": 77.9,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbga": {
+        "value": 2.89,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbg": {
+        "value": 0.257,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbda": {
+        "value": 0.171,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbc": {
+        "value": 0.118,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      }
+    },
+    "terpenes": [
+      {
+        "name": "d-limonene",
+        "value": 1.925,
+        "unit": "%"
+      },
+      {
+        "name": "limonene",
+        "value": 1.925,
+        "unit": "%"
+      },
+      {
+        "name": "linalool",
+        "value": 0.9138,
+        "unit": "%"
+      },
+      {
+        "name": "nerolidol",
+        "value": 2.0,
+        "unit": "%"
+      },
+      {
+        "name": "myrcene",
+        "value": 0.4591,
+        "unit": "%"
+      },
+      {
+        "name": "humulene",
+        "value": 0.4164,
+        "unit": "%"
+      },
+      {
+        "name": "guaiol",
+        "value": 0.281,
+        "unit": "%"
+      }
+    ],
+    "total_terpenes": {
+      "value": 7.626,
+      "unit": "%"
+    },
+    "safety": {
+      "microbials": {
+        "status": "pass"
+      },
+      "pesticides": {
+        "status": "pass"
+      },
+      "heavy_metals": {
+        "status": "pass"
+      },
+      "residual_solvents": {
+        "status": "pass"
+      },
+      "mycotoxins": {
+        "status": "pass"
+      }
+    }
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-030",
+      "source_url": "https://lims.tagleaf.com/coas/cWLw21BrOD0tqzzLcFuDuaK37EA058mG30es0T7VqKCZQuMErt",
+      "source_tier": "primary",
+      "source_group": "Vivid / TagLeaf",
+      "product_hint": "Vivid Alien Mintz Live Hash Rosin",
+      "product_type_hint": "concentrate/extract",
+      "title_verified": "Vivid | Alien Mintz | Live Hash Rosin",
+      "overall_result_observed": "Pass",
+      "units_observed": [
+        "%",
+        "mg/g",
+        "mg/serving",
+        "µg/g"
+      ],
+      "panels_observed": [
+        "cannabinoid",
+        "terpene",
+        "microbial",
+        "pesticide",
+        "heavy_metal",
+        "residual_solvent",
+        "mycotoxin",
+        "foreign_matter"
+      ],
+      "metrc_src_tag": "1A40C0300004589000157351",
+      "metrc_testing_tag": "1A40C0300004589000157353",
+      "foreign_material": "pass"
+    }
+  }
+}

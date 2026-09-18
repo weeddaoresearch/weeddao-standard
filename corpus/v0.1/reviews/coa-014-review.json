@@ -1,0 +1,73 @@
+{
+  "case_id": "COA-014",
+  "schema_version": "0.1-alpha",
+  "mapped_record_valid": true,
+  "mapping_result": "PARTIAL",
+  "exact_mapping_count": 24,
+  "partial_mapping_count": 4,
+  "not_representable_count": 10,
+  "gaps": [
+    {
+      "gap_key": "nd_not_representable",
+      "observed_source_semantics": "ND examples=['cbda', 'total_cbd', 'D8-THC', 'CBDV']",
+      "severity": "CRITICAL_INTEROPERABILITY",
+      "existing_issue_if_any": 3
+    },
+    {
+      "gap_key": "below_reporting_limit_qualifier",
+      "observed_source_semantics": "Below-limit examples=['thca', 'cbd', 'cbga', 'cbn', 'thcv']",
+      "severity": "CRITICAL_INTEROPERABILITY",
+      "existing_issue_if_any": 1
+    },
+    {
+      "gap_key": "multi_unit_cannabinoid",
+      "observed_source_semantics": "units_observed=['%', 'mg/g', 'mg/unit', 'CFU/g', 'µg/g', 'ng/g']",
+      "severity": "CRITICAL_INTEROPERABILITY",
+      "existing_issue_if_any": 4
+    },
+    {
+      "gap_key": "analyte_level_not_performed",
+      "observed_source_semantics": "NOT TESTED / NOT PERFORMED",
+      "severity": "CRITICAL_INTEROPERABILITY",
+      "existing_issue_if_any": 2
+    },
+    {
+      "gap_key": "not_reported",
+      "observed_source_semantics": "NOT REPORTED",
+      "severity": "IMPORTANT",
+      "existing_issue_if_any": null
+    },
+    {
+      "gap_key": "regulatory_tracking",
+      "observed_source_semantics": "METRC/regulatory tracking",
+      "severity": "JURISDICTION_SPECIFIC",
+      "existing_issue_if_any": null
+    },
+    {
+      "gap_key": "sample_lifecycle_metadata",
+      "observed_source_semantics": "Collected/received lifecycle metadata",
+      "severity": "IMPORTANT",
+      "existing_issue_if_any": null
+    },
+    {
+      "gap_key": "foreign_material",
+      "observed_source_semantics": "Foreign material / visual inspection",
+      "severity": "IMPORTANT",
+      "existing_issue_if_any": null
+    },
+    {
+      "gap_key": "moisture_not_in_core",
+      "observed_source_semantics": "Moisture on source",
+      "severity": "OPTIONAL",
+      "existing_issue_if_any": null
+    },
+    {
+      "gap_key": "water_activity_not_in_core",
+      "observed_source_semantics": "Water activity on source",
+      "severity": "OPTIONAL",
+      "existing_issue_if_any": null
+    }
+  ],
+  "source_unavailable": false,
+  "notes": "Automated corpus mapping against frozen v0.1-alpha; numeric values only when parseable; no fabrication."
+}

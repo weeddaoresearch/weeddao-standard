@@ -1,0 +1,179 @@
+{
+  "schema_version": "0.1-alpha",
+  "record_id": "corpus-coa-033",
+  "cultivation_batch_id": "TCR-F-MA-901",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "producer": {
+    "organization_name": "Grams Brooklyn / ACT Laboratories",
+    "jurisdiction": "US-NY"
+  },
+  "cultivar": {
+    "reported_name": "Grams Applesauce Sativa Hybrid Flower 28g",
+    "identity_status": "reported"
+  },
+  "lab_results": {
+    "lab_name": "ACT Laboratories (NY)",
+    "sample_id": "SNYTCO0903-PFCU-0030485",
+    "provenance": "laboratory_verified",
+    "notes": "Mapped from public COA corpus case COA-033. WeedDAO does not independently re-verify laboratory measurements.",
+    "cannabinoids": {
+      "total_thc": {
+        "value": 7.0,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "total_cannabinoids": {
+        "value": 28.049,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "thca": {
+        "value": 25.134,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "thc": {
+        "value": 2.399,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbga": {
+        "value": 0.517,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      }
+    },
+    "terpenes": [
+      {
+        "name": "linalool",
+        "value": 0.1983,
+        "unit": "%"
+      },
+      {
+        "name": "limonene",
+        "value": 0.1356,
+        "unit": "%"
+      },
+      {
+        "name": "humulene",
+        "value": 82.0,
+        "unit": "%"
+      },
+      {
+        "name": "myrcene",
+        "value": 82.0,
+        "unit": "%"
+      },
+      {
+        "name": "bisabolol",
+        "value": 82.0,
+        "unit": "%"
+      },
+      {
+        "name": "fenchol",
+        "value": 82.0,
+        "unit": "%"
+      },
+      {
+        "name": "geraniol",
+        "value": 82.0,
+        "unit": "%"
+      },
+      {
+        "name": "nerolidol",
+        "value": 82.0,
+        "unit": "%"
+      },
+      {
+        "name": "terpinolene",
+        "value": 82.0,
+        "unit": "%"
+      },
+      {
+        "name": "camphene",
+        "value": 82.0,
+        "unit": "%"
+      },
+      {
+        "name": "valencene",
+        "value": 82.0,
+        "unit": "%"
+      },
+      {
+        "name": "guaiol",
+        "value": 82.0,
+        "unit": "%"
+      },
+      {
+        "name": "ocimene",
+        "value": 82.0,
+        "unit": "%"
+      }
+    ],
+    "safety": {
+      "microbials": {
+        "status": "pass"
+      },
+      "pesticides": {
+        "status": "pass"
+      },
+      "heavy_metals": {
+        "status": "pass"
+      },
+      "mycotoxins": {
+        "status": "pass"
+      }
+    }
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-033",
+      "source_url": "https://www.gramsbk.com/coa/COA-SNYTCO0903PFCU0030485-GramsApplesauceSativaHybridFlower28g-TCRFMA901-002.pdf",
+      "source_tier": "primary",
+      "source_group": "Grams Brooklyn / ACT Laboratories",
+      "product_hint": "Grams Applesauce Sativa Hybrid Flower 28g",
+      "product_type_hint": "flower",
+      "title_verified": "Grams Applesauce Sativa Hybrid Flower 28g",
+      "overall_result_observed": null,
+      "units_observed": [
+        "%",
+        "mg/g",
+        "mg/unit",
+        "CFU/g",
+        "µg/g",
+        "ng/g"
+      ],
+      "panels_observed": [
+        "cannabinoid",
+        "terpene",
+        "microbial",
+        "pesticide",
+        "heavy_metal",
+        "residual_solvent",
+        "mycotoxin",
+        "moisture",
+        "water_activity",
+        "foreign_matter"
+      ],
+      "cannabinoids_alt_units": {
+        "thca": {
+          "mg/g": 251.34
+        },
+        "thc": {
+          "mg/g": 23.99
+        },
+        "cbga": {
+          "mg/g": 5.17
+        }
+      },
+      "foreign_material": "pass",
+      "water_activity": 0.65
+    }
+  }
+}

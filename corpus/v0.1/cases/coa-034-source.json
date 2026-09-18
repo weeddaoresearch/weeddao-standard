@@ -1,0 +1,40 @@
+{
+  "case_id": "COA-034",
+  "source_url": "https://www.8thavenue.us/coas/newCOAS/2605CH0094.0496%20-%20Sammie%20Rizk%20%20-%20Dirty%20Girl%20(Batch%20401).pdf",
+  "source_tier": "primary",
+  "source_group": "8th Avenue / ChemHistory",
+  "retrieved_at": "2026-09-18T17:10:32Z",
+  "fetch_status": 200,
+  "fetch_ok": true,
+  "source_unavailable": false,
+  "jurisdiction_hint": "Texas retail / Oregon laboratory",
+  "producer_or_brand": "8th Avenue / ChemHistory",
+  "laboratory": "ChemHistory",
+  "product_name": "Dirty Girl (Batch 401)",
+  "product_type": "flower/biomass",
+  "batch_or_lot_id": "401",
+  "sample_id": "2605CH0094.0496",
+  "overall_status": null,
+  "title_verified": "Dirty Girl (Batch 401)",
+  "panels_observed": [
+    "cannabinoid",
+    "microbial",
+    "pesticide",
+    "residual_solvent",
+    "moisture"
+  ],
+  "units_observed": [
+    "%",
+    "mg/g"
+  ],
+  "uses_nd": true,
+  "uses_below_limit": true,
+  "uses_not_tested": false,
+  "uses_not_reported": true,
+  "uses_not_performed": false,
+  "has_regulatory_tracking": true,
+  "has_sample_lifecycle": true,
+  "detail_level": "medium",
+  "verification_method": "Live public-content fetch on 2026-09-18",
+  "notes": "Interoperability metadata extracted from the public source; full numeric analyte mapping remains for the schema-validation batch step."
+}

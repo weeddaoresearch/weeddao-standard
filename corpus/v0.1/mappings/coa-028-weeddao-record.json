@@ -1,0 +1,127 @@
+{
+  "schema_version": "0.1-alpha",
+  "record_id": "corpus-coa-028",
+  "cultivation_batch_id": "FCO0106",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "producer": {
+    "organization_name": "Show-Me GP",
+    "jurisdiction": "US-MO"
+  },
+  "cultivar": {
+    "reported_name": "Vivid Caps Frozen Lemons FECO",
+    "identity_status": "reported"
+  },
+  "lab_results": {
+    "lab_name": "Green Precision Analytics",
+    "sample_id": "GPA-260904-133",
+    "provenance": "laboratory_verified",
+    "notes": "Mapped from public COA corpus case COA-028. WeedDAO does not independently re-verify laboratory measurements.",
+    "cannabinoids": {
+      "total_cannabinoids": {
+        "value": 82.44,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "thca": {
+        "value": 0.055,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbga": {
+        "value": 0.1,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbg": {
+        "value": 6.17,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbd": {
+        "value": 0.177,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbc": {
+        "value": 0.961,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbn": {
+        "value": 0.546,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "thcv": {
+        "value": 0.658,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      }
+    },
+    "terpenes": [
+      {
+        "name": "nerolidol",
+        "value": 2.0,
+        "unit": "%"
+      }
+    ],
+    "total_terpenes": {
+      "value": 0.7569,
+      "unit": "%"
+    },
+    "safety": {
+      "microbials": {
+        "status": "pass"
+      },
+      "pesticides": {
+        "status": "pass"
+      },
+      "heavy_metals": {
+        "status": "pass"
+      },
+      "residual_solvents": {
+        "status": "pass"
+      },
+      "mycotoxins": {
+        "status": "pass"
+      }
+    }
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-028",
+      "source_url": "https://lims.tagleaf.com/coas/Bh861trOf4a3vJ0DthLetWdSnWQON0qnsoyVX0wujddOU0hn2t",
+      "source_tier": "primary",
+      "source_group": "Vivid / TagLeaf",
+      "product_hint": "Vivid Caps Frozen Lemons FECO",
+      "product_type_hint": "concentrate/extract",
+      "title_verified": "Vivid | Caps Frozen Lemons | FECO",
+      "overall_result_observed": "Pass",
+      "units_observed": [
+        "%",
+        "mg/g",
+        "mg/serving",
+        "µg/g"
+      ],
+      "panels_observed": [
+        "cannabinoid",
+        "terpene",
+        "microbial",
+        "pesticide",
+        "heavy_metal",
+        "residual_solvent",
+        "mycotoxin",
+        "foreign_matter"
+      ],
+      "metrc_src_tag": "1A40C0300004589000157395",
+      "metrc_testing_tag": "1A40C0300004589000158402",
+      "foreign_material": "pass"
+    }
+  }
+}

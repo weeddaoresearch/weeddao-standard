@@ -1,0 +1,16 @@
+{
+  "case_id": "COA-002",
+  "source_url": "https://github.com/weeddaoresearch/weeddao-standard/blob/main/docs/review-cases/coa-002.md",
+  "source_tier": "seed/user-supplied",
+  "source_group": "WeedDAO hand-validated seed",
+  "jurisdiction_hint": "Texas",
+  "product_hint": "0:1 SLH Medical Vaporization Oil 0.5g",
+  "product_type_hint": "vape",
+  "seed_reuse": true,
+  "laboratory": "external-lab-002",
+  "producer_or_brand": "Texas Original",
+  "batch_or_lot_id": "11003107150285",
+  "sample_id": null,
+  "detail_level": "high",
+  "notes": "Seed case: reused hand-reviewed WeedDAO mapping; original COA image not republished."
+}

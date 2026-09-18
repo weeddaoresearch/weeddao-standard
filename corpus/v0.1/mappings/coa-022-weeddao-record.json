@@ -1,0 +1,80 @@
+{
+  "schema_version": "0.1-alpha",
+  "record_id": "corpus-coa-022",
+  "cultivation_batch_id": "26003B",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "producer": {
+    "organization_name": "BakPak",
+    "jurisdiction": "US-CA"
+  },
+  "cultivar": {
+    "reported_name": "Space Debris Cherry Limeade Drink",
+    "identity_status": "reported"
+  },
+  "lab_results": {
+    "lab_name": null,
+    "sample_id": "260713N028",
+    "provenance": "laboratory_verified",
+    "notes": "Mapped from public COA corpus case COA-022. WeedDAO does not independently re-verify laboratory measurements.",
+    "cannabinoids": {
+      "total_thc": {
+        "value": 1.8105,
+        "unit": "mg/serving",
+        "provenance": "laboratory_verified"
+      },
+      "total_cannabinoids": {
+        "value": 1.8105,
+        "unit": "mg/serving",
+        "provenance": "laboratory_verified"
+      },
+      "thca": {
+        "value": 0.0001,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbda": {
+        "value": 0.0001,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbc": {
+        "value": 0.0003,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbn": {
+        "value": 0.0001,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      }
+    }
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-022",
+      "source_url": "https://cdn.shopify.com/s/files/1/0802/6731/3461/files/Space_Debris_Cherry_Limeade_COA.pdf?v=1785962827",
+      "source_tier": "primary",
+      "source_group": "BakPak",
+      "product_hint": "Space Debris Cherry Limeade Drink",
+      "product_type_hint": "beverage",
+      "title_verified": "Space Debris Cherry Limeade Drink",
+      "overall_result_observed": null,
+      "units_observed": [
+        "%",
+        "mg/g",
+        "mg/unit",
+        "mg/serving",
+        "ppm"
+      ],
+      "panels_observed": [
+        "cannabinoid"
+      ]
+    }
+  }
+}

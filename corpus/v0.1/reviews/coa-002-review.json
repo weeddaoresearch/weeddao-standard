@@ -1,0 +1,43 @@
+{
+  "case_id": "COA-002",
+  "schema_version": "0.1-alpha",
+  "mapped_record_valid": true,
+  "mapping_result": "PARTIAL",
+  "exact_mapping_count": 14,
+  "partial_mapping_count": 5,
+  "not_representable_count": 5,
+  "gaps": [
+    {
+      "gap_key": "nd_not_representable",
+      "observed_source_semantics": "Cannabinoid/terpene ND",
+      "severity": "CRITICAL_INTEROPERABILITY",
+      "existing_issue_if_any": 3
+    },
+    {
+      "gap_key": "below_reporting_limit_qualifier",
+      "observed_source_semantics": "Heavy metals <0.008 ppm",
+      "severity": "CRITICAL_INTEROPERABILITY",
+      "existing_issue_if_any": 1
+    },
+    {
+      "gap_key": "multi_unit_cannabinoid",
+      "observed_source_semantics": "%wt + mg/g + mg/unit",
+      "severity": "CRITICAL_INTEROPERABILITY",
+      "existing_issue_if_any": 4
+    },
+    {
+      "gap_key": "foreign_material",
+      "observed_source_semantics": "Visual Inspection Passed",
+      "severity": "IMPORTANT",
+      "existing_issue_if_any": null
+    },
+    {
+      "gap_key": "best_by_date",
+      "observed_source_semantics": "Best by on COA",
+      "severity": "OPTIONAL",
+      "existing_issue_if_any": null
+    }
+  ],
+  "source_unavailable": false,
+  "notes": "Seed hand-reviewed PARTIAL mapping; confirms issues #1-#4 as applicable."
+}

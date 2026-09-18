@@ -1,0 +1,16 @@
+{
+  "case_id": "COA-001",
+  "source_url": "https://github.com/weeddaoresearch/weeddao-standard/blob/main/docs/review-cases/coa-001.md",
+  "source_tier": "seed/grower-supplied",
+  "source_group": "WeedDAO hand-validated seed",
+  "jurisdiction_hint": "New Mexico",
+  "product_hint": "Cherry Lemon cured flower",
+  "product_type_hint": "flower",
+  "seed_reuse": true,
+  "laboratory": "external-lab-001",
+  "producer_or_brand": "Desert Green Farm",
+  "batch_or_lot_id": "review-batch-001",
+  "sample_id": "DGF-001",
+  "detail_level": "high",
+  "notes": "Seed case: reused hand-reviewed WeedDAO mapping; original COA image not republished."
+}

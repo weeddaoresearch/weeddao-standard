@@ -1,0 +1,152 @@
+{
+  "schema_version": "0.1-alpha",
+  "record_id": "corpus-coa-005",
+  "cultivation_batch_id": "VRV007",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "producer": {
+    "organization_name": "Show-Me GP",
+    "jurisdiction": "US-MO"
+  },
+  "cultivar": {
+    "reported_name": "Alien Mintz 1g liquid diamond vape",
+    "identity_status": "reported"
+  },
+  "lab_results": {
+    "lab_name": "Green Precision Analytics",
+    "sample_id": "GPA-260828-181",
+    "provenance": "laboratory_verified",
+    "notes": "Mapped from public COA corpus case COA-005. WeedDAO does not independently re-verify laboratory measurements.",
+    "cannabinoids": {
+      "total_cannabinoids": {
+        "value": 3.96,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbga": {
+        "value": 0.1,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbg": {
+        "value": 0.14,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbd": {
+        "value": 0.356,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbc": {
+        "value": 0.853,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbn": {
+        "value": 0.119,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "thcv": {
+        "value": 0.579,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      }
+    },
+    "terpenes": [
+      {
+        "name": "d-limonene",
+        "value": 1.307,
+        "unit": "%"
+      },
+      {
+        "name": "limonene",
+        "value": 1.307,
+        "unit": "%"
+      },
+      {
+        "name": "linalool",
+        "value": 0.8752,
+        "unit": "%"
+      },
+      {
+        "name": "nerolidol",
+        "value": 2.0,
+        "unit": "%"
+      },
+      {
+        "name": "myrcene",
+        "value": 0.5096,
+        "unit": "%"
+      },
+      {
+        "name": "humulene",
+        "value": 0.3895,
+        "unit": "%"
+      },
+      {
+        "name": "guaiol",
+        "value": 0.2889,
+        "unit": "%"
+      }
+    ],
+    "total_terpenes": {
+      "value": 5.534,
+      "unit": "%"
+    },
+    "safety": {
+      "microbials": {
+        "status": "pass"
+      },
+      "pesticides": {
+        "status": "pass"
+      },
+      "heavy_metals": {
+        "status": "pass"
+      },
+      "residual_solvents": {
+        "status": "pass"
+      },
+      "mycotoxins": {
+        "status": "pass"
+      }
+    }
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-005",
+      "source_url": "https://lims.tagleaf.com/coas/Mv8MES2bh5EKgnnCsIRaEZx6pfJ2Fon4SrCLRNlS7S5EeQ7zVS",
+      "source_tier": "primary",
+      "source_group": "Vivid / TagLeaf",
+      "product_hint": "Alien Mintz 1g liquid diamond vape",
+      "product_type_hint": "vape",
+      "title_verified": "Vivid | Alien Mintz | 1g Liquid Diamond Vapes",
+      "overall_result_observed": "Pass",
+      "units_observed": [
+        "%",
+        "mg/g",
+        "mg/serving",
+        "µg/g"
+      ],
+      "panels_observed": [
+        "cannabinoid",
+        "terpene",
+        "microbial",
+        "pesticide",
+        "heavy_metal",
+        "residual_solvent",
+        "mycotoxin",
+        "foreign_matter"
+      ],
+      "metrc_src_tag": "1A40C0300004589000156315",
+      "metrc_testing_tag": "1A40C0300004589000156335",
+      "foreign_material": "pass"
+    }
+  }
+}

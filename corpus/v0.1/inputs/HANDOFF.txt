@@ -1,0 +1,303 @@
+WEEDDAO — 50-CASE CORPUS VALIDATION / MAPPING HANDOFF
+
+You are continuing the WeedDAO Open Cannabis Data Standard project.
+
+PUBLIC REPOSITORY:
+weeddaoresearch/weeddao-standard
+
+FROZEN STANDARD:
+WeedDAO v0.1-alpha
+
+DO NOT modify:
+- schemas/weeddao-cultivation-record-v0.1-alpha.schema.json
+- v0.1-alpha tag
+- v0.1-alpha release
+- existing schema semantics
+
+INPUT FILES I AM PROVIDING:
+1. weeddao_verified_manifest_v0.1.json
+2. weeddao_extracted_coa_data_v0.1.jsonl
+3. weeddao_corpus_verification_summary_v0.1.json
+
+IMPORTANT:
+The source-discovery phase is already complete.
+
+Exactly 50 cases are selected:
+- COA-001 through COA-003 = existing hand-reviewed seed cases
+- COA-004 through COA-050 = verified public sources
+- 37 of the 47 new sources are primary
+- 10 are secondary OpenCOA sources
+- unreachable/empty/summary-only candidates were already replaced
+- DO NOT search for replacement COAs
+- DO NOT redesign the corpus
+- DO NOT create more than 50 cases
+
+OBJECTIVE
+
+Use the supplied verified manifest as the authoritative case list.
+
+For COA-001 through COA-003:
+reuse the existing WeedDAO hand-reviewed evidence and mappings.
+
+For COA-004 through COA-050:
+retrieve only the exact source_url in the verified manifest when additional numeric analyte detail is needed.
+
+Do NOT perform broad web search.
+Do NOT hunt for COAs.
+Do NOT substitute sources unless a manifest URL is genuinely unavailable at execution time.
+If one URL is unavailable, mark the case SOURCE_UNAVAILABLE and continue; do not spend time searching for a replacement.
+
+Create:
+
+corpus/v0.1/
+  manifest.json
+  manifest.csv
+  README.md
+  cases/
+  mappings/
+  reviews/
+
+and:
+
+docs/corpus-v0.1-methodology.md
+docs/corpus-v0.1-analysis.md
+docs/v0.2-evidence-readiness.md
+
+Use the supplied manifest/extraction files as the source-selection record.
+
+MAPPING RULES
+
+Map each case against frozen v0.1-alpha.
+
+Do not force unsupported source semantics into incorrect fields.
+
+Preserve distinctions between:
+- numeric detected value
+- ND / not_detected
+- <LOQ / <LOD / below reporting limit
+- PASS
+- FAIL
+- NOT TESTED
+- NOT PERFORMED
+- NOT REPORTED
+- null / missing
+
+If a source semantic cannot be represented faithfully:
+omit it from the validated core record
+and log it as a gap.
+
+Never convert:
+ND -> 0
+<LOQ -> 0
+NOT TESTED -> PASS
+NOT PERFORMED -> missing
+
+Known issues already exist:
+#1 below-reporting-limit qualifier
+#2 analyte-level NOT_PERFORMED
+#3 ND / Not Detected for quantitative cannabinoid/terpene results
+#4 concurrent multi-unit cannabinoid representations
+
+Do not duplicate them.
+
+For a recurring known issue:
+record the case as evidence for the existing issue.
+
+Create a new v0.2-candidate issue only if:
+- a genuinely new CRITICAL_INTEROPERABILITY gap appears in at least 2 independent COAs, preferably across >1 lab/producer,
+OR
+- one source proves a severe safety/dosing/traceability semantic failure.
+
+Do not design v0.2.
+
+CASE OUTPUT
+
+For each new case create:
+
+corpus/v0.1/cases/coa-NNN-source.json
+
+containing factual source metadata only.
+
+Create:
+
+corpus/v0.1/mappings/coa-NNN-weeddao-record.json
+
+using frozen v0.1-alpha.
+
+Create:
+
+corpus/v0.1/reviews/coa-NNN-review.json
+
+with:
+case_id
+schema_version
+mapped_record_valid
+mapping_result = FULL | PARTIAL | FAILED
+exact_mapping_count
+partial_mapping_count
+not_representable_count
+gaps
+
+Each gap:
+gap_key
+observed_source_semantics
+severity
+existing_issue_if_any
+
+Do NOT create 47 verbose Markdown case reports.
+
+MANIFEST
+
+Build corpus manifest from the supplied verified manifest.
+
+Do not change source URLs unless documenting an execution-time source failure.
+
+Required fields:
+case_id
+source_url
+source_tier
+retrieved_at
+jurisdiction
+producer_or_brand
+laboratory
+product_name
+product_type
+batch_or_lot_id
+sample_id
+overall_status
+coa_date
+primary_unit_types
+has_cannabinoids
+has_terpenes
+has_microbials
+has_pesticides
+has_heavy_metals
+has_residual_solvents
+has_mycotoxins
+has_moisture
+has_water_activity
+has_foreign_material
+has_regulatory_tracking
+has_sample_lifecycle
+uses_nd
+uses_below_limit
+uses_not_tested
+uses_not_reported
+uses_multi_unit
+contains_numeric_contaminant_detection
+contains_failure
+mapping_result
+notes
+
+Never invent unknown values.
+
+ANALYSIS
+
+Across all 50 cases calculate:
+TOTAL_CASES
+PRIMARY_SOURCE_CASES
+SECONDARY_SOURCE_CASES
+JURISDICTIONS
+LABORATORIES
+PRODUCERS
+PRODUCT_TYPES
+FULL_MAPPINGS
+PARTIAL_MAPPINGS
+FAILED_MAPPINGS
+
+For every observed gap calculate:
+cases_count
+cases_percent
+independent_labs_count
+jurisdictions_count
+product_types_count
+severity
+existing_issue
+
+Classify evidence:
+SINGLE_CASE
+REPEATED
+CROSS_PRODUCER
+CROSS_LAB
+CROSS_JURISDICTION
+
+Also count occurrence of:
+ND
+below-limit qualifier
+NOT_TESTED / NOT_PERFORMED
+NOT_REPORTED
+multiple units
+sample lifecycle metadata
+regulatory tracking
+water activity
+moisture
+foreign material
+actual FAIL
+numeric contaminant that still PASSes
+missing panels
+panel-level status
+analyte-level status
+
+V0.2 EVIDENCE READINESS
+
+Do not create a v0.2 schema.
+
+Only report:
+HIGH_CONFIDENCE_RECURRING_GAPS
+MODERATE_EVIDENCE_GAPS
+LOW_EVIDENCE_GAPS
+JURISDICTION_SPECIFIC_FIELDS
+PRESENTATION_ONLY_FIELDS
+
+QUALITY CONTROL
+
+Confirm:
+exactly 50 cases
+COA-001 through COA-050 unique
+schema unchanged
+v0.1-alpha tag unchanged
+no PDFs/images/signatures committed
+no fabricated values
+all generated mappings marked VALID actually validate
+existing validation suite still passes
+FULL is never used when important semantics were dropped
+
+Commit to main:
+
+Build 50-case public COA corpus v0.1
+
+FINAL RESPONSE ONLY:
+
+WEEDDAO — PUBLIC COA CORPUS v0.1
+
+TOTAL_CASES =
+SEED_CASES =
+NEW_PUBLIC_CASES =
+PRIMARY_SOURCE_CASES =
+SECONDARY_SOURCE_CASES =
+JURISDICTIONS =
+LABORATORIES =
+PRODUCERS =
+PRODUCT_TYPES =
+FULL_MAPPINGS =
+PARTIAL_MAPPINGS =
+FAILED_MAPPINGS =
+TOP_RECURRING_GAPS =
+CROSS_LAB_GAPS =
+CROSS_JURISDICTION_GAPS =
+NEW_CRITICAL_GAPS =
+EXISTING_ISSUES_CONFIRMED =
+NEW_ISSUES_CREATED =
+SCHEMA_CHANGED =
+V0_1_ALPHA_TAG_CHANGED =
+VALIDATION =
+CORPUS_MANIFEST =
+CORPUS_ANALYSIS =
+V0_2_EVIDENCE_READINESS =
+COMMIT =
+PUSH =
+BLOCKERS =
+CORPUS_V0_1_COMPLETE = YES/NO
+
+Do not design v0.2.
+Execute.

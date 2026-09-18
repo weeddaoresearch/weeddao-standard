@@ -1,0 +1,106 @@
+{
+  "schema_version": "0.1-alpha",
+  "record_id": "corpus-coa-010",
+  "cultivation_batch_id": "FCO0105",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "producer": {
+    "organization_name": "Show-Me GP",
+    "jurisdiction": "US-MO"
+  },
+  "cultivar": {
+    "reported_name": "Fruit Gusherz FECO",
+    "identity_status": "reported"
+  },
+  "lab_results": {
+    "lab_name": "Green Precision Analytics",
+    "sample_id": "GPA-260811-049",
+    "provenance": "laboratory_verified",
+    "notes": "Mapped from public COA corpus case COA-010. WeedDAO does not independently re-verify laboratory measurements.",
+    "cannabinoids": {
+      "total_cannabinoids": {
+        "value": 82.47,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbg": {
+        "value": 4.28,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbd": {
+        "value": 0.167,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbc": {
+        "value": 0.992,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbn": {
+        "value": 0.214,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "thcv": {
+        "value": 0.454,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      }
+    },
+    "safety": {
+      "microbials": {
+        "status": "pass"
+      },
+      "pesticides": {
+        "status": "pass"
+      },
+      "heavy_metals": {
+        "status": "pass"
+      },
+      "residual_solvents": {
+        "status": "pass"
+      },
+      "mycotoxins": {
+        "status": "pass"
+      }
+    }
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-010",
+      "source_url": "https://lims.tagleaf.com/coas/JXhrY809IwFikjBTwbscJCYxCNnXy26eGeuvbRZ9ywa9FvaxYA",
+      "source_tier": "primary",
+      "source_group": "Vivid / TagLeaf",
+      "product_hint": "Fruit Gusherz FECO",
+      "product_type_hint": "concentrate/extract",
+      "title_verified": "Vivid | Fruit Gusherz | FECO",
+      "overall_result_observed": "Pass",
+      "units_observed": [
+        "%",
+        "mg/g",
+        "mg/serving",
+        "µg/g"
+      ],
+      "panels_observed": [
+        "cannabinoid",
+        "terpene",
+        "microbial",
+        "pesticide",
+        "heavy_metal",
+        "residual_solvent",
+        "mycotoxin",
+        "foreign_matter"
+      ],
+      "metrc_src_tag": "1A40C0300004589000154847",
+      "metrc_testing_tag": "1A40C0300004589000154848",
+      "foreign_material": "pass"
+    }
+  }
+}

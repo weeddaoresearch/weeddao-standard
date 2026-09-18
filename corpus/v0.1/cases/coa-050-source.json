@@ -1,0 +1,39 @@
+{
+  "case_id": "COA-050",
+  "source_url": "https://opencoa.org/coa/019f9445-ce79-71a5-8388-5880ab0b3cee/weca-f1h4-2026-06-29-p",
+  "source_tier": "secondary",
+  "source_group": "OpenCOA",
+  "retrieved_at": "2026-09-18T17:10:32Z",
+  "fetch_status": 200,
+  "fetch_ok": true,
+  "source_unavailable": false,
+  "jurisdiction_hint": "Massachusetts",
+  "producer_or_brand": "OpenCOA",
+  "laboratory": null,
+  "product_name": "Wedding Cake Flower",
+  "product_type": "flower",
+  "batch_or_lot_id": null,
+  "sample_id": null,
+  "overall_status": null,
+  "title_verified": "Wedding Cake Flower",
+  "panels_observed": [
+    "cannabinoid",
+    "terpene",
+    "microbial",
+    "pesticide",
+    "heavy_metal"
+  ],
+  "units_observed": [
+    "%"
+  ],
+  "uses_nd": true,
+  "uses_below_limit": false,
+  "uses_not_tested": false,
+  "uses_not_reported": false,
+  "uses_not_performed": false,
+  "has_regulatory_tracking": false,
+  "has_sample_lifecycle": false,
+  "detail_level": "medium",
+  "verification_method": "Live public-content fetch on 2026-09-18",
+  "notes": "Interoperability metadata extracted from the public source; full numeric analyte mapping remains for the schema-validation batch step."
+}

@@ -1,0 +1,179 @@
+{
+  "schema_version": "0.1-alpha",
+  "record_id": "corpus-coa-031",
+  "cultivation_batch_id": "TCR-5P-VC-901",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "producer": {
+    "organization_name": "Grams Brooklyn / ACT Laboratories",
+    "jurisdiction": "US-NY"
+  },
+  "cultivar": {
+    "reported_name": "Grams Vanilla Coke Indica 5-Pack Preroll 2.5g",
+    "identity_status": "reported"
+  },
+  "lab_results": {
+    "lab_name": "ACT Laboratories (NY)",
+    "sample_id": "SNYTCO0903-PPRE-0030491",
+    "provenance": "laboratory_verified",
+    "notes": "Mapped from public COA corpus case COA-031. WeedDAO does not independently re-verify laboratory measurements.",
+    "cannabinoids": {
+      "total_thc": {
+        "value": 940.48,
+        "unit": "mg/serving",
+        "provenance": "laboratory_verified"
+      },
+      "total_cannabinoids": {
+        "value": 37.619,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "thca": {
+        "value": 34.695,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "thc": {
+        "value": 1.94,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbga": {
+        "value": 0.983,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      }
+    },
+    "terpenes": [
+      {
+        "name": "linalool",
+        "value": 0.2484,
+        "unit": "%"
+      },
+      {
+        "name": "humulene",
+        "value": 0.1108,
+        "unit": "%"
+      },
+      {
+        "name": "limonene",
+        "value": 81.0,
+        "unit": "%"
+      },
+      {
+        "name": "terpinolene",
+        "value": 81.0,
+        "unit": "%"
+      },
+      {
+        "name": "myrcene",
+        "value": 81.0,
+        "unit": "%"
+      },
+      {
+        "name": "nerolidol",
+        "value": 81.0,
+        "unit": "%"
+      },
+      {
+        "name": "fenchol",
+        "value": 81.0,
+        "unit": "%"
+      },
+      {
+        "name": "bisabolol",
+        "value": 81.0,
+        "unit": "%"
+      },
+      {
+        "name": "geraniol",
+        "value": 81.0,
+        "unit": "%"
+      },
+      {
+        "name": "camphene",
+        "value": 81.0,
+        "unit": "%"
+      },
+      {
+        "name": "valencene",
+        "value": 81.0,
+        "unit": "%"
+      },
+      {
+        "name": "guaiol",
+        "value": 81.0,
+        "unit": "%"
+      },
+      {
+        "name": "ocimene",
+        "value": 81.0,
+        "unit": "%"
+      }
+    ],
+    "safety": {
+      "microbials": {
+        "status": "pass"
+      },
+      "pesticides": {
+        "status": "pass"
+      },
+      "heavy_metals": {
+        "status": "pass"
+      },
+      "mycotoxins": {
+        "status": "pass"
+      }
+    }
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-031",
+      "source_url": "https://www.gramsbk.com/coa/COA-SNYTCO0903PPRE0030491-GramsVanillaCokeIndica5PackPreroll25g-TCR5PVC901-002.pdf",
+      "source_tier": "primary",
+      "source_group": "Grams Brooklyn / ACT Laboratories",
+      "product_hint": "Grams Vanilla Coke Indica 5-Pack Preroll 2.5g",
+      "product_type_hint": "pre-roll",
+      "title_verified": "Grams Vanilla Coke Indica 5-Pack Preroll 2.5g",
+      "overall_result_observed": null,
+      "units_observed": [
+        "%",
+        "mg/g",
+        "mg/unit",
+        "CFU/g",
+        "µg/g",
+        "ng/g"
+      ],
+      "panels_observed": [
+        "cannabinoid",
+        "terpene",
+        "microbial",
+        "pesticide",
+        "heavy_metal",
+        "residual_solvent",
+        "mycotoxin",
+        "moisture",
+        "water_activity",
+        "foreign_matter"
+      ],
+      "cannabinoids_alt_units": {
+        "thca": {
+          "mg/g": 346.95
+        },
+        "thc": {
+          "mg/g": 19.4
+        },
+        "cbga": {
+          "mg/g": 9.83
+        }
+      },
+      "foreign_material": "observed",
+      "water_activity": 0.65
+    }
+  }
+}

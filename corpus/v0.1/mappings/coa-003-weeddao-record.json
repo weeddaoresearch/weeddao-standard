@@ -1,0 +1,225 @@
+{
+  "schema_version": "0.1-alpha",
+  "record_id": "review-coa-003",
+  "cultivation_batch_id": "0",
+  "created_at": "2026-09-18T16:00:00Z",
+  "updated_at": "2026-09-18T16:00:00Z",
+  "producer": {
+    "organization_name": "Texas Original",
+    "organization_id": "tx-original-review-003",
+    "jurisdiction": "US-TX",
+    "license_id": "0005"
+  },
+  "cultivar": {
+    "reported_name": "OGK",
+    "identity_status": "reported",
+    "genetic_verification": null,
+    "notes": "Cultivar/strain code OGK as reported on COA product line DISSyr-0:1-0.5g-OGK-H. Display name: 0:1 OGK Distillate Syringe 0.5g. Not genetically verified."
+  },
+  "lab_results": {
+    "lab_name": null,
+    "lab_id": "external-lab-002",
+    "certificate_id": "redacted-coa-003",
+    "tested_at": "2025-12-23T00:00:00Z",
+    "sample_id": null,
+    "method": null,
+    "sample_material": "Distillate Syringe 0.5g",
+    "notes": "Mapped from a producer-supplied Certificate of Analysis for WeedDAO interoperability review. Original certificate artwork/signatures not republished. Laboratory branded as external-lab-002. Batch ID on certificate is the literal string '0' — preserved as cultivation_batch_id string '0' (NOT converted to null). Detected cannabinoids/terpenes mapped with unit '%'. ND cannabinoid/terpene rows omitted from core. Heavy metal <0.008 ppm omitted from numeric values. Multi-unit mg/g and mg/unit in extensions.weeddao_review. See docs/review-cases/coa-003-gaps.md.",
+    "provenance": "laboratory_verified",
+    "cannabinoids": {
+      "cbn": {
+        "value": 1.94,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "thc": {
+        "value": 85.49,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "total_thc": {
+        "value": 85.49,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      }
+    },
+    "terpenes": [
+      {
+        "name": "beta-myrcene",
+        "value": 0.62,
+        "unit": "%"
+      },
+      {
+        "name": "limonene",
+        "value": 0.55,
+        "unit": "%"
+      },
+      {
+        "name": "beta-caryophyllene",
+        "value": 0.53,
+        "unit": "%"
+      },
+      {
+        "name": "beta-pinene",
+        "value": 0.34,
+        "unit": "%"
+      },
+      {
+        "name": "linalool",
+        "value": 0.3,
+        "unit": "%"
+      },
+      {
+        "name": "alpha-pinene",
+        "value": 0.29,
+        "unit": "%"
+      }
+    ],
+    "safety": {
+      "pesticides": {
+        "status": "pass",
+        "notes": "COA states Passed; No pesticides detected. Per-analyte ND rows not coerced to numeric zeros."
+      },
+      "heavy_metals": {
+        "status": "pass",
+        "notes": "COA panel Passed. As/Cd/Pb/Hg each reported as <0.008 ppm — below-reporting-limit strings NOT encoded as value 0. Confirms GitHub issue #1. Per-analyte < strings retained in extensions.weeddao_review."
+      },
+      "microbials": {
+        "status": "pass",
+        "notes": "COA panel Passed. Yeast/Mold, Salmonella, E.coli reported ND. SafetyAnalyteResult 'not_detected' used for organisms.",
+        "analytes": [
+          {
+            "name": "Yeast/Mold",
+            "result": "not_detected",
+            "limit": 10000,
+            "unit": "CFU/g",
+            "notes": "COA: ND limit 10000 CFU/g"
+          },
+          {
+            "name": "Salmonella",
+            "result": "not_detected"
+          },
+          {
+            "name": "E.coli",
+            "result": "not_detected"
+          }
+        ]
+      },
+      "residual_solvents": {
+        "status": "pass",
+        "notes": "COA panel Passed. Listed solvents PASS with limit 5000 ppm each.",
+        "analytes": [
+          {
+            "name": "Acetone",
+            "result": "pass",
+            "limit": 5000,
+            "unit": "ppm"
+          },
+          {
+            "name": "Ethanol",
+            "result": "pass",
+            "limit": 5000,
+            "unit": "ppm"
+          },
+          {
+            "name": "Pentane",
+            "result": "pass",
+            "limit": 5000,
+            "unit": "ppm"
+          },
+          {
+            "name": "2-Propanol",
+            "result": "pass",
+            "limit": 5000,
+            "unit": "ppm"
+          },
+          {
+            "name": "Methyl Acetate",
+            "result": "pass",
+            "limit": 5000,
+            "unit": "ppm"
+          },
+          {
+            "name": "Heptane",
+            "result": "pass",
+            "limit": 5000,
+            "unit": "ppm"
+          }
+        ]
+      }
+    }
+  },
+  "provenance": {
+    "record": "third_party_verified",
+    "lab_results": "laboratory_verified",
+    "cultivar": "self_reported",
+    "notes": "Laboratory results transcribed from a producer-authorized COA for WeedDAO development/review. WeedDAO does not independently re-verify laboratory measurements. Producer Texas Original and TX license 0005 disclosed; laboratory branded identity redacted to external-lab-002. Batch ID literal '0' preserved as string."
+  },
+  "extensions": {
+    "weeddao_review": {
+      "case_id": "COA-003",
+      "product_code_coa": "DISSyr-0:1-0.5g-OGK-H",
+      "display_name_coa": "0:1 OGK Distillate Syringe 0.5g",
+      "material_type_coa": "Distillate Syringe 0.5g",
+      "best_by_coa": "2026-12-03",
+      "visual_inspection_coa": "Passed",
+      "tx_license_coa": "0005",
+      "batch_id_coa": "0",
+      "batch_id_ambiguity_note": "Certificate shows literal batch ID '0'. Preserved as cultivation_batch_id string '0'. Do NOT convert to null. Ambiguous whether this is a placeholder, missing print, or intentional token — documented for review; not silently dropped.",
+      "cannabinoids_nd_coa": [
+        "CBDV",
+        "CBDA",
+        "CBGA",
+        "CBG",
+        "CBD",
+        "THCV",
+        "CBC",
+        "THCA"
+      ],
+      "total_cbd_coa": "ND",
+      "cannabinoids_mg_g_coa": {
+        "CBN": 19.4,
+        "THC": 854.9,
+        "Total_THC": 854.9
+      },
+      "cannabinoids_mg_unit_coa": {
+        "CBN": 9.7,
+        "THC": 427.45,
+        "Total_THC": 427.45,
+        "unit_size_note": "0.5g unit"
+      },
+      "terpenes_nd_coa": [
+        "Camphene",
+        "3-Carene",
+        "alpha-Terpinene",
+        "p-Cymene",
+        "beta-Ocimene",
+        "alpha-Ocimene",
+        "Isopulegol",
+        "Geraniol",
+        "cis-Nerolidol",
+        "trans-Nerolidol",
+        "Guaiol",
+        "alpha-Bisabolol",
+        "Terpinolene",
+        "Humulene",
+        "gamma-Terpinene"
+      ],
+      "heavy_metals_below_limit_coa": {
+        "As": "<0.008 ppm",
+        "Cd": "<0.008 ppm",
+        "Pb": "<0.008 ppm",
+        "Hg": "<0.008 ppm"
+      },
+      "semantic_notes": [
+        "ND (Not Detected) is NOT zero and is NOT not_measured.",
+        "Heavy metal <0.008 ppm is NOT value 0.",
+        "Residual solvent PASS is NOT ND.",
+        "Batch ID '0' must remain string '0', not null.",
+        "Cannabinoid/terpene ND cannot be encoded in core CannabinoidMeasurement/TerpeneEntry."
+      ],
+      "mapping_result": "PARTIAL",
+      "note": "Extension bag for COA facts not faithfully representable in core v0.1-alpha fields. Not a schema change."
+    }
+  }
+}

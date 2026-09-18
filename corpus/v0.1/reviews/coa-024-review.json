@@ -1,0 +1,37 @@
+{
+  "case_id": "COA-024",
+  "schema_version": "0.1-alpha",
+  "mapped_record_valid": true,
+  "mapping_result": "PARTIAL",
+  "exact_mapping_count": 10,
+  "partial_mapping_count": 1,
+  "not_representable_count": 4,
+  "gaps": [
+    {
+      "gap_key": "nd_not_representable",
+      "observed_source_semantics": "ND examples=[]",
+      "severity": "CRITICAL_INTEROPERABILITY",
+      "existing_issue_if_any": 3
+    },
+    {
+      "gap_key": "multi_unit_cannabinoid",
+      "observed_source_semantics": "units_observed=['%', 'mg/g', 'mg/unit', 'mg/serving', 'ppm']",
+      "severity": "CRITICAL_INTEROPERABILITY",
+      "existing_issue_if_any": 4
+    },
+    {
+      "gap_key": "analyte_level_not_performed",
+      "observed_source_semantics": "NOT TESTED / NOT PERFORMED",
+      "severity": "CRITICAL_INTEROPERABILITY",
+      "existing_issue_if_any": 2
+    },
+    {
+      "gap_key": "water_activity_not_in_core",
+      "observed_source_semantics": "Water activity on source",
+      "severity": "OPTIONAL",
+      "existing_issue_if_any": null
+    }
+  ],
+  "source_unavailable": false,
+  "notes": "Automated corpus mapping against frozen v0.1-alpha; numeric values only when parseable; no fabrication."
+}

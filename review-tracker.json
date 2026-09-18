@@ -90,5 +90,24 @@
       "COA-003"
     ],
     "status": "COMPLETED"
-  }
+  },
+  "PUBLIC_COA_CORPUS_V0_1": {
+    "status": "COMPLETED",
+    "path": "corpus/v0.1/",
+    "manifest": "corpus/v0.1/manifest.json",
+    "analysis": "docs/corpus-v0.1-analysis.md",
+    "methodology": "docs/corpus-v0.1-methodology.md",
+    "evidence_readiness": "docs/v0.2-evidence-readiness.md",
+    "total_cases": 50,
+    "seed_cases": 3,
+    "new_public_cases": 47,
+    "note": "Public evidence collection mapped by WeedDAO Research. Not industry adoption. Not FIRST_EXTERNAL_IMPLEMENTATION.",
+    "first_external_implementation": false,
+    "mapping_counts": {
+      "FULL": 0,
+      "PARTIAL": 50,
+      "FAILED": 0
+    }
+  },
+  "PUBLIC_COA_CORPUS_V0_1_CASE_COUNT": 50
 }

@@ -1,0 +1,147 @@
+{
+  "schema_version": "0.1-alpha",
+  "record_id": "corpus-coa-006",
+  "cultivation_batch_id": "LDV0046",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "producer": {
+    "organization_name": "Show-Me GP",
+    "jurisdiction": "US-MO"
+  },
+  "cultivar": {
+    "reported_name": "Grease Monkey 1g hash rosin vape",
+    "identity_status": "reported"
+  },
+  "lab_results": {
+    "lab_name": "Green Precision Analytics",
+    "sample_id": "GPA-260828-183",
+    "provenance": "laboratory_verified",
+    "notes": "Mapped from public COA corpus case COA-006. WeedDAO does not independently re-verify laboratory measurements.",
+    "cannabinoids": {
+      "total_cannabinoids": {
+        "value": 4.11,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbga": {
+        "value": 0.096,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbg": {
+        "value": 0.26,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbd": {
+        "value": 0.595,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbc": {
+        "value": 1.079,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbn": {
+        "value": 0.127,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "thcv": {
+        "value": 0.504,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      }
+    },
+    "terpenes": [
+      {
+        "name": "d-limonene",
+        "value": 1.097,
+        "unit": "%"
+      },
+      {
+        "name": "limonene",
+        "value": 1.097,
+        "unit": "%"
+      },
+      {
+        "name": "linalool",
+        "value": 0.2405,
+        "unit": "%"
+      },
+      {
+        "name": "nerolidol",
+        "value": 2.0,
+        "unit": "%"
+      },
+      {
+        "name": "myrcene",
+        "value": 1.292,
+        "unit": "%"
+      },
+      {
+        "name": "humulene",
+        "value": 0.4244,
+        "unit": "%"
+      }
+    ],
+    "total_terpenes": {
+      "value": 4.919,
+      "unit": "%"
+    },
+    "safety": {
+      "microbials": {
+        "status": "pass"
+      },
+      "pesticides": {
+        "status": "pass"
+      },
+      "heavy_metals": {
+        "status": "pass"
+      },
+      "residual_solvents": {
+        "status": "pass"
+      },
+      "mycotoxins": {
+        "status": "pass"
+      }
+    }
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-006",
+      "source_url": "https://lims.tagleaf.com/coas/65g9zPrPaiX6Ip1xBKbZ8vsqAYQ8jPCItzcCFyn0B1SUvT11Qz",
+      "source_tier": "primary",
+      "source_group": "Vivid / TagLeaf",
+      "product_hint": "Grease Monkey 1g hash rosin vape",
+      "product_type_hint": "vape",
+      "title_verified": "Vivid | Grease Monkey | 1g All in One Hash Rosin Vape",
+      "overall_result_observed": "Pass",
+      "units_observed": [
+        "%",
+        "mg/g",
+        "mg/serving",
+        "µg/g"
+      ],
+      "panels_observed": [
+        "cannabinoid",
+        "terpene",
+        "microbial",
+        "pesticide",
+        "heavy_metal",
+        "residual_solvent",
+        "mycotoxin",
+        "foreign_matter"
+      ],
+      "metrc_src_tag": "1A40C0300004589000156314",
+      "metrc_testing_tag": "1A40C0300004589000156336",
+      "foreign_material": "pass"
+    }
+  }
+}

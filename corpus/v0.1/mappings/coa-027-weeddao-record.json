@@ -1,0 +1,90 @@
+{
+  "schema_version": "0.1-alpha",
+  "record_id": "corpus-coa-027",
+  "cultivation_batch_id": "25227ABC",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "producer": {
+    "organization_name": "BakPak",
+    "jurisdiction": "US-LA"
+  },
+  "cultivar": {
+    "reported_name": "Who Dat 504mg CBG+THC Variety Pack",
+    "identity_status": "reported"
+  },
+  "lab_results": {
+    "lab_name": null,
+    "sample_id": "260713N020",
+    "provenance": "laboratory_verified",
+    "notes": "Mapped from public COA corpus case COA-027. WeedDAO does not independently re-verify laboratory measurements.",
+    "cannabinoids": {
+      "total_thc": {
+        "value": 192.717,
+        "unit": "mg/serving",
+        "provenance": "laboratory_verified"
+      },
+      "total_cbd": {
+        "value": 2.075,
+        "unit": "mg/serving",
+        "provenance": "laboratory_verified"
+      },
+      "total_cannabinoids": {
+        "value": 481.19,
+        "unit": "mg/serving",
+        "provenance": "laboratory_verified"
+      },
+      "thca": {
+        "value": 0.001,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbda": {
+        "value": 0.001,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbg": {
+        "value": 0.002,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbc": {
+        "value": 0.003,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbn": {
+        "value": 0.001,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      }
+    }
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-027",
+      "source_url": "https://cdn.shopify.com/s/files/1/0802/6731/3461/files/Who_Dat_504_COA.pdf?v=1785962829",
+      "source_tier": "primary",
+      "source_group": "BakPak",
+      "product_hint": "Who Dat 504mg CBG+THC Variety Pack",
+      "product_type_hint": "edible",
+      "title_verified": "Who Dat 504mg CBG+THC Variety Pack",
+      "overall_result_observed": null,
+      "units_observed": [
+        "%",
+        "mg/g",
+        "mg/unit",
+        "mg/serving",
+        "ppm"
+      ],
+      "panels_observed": [
+        "cannabinoid"
+      ]
+    }
+  }
+}

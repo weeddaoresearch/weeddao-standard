@@ -10,3 +10,7 @@ id_rsa*
 .idea/
 .vscode/
 *.log
+
+# Corpus fetch cache (raw HTML/PDF/text; do not commit binaries)
+corpus/v0.1/cache/**
+!corpus/v0.1/cache/.gitkeep

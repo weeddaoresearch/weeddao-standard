@@ -1,0 +1,116 @@
+{
+  "schema_version": "0.1-alpha",
+  "record_id": "corpus-coa-042",
+  "cultivation_batch_id": "SB-1227-001",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "producer": {
+    "organization_name": "OpenCOA",
+    "jurisdiction": "US-NY"
+  },
+  "cultivar": {
+    "reported_name": "Sha-Boink flower",
+    "identity_status": "reported"
+  },
+  "lab_results": {
+    "lab_name": null,
+    "sample_id": "2412RLI0511-1771",
+    "provenance": "laboratory_verified",
+    "notes": "Mapped from public COA corpus case COA-042. WeedDAO does not independently re-verify laboratory measurements.",
+    "cannabinoids": {
+      "total_cbd": {
+        "value": 1.4,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "thca": {
+        "value": 19.91,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "thc": {
+        "value": 1.59,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      }
+    },
+    "terpenes": [
+      {
+        "name": "myrcene",
+        "value": 0.6,
+        "unit": "%"
+      },
+      {
+        "name": "limonene",
+        "value": 0.2,
+        "unit": "%"
+      },
+      {
+        "name": "beta-caryophyllene",
+        "value": 0.13,
+        "unit": "%"
+      },
+      {
+        "name": "humulene",
+        "value": 0.04,
+        "unit": "%"
+      },
+      {
+        "name": "bisabolol",
+        "value": 0.04,
+        "unit": "%"
+      },
+      {
+        "name": "valencene",
+        "value": 0.03,
+        "unit": "%"
+      },
+      {
+        "name": "fenchol",
+        "value": 0.03,
+        "unit": "%"
+      }
+    ],
+    "safety": {
+      "microbials": {
+        "status": "pass"
+      },
+      "pesticides": {
+        "status": "pass"
+      },
+      "heavy_metals": {
+        "status": "pass"
+      },
+      "mycotoxins": {
+        "status": "pass"
+      }
+    }
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-042",
+      "source_url": "https://opencoa.org/coa/019c6978-b935-728f-9837-1590c0b1bc83/sb-1227-001",
+      "source_tier": "secondary",
+      "source_group": "OpenCOA",
+      "product_hint": "Sha-Boink flower",
+      "product_type_hint": "flower",
+      "title_verified": "Sha-Boink flower",
+      "overall_result_observed": null,
+      "units_observed": [
+        "%"
+      ],
+      "panels_observed": [
+        "cannabinoid",
+        "terpene",
+        "microbial",
+        "pesticide",
+        "heavy_metal"
+      ]
+    }
+  }
+}

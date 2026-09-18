@@ -1,0 +1,39 @@
+{
+  "case_id": "COA-025",
+  "source_url": "https://cdn.shopify.com/s/files/1/0802/6731/3461/files/Rest_Extra_Strength_55mg_30ct_COA.pdf?v=1785962829",
+  "source_tier": "primary",
+  "source_group": "BakPak",
+  "retrieved_at": "2026-09-18T17:10:32Z",
+  "fetch_status": 200,
+  "fetch_ok": true,
+  "source_unavailable": false,
+  "jurisdiction_hint": "Louisiana brand",
+  "producer_or_brand": "BakPak",
+  "laboratory": null,
+  "product_name": "Rest Extra Strength 30ct",
+  "product_type": "edible",
+  "batch_or_lot_id": null,
+  "sample_id": "260713N016",
+  "overall_status": null,
+  "title_verified": "Rest Extra Strength 55mg 30ct",
+  "panels_observed": [
+    "cannabinoid"
+  ],
+  "units_observed": [
+    "%",
+    "mg/g",
+    "mg/unit",
+    "mg/serving",
+    "ppm"
+  ],
+  "uses_nd": true,
+  "uses_below_limit": false,
+  "uses_not_tested": true,
+  "uses_not_reported": false,
+  "uses_not_performed": false,
+  "has_regulatory_tracking": false,
+  "has_sample_lifecycle": false,
+  "detail_level": "medium",
+  "verification_method": "Live public-content fetch on 2026-09-18",
+  "notes": "Interoperability metadata extracted from the public source; full numeric analyte mapping remains for the schema-validation batch step."
+}
