@@ -1,0 +1,204 @@
+{
+  "schema_version": "0.2-draft",
+  "record_id": "corpus-v02-coa-008",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "subject": {
+    "subject_type": "product_batch",
+    "subject_id": "VMW017",
+    "name": "Dulce de Uva + Florida Kush Moon Walker infused pre-roll",
+    "product_type": "infused pre-roll",
+    "matrix": "infused pre-roll",
+    "external_identifiers": [
+      {
+        "scheme": "metrc.tag",
+        "value": "1A40C0300004589000156256",
+        "jurisdiction": "Missouri",
+        "scope": "source"
+      },
+      {
+        "scheme": "metrc.tag",
+        "value": "1A40C0300004589000156261",
+        "jurisdiction": "Missouri",
+        "scope": null
+      }
+    ]
+  },
+  "producer": {
+    "organization_name": "Show-Me GP",
+    "jurisdiction": "US-MO"
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "lab_results": {
+    "lab_name": "Green Precision Analytics",
+    "sample_id": "GPA-260821-238",
+    "notes": "Mapped from public COA corpus case COA-008. WeedDAO does not independently re-verify laboratory measurements.",
+    "provenance": "laboratory_verified",
+    "sample": {
+      "sample_id": "GPA-260821-238"
+    },
+    "cannabinoids": {
+      "total_cannabinoids": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 296.83,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "thca": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 232.35,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbga": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 1.687,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbg": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.3728,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbda": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.1264,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbd": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.1395,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbc": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.2431,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbn": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.07,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "thcv": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.06975,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "other": [
+        {
+          "name": "CBDV",
+          "result_state": "not_detected",
+          "reported_as": "ND",
+          "provenance": "laboratory_verified"
+        },
+        {
+          "name": "CBDVA",
+          "result_state": "not_detected",
+          "reported_as": "ND",
+          "provenance": "laboratory_verified"
+        },
+        {
+          "name": "BELOW_LIMIT_PLACEHOLDER_FROM_SOURCE",
+          "result_state": "below_reporting_limit",
+          "reported_as": "<LOQ",
+          "notes": "Shadow marker: source uses below-limit qualifier; specific analyte names not retained in v0.1 numeric mapping."
+        }
+      ]
+    },
+    "safety": {
+      "pesticides": {
+        "status": "pass"
+      },
+      "heavy_metals": {
+        "status": "pass"
+      },
+      "microbials": {
+        "status": "pass"
+      },
+      "mycotoxins": {
+        "status": "pass"
+      },
+      "residual_solvents": {
+        "status": "pass"
+      }
+    },
+    "foreign_material": {
+      "result_state": "not_detected",
+      "assessment": "pass",
+      "reported_as": "pass"
+    }
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-008",
+      "source_url": "https://lims.tagleaf.com/coas/nIAz8Klwf37T9PsabrZsdjpIk9YPR8l1RCBVBAdD90CxTrCWGu",
+      "source_tier": "primary",
+      "source_group": "Vivid / TagLeaf",
+      "product_hint": "Dulce de Uva + Florida Kush Moon Walker infused pre-roll",
+      "product_type_hint": "infused pre-roll",
+      "title_verified": "Vivid | Dulce de Uva + Florida Kush | Moon Walker Infused Pre-Roll",
+      "overall_result_observed": "Pass",
+      "panels_observed": [
+        "cannabinoid",
+        "terpene",
+        "microbial",
+        "pesticide",
+        "heavy_metal",
+        "residual_solvent",
+        "mycotoxin",
+        "foreign_matter"
+      ],
+      "metrc_src_tag": "1A40C0300004589000156256",
+      "metrc_testing_tag": "1A40C0300004589000156261",
+      "foreign_material": "pass"
+    }
+  }
+}

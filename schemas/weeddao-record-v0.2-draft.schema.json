@@ -1,0 +1,1007 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://weeddao.org/schemas/weeddao-record-v0.2-draft.schema.json",
+  "title": "WeedDAO Cannabis Data Record v0.2 Draft",
+  "description": "Evidence-driven draft record schema. Replaces cultivation-batch-centric v0.1-alpha with a subject model and AnalyteResult semantics for ND / below-limit / not-performed / multi-unit / not_reported. Experimental draft \u2014 not a release.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "record_id",
+    "created_at",
+    "subject"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "schema_version": {
+      "const": "0.2-draft",
+      "description": "Must be exactly \"0.2-draft\" for this draft schema."
+    },
+    "record_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "subject": {
+      "$ref": "#/$defs/Subject"
+    },
+    "cultivation_batch_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "description": "OPTIONAL migration aid. Applicable primarily when subject.subject_type=cultivation_batch. Do not force finished-product identifiers here."
+    },
+    "producer": {
+      "$ref": "#/$defs/Producer"
+    },
+    "cultivar": {
+      "$ref": "#/$defs/Cultivar",
+      "description": "Genetics / cultivar identity only. Never use for finished product trade names."
+    },
+    "cultivation": {
+      "$ref": "#/$defs/Cultivation"
+    },
+    "environment": {
+      "$ref": "#/$defs/Environment"
+    },
+    "irrigation_nutrition": {
+      "$ref": "#/$defs/IrrigationNutrition"
+    },
+    "harvest": {
+      "$ref": "#/$defs/Harvest"
+    },
+    "post_harvest": {
+      "$ref": "#/$defs/PostHarvest"
+    },
+    "lab_results": {
+      "$ref": "#/$defs/LabResults"
+    },
+    "outcomes": {
+      "$ref": "#/$defs/Outcomes"
+    },
+    "provenance": {
+      "$ref": "#/$defs/Provenance"
+    },
+    "extensions": {
+      "$ref": "#/$defs/Extensions"
+    },
+    "data_gaps": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {
+        "$ref": "#/$defs/DataGapReason"
+      }
+    }
+  },
+  "$defs": {
+    "DataGapReason": {
+      "type": "string",
+      "enum": [
+        "not_measured",
+        "not_applicable",
+        "withheld"
+      ]
+    },
+    "ProvenanceMethod": {
+      "type": "string",
+      "enum": [
+        "self_reported",
+        "sensor_measured",
+        "laboratory_verified",
+        "third_party_verified",
+        "derived"
+      ]
+    },
+    "ExternalIdentifier": {
+      "type": "object",
+      "required": [
+        "scheme",
+        "value"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "scheme": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Open identifier scheme (examples: metrc.package, metrc.source, metrc.tag, lab.sample, producer.lot, other)."
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1
+        },
+        "jurisdiction": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "scope": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Optional scope hint (package, source, sample, batch, facility, other)."
+        }
+      }
+    },
+    "Subject": {
+      "type": "object",
+      "required": [
+        "subject_type",
+        "subject_id"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "subject_type": {
+          "type": "string",
+          "enum": [
+            "cultivation_batch",
+            "harvest_lot",
+            "product_batch",
+            "sample",
+            "other"
+          ]
+        },
+        "subject_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Human-readable subject name (product / lot / batch label). Not cultivar genetics."
+        },
+        "product_type": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Product category when applicable (flower, edible, concentrate, vape, ...)."
+        },
+        "matrix": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Sample matrix / material tested when distinct from product_type."
+        },
+        "external_identifiers": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/ExternalIdentifier"
+          }
+        }
+      }
+    },
+    "MeasurementUnit": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Extensible unit string. Common examples: %, mg/g, mg/ml, mg/serving, mg/unit, mg/package, ppm, ppb, \u00b5g/g, ng/g, CFU/g."
+    },
+    "Measurement": {
+      "type": "object",
+      "required": [
+        "value",
+        "unit"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": "number"
+        },
+        "unit": {
+          "$ref": "#/$defs/MeasurementUnit"
+        },
+        "basis": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Optional measurement basis (e.g. dry_weight, wet_weight, as_received, labeled_serving)."
+        },
+        "basis_quantity": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "required": [
+            "value",
+            "unit"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "value": {
+              "type": "number"
+            },
+            "unit": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    },
+    "Limit": {
+      "type": "object",
+      "required": [
+        "type",
+        "value",
+        "unit"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "LOD",
+            "LOQ",
+            "reporting_limit",
+            "action_limit",
+            "regulatory_limit",
+            "other"
+          ]
+        },
+        "operator": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "<",
+            "<=",
+            ">",
+            ">=",
+            "=",
+            null
+          ]
+        },
+        "value": {
+          "type": "number"
+        },
+        "unit": {
+          "$ref": "#/$defs/MeasurementUnit"
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "ResultState": {
+      "type": "string",
+      "enum": [
+        "detected",
+        "not_detected",
+        "below_reporting_limit",
+        "not_tested",
+        "not_performed",
+        "not_reported",
+        "not_applicable",
+        "withheld",
+        "unknown"
+      ]
+    },
+    "Assessment": {
+      "type": "string",
+      "enum": [
+        "pass",
+        "fail",
+        "not_applicable"
+      ]
+    },
+    "AnalyteResult": {
+      "type": "object",
+      "required": [
+        "result_state"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "result_state": {
+          "$ref": "#/$defs/ResultState"
+        },
+        "measurements": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Measurement"
+          }
+        },
+        "limits": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Limit"
+          }
+        },
+        "assessment": {
+          "$ref": "#/$defs/Assessment"
+        },
+        "reported_as": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Literal qualifier from source when useful (e.g. '<LOQ', 'ND', 'NOT PERFORMED')."
+        },
+        "method": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provenance": {
+          "$ref": "#/$defs/ProvenanceMethod"
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "result_state": {
+                "const": "detected"
+              }
+            },
+            "required": [
+              "result_state"
+            ]
+          },
+          "then": {
+            "required": [
+              "measurements"
+            ],
+            "properties": {
+              "measurements": {
+                "type": "array",
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "result_state": {
+                "const": "below_reporting_limit"
+              }
+            },
+            "required": [
+              "result_state"
+            ]
+          },
+          "then": {
+            "anyOf": [
+              {
+                "required": [
+                  "limits"
+                ],
+                "properties": {
+                  "limits": {
+                    "type": "array",
+                    "minItems": 1
+                  }
+                }
+              },
+              {
+                "required": [
+                  "reported_as"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "NamedAnalyteResult": {
+      "type": "object",
+      "required": [
+        "name",
+        "result_state"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "result_state": {
+          "$ref": "#/$defs/ResultState"
+        },
+        "measurements": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Measurement"
+          }
+        },
+        "limits": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Limit"
+          }
+        },
+        "assessment": {
+          "$ref": "#/$defs/Assessment"
+        },
+        "reported_as": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "method": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provenance": {
+          "$ref": "#/$defs/ProvenanceMethod"
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "result_state": {
+                "const": "detected"
+              }
+            },
+            "required": [
+              "result_state"
+            ]
+          },
+          "then": {
+            "required": [
+              "measurements"
+            ],
+            "properties": {
+              "measurements": {
+                "type": "array",
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "result_state": {
+                "const": "below_reporting_limit"
+              }
+            },
+            "required": [
+              "result_state"
+            ]
+          },
+          "then": {
+            "anyOf": [
+              {
+                "required": [
+                  "limits"
+                ],
+                "properties": {
+                  "limits": {
+                    "type": "array",
+                    "minItems": 1
+                  }
+                }
+              },
+              {
+                "required": [
+                  "reported_as"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "PanelStatus": {
+      "type": "string",
+      "enum": [
+        "pass",
+        "fail",
+        "partial",
+        "not_tested",
+        "not_performed",
+        "not_reported",
+        "not_applicable"
+      ]
+    },
+    "SafetyPanel": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "$ref": "#/$defs/PanelStatus"
+        },
+        "method": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "analytes": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/NamedAnalyteResult"
+          }
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "SampleLifecycle": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Optional sample lifecycle metadata under lab_results.sample.",
+      "properties": {
+        "sample_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "collected_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "received_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "produced_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "harvested_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "matrix": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "collector": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "Producer": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "organization_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "organization_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "facility_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "jurisdiction": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "license_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "Cultivar": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "description": "Genetics only.",
+      "properties": {
+        "reported_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reported_type": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "indica",
+            "sativa",
+            "hybrid",
+            "ruderalis",
+            "hemp",
+            "other",
+            null
+          ]
+        },
+        "breeder_reported": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "identity_status": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "reported",
+            "verified",
+            "unknown",
+            null
+          ]
+        },
+        "genetic_verification": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "Cultivation": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": true
+    },
+    "Environment": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": true
+    },
+    "IrrigationNutrition": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": true
+    },
+    "Harvest": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": true
+    },
+    "PostHarvest": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": true
+    },
+    "Cannabinoids": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "thc": {
+          "$ref": "#/$defs/AnalyteResult"
+        },
+        "thca": {
+          "$ref": "#/$defs/AnalyteResult"
+        },
+        "cbd": {
+          "$ref": "#/$defs/AnalyteResult"
+        },
+        "cbda": {
+          "$ref": "#/$defs/AnalyteResult"
+        },
+        "cbg": {
+          "$ref": "#/$defs/AnalyteResult"
+        },
+        "cbga": {
+          "$ref": "#/$defs/AnalyteResult"
+        },
+        "cbc": {
+          "$ref": "#/$defs/AnalyteResult"
+        },
+        "cbn": {
+          "$ref": "#/$defs/AnalyteResult"
+        },
+        "thcv": {
+          "$ref": "#/$defs/AnalyteResult"
+        },
+        "total_thc": {
+          "$ref": "#/$defs/AnalyteResult"
+        },
+        "total_cbd": {
+          "$ref": "#/$defs/AnalyteResult"
+        },
+        "total_cannabinoids": {
+          "$ref": "#/$defs/AnalyteResult"
+        },
+        "other": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/NamedAnalyteResult"
+          }
+        }
+      }
+    },
+    "LabResults": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "lab_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "lab_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "certificate_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "tested_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "sample_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sample": {
+          "$ref": "#/$defs/SampleLifecycle"
+        },
+        "method": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "cannabinoids": {
+          "$ref": "#/$defs/Cannabinoids"
+        },
+        "terpenes": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/NamedAnalyteResult"
+          }
+        },
+        "total_terpenes": {
+          "$ref": "#/$defs/AnalyteResult"
+        },
+        "safety": {
+          "$ref": "#/$defs/LabSafety"
+        },
+        "moisture": {
+          "$ref": "#/$defs/AnalyteResult"
+        },
+        "water_activity": {
+          "$ref": "#/$defs/AnalyteResult"
+        },
+        "foreign_material": {
+          "$ref": "#/$defs/AnalyteResult"
+        },
+        "homogeneity": {
+          "$ref": "#/$defs/HomogeneityResult"
+        },
+        "best_by": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provenance": {
+          "$ref": "#/$defs/ProvenanceMethod"
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "HomogeneityResult": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "description": "Optional homogeneity assessment distinct from contaminant safety and potency-spec assessment.",
+      "properties": {
+        "status": {
+          "$ref": "#/$defs/PanelStatus"
+        },
+        "analyte": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "metric": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "measurements": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Measurement"
+          }
+        },
+        "limits": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Limit"
+          }
+        },
+        "assessment": {
+          "$ref": "#/$defs/Assessment"
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "LabSafety": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "pesticides": {
+          "$ref": "#/$defs/SafetyPanel"
+        },
+        "heavy_metals": {
+          "$ref": "#/$defs/SafetyPanel"
+        },
+        "microbials": {
+          "$ref": "#/$defs/SafetyPanel"
+        },
+        "mycotoxins": {
+          "$ref": "#/$defs/SafetyPanel"
+        },
+        "residual_solvents": {
+          "$ref": "#/$defs/SafetyPanel"
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "Outcomes": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": true
+    },
+    "Provenance": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": true
+    },
+    "Extensions": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Namespaced extensions. Do not use to stash Issue #1\u2013#4 semantics that belong in core AnalyteResult / subject.",
+      "additionalProperties": true
+    }
+  }
+}

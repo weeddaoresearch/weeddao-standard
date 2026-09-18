@@ -1,0 +1,156 @@
+{
+  "schema_version": "0.2-draft",
+  "record_id": "corpus-v02-coa-038",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "subject": {
+    "subject_type": "harvest_lot",
+    "subject_id": "Size",
+    "name": "Ghost Train Haze",
+    "product_type": "flower/biomass",
+    "matrix": "flower/biomass"
+  },
+  "producer": {
+    "organization_name": "8th Avenue",
+    "jurisdiction": "US-OR"
+  },
+  "cultivar": {
+    "reported_name": "Ghost Train Haze",
+    "identity_status": "reported",
+    "notes": "Genetics / cultivar identity for flower lot."
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "lab_results": {
+    "lab_name": "ChemHistory",
+    "sample_id": "2511CH0605.2684",
+    "notes": "Mapped from public COA corpus case COA-038. WeedDAO does not independently re-verify laboratory measurements.",
+    "provenance": "laboratory_verified",
+    "sample": {
+      "sample_id": "2511CH0605.2684"
+    },
+    "cannabinoids": {
+      "thc": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.1,
+            "unit": "%"
+          },
+          {
+            "value": 1.0,
+            "unit": "mg/g"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbd": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 3.75,
+            "unit": "%"
+          },
+          {
+            "value": 37.5,
+            "unit": "mg/g"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbda": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 3.49,
+            "unit": "%"
+          },
+          {
+            "value": 34.9,
+            "unit": "mg/g"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbg": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.13,
+            "unit": "%"
+          },
+          {
+            "value": 1.3,
+            "unit": "mg/g"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbc": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.23,
+            "unit": "%"
+          },
+          {
+            "value": 2.3,
+            "unit": "mg/g"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "thcv": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.4,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "thca": {
+        "result_state": "below_reporting_limit",
+        "reported_as": "<LOQ",
+        "provenance": "laboratory_verified"
+      },
+      "other": [
+        {
+          "name": "ND_PLACEHOLDER_FROM_SOURCE",
+          "result_state": "not_detected",
+          "reported_as": "ND",
+          "notes": "Shadow marker: source uses ND vocabulary; specific analyte names not retained in v0.1 numeric mapping."
+        }
+      ]
+    },
+    "safety": {
+      "mycotoxins": {
+        "status": "not_reported",
+        "notes": "Source uses NOT_REPORTED semantics (moderate evidence gap; first-class in v0.2)."
+      }
+    }
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-038",
+      "source_url": "https://www.8thavenue.us/coas/2511CH0605.2684%20-%20Anderson%20Technology%20and%20Supply%20-%20Ghost%20Train%20Haze.pdf",
+      "source_tier": "primary",
+      "source_group": "8th Avenue",
+      "product_hint": "Ghost Train Haze",
+      "product_type_hint": "flower/biomass",
+      "title_verified": "Ghost Train Haze",
+      "overall_result_observed": null,
+      "panels_observed": [
+        "cannabinoid",
+        "microbial",
+        "pesticide",
+        "residual_solvent",
+        "moisture"
+      ]
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "schema_version": "0.1-alpha",
+  "record_id": "t-inv-4",
+  "created_at": "2026-09-18T12:00:00Z",
+  "subject": {
+    "subject_type": "sample",
+    "subject_id": "s1"
+  }
+}

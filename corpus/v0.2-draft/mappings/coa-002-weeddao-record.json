@@ -1,0 +1,452 @@
+{
+  "schema_version": "0.2-draft",
+  "record_id": "corpus-v02-coa-002",
+  "created_at": "2026-09-18T16:00:00Z",
+  "updated_at": "2026-09-18T16:00:00Z",
+  "subject": {
+    "subject_type": "cultivation_batch",
+    "subject_id": "11003107150285",
+    "name": "SLH",
+    "product_type": null,
+    "matrix": "Medical Vaporization Oil 0.5g"
+  },
+  "cultivation_batch_id": "11003107150285",
+  "producer": {
+    "organization_name": "Texas Original",
+    "organization_id": "tx-original-review-002",
+    "jurisdiction": "US-TX",
+    "license_id": "0005"
+  },
+  "cultivar": {
+    "reported_name": "SLH",
+    "identity_status": "reported",
+    "genetic_verification": null,
+    "notes": "Cultivar/strain code SLH as reported on COA product line DISVAPE -0:1- 0.5g - SLH - S. Display name: 0:1 SLH Medical Vaporization Oil 0.5g. Not genetically verified."
+  },
+  "provenance": {
+    "record": "third_party_verified",
+    "lab_results": "laboratory_verified",
+    "cultivar": "self_reported",
+    "notes": "Laboratory results transcribed from a producer-authorized COA for WeedDAO development/review. WeedDAO does not independently re-verify laboratory measurements. Producer Texas Original and TX license 0005 disclosed; laboratory branded identity redacted to external-lab-002."
+  },
+  "lab_results": {
+    "lab_id": "external-lab-002",
+    "certificate_id": "redacted-coa-002",
+    "tested_at": "2026-08-11T00:00:00Z",
+    "notes": "Mapped from a producer-supplied Certificate of Analysis for WeedDAO interoperability review. Original certificate artwork/signatures not republished. Laboratory branded as external-lab-002. Detected cannabinoids/terpenes mapped with unit '%'. ND (Not Detected) cannabinoid/terpene rows omitted from core measurements because v0.1-alpha CannabinoidMeasurement/TerpeneEntry cannot express ND without collapsing to 0 or false not_measured. Heavy metal per-analyte '<0.008 ppm' omitted from numeric values (panel status=pass only). Multi-unit mg/g and mg/unit representations preserved in extensions.weeddao_review. See docs/review-cases/coa-002-gaps.md.",
+    "provenance": "laboratory_verified",
+    "sample": {
+      "matrix": "Medical Vaporization Oil 0.5g"
+    },
+    "cannabinoids": {
+      "cbg": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 2.04,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "thc": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 87.13,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "total_thc": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 87.13,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbda": {
+        "result_state": "not_detected",
+        "reported_as": "ND",
+        "provenance": "laboratory_verified"
+      },
+      "cbga": {
+        "result_state": "not_detected",
+        "reported_as": "ND",
+        "provenance": "laboratory_verified"
+      },
+      "cbd": {
+        "result_state": "not_detected",
+        "reported_as": "ND",
+        "provenance": "laboratory_verified"
+      },
+      "thcv": {
+        "result_state": "not_detected",
+        "reported_as": "ND",
+        "provenance": "laboratory_verified"
+      },
+      "cbn": {
+        "result_state": "not_detected",
+        "reported_as": "ND",
+        "provenance": "laboratory_verified"
+      },
+      "cbc": {
+        "result_state": "not_detected",
+        "reported_as": "ND",
+        "provenance": "laboratory_verified"
+      },
+      "thca": {
+        "result_state": "not_detected",
+        "reported_as": "ND",
+        "provenance": "laboratory_verified"
+      },
+      "other": [
+        {
+          "name": "CBDV",
+          "result_state": "not_detected",
+          "reported_as": "ND",
+          "provenance": "laboratory_verified"
+        },
+        {
+          "name": "Heavy metals <0.008 ppm",
+          "result_state": "below_reporting_limit",
+          "reported_as": "<LOQ",
+          "provenance": "laboratory_verified"
+        }
+      ]
+    },
+    "terpenes": [
+      {
+        "name": "terpinolene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 1.25,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "beta-caryophyllene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.56,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "beta-pinene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.38,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "alpha-pinene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.38,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "beta-myrcene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.32,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "humulene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.25,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "limonene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.24,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "gamma-terpinene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.23,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "Camphene",
+        "result_state": "not_detected",
+        "reported_as": "ND",
+        "provenance": "laboratory_verified"
+      },
+      {
+        "name": "3-Carene",
+        "result_state": "not_detected",
+        "reported_as": "ND",
+        "provenance": "laboratory_verified"
+      },
+      {
+        "name": "alpha-Terpinene",
+        "result_state": "not_detected",
+        "reported_as": "ND",
+        "provenance": "laboratory_verified"
+      },
+      {
+        "name": "p-Cymene",
+        "result_state": "not_detected",
+        "reported_as": "ND",
+        "provenance": "laboratory_verified"
+      },
+      {
+        "name": "beta-Ocimene",
+        "result_state": "not_detected",
+        "reported_as": "ND",
+        "provenance": "laboratory_verified"
+      },
+      {
+        "name": "alpha-Ocimene",
+        "result_state": "not_detected",
+        "reported_as": "ND",
+        "provenance": "laboratory_verified"
+      },
+      {
+        "name": "Linalool",
+        "result_state": "not_detected",
+        "reported_as": "ND",
+        "provenance": "laboratory_verified"
+      },
+      {
+        "name": "Isopulegol",
+        "result_state": "not_detected",
+        "reported_as": "ND",
+        "provenance": "laboratory_verified"
+      },
+      {
+        "name": "Geraniol",
+        "result_state": "not_detected",
+        "reported_as": "ND",
+        "provenance": "laboratory_verified"
+      },
+      {
+        "name": "cis-Nerolidol",
+        "result_state": "not_detected",
+        "reported_as": "ND",
+        "provenance": "laboratory_verified"
+      },
+      {
+        "name": "trans-Nerolidol",
+        "result_state": "not_detected",
+        "reported_as": "ND",
+        "provenance": "laboratory_verified"
+      },
+      {
+        "name": "Guaiol",
+        "result_state": "not_detected",
+        "reported_as": "ND",
+        "provenance": "laboratory_verified"
+      },
+      {
+        "name": "alpha-Bisabolol",
+        "result_state": "not_detected",
+        "reported_as": "ND",
+        "provenance": "laboratory_verified"
+      }
+    ],
+    "safety": {
+      "pesticides": {
+        "status": "pass"
+      },
+      "heavy_metals": {
+        "status": "pass",
+        "analytes": [
+          {
+            "name": "As",
+            "result_state": "below_reporting_limit",
+            "reported_as": "<LOQ",
+            "provenance": "laboratory_verified"
+          },
+          {
+            "name": "Cd",
+            "result_state": "below_reporting_limit",
+            "reported_as": "<LOQ",
+            "provenance": "laboratory_verified"
+          },
+          {
+            "name": "Pb",
+            "result_state": "below_reporting_limit",
+            "reported_as": "<LOQ",
+            "provenance": "laboratory_verified"
+          },
+          {
+            "name": "Hg",
+            "result_state": "below_reporting_limit",
+            "reported_as": "<LOQ",
+            "provenance": "laboratory_verified"
+          }
+        ]
+      },
+      "microbials": {
+        "status": "pass",
+        "analytes": [
+          {
+            "name": "Yeast/Mold",
+            "result_state": "not_detected",
+            "reported_as": "ND",
+            "provenance": "laboratory_verified",
+            "limits": [
+              {
+                "type": "action_limit",
+                "value": 10000,
+                "unit": "CFU/g"
+              }
+            ]
+          },
+          {
+            "name": "Salmonella",
+            "result_state": "not_detected",
+            "reported_as": "ND",
+            "provenance": "laboratory_verified"
+          },
+          {
+            "name": "E.coli",
+            "result_state": "not_detected",
+            "reported_as": "ND",
+            "provenance": "laboratory_verified"
+          }
+        ]
+      },
+      "residual_solvents": {
+        "status": "pass",
+        "analytes": [
+          {
+            "name": "Acetone",
+            "result_state": "unknown",
+            "assessment": "pass",
+            "limits": [
+              {
+                "type": "action_limit",
+                "value": 5000,
+                "unit": "ppm"
+              }
+            ]
+          },
+          {
+            "name": "Ethanol",
+            "result_state": "unknown",
+            "assessment": "pass",
+            "limits": [
+              {
+                "type": "action_limit",
+                "value": 5000,
+                "unit": "ppm"
+              }
+            ]
+          },
+          {
+            "name": "Pentane",
+            "result_state": "unknown",
+            "assessment": "pass",
+            "limits": [
+              {
+                "type": "action_limit",
+                "value": 5000,
+                "unit": "ppm"
+              }
+            ]
+          },
+          {
+            "name": "2-Propanol",
+            "result_state": "unknown",
+            "assessment": "pass",
+            "limits": [
+              {
+                "type": "action_limit",
+                "value": 5000,
+                "unit": "ppm"
+              }
+            ]
+          },
+          {
+            "name": "Methyl Acetate",
+            "result_state": "unknown",
+            "assessment": "pass",
+            "limits": [
+              {
+                "type": "action_limit",
+                "value": 5000,
+                "unit": "ppm"
+              }
+            ]
+          },
+          {
+            "name": "Heptane",
+            "result_state": "unknown",
+            "assessment": "pass",
+            "limits": [
+              {
+                "type": "action_limit",
+                "value": 5000,
+                "unit": "ppm"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "foreign_material": {
+      "result_state": "not_detected",
+      "assessment": "pass",
+      "reported_as": "Passed"
+    },
+    "best_by": "2027-07-31"
+  },
+  "extensions": {
+    "weeddao_review": {
+      "case_id": "COA-002",
+      "product_code_coa": "DISVAPE -0:1- 0.5g - SLH - S",
+      "display_name_coa": "0:1 SLH Medical Vaporization Oil 0.5g",
+      "material_type_coa": "Medical Vaporization Oil 0.5g",
+      "best_by_coa": "2027-07-31",
+      "visual_inspection_coa": "Passed",
+      "tx_license_coa": "0005",
+      "batch_id_coa": "11003107150285",
+      "total_cbd_coa": "ND",
+      "semantic_notes": [
+        "ND (Not Detected) is NOT zero and is NOT not_measured.",
+        "Heavy metal <0.008 ppm is NOT value 0.",
+        "Residual solvent PASS is NOT ND.",
+        "Microbial ND mapped to SafetyAnalyteResult not_detected (organism context only).",
+        "Cannabinoid/terpene ND cannot be encoded in core CannabinoidMeasurement/TerpeneEntry."
+      ],
+      "mapping_result": "PARTIAL",
+      "note": "Extension bag for COA facts not faithfully representable in core v0.1-alpha fields. Not a schema change."
+    }
+  }
+}

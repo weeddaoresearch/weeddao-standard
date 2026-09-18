@@ -1,0 +1,22 @@
+{
+  "schema_version": "0.2-draft",
+  "record_id": "t-valid-detected",
+  "created_at": "2026-09-18T12:00:00Z",
+  "subject": {
+    "subject_type": "sample",
+    "subject_id": "s1"
+  },
+  "lab_results": {
+    "cannabinoids": {
+      "thc": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 1.2,
+            "unit": "%"
+          }
+        ]
+      }
+    }
+  }
+}

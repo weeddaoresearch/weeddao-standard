@@ -1,0 +1,9 @@
+{
+  "schema_version": "0.2-draft",
+  "record_id": "t-inv-5",
+  "created_at": "2026-09-18T12:00:00Z",
+  "subject": {
+    "subject_type": "finished_good",
+    "subject_id": "s1"
+  }
+}

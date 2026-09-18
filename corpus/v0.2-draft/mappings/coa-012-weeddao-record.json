@@ -1,0 +1,349 @@
+{
+  "schema_version": "0.2-draft",
+  "record_id": "corpus-v02-coa-012",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "subject": {
+    "subject_type": "harvest_lot",
+    "subject_id": "TCR-F-CRM-901",
+    "name": "Cool Ranch Mintz Hybrid Flower 28g",
+    "product_type": "flower",
+    "matrix": "flower"
+  },
+  "producer": {
+    "organization_name": "Grams Brooklyn",
+    "jurisdiction": "US-NY"
+  },
+  "cultivar": {
+    "reported_name": "Cool Ranch Mintz Hybrid Flower 28g",
+    "identity_status": "reported",
+    "notes": "Genetics / cultivar identity for flower lot."
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "lab_results": {
+    "lab_name": "ACT Laboratories (NY)",
+    "sample_id": "SNYTCO0903-PFCU-0030488",
+    "notes": "Mapped from public COA corpus case COA-012. WeedDAO does not independently re-verify laboratory measurements.",
+    "provenance": "laboratory_verified",
+    "sample": {
+      "sample_id": "SNYTCO0903-PFCU-0030488"
+    },
+    "cannabinoids": {
+      "total_thc": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 11.0,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "total_cannabinoids": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 39.551,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "thca": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 30.61,
+            "unit": "%"
+          },
+          {
+            "value": 306.1,
+            "unit": "mg/g"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "thc": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 7.364,
+            "unit": "%"
+          },
+          {
+            "value": 73.64,
+            "unit": "mg/g"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbg": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.247,
+            "unit": "%"
+          },
+          {
+            "value": 2.47,
+            "unit": "mg/g"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbga": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 1.33,
+            "unit": "%"
+          },
+          {
+            "value": 13.3,
+            "unit": "mg/g"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbd": {
+        "result_state": "not_detected",
+        "reported_as": "ND",
+        "provenance": "laboratory_verified"
+      },
+      "cbc": {
+        "result_state": "not_detected",
+        "reported_as": "ND",
+        "provenance": "laboratory_verified"
+      },
+      "thcv": {
+        "result_state": "not_detected",
+        "reported_as": "ND",
+        "provenance": "laboratory_verified"
+      },
+      "total_cbd": {
+        "result_state": "not_detected",
+        "reported_as": "ND",
+        "provenance": "laboratory_verified"
+      },
+      "cbda": {
+        "result_state": "below_reporting_limit",
+        "reported_as": "<LOQ",
+        "provenance": "laboratory_verified"
+      },
+      "cbn": {
+        "result_state": "below_reporting_limit",
+        "reported_as": "<LOQ",
+        "provenance": "laboratory_verified"
+      },
+      "other": [
+        {
+          "name": "D8-THC",
+          "result_state": "not_detected",
+          "reported_as": "ND",
+          "provenance": "laboratory_verified"
+        },
+        {
+          "name": "CBDV",
+          "result_state": "not_detected",
+          "reported_as": "ND",
+          "provenance": "laboratory_verified"
+        }
+      ]
+    },
+    "terpenes": [
+      {
+        "name": "limonene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.5977,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "linalool",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.2067,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "myrcene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 87.0,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "humulene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 87.0,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "guaiol",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 87.0,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "fenchol",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 87.0,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "bisabolol",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 87.0,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "valencene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 87.0,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "terpinolene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 87.0,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "geraniol",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 87.0,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "nerolidol",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 87.0,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "camphene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 87.0,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "ocimene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 87.0,
+            "unit": "%"
+          }
+        ]
+      }
+    ],
+    "safety": {
+      "pesticides": {
+        "status": "pass"
+      },
+      "heavy_metals": {
+        "status": "pass"
+      },
+      "microbials": {
+        "status": "pass"
+      },
+      "mycotoxins": {
+        "status": "pass"
+      },
+      "residual_solvents": {
+        "status": "not_tested",
+        "notes": "Represented from source NOT_TESTED / NOT_PERFORMED semantics (issue #2)."
+      }
+    },
+    "water_activity": {
+      "result_state": "detected",
+      "measurements": [
+        {
+          "value": 0.65,
+          "unit": "aw"
+        }
+      ],
+      "provenance": "laboratory_verified"
+    },
+    "foreign_material": {
+      "result_state": "not_detected",
+      "assessment": "pass",
+      "reported_as": "pass"
+    }
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-012",
+      "source_url": "https://www.gramsbk.com/coa/COA-SNYTCO0903PFCU0030488-GramsCoolRanchMintzHybridFlower28g-TCRFCRM901-002.pdf",
+      "source_tier": "primary",
+      "source_group": "Grams Brooklyn",
+      "product_hint": "Cool Ranch Mintz Hybrid Flower 28g",
+      "product_type_hint": "flower",
+      "title_verified": "Grams Cool Ranch Mintz Hybrid Flower 28g",
+      "overall_result_observed": null,
+      "panels_observed": [
+        "cannabinoid",
+        "terpene",
+        "microbial",
+        "pesticide",
+        "heavy_metal",
+        "residual_solvent",
+        "mycotoxin",
+        "moisture",
+        "water_activity",
+        "foreign_matter"
+      ],
+      "foreign_material": "pass",
+      "water_activity": 0.65
+    }
+  }
+}

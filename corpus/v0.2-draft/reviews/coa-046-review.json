@@ -1,0 +1,19 @@
+{
+  "case_id": "COA-046",
+  "schema_version": "0.2-draft",
+  "mapped_record_valid": true,
+  "mapping_result": "FULL",
+  "subject_semantics_valid": true,
+  "relevant_issues": {
+    "1": true,
+    "3": true,
+    "4": true
+  },
+  "resolved_in_core": {
+    "1": true,
+    "3": true,
+    "4": true
+  },
+  "remaining_optional_gaps": [],
+  "notes": "Shadow mapping from corpus/v0.1 facts only; issues #1–#4 expressed in core AnalyteResult/subject."
+}

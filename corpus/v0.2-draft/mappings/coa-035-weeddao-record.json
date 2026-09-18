@@ -1,0 +1,185 @@
+{
+  "schema_version": "0.2-draft",
+  "record_id": "corpus-v02-coa-035",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "subject": {
+    "subject_type": "harvest_lot",
+    "subject_id": "402",
+    "name": "Banana Sunday (Batch 402)",
+    "product_type": "flower/biomass",
+    "matrix": "flower/biomass"
+  },
+  "producer": {
+    "organization_name": "8th Avenue",
+    "jurisdiction": "US-OR"
+  },
+  "cultivar": {
+    "reported_name": "Banana Sunday",
+    "identity_status": "reported"
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "lab_results": {
+    "lab_name": "ChemHistory",
+    "sample_id": "2605CH0094.0497",
+    "notes": "Mapped from public COA corpus case COA-035. WeedDAO does not independently re-verify laboratory measurements.",
+    "provenance": "laboratory_verified",
+    "sample": {
+      "sample_id": "2605CH0094.0497"
+    },
+    "cannabinoids": {
+      "thc": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.08,
+            "unit": "%"
+          },
+          {
+            "value": 0.8,
+            "unit": "mg/g"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbd": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 4.02,
+            "unit": "%"
+          },
+          {
+            "value": 40.2,
+            "unit": "mg/g"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbda": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.5,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbg": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.09,
+            "unit": "%"
+          },
+          {
+            "value": 0.9,
+            "unit": "mg/g"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbga": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.11,
+            "unit": "%"
+          },
+          {
+            "value": 1.1,
+            "unit": "mg/g"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbc": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.2,
+            "unit": "%"
+          },
+          {
+            "value": 2.0,
+            "unit": "mg/g"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbn": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.07,
+            "unit": "%"
+          },
+          {
+            "value": 0.7,
+            "unit": "mg/g"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "thcv": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.5,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "thca": {
+        "result_state": "below_reporting_limit",
+        "reported_as": "<LOQ",
+        "provenance": "laboratory_verified"
+      },
+      "other": [
+        {
+          "name": "CBDV",
+          "result_state": "below_reporting_limit",
+          "reported_as": "<LOQ",
+          "provenance": "laboratory_verified"
+        },
+        {
+          "name": "ND_PLACEHOLDER_FROM_SOURCE",
+          "result_state": "not_detected",
+          "reported_as": "ND",
+          "notes": "Shadow marker: source uses ND vocabulary; specific analyte names not retained in v0.1 numeric mapping."
+        }
+      ]
+    },
+    "safety": {
+      "mycotoxins": {
+        "status": "not_reported",
+        "notes": "Source uses NOT_REPORTED semantics (moderate evidence gap; first-class in v0.2)."
+      }
+    }
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-035",
+      "source_url": "https://www.8thavenue.us/coas/newCOAS/2605CH0094.0497%20-%20Sammie%20Rizk%20%20-%20Banana%20Sunday%20(Batch%20402).pdf",
+      "source_tier": "primary",
+      "source_group": "8th Avenue / ChemHistory",
+      "product_hint": "Banana Sunday (Batch 402)",
+      "product_type_hint": "flower/biomass",
+      "title_verified": "Banana Sunday (Batch 402)",
+      "overall_result_observed": null,
+      "panels_observed": [
+        "cannabinoid",
+        "microbial",
+        "pesticide",
+        "residual_solvent",
+        "moisture"
+      ]
+    }
+  }
+}

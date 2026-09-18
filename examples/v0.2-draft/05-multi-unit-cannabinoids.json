@@ -1,0 +1,47 @@
+{
+  "schema_version": "0.2-draft",
+  "record_id": "v02-ex-005-multi-unit",
+  "created_at": "2026-09-18T12:00:00Z",
+  "subject": {
+    "subject_type": "product_batch",
+    "subject_id": "tincture-3000",
+    "name": "CBD Gold Formula 3000mg",
+    "product_type": "tincture/liquid edible"
+  },
+  "lab_results": {
+    "cannabinoids": {
+      "total_cbd": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 98.56,
+            "unit": "mg/ml"
+          },
+          {
+            "value": 2956.8,
+            "unit": "mg/unit",
+            "basis": "labeled_bottle"
+          },
+          {
+            "value": 9.856,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "total_thc": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.759,
+            "unit": "mg/ml"
+          },
+          {
+            "value": 0.0759,
+            "unit": "%"
+          }
+        ]
+      }
+    }
+  }
+}

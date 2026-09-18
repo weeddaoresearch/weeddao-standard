@@ -1,0 +1,54 @@
+{
+  "schema_version": "0.2-draft",
+  "record_id": "v02-ex-003-product-batch",
+  "created_at": "2026-09-18T12:00:00Z",
+  "subject": {
+    "subject_type": "product_batch",
+    "subject_id": "ORMCF2B0626",
+    "name": "(WIP) - 100mg THC Milk Chocolate",
+    "product_type": "edible",
+    "matrix": "chocolate",
+    "external_identifiers": [
+      {
+        "scheme": "metrc.package",
+        "value": "1A4010300067071000017353",
+        "jurisdiction": "US-OR",
+        "scope": "package"
+      }
+    ]
+  },
+  "producer": {
+    "organization_name": "Example Edibles Co",
+    "jurisdiction": "US-OR"
+  },
+  "lab_results": {
+    "lab_name": "Example Lab",
+    "sample_id": "LSL-example-001",
+    "cannabinoids": {
+      "total_thc": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.2531,
+            "unit": "%"
+          },
+          {
+            "value": 2.531,
+            "unit": "mg/g"
+          },
+          {
+            "value": 11.39,
+            "unit": "mg/serving"
+          },
+          {
+            "value": 113.9,
+            "unit": "mg/package"
+          }
+        ],
+        "assessment": "fail",
+        "notes": "Potency-spec assessment vs labeled claim; not a contaminant FAIL.",
+        "provenance": "laboratory_verified"
+      }
+    }
+  }
+}

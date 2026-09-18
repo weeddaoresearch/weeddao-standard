@@ -1,0 +1,131 @@
+{
+  "schema_version": "0.2-draft",
+  "record_id": "corpus-v02-coa-020",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "subject": {
+    "subject_type": "product_batch",
+    "subject_id": "260041A",
+    "name": "CBD Gold Formula 3000mg",
+    "product_type": "tincture/liquid edible",
+    "matrix": "tincture/liquid edible"
+  },
+  "producer": {
+    "organization_name": "BakPak",
+    "jurisdiction": "US-CA"
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "lab_results": {
+    "sample_id": "260714Q006",
+    "notes": "Mapped from public COA corpus case COA-020. WeedDAO does not independently re-verify laboratory measurements.",
+    "provenance": "laboratory_verified",
+    "sample": {
+      "sample_id": "260714Q006"
+    },
+    "cannabinoids": {
+      "total_thc": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.759,
+            "unit": "mg/ml"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "total_cbd": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 98.56,
+            "unit": "mg/ml"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "total_cannabinoids": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 103.744,
+            "unit": "mg/ml"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "thca": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.001,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbg": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.002,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbga": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.002,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbc": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.003,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "other": [
+        {
+          "name": "ND_PLACEHOLDER_FROM_SOURCE",
+          "result_state": "not_detected",
+          "reported_as": "ND",
+          "notes": "Shadow marker: source uses ND vocabulary; specific analyte names not retained in v0.1 numeric mapping."
+        }
+      ]
+    },
+    "safety": {
+      "microbials": {
+        "status": "not_tested",
+        "notes": "Represented from source NOT_TESTED / NOT_PERFORMED semantics (issue #2)."
+      }
+    }
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-020",
+      "source_url": "https://cdn.shopify.com/s/files/1/0802/6731/3461/files/CBD_Gold_Formula_3000_COA.pdf?v=1785962826",
+      "source_tier": "primary",
+      "source_group": "BakPak",
+      "product_hint": "CBD Gold Formula 3000mg",
+      "product_type_hint": "tincture/liquid edible",
+      "title_verified": "CBD Gold Formula 3000mg",
+      "overall_result_observed": null,
+      "panels_observed": [
+        "cannabinoid"
+      ]
+    }
+  }
+}

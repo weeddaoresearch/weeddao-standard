@@ -1,0 +1,275 @@
+{
+  "schema_version": "0.2-draft",
+  "record_id": "corpus-v02-coa-005",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "subject": {
+    "subject_type": "product_batch",
+    "subject_id": "VRV007",
+    "name": "Alien Mintz 1g liquid diamond vape",
+    "product_type": "vape",
+    "matrix": "vape",
+    "external_identifiers": [
+      {
+        "scheme": "metrc.tag",
+        "value": "1A40C0300004589000156315",
+        "jurisdiction": "Missouri",
+        "scope": "source"
+      },
+      {
+        "scheme": "metrc.tag",
+        "value": "1A40C0300004589000156335",
+        "jurisdiction": "Missouri",
+        "scope": null
+      }
+    ]
+  },
+  "producer": {
+    "organization_name": "Show-Me GP",
+    "jurisdiction": "US-MO"
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "lab_results": {
+    "lab_name": "Green Precision Analytics",
+    "sample_id": "GPA-260828-181",
+    "notes": "Mapped from public COA corpus case COA-005. WeedDAO does not independently re-verify laboratory measurements.",
+    "provenance": "laboratory_verified",
+    "sample": {
+      "sample_id": "GPA-260828-181"
+    },
+    "cannabinoids": {
+      "total_cannabinoids": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 3.96,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbga": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.1,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbg": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.14,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbd": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.356,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbc": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.853,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbn": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.119,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "thcv": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.579,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "thca": {
+        "result_state": "not_detected",
+        "reported_as": "ND",
+        "provenance": "laboratory_verified"
+      },
+      "cbda": {
+        "result_state": "not_detected",
+        "reported_as": "ND",
+        "provenance": "laboratory_verified"
+      },
+      "other": [
+        {
+          "name": "CBCA",
+          "result_state": "not_detected",
+          "reported_as": "ND",
+          "provenance": "laboratory_verified"
+        },
+        {
+          "name": "CBDVA",
+          "result_state": "not_detected",
+          "reported_as": "ND",
+          "provenance": "laboratory_verified"
+        },
+        {
+          "name": "BELOW_LIMIT_PLACEHOLDER_FROM_SOURCE",
+          "result_state": "below_reporting_limit",
+          "reported_as": "<LOQ",
+          "notes": "Shadow marker: source uses below-limit qualifier; specific analyte names not retained in v0.1 numeric mapping."
+        }
+      ]
+    },
+    "terpenes": [
+      {
+        "name": "d-limonene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 1.307,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "limonene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 1.307,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "linalool",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.8752,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "nerolidol",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 2.0,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "myrcene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.5096,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "humulene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.3895,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "guaiol",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.2889,
+            "unit": "%"
+          }
+        ]
+      }
+    ],
+    "total_terpenes": {
+      "result_state": "detected",
+      "measurements": [
+        {
+          "value": 5.534,
+          "unit": "%"
+        }
+      ]
+    },
+    "safety": {
+      "pesticides": {
+        "status": "pass"
+      },
+      "heavy_metals": {
+        "status": "pass"
+      },
+      "microbials": {
+        "status": "pass"
+      },
+      "mycotoxins": {
+        "status": "pass"
+      },
+      "residual_solvents": {
+        "status": "pass"
+      }
+    },
+    "foreign_material": {
+      "result_state": "not_detected",
+      "assessment": "pass",
+      "reported_as": "pass"
+    }
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-005",
+      "source_url": "https://lims.tagleaf.com/coas/Mv8MES2bh5EKgnnCsIRaEZx6pfJ2Fon4SrCLRNlS7S5EeQ7zVS",
+      "source_tier": "primary",
+      "source_group": "Vivid / TagLeaf",
+      "product_hint": "Alien Mintz 1g liquid diamond vape",
+      "product_type_hint": "vape",
+      "title_verified": "Vivid | Alien Mintz | 1g Liquid Diamond Vapes",
+      "overall_result_observed": "Pass",
+      "panels_observed": [
+        "cannabinoid",
+        "terpene",
+        "microbial",
+        "pesticide",
+        "heavy_metal",
+        "residual_solvent",
+        "mycotoxin",
+        "foreign_matter"
+      ],
+      "metrc_src_tag": "1A40C0300004589000156315",
+      "metrc_testing_tag": "1A40C0300004589000156335",
+      "foreign_material": "pass"
+    }
+  }
+}

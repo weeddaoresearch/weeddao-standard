@@ -1,0 +1,396 @@
+{
+  "schema_version": "0.2-draft",
+  "record_id": "corpus-v02-coa-044",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "subject": {
+    "subject_type": "harvest_lot",
+    "subject_id": "TCR-F-BLOZ-901",
+    "name": "Boussera Lemons Sativa Flower 28g",
+    "product_type": "flower",
+    "matrix": "flower",
+    "external_identifiers": [
+      {
+        "scheme": "metrc.batch",
+        "value": "1A412030000164C000002215",
+        "jurisdiction": "New York",
+        "scope": null
+      },
+      {
+        "scheme": "metrc.sample",
+        "value": "1A412030000164C000002234",
+        "jurisdiction": "New York",
+        "scope": null
+      },
+      {
+        "scheme": "metrc.manifest",
+        "value": "0000384492",
+        "jurisdiction": "New York",
+        "scope": null
+      }
+    ]
+  },
+  "producer": {
+    "organization_name": "Grams Brooklyn",
+    "jurisdiction": "US-NY"
+  },
+  "cultivar": {
+    "reported_name": "Boussera Lemons Sativa Flower 28g",
+    "identity_status": "reported",
+    "notes": "Genetics / cultivar identity for flower lot."
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "lab_results": {
+    "lab_name": "ACT Laboratories (NY)",
+    "sample_id": "SNYTCO0903-PFCU-0030482",
+    "notes": "Mapped from public COA corpus case COA-044. WeedDAO does not independently re-verify laboratory measurements.",
+    "provenance": "laboratory_verified",
+    "sample": {
+      "sample_id": "SNYTCO0903-PFCU-0030482",
+      "received_at": "2026-09-03"
+    },
+    "cannabinoids": {
+      "cbga": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 1.667,
+            "unit": "%"
+          },
+          {
+            "value": 16.67,
+            "unit": "mg/g"
+          },
+          {
+            "value": 466.82,
+            "unit": "mg/unit"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbg": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.416,
+            "unit": "%"
+          },
+          {
+            "value": 4.16,
+            "unit": "mg/g"
+          },
+          {
+            "value": 116.61,
+            "unit": "mg/unit"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "thc": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 11.973,
+            "unit": "%"
+          },
+          {
+            "value": 119.73,
+            "unit": "mg/g"
+          },
+          {
+            "value": 3352.43,
+            "unit": "mg/unit"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "thca": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 19.492,
+            "unit": "%"
+          },
+          {
+            "value": 194.92,
+            "unit": "mg/g"
+          },
+          {
+            "value": 5457.89,
+            "unit": "mg/unit"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "total_thc": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 29.068,
+            "unit": "%"
+          },
+          {
+            "value": 290.68,
+            "unit": "mg/g"
+          },
+          {
+            "value": 8139.0,
+            "unit": "mg/unit"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "total_cannabinoids": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 33.549,
+            "unit": "%"
+          },
+          {
+            "value": 335.49,
+            "unit": "mg/g"
+          },
+          {
+            "value": 9393.76,
+            "unit": "mg/unit"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbd": {
+        "result_state": "not_detected",
+        "reported_as": "ND",
+        "provenance": "laboratory_verified"
+      },
+      "cbc": {
+        "result_state": "not_detected",
+        "reported_as": "ND",
+        "provenance": "laboratory_verified"
+      },
+      "total_cbd": {
+        "result_state": "not_detected",
+        "reported_as": "ND",
+        "provenance": "laboratory_verified"
+      },
+      "cbda": {
+        "result_state": "below_reporting_limit",
+        "reported_as": "<LOQ",
+        "provenance": "laboratory_verified"
+      },
+      "thcv": {
+        "result_state": "below_reporting_limit",
+        "reported_as": "<LOQ",
+        "provenance": "laboratory_verified"
+      },
+      "cbn": {
+        "result_state": "below_reporting_limit",
+        "reported_as": "<LOQ",
+        "provenance": "laboratory_verified"
+      },
+      "other": [
+        {
+          "name": "CBDV",
+          "result_state": "not_detected",
+          "reported_as": "ND",
+          "provenance": "laboratory_verified"
+        },
+        {
+          "name": "D8-THC",
+          "result_state": "not_detected",
+          "reported_as": "ND",
+          "provenance": "laboratory_verified"
+        },
+        {
+          "name": "Total D10-THC",
+          "result_state": "not_detected",
+          "reported_as": "ND",
+          "provenance": "laboratory_verified"
+        }
+      ]
+    },
+    "terpenes": [
+      {
+        "name": "terpinolene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.9319,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "b-caryophyllene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.5088,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "trans-b-ocimene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.3652,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "valencene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.2806,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "a-humulene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.1466,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "b-myrcene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.1374,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "a-bisabolol",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.082,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "limonene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.0699,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "b-pinene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.0474,
+            "unit": "%"
+          }
+        ]
+      }
+    ],
+    "total_terpenes": {
+      "result_state": "detected",
+      "measurements": [
+        {
+          "value": 2.8273,
+          "unit": "%"
+        }
+      ]
+    },
+    "safety": {
+      "pesticides": {
+        "status": "pass"
+      },
+      "heavy_metals": {
+        "status": "pass"
+      },
+      "microbials": {
+        "status": "pass"
+      },
+      "mycotoxins": {
+        "status": "pass"
+      },
+      "residual_solvents": {
+        "status": "not_tested"
+      }
+    },
+    "moisture": {
+      "result_state": "detected",
+      "measurements": [
+        {
+          "value": 11.0,
+          "unit": "%"
+        }
+      ],
+      "provenance": "laboratory_verified"
+    },
+    "water_activity": {
+      "result_state": "detected",
+      "measurements": [
+        {
+          "value": 0.59,
+          "unit": "aw"
+        }
+      ],
+      "provenance": "laboratory_verified"
+    },
+    "foreign_material": {
+      "result_state": "not_detected",
+      "assessment": "pass",
+      "reported_as": "pass"
+    }
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-044",
+      "source_url": "https://www.gramsbk.com/coa/COA-SNYTCO0903PFCU0030482-GramsBousseraLemonsSativaFlower28g-TCRFBLOZ901-002.pdf",
+      "source_tier": "primary",
+      "source_group": "Grams Brooklyn",
+      "product_hint": "Boussera Lemons Sativa Flower 28g",
+      "product_type_hint": "flower",
+      "title_verified": "Grams | Boussera Lemons | Sativa | Flower | 28g",
+      "overall_result_observed": null,
+      "panels_observed": [
+        "cannabinoid",
+        "terpene",
+        "microbial",
+        "pesticide",
+        "heavy_metal",
+        "residual_solvent",
+        "mycotoxin",
+        "moisture",
+        "water_activity",
+        "foreign_matter"
+      ],
+      "foreign_material": "pass",
+      "moisture_percent": 11.0,
+      "water_activity": 0.59,
+      "homogeneity_status": "not_tested",
+      "metrc_batch": "1A412030000164C000002215",
+      "metrc_sample": "1A412030000164C000002234",
+      "metrc_manifest": "0000384492",
+      "dates": {
+        "sampled": "2026-09-03",
+        "received": "2026-09-03",
+        "report_created": "2026-09-09"
+      }
+    }
+  }
+}

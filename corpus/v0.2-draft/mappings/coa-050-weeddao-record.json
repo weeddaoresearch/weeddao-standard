@@ -1,0 +1,60 @@
+{
+  "schema_version": "0.2-draft",
+  "record_id": "corpus-v02-coa-050",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "subject": {
+    "subject_type": "harvest_lot",
+    "subject_id": "corpus-coa-050-unknown-batch",
+    "name": "Wedding Cake Flower",
+    "product_type": "flower",
+    "matrix": "flower"
+  },
+  "producer": {
+    "organization_name": "unknown-producer",
+    "jurisdiction": "US-MA"
+  },
+  "cultivar": {
+    "reported_name": "Wedding Cake Flower",
+    "identity_status": "reported",
+    "notes": "Genetics / cultivar identity for flower lot."
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "lab_results": {
+    "notes": "Mapped from public COA corpus case COA-050. WeedDAO does not independently re-verify laboratory measurements.",
+    "provenance": "laboratory_verified",
+    "cannabinoids": {
+      "other": [
+        {
+          "name": "ND_PLACEHOLDER_FROM_SOURCE",
+          "result_state": "not_detected",
+          "reported_as": "ND",
+          "notes": "Shadow marker: source uses ND vocabulary; specific analyte names not retained in v0.1 numeric mapping."
+        }
+      ]
+    }
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-050",
+      "source_url": "https://opencoa.org/coa/019f9445-ce79-71a5-8388-5880ab0b3cee/weca-f1h4-2026-06-29-p",
+      "source_tier": "secondary",
+      "source_group": "OpenCOA",
+      "product_hint": "Wedding Cake Flower",
+      "product_type_hint": "flower",
+      "title_verified": "Wedding Cake Flower",
+      "overall_result_observed": null,
+      "panels_observed": [
+        "cannabinoid",
+        "terpene",
+        "microbial",
+        "pesticide",
+        "heavy_metal"
+      ]
+    }
+  }
+}

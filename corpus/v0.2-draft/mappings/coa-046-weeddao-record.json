@@ -1,0 +1,278 @@
+{
+  "schema_version": "0.2-draft",
+  "record_id": "corpus-v02-coa-046",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "subject": {
+    "subject_type": "product_batch",
+    "subject_id": "ORMCF2B0626",
+    "name": "(WIP) - 100mg THC Milk Chocolate",
+    "product_type": "edible",
+    "matrix": "edible",
+    "external_identifiers": [
+      {
+        "scheme": "metrc.package",
+        "value": "1A4010300067071000017353",
+        "jurisdiction": "Oregon",
+        "scope": "package"
+      },
+      {
+        "scheme": "metrc.source",
+        "value": "1A4010300067071000017352",
+        "jurisdiction": "Oregon",
+        "scope": "source"
+      }
+    ]
+  },
+  "producer": {
+    "organization_name": "Grön Chocolate",
+    "jurisdiction": "US-OR"
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "lab_results": {
+    "lab_name": "Lightscale Labs",
+    "sample_id": "LSL-260513-007",
+    "notes": "Mapped from public COA corpus case COA-046. Source BATCH RESULT=FAIL (POTENCY FAIL, HOMOGENEITY FAIL). Potency-spec/homogeneity failures are NOT mapped as contaminant safety FAIL.",
+    "provenance": "laboratory_verified",
+    "sample": {
+      "sample_id": "LSL-260513-007",
+      "collected_at": "2026-05-13",
+      "produced_at": "2026-05-20"
+    },
+    "cannabinoids": {
+      "thc": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.2531,
+            "unit": "%"
+          },
+          {
+            "value": 2.531,
+            "unit": "mg/g"
+          },
+          {
+            "value": 11.39,
+            "unit": "mg/serving"
+          },
+          {
+            "value": 113.9,
+            "unit": "mg/package"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "total_thc": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.2531,
+            "unit": "%"
+          },
+          {
+            "value": 2.531,
+            "unit": "mg/g"
+          },
+          {
+            "value": 11.39,
+            "unit": "mg/serving"
+          },
+          {
+            "value": 113.9,
+            "unit": "mg/package"
+          }
+        ],
+        "provenance": "laboratory_verified",
+        "assessment": "fail",
+        "notes": "Potency-spec FAIL vs labeled claim; not mapped as contaminant safety FAIL."
+      },
+      "total_cannabinoids": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 11.39,
+            "unit": "mg/serving"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbc": {
+        "result_state": "below_reporting_limit",
+        "reported_as": "<LOQ",
+        "provenance": "laboratory_verified"
+      },
+      "cbd": {
+        "result_state": "below_reporting_limit",
+        "reported_as": "<LOQ",
+        "provenance": "laboratory_verified"
+      },
+      "cbda": {
+        "result_state": "below_reporting_limit",
+        "reported_as": "<LOQ",
+        "provenance": "laboratory_verified"
+      },
+      "cbg": {
+        "result_state": "below_reporting_limit",
+        "reported_as": "<LOQ",
+        "provenance": "laboratory_verified"
+      },
+      "cbga": {
+        "result_state": "below_reporting_limit",
+        "reported_as": "<LOQ",
+        "provenance": "laboratory_verified"
+      },
+      "cbn": {
+        "result_state": "below_reporting_limit",
+        "reported_as": "<LOQ",
+        "provenance": "laboratory_verified"
+      },
+      "thca": {
+        "result_state": "below_reporting_limit",
+        "reported_as": "<LOQ",
+        "provenance": "laboratory_verified"
+      },
+      "thcv": {
+        "result_state": "below_reporting_limit",
+        "reported_as": "<LOQ",
+        "provenance": "laboratory_verified"
+      },
+      "total_cbd": {
+        "result_state": "below_reporting_limit",
+        "reported_as": "<LOQ",
+        "provenance": "laboratory_verified"
+      },
+      "other": [
+        {
+          "name": "ND vocabulary on Lightscale Labs COA / QC blanks",
+          "result_state": "not_detected",
+          "reported_as": "ND",
+          "provenance": "laboratory_verified"
+        },
+        {
+          "name": "CBCA",
+          "result_state": "below_reporting_limit",
+          "reported_as": "<LOQ",
+          "provenance": "laboratory_verified"
+        },
+        {
+          "name": "CBDV",
+          "result_state": "below_reporting_limit",
+          "reported_as": "<LOQ",
+          "provenance": "laboratory_verified"
+        },
+        {
+          "name": "CBDVA",
+          "result_state": "below_reporting_limit",
+          "reported_as": "<LOQ",
+          "provenance": "laboratory_verified"
+        },
+        {
+          "name": "CBL",
+          "result_state": "below_reporting_limit",
+          "reported_as": "<LOQ",
+          "provenance": "laboratory_verified"
+        },
+        {
+          "name": "CBNA",
+          "result_state": "below_reporting_limit",
+          "reported_as": "<LOQ",
+          "provenance": "laboratory_verified"
+        },
+        {
+          "name": "Δ8-THC",
+          "result_state": "below_reporting_limit",
+          "reported_as": "<LOQ",
+          "provenance": "laboratory_verified"
+        },
+        {
+          "name": "THCVA",
+          "result_state": "below_reporting_limit",
+          "reported_as": "<LOQ",
+          "provenance": "laboratory_verified"
+        }
+      ]
+    },
+    "homogeneity": {
+      "status": "fail",
+      "analyte": "TOTAL THC RPD",
+      "metric": "RPD",
+      "assessment": "fail",
+      "measurements": [
+        {
+          "value": 10.1,
+          "unit": "%"
+        }
+      ],
+      "limits": [
+        {
+          "type": "action_limit",
+          "operator": "<=",
+          "value": 10,
+          "unit": "%"
+        }
+      ],
+      "notes": "Homogeneity assessment distinct from contaminant safety and potency-spec."
+    }
+  },
+  "outcomes": {
+    "overall_status": "fail",
+    "failure_types": [
+      "potency_spec",
+      "homogeneity"
+    ],
+    "notes": "Do not collapse potency-spec FAIL into contaminant safety FAIL."
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-046",
+      "source_url": "https://eatgron.com/wp-content/uploads/2026/05/LSL-260513-007.pdf",
+      "source_tier": "primary",
+      "source_group": "Grön / Lightscale Labs",
+      "product_hint": "(WIP) - 100mg THC Milk Chocolate",
+      "product_type_hint": "edible",
+      "matrix": "Edible Solid",
+      "category": "Edible",
+      "title_verified": "(WIP) - 100mg THC Milk Chocolate",
+      "overall_result_observed": "FAIL",
+      "batch_result": "FAIL",
+      "panel_results": {
+        "potency": "FAIL",
+        "homogeneity": "FAIL"
+      },
+      "panels_observed": [
+        "cannabinoid",
+        "homogeneity"
+      ],
+      "labeled_targets": {
+        "total_thc_per_serving_mg": 11,
+        "total_thc_per_package_mg": 110
+      },
+      "measured_vs_labeled": {
+        "total_thc_per_serving_mg": {
+          "labeled": 11,
+          "measured": 11.39,
+          "result": "FAIL"
+        },
+        "total_thc_per_package_mg": {
+          "labeled": 110,
+          "measured": 113.9,
+          "result": "FAIL"
+        }
+      },
+      "metrc_package": "1A4010300067071000017353",
+      "metrc_source": "1A4010300067071000017352",
+      "serving_size_g": 4.5,
+      "package_size_g": 45,
+      "dates": {
+        "produced": "2026-05-20",
+        "manufactured": "2026-05-06",
+        "collected": "2026-05-13"
+      },
+      "contains_failure": true
+    }
+  }
+}

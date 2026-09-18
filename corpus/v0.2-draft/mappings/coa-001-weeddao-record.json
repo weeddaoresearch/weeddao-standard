@@ -1,0 +1,295 @@
+{
+  "schema_version": "0.2-draft",
+  "record_id": "corpus-v02-coa-001",
+  "created_at": "2026-09-18T15:00:00Z",
+  "updated_at": "2026-09-18T15:00:00Z",
+  "subject": {
+    "subject_type": "cultivation_batch",
+    "subject_id": "review-batch-001",
+    "name": "cherry lemon",
+    "product_type": null,
+    "matrix": "Cured Flower"
+  },
+  "cultivation_batch_id": "review-batch-001",
+  "producer": {
+    "organization_name": "Desert Green Farm",
+    "organization_id": "dgf-review-001",
+    "jurisdiction": "US-NM"
+  },
+  "cultivar": {
+    "reported_name": "cherry lemon",
+    "identity_status": "reported",
+    "genetic_verification": null,
+    "notes": "Cultivar name as reported on grower-supplied COA / lot description. Not genetically verified."
+  },
+  "provenance": {
+    "record": "third_party_verified",
+    "lab_results": "laboratory_verified",
+    "cultivar": "self_reported",
+    "notes": "Laboratory results transcribed from a grower-authorized COA for WeedDAO development/review. WeedDAO does not independently re-verify laboratory measurements. Grower/producer identity disclosed with permission; laboratory branded identity redacted to external-lab-001."
+  },
+  "data_gaps": {
+    "/lab_results/moisture": "not_measured"
+  },
+  "lab_results": {
+    "lab_id": "external-lab-001",
+    "certificate_id": "redacted-coa-001",
+    "tested_at": "2025-10-23T00:00:00Z",
+    "sample_id": "DGF-001",
+    "method": "HPLC",
+    "notes": "Mapped from a grower-supplied Certificate of Analysis for WeedDAO interoperability review. Original certificate artwork/signatures not republished. Laboratory branded as external-lab-001. Below-reporting-limit cannabinoid/terpene values from the COA are omitted here because v0.1-alpha CannabinoidMeasurement/TerpeneEntry cannot express a '<' qualifier without collapsing to 0 or false not_measured. See docs/review-cases/coa-001-gaps.md.",
+    "provenance": "laboratory_verified",
+    "sample": {
+      "sample_id": "DGF-001",
+      "received_at": "2025-10-17",
+      "collector": "Sample Collected by Client",
+      "matrix": "Cured Flower"
+    },
+    "cannabinoids": {
+      "thc": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 3.0,
+            "unit": "mg/g"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "thca": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 236.9,
+            "unit": "mg/g"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbga": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 8.4,
+            "unit": "mg/g"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "total_thc": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 21.1,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "total_cannabinoids": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 24.8,
+            "unit": "%"
+          },
+          {
+            "value": 248.2,
+            "unit": "mg/g"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "other": [
+        {
+          "name": "Cannabinoid/terpene <LOQ",
+          "result_state": "below_reporting_limit",
+          "reported_as": "<LOQ",
+          "provenance": "laboratory_verified"
+        }
+      ]
+    },
+    "terpenes": [
+      {
+        "name": "alpha-pinene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.06,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "beta-pinene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.02,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "myrcene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.34,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "d-limonene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.25,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "gamma-terpinene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.11,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "isopulegol",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.02,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "geraniol",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.01,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "beta-caryophyllene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 1.31,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "alpha-humulene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.08,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "nerolidol",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.02,
+            "unit": "%"
+          }
+        ]
+      }
+    ],
+    "total_terpenes": {
+      "result_state": "detected",
+      "measurements": [
+        {
+          "value": 2.23,
+          "unit": "%"
+        }
+      ]
+    },
+    "safety": {
+      "pesticides": {
+        "status": "pass"
+      },
+      "microbials": {
+        "status": "partial",
+        "method": "qPCR Analysis",
+        "analytes": [
+          {
+            "name": "E. coli (STEC)",
+            "result_state": "unknown",
+            "assessment": "pass"
+          },
+          {
+            "name": "A. niger",
+            "result_state": "unknown",
+            "assessment": "pass"
+          },
+          {
+            "name": "A. flavus",
+            "result_state": "unknown",
+            "assessment": "pass"
+          },
+          {
+            "name": "A. fumigatus",
+            "result_state": "unknown",
+            "assessment": "pass"
+          },
+          {
+            "name": "A. terreus",
+            "result_state": "unknown",
+            "assessment": "pass"
+          },
+          {
+            "name": "Salmonella",
+            "result_state": "unknown",
+            "assessment": "pass"
+          },
+          {
+            "name": "P. aeruginosa",
+            "result_state": "unknown",
+            "provenance": "laboratory_verified"
+          }
+        ]
+      },
+      "residual_solvents": {
+        "status": "not_tested"
+      }
+    },
+    "moisture": {
+      "result_state": "not_performed",
+      "reported_as": "Not Performed",
+      "provenance": "laboratory_verified"
+    },
+    "foreign_material": {
+      "result_state": "not_detected",
+      "assessment": "pass",
+      "reported_as": "Passed Visual Inspection"
+    }
+  },
+  "extensions": {
+    "weeddao_review": {
+      "case_id": "COA-001",
+      "material_type_coa": "Cured Flower",
+      "sample_received_date_coa": "2025-10-17",
+      "sample_collection_coa": "Sample Collected by Client",
+      "coa_approved_date": "2025-10-23",
+      "foreign_material_inspection_coa": "Passed Visual Inspection",
+      "moisture_coa": "Not Performed",
+      "note": "Extension bag for COA facts not faithfully representable in core v0.1-alpha fields. Not a schema change."
+    }
+  }
+}

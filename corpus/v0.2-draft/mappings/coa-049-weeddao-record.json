@@ -1,0 +1,55 @@
+{
+  "schema_version": "0.2-draft",
+  "record_id": "corpus-v02-coa-049",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "subject": {
+    "subject_type": "product_batch",
+    "subject_id": "corpus-coa-049-unknown-batch",
+    "name": "GMO live rosin 2g jar",
+    "product_type": "concentrate",
+    "matrix": "concentrate"
+  },
+  "producer": {
+    "organization_name": "unknown-producer",
+    "jurisdiction": "US-NY"
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "lab_results": {
+    "notes": "Mapped from public COA corpus case COA-049. WeedDAO does not independently re-verify laboratory measurements.",
+    "provenance": "laboratory_verified",
+    "cannabinoids": {
+      "other": [
+        {
+          "name": "ND_PLACEHOLDER_FROM_SOURCE",
+          "result_state": "not_detected",
+          "reported_as": "ND",
+          "notes": "Shadow marker: source uses ND vocabulary; specific analyte names not retained in v0.1 numeric mapping."
+        }
+      ]
+    }
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-049",
+      "source_url": "https://opencoa.org/coa/01a0aa3d-d32c-7088-9e50-054636a5066b/260723h5up44a028",
+      "source_tier": "secondary",
+      "source_group": "OpenCOA",
+      "product_hint": "GMO live rosin 2g jar",
+      "product_type_hint": "concentrate",
+      "title_verified": "GMO live rosin 2g jar",
+      "overall_result_observed": null,
+      "panels_observed": [
+        "cannabinoid",
+        "terpene",
+        "microbial",
+        "pesticide",
+        "heavy_metal"
+      ]
+    }
+  }
+}

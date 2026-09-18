@@ -1,0 +1,23 @@
+{
+  "case_id": "COA-017",
+  "schema_version": "0.2-draft",
+  "mapped_record_valid": true,
+  "mapping_result": "PARTIAL",
+  "subject_semantics_valid": true,
+  "relevant_issues": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true
+  },
+  "resolved_in_core": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true
+  },
+  "remaining_optional_gaps": [
+    "regulatory_tracking"
+  ],
+  "notes": "Shadow mapping from corpus/v0.1 facts only; issues #1–#4 expressed in core AnalyteResult/subject."
+}

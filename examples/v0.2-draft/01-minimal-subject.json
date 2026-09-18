@@ -1,0 +1,9 @@
+{
+  "schema_version": "0.2-draft",
+  "record_id": "v02-ex-001-minimal",
+  "created_at": "2026-09-18T12:00:00Z",
+  "subject": {
+    "subject_type": "sample",
+    "subject_id": "sample-minimal-001"
+  }
+}

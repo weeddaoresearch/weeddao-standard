@@ -1,0 +1,121 @@
+{
+  "schema_version": "0.2-draft",
+  "record_id": "corpus-v02-coa-022",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "subject": {
+    "subject_type": "product_batch",
+    "subject_id": "26003B",
+    "name": "Space Debris Cherry Limeade Drink",
+    "product_type": "beverage",
+    "matrix": "beverage"
+  },
+  "producer": {
+    "organization_name": "BakPak",
+    "jurisdiction": "US-CA"
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "lab_results": {
+    "sample_id": "260713N028",
+    "notes": "Mapped from public COA corpus case COA-022. WeedDAO does not independently re-verify laboratory measurements.",
+    "provenance": "laboratory_verified",
+    "sample": {
+      "sample_id": "260713N028"
+    },
+    "cannabinoids": {
+      "total_thc": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 1.8105,
+            "unit": "mg/serving"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "total_cannabinoids": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 1.8105,
+            "unit": "mg/serving"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "thca": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.0001,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbda": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.0001,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbc": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.0003,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbn": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.0001,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "other": [
+        {
+          "name": "ND_PLACEHOLDER_FROM_SOURCE",
+          "result_state": "not_detected",
+          "reported_as": "ND",
+          "notes": "Shadow marker: source uses ND vocabulary; specific analyte names not retained in v0.1 numeric mapping."
+        }
+      ]
+    },
+    "safety": {
+      "microbials": {
+        "status": "not_tested",
+        "notes": "Represented from source NOT_TESTED / NOT_PERFORMED semantics (issue #2)."
+      }
+    }
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-022",
+      "source_url": "https://cdn.shopify.com/s/files/1/0802/6731/3461/files/Space_Debris_Cherry_Limeade_COA.pdf?v=1785962827",
+      "source_tier": "primary",
+      "source_group": "BakPak",
+      "product_hint": "Space Debris Cherry Limeade Drink",
+      "product_type_hint": "beverage",
+      "title_verified": "Space Debris Cherry Limeade Drink",
+      "overall_result_observed": null,
+      "panels_observed": [
+        "cannabinoid"
+      ]
+    }
+  }
+}

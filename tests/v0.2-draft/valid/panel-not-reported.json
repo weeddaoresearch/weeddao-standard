@@ -1,0 +1,20 @@
+{
+  "schema_version": "0.2-draft",
+  "record_id": "t-valid-panel-nr",
+  "created_at": "2026-09-18T12:00:00Z",
+  "subject": {
+    "subject_type": "product_batch",
+    "subject_id": "pb1",
+    "product_type": "vape"
+  },
+  "lab_results": {
+    "safety": {
+      "residual_solvents": {
+        "status": "not_reported"
+      },
+      "microbials": {
+        "status": "not_performed"
+      }
+    }
+  }
+}

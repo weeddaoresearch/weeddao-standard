@@ -1,0 +1,52 @@
+{
+  "schema_version": "0.2-draft",
+  "record_id": "v02-ex-002-cultivation",
+  "created_at": "2026-09-18T12:00:00Z",
+  "subject": {
+    "subject_type": "cultivation_batch",
+    "subject_id": "batch-2026-042",
+    "name": "North Room Flower Lot",
+    "product_type": "flower",
+    "matrix": "cured flower"
+  },
+  "cultivation_batch_id": "batch-2026-042",
+  "producer": {
+    "organization_name": "Example Cultivation Co-op",
+    "jurisdiction": "US-OR"
+  },
+  "cultivar": {
+    "reported_name": "Example Haze",
+    "reported_type": "hybrid",
+    "identity_status": "reported",
+    "notes": "Genetics only; not a retail product name."
+  },
+  "lab_results": {
+    "lab_name": "Example Lab",
+    "cannabinoids": {
+      "thca": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 22.4,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "total_thc": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 21.1,
+            "unit": "%"
+          },
+          {
+            "value": 211.0,
+            "unit": "mg/g"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      }
+    }
+  }
+}

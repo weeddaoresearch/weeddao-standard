@@ -1,0 +1,178 @@
+{
+  "schema_version": "0.2-draft",
+  "record_id": "corpus-v02-coa-024",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "subject": {
+    "subject_type": "product_batch",
+    "subject_id": "Description",
+    "name": "Rest Extra Strength edible",
+    "product_type": "edible",
+    "matrix": "edible"
+  },
+  "producer": {
+    "organization_name": "BakPak",
+    "jurisdiction": "US-LA"
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "lab_results": {
+    "sample_id": "AIT-SAMP-45",
+    "notes": "Mapped from public COA corpus case COA-024. WeedDAO does not independently re-verify laboratory measurements.",
+    "provenance": "laboratory_verified",
+    "sample": {
+      "sample_id": "AIT-SAMP-45"
+    },
+    "cannabinoids": {
+      "thca": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.04,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "thc": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.04,
+            "unit": "%"
+          },
+          {
+            "value": 0.78879305,
+            "unit": "mg/g"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbd": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.04,
+            "unit": "%"
+          },
+          {
+            "value": 4.04606225,
+            "unit": "mg/g"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbda": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.04,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbg": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.04,
+            "unit": "%"
+          },
+          {
+            "value": 3.91399343,
+            "unit": "mg/g"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbga": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.04,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbc": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.04,
+            "unit": "%"
+          },
+          {
+            "value": 0.06023244,
+            "unit": "mg/g"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbn": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.04,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "thcv": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.04,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "other": [
+        {
+          "name": "ND_PLACEHOLDER_FROM_SOURCE",
+          "result_state": "not_detected",
+          "reported_as": "ND",
+          "notes": "Shadow marker: source uses ND vocabulary; specific analyte names not retained in v0.1 numeric mapping."
+        }
+      ]
+    },
+    "safety": {
+      "microbials": {
+        "status": "not_tested",
+        "notes": "Represented from source NOT_TESTED / NOT_PERFORMED semantics (issue #2)."
+      }
+    },
+    "water_activity": {
+      "result_state": "detected",
+      "measurements": [
+        {
+          "value": 0.85,
+          "unit": "aw"
+        }
+      ],
+      "provenance": "laboratory_verified"
+    }
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-024",
+      "source_url": "https://cdn.shopify.com/s/files/1/0802/6731/3461/files/Rest_MN_Product_COA.pdf?v=1786025253",
+      "source_tier": "primary",
+      "source_group": "BakPak",
+      "product_hint": "Rest Extra Strength edible",
+      "product_type_hint": "edible",
+      "title_verified": "Rest Gummies",
+      "overall_result_observed": null,
+      "panels_observed": [
+        "cannabinoid"
+      ],
+      "water_activity": 0.85
+    }
+  }
+}

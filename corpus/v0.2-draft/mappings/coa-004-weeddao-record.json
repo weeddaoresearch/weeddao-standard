@@ -1,0 +1,270 @@
+{
+  "schema_version": "0.2-draft",
+  "record_id": "corpus-v02-coa-004",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "subject": {
+    "subject_type": "product_batch",
+    "subject_id": "VLB00496",
+    "name": "Alien Mintz live badder",
+    "product_type": "concentrate",
+    "matrix": "concentrate",
+    "external_identifiers": [
+      {
+        "scheme": "metrc.tag",
+        "value": "1A40C0300004589000158410",
+        "jurisdiction": "Missouri",
+        "scope": "source"
+      },
+      {
+        "scheme": "metrc.tag",
+        "value": "1A40C0300004589000158404",
+        "jurisdiction": "Missouri",
+        "scope": null
+      }
+    ]
+  },
+  "producer": {
+    "organization_name": "Show-Me GP",
+    "jurisdiction": "US-MO"
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "lab_results": {
+    "lab_name": "Green Precision Analytics",
+    "sample_id": "GPA-260904-131",
+    "notes": "Mapped from public COA corpus case COA-004. WeedDAO does not independently re-verify laboratory measurements.",
+    "provenance": "laboratory_verified",
+    "sample": {
+      "sample_id": "GPA-260904-131"
+    },
+    "cannabinoids": {
+      "total_cannabinoids": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 84.76,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "thca": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 78.39,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbga": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 2.98,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbg": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.29,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbda": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.181,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "thcv": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.064,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "cbd": {
+        "result_state": "not_detected",
+        "reported_as": "ND",
+        "provenance": "laboratory_verified"
+      },
+      "cbc": {
+        "result_state": "not_detected",
+        "reported_as": "ND",
+        "provenance": "laboratory_verified"
+      },
+      "cbn": {
+        "result_state": "not_detected",
+        "reported_as": "ND",
+        "provenance": "laboratory_verified"
+      },
+      "other": [
+        {
+          "name": "CBDV",
+          "result_state": "not_detected",
+          "reported_as": "ND",
+          "provenance": "laboratory_verified"
+        },
+        {
+          "name": "CBDVA",
+          "result_state": "not_detected",
+          "reported_as": "ND",
+          "provenance": "laboratory_verified"
+        },
+        {
+          "name": "BELOW_LIMIT_PLACEHOLDER_FROM_SOURCE",
+          "result_state": "below_reporting_limit",
+          "reported_as": "<LOQ",
+          "notes": "Shadow marker: source uses below-limit qualifier; specific analyte names not retained in v0.1 numeric mapping."
+        }
+      ]
+    },
+    "terpenes": [
+      {
+        "name": "d-limonene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 1.095,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "limonene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 1.095,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "linalool",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.898,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "nerolidol",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 2.0,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "myrcene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.4245,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "humulene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.4003,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "guaiol",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.2977,
+            "unit": "%"
+          }
+        ]
+      }
+    ],
+    "total_terpenes": {
+      "result_state": "detected",
+      "measurements": [
+        {
+          "value": 6.049,
+          "unit": "%"
+        }
+      ]
+    },
+    "safety": {
+      "pesticides": {
+        "status": "pass"
+      },
+      "heavy_metals": {
+        "status": "pass"
+      },
+      "microbials": {
+        "status": "pass"
+      },
+      "mycotoxins": {
+        "status": "pass"
+      },
+      "residual_solvents": {
+        "status": "pass"
+      }
+    },
+    "foreign_material": {
+      "result_state": "not_detected",
+      "assessment": "pass",
+      "reported_as": "pass"
+    }
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-004",
+      "source_url": "https://lims.tagleaf.com/coas/mvNRWkKW4rQYmWwILGbPjyccs7bpAxo40BtuNnr10gczL3ziBH",
+      "source_tier": "primary",
+      "source_group": "Vivid / TagLeaf",
+      "product_hint": "Alien Mintz live badder",
+      "product_type_hint": "concentrate",
+      "title_verified": "Vivid | Alien Mintz | Live Badder",
+      "overall_result_observed": "Pass",
+      "panels_observed": [
+        "cannabinoid",
+        "terpene",
+        "microbial",
+        "pesticide",
+        "heavy_metal",
+        "residual_solvent",
+        "mycotoxin",
+        "foreign_matter"
+      ],
+      "metrc_src_tag": "1A40C0300004589000158410",
+      "metrc_testing_tag": "1A40C0300004589000158404",
+      "foreign_material": "pass"
+    }
+  }
+}

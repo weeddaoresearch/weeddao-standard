@@ -1,0 +1,252 @@
+{
+  "schema_version": "0.2-draft",
+  "record_id": "corpus-v02-coa-019",
+  "created_at": "2026-09-18T17:00:00Z",
+  "updated_at": "2026-09-18T17:00:00Z",
+  "subject": {
+    "subject_type": "product_batch",
+    "subject_id": "TCR-V-RLD-426",
+    "name": "Lemon Drop Rosin AIO Vape",
+    "product_type": "vape",
+    "matrix": "vape"
+  },
+  "producer": {
+    "organization_name": "Grams Brooklyn",
+    "jurisdiction": "US-NY"
+  },
+  "provenance": {
+    "record": "derived",
+    "lab_results": "laboratory_verified",
+    "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
+  },
+  "lab_results": {
+    "lab_name": "Kaycha Labs",
+    "sample_id": "AL60415006-003",
+    "notes": "Mapped from public COA corpus case COA-019. WeedDAO does not independently re-verify laboratory measurements.",
+    "provenance": "laboratory_verified",
+    "sample": {
+      "sample_id": "AL60415006-003"
+    },
+    "cannabinoids": {
+      "total_cannabinoids": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 64.7472,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified"
+      },
+      "other": [
+        {
+          "name": "ND_PLACEHOLDER_FROM_SOURCE",
+          "result_state": "not_detected",
+          "reported_as": "ND",
+          "notes": "Shadow marker: source uses ND vocabulary; specific analyte names not retained in v0.1 numeric mapping."
+        },
+        {
+          "name": "BELOW_LIMIT_PLACEHOLDER_FROM_SOURCE",
+          "result_state": "below_reporting_limit",
+          "reported_as": "<LOQ",
+          "notes": "Shadow marker: source uses below-limit qualifier; specific analyte names not retained in v0.1 numeric mapping."
+        }
+      ]
+    },
+    "terpenes": [
+      {
+        "name": "beta-caryophyllene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.004,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "alpha-humulene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.004,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "limonene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.004,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "linalool",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.004,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "beta-myrcene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.004,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "alpha-pinene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.004,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "terpinolene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.004,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "guaiol",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.004,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "valencene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.004,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "camphene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.004,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "ocimene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.004,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "bisabolol",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.004,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "beta-pinene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.004,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "name": "geraniol",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.004,
+            "unit": "%"
+          }
+        ]
+      }
+    ],
+    "safety": {
+      "pesticides": {
+        "status": "pass"
+      },
+      "heavy_metals": {
+        "status": "pass"
+      },
+      "microbials": {
+        "status": "pass",
+        "analytes": [
+          {
+            "name": "NOT_TESTED_ANALYTE_FROM_SOURCE",
+            "result_state": "not_tested",
+            "reported_as": "NOT TESTED",
+            "notes": "Shadow marker: source uses analyte-level NOT TESTED / NOT PERFORMED (issue #2)."
+          }
+        ]
+      },
+      "mycotoxins": {
+        "status": "pass"
+      },
+      "residual_solvents": {
+        "status": "pass"
+      }
+    },
+    "moisture": {
+      "result_state": "not_performed",
+      "reported_as": "Not Performed",
+      "provenance": "laboratory_verified"
+    }
+  },
+  "extensions": {
+    "weeddao_corpus": {
+      "case_id": "COA-019",
+      "source_url": "https://docs.wixstatic.com/ugd/43c248_c0fa7431736d4657bbe63ddccddddace.pdf",
+      "source_tier": "primary",
+      "source_group": "Grams Brooklyn",
+      "product_hint": "Lemon Drop Rosin AIO Vape",
+      "product_type_hint": "vape",
+      "title_verified": "Lemon Drop Rosin AIO Vape",
+      "overall_result_observed": null,
+      "panels_observed": [
+        "cannabinoid",
+        "terpene",
+        "microbial",
+        "pesticide",
+        "heavy_metal",
+        "residual_solvent",
+        "mycotoxin",
+        "moisture",
+        "water_activity"
+      ]
+    }
+  }
+}

@@ -1,0 +1,816 @@
+{
+  "TOTAL_CASES": 50,
+  "SUBJECT_SEMANTICS_VALID_CASES": 50,
+  "ISSUE_1_RELEVANT_CASES": 35,
+  "ISSUE_1_RESOLVED_IN_CORE": 35,
+  "ISSUE_2_RELEVANT_CASES": 22,
+  "ISSUE_2_RESOLVED_IN_CORE": 22,
+  "ISSUE_3_RELEVANT_CASES": 48,
+  "ISSUE_3_RESOLVED_IN_CORE": 48,
+  "ISSUE_4_RELEVANT_CASES": 43,
+  "ISSUE_4_RESOLVED_IN_CORE": 43,
+  "CRITICAL_GAP_CORE_RESOLUTION_RATE": 100.0,
+  "CRITICAL_GAP_CORE_RESOLUTION_FORMULA": "sum(ISSUE_N_RESOLVED_IN_CORE for N=1..4) / sum(ISSUE_N_RELEVANT_CASES for N=1..4)",
+  "FULL_MAPPINGS": 32,
+  "PARTIAL_MAPPINGS": 18,
+  "FAILED_MAPPINGS": 0,
+  "V0_2_DRAFT_READY": "YES",
+  "per_case": [
+    {
+      "case_id": "COA-001",
+      "subject_type": "cultivation_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "FULL",
+      "relevant_issues": [
+        1,
+        2,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-002",
+      "subject_type": "cultivation_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "FULL",
+      "relevant_issues": [
+        1,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-003",
+      "subject_type": "cultivation_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "FULL",
+      "relevant_issues": [
+        1,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-004",
+      "subject_type": "product_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "FULL",
+      "relevant_issues": [
+        1,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-005",
+      "subject_type": "product_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "FULL",
+      "relevant_issues": [
+        1,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-006",
+      "subject_type": "product_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "FULL",
+      "relevant_issues": [
+        1,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-007",
+      "subject_type": "harvest_lot",
+      "subject_semantics_valid": true,
+      "mapping_result": "FULL",
+      "relevant_issues": [
+        1,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-008",
+      "subject_type": "product_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "FULL",
+      "relevant_issues": [
+        1,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-009",
+      "subject_type": "product_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "FULL",
+      "relevant_issues": [
+        1,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-010",
+      "subject_type": "product_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "FULL",
+      "relevant_issues": [
+        1,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-011",
+      "subject_type": "product_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "FULL",
+      "relevant_issues": [
+        1,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-012",
+      "subject_type": "harvest_lot",
+      "subject_semantics_valid": true,
+      "mapping_result": "PARTIAL",
+      "relevant_issues": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-013",
+      "subject_type": "product_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "PARTIAL",
+      "relevant_issues": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-014",
+      "subject_type": "product_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "PARTIAL",
+      "relevant_issues": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-015",
+      "subject_type": "harvest_lot",
+      "subject_semantics_valid": true,
+      "mapping_result": "PARTIAL",
+      "relevant_issues": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-016",
+      "subject_type": "product_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "FULL",
+      "relevant_issues": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-017",
+      "subject_type": "product_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "PARTIAL",
+      "relevant_issues": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-018",
+      "subject_type": "product_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "PARTIAL",
+      "relevant_issues": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-019",
+      "subject_type": "product_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "PARTIAL",
+      "relevant_issues": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-020",
+      "subject_type": "product_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "FULL",
+      "relevant_issues": [
+        2,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-021",
+      "subject_type": "product_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "FULL",
+      "relevant_issues": [
+        2,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-022",
+      "subject_type": "product_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "FULL",
+      "relevant_issues": [
+        2,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-023",
+      "subject_type": "product_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "FULL",
+      "relevant_issues": [
+        2,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-024",
+      "subject_type": "product_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "FULL",
+      "relevant_issues": [
+        2,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-025",
+      "subject_type": "product_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "FULL",
+      "relevant_issues": [
+        2,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-026",
+      "subject_type": "product_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "FULL",
+      "relevant_issues": [
+        2,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-027",
+      "subject_type": "product_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "FULL",
+      "relevant_issues": [
+        2,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-028",
+      "subject_type": "product_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "FULL",
+      "relevant_issues": [
+        1,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-029",
+      "subject_type": "product_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "PARTIAL",
+      "relevant_issues": [
+        1,
+        2,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-030",
+      "subject_type": "product_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "FULL",
+      "relevant_issues": [
+        1,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-031",
+      "subject_type": "product_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "PARTIAL",
+      "relevant_issues": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-032",
+      "subject_type": "product_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "FULL",
+      "relevant_issues": [
+        3
+      ],
+      "resolved_issues": [
+        3
+      ]
+    },
+    {
+      "case_id": "COA-033",
+      "subject_type": "harvest_lot",
+      "subject_semantics_valid": true,
+      "mapping_result": "PARTIAL",
+      "relevant_issues": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-034",
+      "subject_type": "harvest_lot",
+      "subject_semantics_valid": true,
+      "mapping_result": "PARTIAL",
+      "relevant_issues": [
+        1,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-035",
+      "subject_type": "harvest_lot",
+      "subject_semantics_valid": true,
+      "mapping_result": "PARTIAL",
+      "relevant_issues": [
+        1,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-036",
+      "subject_type": "harvest_lot",
+      "subject_semantics_valid": true,
+      "mapping_result": "PARTIAL",
+      "relevant_issues": [
+        1,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-037",
+      "subject_type": "harvest_lot",
+      "subject_semantics_valid": true,
+      "mapping_result": "PARTIAL",
+      "relevant_issues": [
+        1,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-038",
+      "subject_type": "harvest_lot",
+      "subject_semantics_valid": true,
+      "mapping_result": "PARTIAL",
+      "relevant_issues": [
+        1,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-039",
+      "subject_type": "harvest_lot",
+      "subject_semantics_valid": true,
+      "mapping_result": "PARTIAL",
+      "relevant_issues": [
+        1,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-040",
+      "subject_type": "harvest_lot",
+      "subject_semantics_valid": true,
+      "mapping_result": "PARTIAL",
+      "relevant_issues": [
+        1,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-041",
+      "subject_type": "harvest_lot",
+      "subject_semantics_valid": true,
+      "mapping_result": "PARTIAL",
+      "relevant_issues": [
+        1,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-042",
+      "subject_type": "harvest_lot",
+      "subject_semantics_valid": true,
+      "mapping_result": "FULL",
+      "relevant_issues": [
+        3
+      ],
+      "resolved_issues": [
+        3
+      ]
+    },
+    {
+      "case_id": "COA-043",
+      "subject_type": "product_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "FULL",
+      "relevant_issues": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-044",
+      "subject_type": "harvest_lot",
+      "subject_semantics_valid": true,
+      "mapping_result": "FULL",
+      "relevant_issues": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-045",
+      "subject_type": "product_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "FULL",
+      "relevant_issues": [
+        3
+      ],
+      "resolved_issues": [
+        3
+      ]
+    },
+    {
+      "case_id": "COA-046",
+      "subject_type": "product_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "FULL",
+      "relevant_issues": [
+        1,
+        3,
+        4
+      ],
+      "resolved_issues": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "case_id": "COA-047",
+      "subject_type": "product_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "FULL",
+      "relevant_issues": [
+        3
+      ],
+      "resolved_issues": [
+        3
+      ]
+    },
+    {
+      "case_id": "COA-048",
+      "subject_type": "product_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "FULL",
+      "relevant_issues": [
+        3
+      ],
+      "resolved_issues": [
+        3
+      ]
+    },
+    {
+      "case_id": "COA-049",
+      "subject_type": "product_batch",
+      "subject_semantics_valid": true,
+      "mapping_result": "FULL",
+      "relevant_issues": [
+        3
+      ],
+      "resolved_issues": [
+        3
+      ]
+    },
+    {
+      "case_id": "COA-050",
+      "subject_type": "harvest_lot",
+      "subject_semantics_valid": true,
+      "mapping_result": "FULL",
+      "relevant_issues": [
+        3
+      ],
+      "resolved_issues": [
+        3
+      ]
+    }
+  ]
+}
