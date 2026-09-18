@@ -25,5 +25,70 @@
         "record": "review-data/coa-001-weeddao-record.json"
       }
     }
-  ]
+  ],
+  "REAL_WORLD_COA_MAPPINGS": [
+    {
+      "case_id": "COA-001",
+      "case_type": "REAL_WORLD_COA_MAPPING",
+      "source": "GROWER_SUPPLIED",
+      "permission": "CONFIRMED",
+      "original_image_public": false,
+      "schema_version_tested": "0.1-alpha",
+      "status": "COMPLETED",
+      "mapping_result": "PARTIAL",
+      "first_external_implementation": false,
+      "paths": {
+        "case": "docs/review-cases/coa-001.md",
+        "gaps": "docs/review-cases/coa-001-gaps.md",
+        "record": "review-data/coa-001-weeddao-record.json"
+      }
+    },
+    {
+      "case_id": "COA-002",
+      "case_type": "REAL_WORLD_COA_MAPPING",
+      "source": "PRODUCER_SUPPLIED",
+      "producer": "Texas Original",
+      "product": "0:1 SLH Medical Vaporization Oil 0.5g",
+      "permission": "CONFIRMED",
+      "original_image_public": false,
+      "schema_version_tested": "0.1-alpha",
+      "status": "COMPLETED",
+      "mapping_result": "PARTIAL",
+      "first_external_implementation": false,
+      "paths": {
+        "case": "docs/review-cases/coa-002.md",
+        "gaps": "docs/review-cases/coa-002-gaps.md",
+        "record": "review-data/coa-002-weeddao-record.json"
+      }
+    },
+    {
+      "case_id": "COA-003",
+      "case_type": "REAL_WORLD_COA_MAPPING",
+      "source": "PRODUCER_SUPPLIED",
+      "producer": "Texas Original",
+      "product": "0:1 OGK Distillate Syringe 0.5g",
+      "permission": "CONFIRMED",
+      "original_image_public": false,
+      "schema_version_tested": "0.1-alpha",
+      "status": "COMPLETED",
+      "mapping_result": "PARTIAL",
+      "first_external_implementation": false,
+      "batch_id_note": "literal string '0' preserved",
+      "paths": {
+        "case": "docs/review-cases/coa-003.md",
+        "gaps": "docs/review-cases/coa-003-gaps.md",
+        "record": "review-data/coa-003-weeddao-record.json"
+      }
+    }
+  ],
+  "REAL_WORLD_COA_MAPPINGS_COUNT": 3,
+  "CROSS_CASE_ANALYSIS": {
+    "path": "docs/review-cases/cross-case-analysis-001-003.md",
+    "cases": [
+      "COA-001",
+      "COA-002",
+      "COA-003"
+    ],
+    "status": "COMPLETED"
+  }
 }
