@@ -1,140 +1,123 @@
-# WeedDAO Open Cannabis Data Standard
+# WeedDAO Cannabis Data Record v0.2 Draft
 
-**Version:** `0.1-alpha` (experimental, proposed)
+**Status:** **EXTERNAL REVIEW CANDIDATE** — experimental working draft on branch `v0.2-draft`
 
-An open, proposed data standard for cannabis cultivation records. This project defines a shared JSON shape so growers, laboratories, researchers, and software systems can exchange cultivation and lab data without inventing incompatible formats.
+This branch publishes WeedDAO Cannabis Data Record **`v0.2-draft`** for **independent external review**.
 
-> **Different platforms. Different organizations. One shared data language.**
-
-This is a **coordination / data layer**. It does not replace growers, labs, researchers, or software products. It is **not** a regulatory standard, **not** a certification program, **not** finalized, and makes **no claim of industry adoption**.
-
-## Status
+It is **not** a release, **not** an industry standard, **not** a regulatory specification, and makes **no claim of industry adoption**.
 
 | Item | Value |
 |------|--------|
-| Schema version | `0.1-alpha` |
-| Status | **EXTERNAL REVIEW** — see [STATUS.md](STATUS.md) |
-| Maturity | Experimental working draft — proposed / under development |
+| Active review draft | `0.2-draft` (`schemas/weeddao-record-v0.2-draft.schema.json`) |
+| Published frozen baseline | `v0.1-alpha` (unchanged; still validated by `scripts/validate.py`) |
+| Branch | [`v0.2-draft`](https://github.com/weeddaoresearch/weeddao-standard/tree/v0.2-draft) |
 | License | [Apache-2.0](LICENSE) |
-| Release notes | [RELEASE-v0.1-alpha.md](RELEASE-v0.1-alpha.md) |
-| Spec | [docs/specification-v0.1-alpha.md](docs/specification-v0.1-alpha.md) |
-| RFC | [docs/request-for-comments.md](docs/request-for-comments.md) |
-| External review brief | [docs/external-review-brief.md](docs/external-review-brief.md) |
+| Review brief | [docs/v0.2-external-review-brief.md](docs/v0.2-external-review-brief.md) |
+| Quickstart | [docs/v0.2-quickstart.md](docs/v0.2-quickstart.md) |
+| RFC | [docs/v0.2-request-for-comments.md](docs/v0.2-request-for-comments.md) |
+| Evidence log | [docs/v0.2-review-evidence.md](docs/v0.2-review-evidence.md) (empty until real external evidence) |
+| Conceptual board | [STATUS.md](STATUS.md) |
 
-## What this is
+> **Different platforms. Different organizations. One shared data language.**
 
-- A JSON Schema (Draft 2020-12) for a **cultivation record**
-- Optional sections for producer, cultivar, cultivation, environment, irrigation/nutrition, harvest, post-harvest, lab results, outcomes, and provenance
-- Explicit units, clear missing-data semantics, and provenance labels
-- Privacy-conscious: **no PII is required**
+This is a **coordination / data layer**. It does not replace growers, labs, researchers, dispensaries, or software products.
+
+## Relationship to v0.1-alpha
+
+- **`v0.1-alpha`** is the **published frozen baseline** (tag `v0.1-alpha`). Schema and tag must not be modified on this review track.
+- **`v0.2-draft`** is the **evidence-driven successor** based on a public COA corpus:
+  - **50 COAs / 8 jurisdictions / 7 labs / 40 primary / 7 secondary**
+  - Critical interoperability gaps addressed in core: below-limit (#1, 35), not-performed (#2, 22), ND (#3, 48), multi-unit (#4, 43)
+- Historical v0.1 docs under `docs/` remain preserved (specification, field reference, v0.1 review brief, etc.).
+
+## Design highlights (v0.2-draft)
+
+- **Subject model** — required `subject` (`subject_type`, `subject_id`); finished products use `product_batch` instead of forcing `cultivation_batch_id`
+- **Sample lifecycle** — optional `lab_results.sample` with distinct `collected_at` / `received_at` / `reported_at` (never silently substituted for `tested_at`)
+- **External identifiers** — open `scheme` + `value` (track-and-trace, lab sample, producer lot, …)
+- **`result_state` vs `assessment`** — measurement state (detected / ND / below-limit / not-performed / …) is separate from pass/fail assessment; no sentinel `0` for ND or visual-only passes
+
+See [docs/v0.2-design.md](docs/v0.2-design.md) and [docs/v0.1-to-v0.2-migration.md](docs/v0.1-to-v0.2-migration.md).
 
 ## What this is not
 
 - Not an official or “industry-leading” standard
+- Not a v0.2 release or tagged version
 - Not a replacement for laboratory methods, agronomy practice, or business software
 - Not a compliance or certification scheme
 - Not related to tokens, blockchains, NFTs, or crypto assets of any kind
 
-## Repository layout
+## Quick start (v0.2-draft)
 
-```
-weeddao-standard/
-├── README.md
-├── STATUS.md
-├── RELEASE-v0.1-alpha.md
-├── LICENSE
-├── CHANGELOG.md
-├── CONTRIBUTING.md
-├── GOVERNANCE.md
-├── review-tracker.json
-├── requirements.txt
-├── schemas/
-│   └── weeddao-cultivation-record-v0.1-alpha.schema.json
-├── examples/
-│   ├── minimal-record.json
-│   └── complete-record.json
-├── docs/
-│   ├── external-review-brief.md
-│   ├── quickstart.md
-│   ├── specification-v0.1-alpha.md
-│   ├── field-reference.md
-│   ├── interoperability.md
-│   ├── privacy.md
-│   ├── request-for-comments.md
-│   ├── review-evidence.md
-│   └── outreach-copy.md
-├── tests/
-│   ├── valid/
-│   └── invalid/
-├── scripts/
-│   └── validate.py
-└── .github/ISSUE_TEMPLATE/
-    ├── field-request.md
-    ├── schema-problem.md
-    └── implementation-feedback.md
+Full path: [docs/v0.2-quickstart.md](docs/v0.2-quickstart.md) (includes **INDEPENDENT IMPLEMENTATION CHALLENGE**).
+
+```bash
+git checkout v0.2-draft
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+python scripts/validate_v0.2.py
+python scripts/validate_v0.2.py examples/v0.2-draft/01-minimal-subject.json
 ```
 
-## Quick start
-
-Full path: [docs/quickstart.md](docs/quickstart.md) (~10 minutes).
-
-### Minimal record
-
-Only four fields are required:
+Minimal record:
 
 ```json
 {
-  "schema_version": "0.1-alpha",
-  "record_id": "rec-001-minimal",
-  "cultivation_batch_id": "batch-2026-001",
-  "created_at": "2026-09-18T10:00:00Z"
+  "schema_version": "0.2-draft",
+  "record_id": "v02-ex-001-minimal",
+  "created_at": "2026-09-18T12:00:00Z",
+  "subject": {
+    "subject_type": "sample",
+    "subject_id": "sample-minimal-001"
+  }
 }
 ```
 
-See `examples/complete-record.json` for a fully populated illustration.
+## Repository layout (review-relevant)
 
-### Validate
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-python scripts/validate.py
 ```
-
-The validator checks:
-
-1. The schema document itself (Draft 2020-12)
-2. All `tests/valid/*.json` (and examples) — must pass
-3. All `tests/invalid/*.json` — must fail for schema reasons
-
-## Design highlights
-
-- **`schema_version`** is fixed to `"0.1-alpha"` for this draft.
-- **Environment** fields carry units in their names (e.g. `average_day_temp_c`, `average_vpd_kpa`, `ppfd_umol_m2_s`).
-- **Cannabinoids** are objects `{ "value": number|null, "unit": "..." }` for `thc`, `thca`, `cbd`, `cbda`, `cbg`, `cbga`, `cbc`, `cbn`, `thcv`, plus totals.
-- **Terpenes** are an extensible array of `{ name, value, unit }`.
-- **Provenance** uses: `self_reported` | `sensor_measured` | `laboratory_verified` | `third_party_verified` | `derived`.
-- **Missing data:** use `null`. Document why with `not_measured` / `not_applicable` / `withheld` — never magic numbers like `-1`, `999`, or `0` as sentinels.
-- **Cultivar identity:** distinguish `reported` vs `genetically_verified` via `identity_status` and optional `genetic_verification`.
+weeddao-standard/
+├── README.md                          # this file (v0.2-draft branch)
+├── STATUS.md
+├── schemas/
+│   ├── weeddao-cultivation-record-v0.1-alpha.schema.json   # frozen baseline
+│   └── weeddao-record-v0.2-draft.schema.json               # active review draft
+├── examples/
+│   ├── minimal-record.json / complete-record.json          # v0.1
+│   └── v0.2-draft/                                         # v0.2 examples
+├── docs/
+│   ├── v0.2-external-review-brief.md
+│   ├── v0.2-quickstart.md
+│   ├── v0.2-request-for-comments.md
+│   ├── v0.2-outreach-copy.md
+│   ├── v0.2-review-evidence.md
+│   ├── v0.2-design.md
+│   ├── v0.1-to-v0.2-migration.md
+│   ├── v0.2-corpus-validation.md
+│   └── … (historical v0.1 docs preserved)
+├── scripts/
+│   ├── validate.py            # v0.1-alpha
+│   └── validate_v0.2.py       # v0.2-draft (+ --shadow)
+└── .github/ISSUE_TEMPLATE/
+    ├── v0.2-implementation-feedback.md
+    └── … (v0.1 templates kept)
+```
 
 ## Documentation
 
 | Document | Purpose |
 |----------|---------|
-| [RELEASE-v0.1-alpha.md](RELEASE-v0.1-alpha.md) | External-review release notes |
-| [STATUS.md](STATUS.md) | Conceptual status board |
-| [external-review-brief.md](docs/external-review-brief.md) | ~2 min reviewer brief |
-| [quickstart.md](docs/quickstart.md) | 10-minute developer path |
-| [specification-v0.1-alpha.md](docs/specification-v0.1-alpha.md) | Normative overview of the draft |
-| [field-reference.md](docs/field-reference.md) | Field-by-field reference |
-| [interoperability.md](docs/interoperability.md) | How systems can map to/from this shape |
-| [privacy.md](docs/privacy.md) | PII avoidance and sharing guidance |
-| [request-for-comments.md](docs/request-for-comments.md) | Open questions and comment process |
-| [review-evidence.md](docs/review-evidence.md) | External review evidence log (empty until real reviews) |
-| [outreach-copy.md](docs/outreach-copy.md) | Short review-request messages |
-| [GOVERNANCE.md](GOVERNANCE.md) | How decisions are made |
-| [CONTRIBUTING.md](CONTRIBUTING.md) | How to contribute |
+| [STATUS.md](STATUS.md) | Published baseline vs active review draft |
+| [v0.2-external-review-brief.md](docs/v0.2-external-review-brief.md) | ~2–3 min reviewer brief |
+| [v0.2-quickstart.md](docs/v0.2-quickstart.md) | Validate + independent challenge |
+| [v0.2-request-for-comments.md](docs/v0.2-request-for-comments.md) | Concise RFC |
+| [v0.2-outreach-copy.md](docs/v0.2-outreach-copy.md) | Short review-request messages |
+| [v0.2-review-evidence.md](docs/v0.2-review-evidence.md) | External evidence log (empty) |
+| [v0.2-design.md](docs/v0.2-design.md) | Design rationale |
+| [v0.1-to-v0.2-migration.md](docs/v0.1-to-v0.2-migration.md) | Migration notes |
+| [v0.2-corpus-validation.md](docs/v0.2-corpus-validation.md) | Shadow corpus results |
+| [specification-v0.1-alpha.md](docs/specification-v0.1-alpha.md) | Historical v0.1 normative overview (preserved) |
+| [RELEASE-v0.1-alpha.md](RELEASE-v0.1-alpha.md) | v0.1-alpha release notes (preserved) |
 
 ## License
 

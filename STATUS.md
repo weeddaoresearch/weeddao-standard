@@ -1,25 +1,43 @@
-# WeedDAO Standard v0.1-alpha
+# WeedDAO Standard — status board (v0.2-draft branch)
 
-STATUS: EXTERNAL REVIEW
+PUBLISHED_BASELINE = v0.1-alpha
 
-SCHEMA = VALID
+ACTIVE_REVIEW_DRAFT = v0.2-draft
 
-REFERENCE IMPLEMENTATION = AVAILABLE
+V0_2_RELEASED = NO
 
-EXAMPLES = VALIDATED
+EXTERNAL_IMPLEMENTATIONS = 0
 
-RFC = OPEN
+EXTERNAL_REVIEW_CANDIDATE = YES
 
-FORMAL CERTIFICATION = NOT AVAILABLE
+FORMAL_CERTIFICATION = NOT AVAILABLE
 
-INDUSTRY ADOPTION = NOT CLAIMED
+INDUSTRY_ADOPTION = NOT CLAIMED
 
-REGULATORY STATUS = NONE
+REGULATORY_STATUS = NONE
 
-Next milestone = evidence from independent external reviewers/implementers.
+SCHEMA_V0_1_ALPHA = FROZEN (tag v0.1-alpha)
+
+SCHEMA_V0_2_DRAFT = UNDER_INDEPENDENT_EXTERNAL_REVIEW
+
+REFERENCE_EXAMPLES_V0_2 = AVAILABLE (examples/v0.2-draft)
+
+VALIDATOR_V0_1 = scripts/validate.py
+
+VALIDATOR_V0_2 = scripts/validate_v0.2.py
+
+RFC_V0_2 = OPEN (docs/v0.2-request-for-comments.md)
+
+REVIEW_EVIDENCE_V0_2 = EMPTY (docs/v0.2-review-evidence.md)
+
+FIRST_EXTERNAL_VALID_RECORD = NOT YET RECORDED
+
+FIRST_EXTERNAL_IMPLEMENTATION = NOT YET RECORDED
+
+Next milestone = independent external review / independent valid record (see docs/v0.2-quickstart.md)
 
 ---
 
-Terminology: open cannabis data standard under development / proposed / v0.1-alpha working draft.
+Terminology: WeedDAO Cannabis Data Record v0.2 Draft — experimental EXTERNAL REVIEW CANDIDATE. Not a release.
 
-See [RELEASE-v0.1-alpha.md](RELEASE-v0.1-alpha.md), [docs/review-evidence.md](docs/review-evidence.md), and [review-tracker.json](review-tracker.json).
+See [docs/v0.2-external-review-brief.md](docs/v0.2-external-review-brief.md), [docs/v0.2-review-evidence.md](docs/v0.2-review-evidence.md), and historical [docs/review-evidence.md](docs/review-evidence.md) for v0.1.
