@@ -17,5 +17,6 @@
   "remaining_optional_gaps": [
     "water_activity_not_in_core"
   ],
-  "notes": "Shadow mapping from corpus/v0.1 facts only; issues #1–#4 expressed in core AnalyteResult/subject."
+  "notes": "Shadow mapping from corpus/v0.1 facts only; issues #1\u2013#4 expressed in core AnalyteResult/subject.",
+  "subject_type": "product_batch"
 }

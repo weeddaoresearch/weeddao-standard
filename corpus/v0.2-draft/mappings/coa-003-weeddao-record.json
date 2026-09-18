@@ -4,13 +4,12 @@
   "created_at": "2026-09-18T16:00:00Z",
   "updated_at": "2026-09-18T16:00:00Z",
   "subject": {
-    "subject_type": "cultivation_batch",
+    "subject_type": "product_batch",
     "subject_id": "0",
-    "name": "OGK",
-    "product_type": null,
+    "name": "0:1 OGK Distillate Syringe 0.5g",
+    "product_type": "concentrate/extract",
     "matrix": "Distillate Syringe 0.5g"
   },
-  "cultivation_batch_id": "0",
   "producer": {
     "organization_name": "Texas Original",
     "organization_id": "tx-original-review-003",
@@ -33,7 +32,7 @@
     "lab_id": "external-lab-002",
     "certificate_id": "redacted-coa-003",
     "tested_at": "2025-12-23T00:00:00Z",
-    "notes": "Mapped from a producer-supplied Certificate of Analysis for WeedDAO interoperability review. Original certificate artwork/signatures not republished. Laboratory branded as external-lab-002. Batch ID on certificate is the literal string '0' — preserved as cultivation_batch_id string '0' (NOT converted to null). Detected cannabinoids/terpenes mapped with unit '%'. ND cannabinoid/terpene rows omitted from core. Heavy metal <0.008 ppm omitted from numeric values. Multi-unit mg/g and mg/unit in extensions.weeddao_review. See docs/review-cases/coa-003-gaps.md.",
+    "notes": "Mapped from a producer-supplied Certificate of Analysis for WeedDAO interoperability review. Original certificate artwork/signatures not republished. Laboratory branded as external-lab-002. Batch ID on certificate is the literal string '0' \u2014 preserved as cultivation_batch_id string '0' (NOT converted to null). Detected cannabinoids/terpenes mapped with unit '%'. ND cannabinoid/terpene rows omitted from core. Heavy metal <0.008 ppm omitted from numeric values. Multi-unit mg/g and mg/unit in extensions.weeddao_review. See docs/review-cases/coa-003-gaps.md.",
     "provenance": "laboratory_verified",
     "sample": {
       "matrix": "Distillate Syringe 0.5g"
@@ -429,7 +428,7 @@
       "visual_inspection_coa": "Passed",
       "tx_license_coa": "0005",
       "batch_id_coa": "0",
-      "batch_id_ambiguity_note": "Certificate shows literal batch ID '0'. Preserved as cultivation_batch_id string '0'. Do NOT convert to null. Ambiguous whether this is a placeholder, missing print, or intentional token — documented for review; not silently dropped.",
+      "batch_id_ambiguity_note": "Certificate shows literal batch ID '0'. Preserved as cultivation_batch_id string '0'. Do NOT convert to null. Ambiguous whether this is a placeholder, missing print, or intentional token \u2014 documented for review; not silently dropped.",
       "total_cbd_coa": "ND",
       "semantic_notes": [
         "ND (Not Detected) is NOT zero and is NOT not_measured.",

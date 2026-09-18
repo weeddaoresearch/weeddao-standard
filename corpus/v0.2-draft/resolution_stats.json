@@ -34,7 +34,7 @@
     },
     {
       "case_id": "COA-002",
-      "subject_type": "cultivation_batch",
+      "subject_type": "product_batch",
       "subject_semantics_valid": true,
       "mapping_result": "FULL",
       "relevant_issues": [
@@ -50,7 +50,7 @@
     },
     {
       "case_id": "COA-003",
-      "subject_type": "cultivation_batch",
+      "subject_type": "product_batch",
       "subject_semantics_valid": true,
       "mapping_result": "FULL",
       "relevant_issues": [
@@ -812,5 +812,6 @@
         3
       ]
     }
-  ]
+  ],
+  "BLOCKERS": []
 }

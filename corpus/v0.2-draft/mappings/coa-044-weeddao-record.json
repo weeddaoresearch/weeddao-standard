@@ -35,9 +35,9 @@
     "jurisdiction": "US-NY"
   },
   "cultivar": {
-    "reported_name": "Boussera Lemons Sativa Flower 28g",
+    "reported_name": "Boussera Lemons",
     "identity_status": "reported",
-    "notes": "Genetics / cultivar identity for flower lot."
+    "notes": "Cultivar/strain as genetics identity only; product display name remains on subject.name."
   },
   "provenance": {
     "record": "derived",

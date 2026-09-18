@@ -4,13 +4,12 @@
   "created_at": "2026-09-18T16:00:00Z",
   "updated_at": "2026-09-18T16:00:00Z",
   "subject": {
-    "subject_type": "cultivation_batch",
+    "subject_type": "product_batch",
     "subject_id": "11003107150285",
-    "name": "SLH",
-    "product_type": null,
+    "name": "0:1 SLH Medical Vaporization Oil 0.5g",
+    "product_type": "vape",
     "matrix": "Medical Vaporization Oil 0.5g"
   },
-  "cultivation_batch_id": "11003107150285",
   "producer": {
     "organization_name": "Texas Original",
     "organization_id": "tx-original-review-002",

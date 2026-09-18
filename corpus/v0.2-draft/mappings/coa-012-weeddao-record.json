@@ -15,9 +15,9 @@
     "jurisdiction": "US-NY"
   },
   "cultivar": {
-    "reported_name": "Cool Ranch Mintz Hybrid Flower 28g",
+    "reported_name": "Cool Ranch Mintz",
     "identity_status": "reported",
-    "notes": "Genetics / cultivar identity for flower lot."
+    "notes": "Genetics / cultivar identity for flower lot. Cultivar name cleaned to genetics identity only (product display remains on subject)."
   },
   "provenance": {
     "record": "derived",

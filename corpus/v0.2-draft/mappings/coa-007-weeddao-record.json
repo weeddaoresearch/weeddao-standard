@@ -29,9 +29,9 @@
     "jurisdiction": "US-MO"
   },
   "cultivar": {
-    "reported_name": "Acai Mints flower",
+    "reported_name": "Acai Mints",
     "identity_status": "reported",
-    "notes": "Genetics / cultivar identity for flower lot."
+    "notes": "Genetics / cultivar identity for flower lot. Cultivar name cleaned to genetics identity only."
   },
   "provenance": {
     "record": "derived",

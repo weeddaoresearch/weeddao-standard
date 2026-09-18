@@ -15,9 +15,9 @@
     "jurisdiction": "US-NY"
   },
   "cultivar": {
-    "reported_name": "Sha-Boink flower",
+    "reported_name": "Sha-Boink",
     "identity_status": "reported",
-    "notes": "Genetics / cultivar identity for flower lot."
+    "notes": "Genetics / cultivar identity for flower lot. Cultivar name cleaned to genetics identity only."
   },
   "provenance": {
     "record": "derived",

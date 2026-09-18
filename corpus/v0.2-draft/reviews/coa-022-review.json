@@ -15,5 +15,6 @@
     "4": true
   },
   "remaining_optional_gaps": [],
-  "notes": "Shadow mapping from corpus/v0.1 facts only; issues #1–#4 expressed in core AnalyteResult/subject."
+  "notes": "Shadow mapping from corpus/v0.1 facts only; issues #1\u2013#4 expressed in core AnalyteResult/subject.",
+  "subject_type": "product_batch"
 }

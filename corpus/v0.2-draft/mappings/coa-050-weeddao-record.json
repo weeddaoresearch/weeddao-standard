@@ -15,9 +15,9 @@
     "jurisdiction": "US-MA"
   },
   "cultivar": {
-    "reported_name": "Wedding Cake Flower",
+    "reported_name": "Wedding Cake",
     "identity_status": "reported",
-    "notes": "Genetics / cultivar identity for flower lot."
+    "notes": "Genetics / cultivar identity for flower lot. Cultivar name cleaned to genetics identity only."
   },
   "provenance": {
     "record": "derived",
