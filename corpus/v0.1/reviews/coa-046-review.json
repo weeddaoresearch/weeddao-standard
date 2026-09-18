@@ -3,29 +3,59 @@
   "schema_version": "0.1-alpha",
   "mapped_record_valid": true,
   "mapping_result": "PARTIAL",
-  "exact_mapping_count": 0,
-  "partial_mapping_count": 1,
-  "not_representable_count": 3,
+  "exact_mapping_count": 4,
+  "partial_mapping_count": 3,
+  "not_representable_count": 8,
   "gaps": [
     {
-      "gap_key": "batch_id_missing_placeholder",
-      "observed_source_semantics": "No batch/sample id; deterministic placeholder",
-      "severity": "IMPORTANT",
-      "existing_issue_if_any": null
+      "gap_key": "below_reporting_limit_qualifier",
+      "observed_source_semantics": "<LOQ cannabinoids omitted: ['CBC', 'CBCA', 'CBD', 'CBDA', 'CBDV', 'CBDVA', 'CBG', 'CBGA', 'CBL', 'CBN']...",
+      "severity": "CRITICAL_INTEROPERABILITY",
+      "existing_issue_if_any": 1
     },
     {
       "gap_key": "nd_not_representable",
-      "observed_source_semantics": "ND examples=[]",
+      "observed_source_semantics": "ND vocabulary on Lightscale Labs COA / QC blanks",
       "severity": "CRITICAL_INTEROPERABILITY",
       "existing_issue_if_any": 3
     },
     {
-      "gap_key": "source_unavailable_or_unparsed",
-      "observed_source_semantics": "SOURCE_UNAVAILABLE at fetch time",
+      "gap_key": "multi_unit_cannabinoid",
+      "observed_source_semantics": "Concurrent % + mg/g + mg/serving + mg/package; labeled targets",
+      "severity": "CRITICAL_INTEROPERABILITY",
+      "existing_issue_if_any": 4
+    },
+    {
+      "gap_key": "regulatory_tracking",
+      "observed_source_semantics": "METRC PKG + METRC SRC (Oregon)",
+      "severity": "JURISDICTION_SPECIFIC",
+      "existing_issue_if_any": null
+    },
+    {
+      "gap_key": "sample_lifecycle_metadata",
+      "observed_source_semantics": "Harvest/MFG, Collected On, Produced dates",
+      "severity": "IMPORTANT",
+      "existing_issue_if_any": null
+    },
+    {
+      "gap_key": "potency_spec_failure_not_native",
+      "observed_source_semantics": "Batch/Potency FAIL labeled-vs-measured Total THC (srv 11→11.390 mg; pkg 110→113.90 mg). No native potency-spec FAIL in v0.1-alpha; not mapped as contaminant safety FAIL.",
+      "severity": "IMPORTANT",
+      "existing_issue_if_any": null
+    },
+    {
+      "gap_key": "homogeneity_not_in_core",
+      "observed_source_semantics": "Homogeneity FAIL Total THC RPD 10.1 vs 10% limit; no first-class homogeneity object",
+      "severity": "IMPORTANT",
+      "existing_issue_if_any": null
+    },
+    {
+      "gap_key": "labeled_vs_measured_dosing",
+      "observed_source_semantics": "Labeled Total THC/serving 11 mg vs measured 11.390; package 110 vs 113.90",
       "severity": "IMPORTANT",
       "existing_issue_if_any": null
     }
   ],
-  "source_unavailable": true,
-  "notes": "Automated corpus mapping against frozen v0.1-alpha; numeric values only when parseable; no fabrication."
+  "source_unavailable": false,
+  "notes": "REQUIRED FAIL case. PARTIAL: Δ9/Total THC mapped; <LOQ omitted; multi-unit+labeled in extensions. Potency-spec/homogeneity FAIL in extensions — NOT contaminant safety FAIL. Only FAIL case in corpus."
 }

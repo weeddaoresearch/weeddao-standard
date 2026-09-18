@@ -1,49 +1,181 @@
 {
   "schema_version": "0.1-alpha",
   "record_id": "corpus-coa-043",
-  "cultivation_batch_id": "corpus-coa-043-unknown-batch",
+  "cultivation_batch_id": "TCR-5P-CK-901",
   "created_at": "2026-09-18T17:00:00Z",
   "updated_at": "2026-09-18T17:00:00Z",
   "producer": {
-    "organization_name": "OpenCOA",
+    "organization_name": "Grams Brooklyn",
     "jurisdiction": "US-NY"
   },
   "cultivar": {
-    "reported_name": "Tangieland Sun Grown 14g",
+    "reported_name": "Champagne Killer Hybrid 5-Pack Preroll 2.5g",
     "identity_status": "reported"
   },
   "lab_results": {
-    "lab_name": null,
-    "sample_id": null,
-    "provenance": "derived",
-    "notes": "Mapped from public COA corpus case COA-043. WeedDAO does not independently re-verify laboratory measurements. SOURCE_UNAVAILABLE at corpus fetch time."
+    "lab_name": "ACT Laboratories (NY)",
+    "sample_id": "SNYTCO0903-PPRE-0030487",
+    "provenance": "laboratory_verified",
+    "notes": "Mapped from public COA corpus case COA-043. WeedDAO does not independently re-verify laboratory measurements.",
+    "cannabinoids": {
+      "cbga": {
+        "value": 1.456,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "thc": {
+        "value": 5.303,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "thca": {
+        "value": 29.613,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "total_thc": {
+        "value": 31.274,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "total_cannabinoids": {
+        "value": 36.372,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      }
+    },
+    "terpenes": [
+      {
+        "name": "b-caryophyllene",
+        "value": 0.3937,
+        "unit": "%"
+      },
+      {
+        "name": "limonene",
+        "value": 0.2923,
+        "unit": "%"
+      },
+      {
+        "name": "b-myrcene",
+        "value": 0.2081,
+        "unit": "%"
+      },
+      {
+        "name": "linalool",
+        "value": 0.1986,
+        "unit": "%"
+      },
+      {
+        "name": "trans-b-farnesene",
+        "value": 0.1727,
+        "unit": "%"
+      }
+    ],
+    "total_terpenes": {
+      "value": 1.7656,
+      "unit": "%"
+    },
+    "safety": {
+      "microbials": {
+        "status": "pass"
+      },
+      "pesticides": {
+        "status": "pass"
+      },
+      "heavy_metals": {
+        "status": "pass"
+      },
+      "mycotoxins": {
+        "status": "pass"
+      },
+      "residual_solvents": {
+        "status": "not_tested"
+      }
+    }
   },
   "provenance": {
     "record": "derived",
-    "lab_results": "derived",
+    "lab_results": "laboratory_verified",
     "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
   },
   "extensions": {
     "weeddao_corpus": {
       "case_id": "COA-043",
-      "source_url": "https://opencoa.org/coa/019c8845-7be0-7156-a98c-e8f0a3993905/tl0d11725",
-      "source_tier": "secondary",
-      "source_group": "OpenCOA",
-      "product_hint": "Tangieland Sun Grown 14g",
-      "product_type_hint": "flower",
-      "title_verified": "Tangieland Sun Grown 14g",
+      "source_url": "https://www.gramsbk.com/coa/COA-SNYTCO0903PPRE0030487-ChampagneKillerHybrid5PackPreroll25g-TCR5PCK901-002.pdf",
+      "source_tier": "primary",
+      "source_group": "Grams Brooklyn",
+      "product_hint": "Champagne Killer Hybrid 5-Pack Preroll 2.5g",
+      "product_type_hint": "pre-roll",
+      "title_verified": "Champagne Killer | Hybrid | 5-Pack Preroll | 2.5g",
       "overall_result_observed": null,
       "units_observed": [
-        "%"
+        "%",
+        "mg/g",
+        "mg/unit",
+        "CFU/g",
+        "µg/g",
+        "ng/g"
       ],
       "panels_observed": [
         "cannabinoid",
         "terpene",
         "microbial",
         "pesticide",
-        "heavy_metal"
+        "heavy_metal",
+        "residual_solvent",
+        "mycotoxin",
+        "moisture",
+        "water_activity",
+        "foreign_matter"
       ],
-      "source_unavailable": true
+      "cannabinoids_alt_units": {
+        "cbga": {
+          "mg/g": 14.56,
+          "mg/unit": 36.4
+        },
+        "thc": {
+          "mg/g": 53.03,
+          "mg/unit": 132.58
+        },
+        "thca": {
+          "mg/g": 296.13,
+          "mg/unit": 740.33
+        },
+        "total_thc": {
+          "mg/g": 312.74,
+          "mg/unit": 781.85
+        },
+        "total_cannabinoids": {
+          "mg/g": 363.72,
+          "mg/unit": 909.31
+        }
+      },
+      "foreign_material": "not_tested",
+      "moisture_percent": 9.9,
+      "water_activity": 0.58,
+      "homogeneity_status": "not_tested",
+      "metrc_batch": "1A412030000164C000002220",
+      "metrc_sample": "1A412030000164C000002229",
+      "metrc_manifest": "0000384492",
+      "dates": {
+        "sampled": "2026-09-03",
+        "received": "2026-09-03",
+        "report_created": "2026-09-09"
+      },
+      "nd_cannabinoids_omitted": [
+        "CBDV",
+        "CBD",
+        "THCV",
+        "CBC",
+        "D8-THC",
+        "Total D10-THC",
+        "Total CBD"
+      ],
+      "below_loq_cannabinoids_omitted": [
+        "CBDa",
+        "CBG",
+        "CBN"
+      ]
     }
   }
 }

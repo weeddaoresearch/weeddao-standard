@@ -40,7 +40,7 @@
     {
       "gap_key": "foreign_material",
       "observed_source_semantics": "Foreign material / visual inspection",
-      "severity": "IMPORTANT",
+      "severity": "OPTIONAL",
       "existing_issue_if_any": null
     },
     {

@@ -2,35 +2,33 @@
   "TOTAL_CASES": 50,
   "SEED_CASES": 3,
   "NEW_PUBLIC_CASES": 47,
-  "PRIMARY_SOURCE_CASES": 37,
-  "SECONDARY_SOURCE_CASES": 10,
+  "PRIMARY_SOURCE_CASES": 40,
+  "SECONDARY_SOURCE_CASES": 7,
   "JURISDICTIONS": [
     "Connecticut",
-    "Louisiana brand",
-    "Louisiana brand / California lab",
+    "Louisiana",
     "Massachusetts",
     "Missouri",
     "New Mexico",
     "New York",
-    "Texas",
-    "Texas retail / Oregon laboratory"
+    "Oregon",
+    "Texas"
   ],
   "LABORATORIES": [
     "ACT Laboratories (NY)",
     "ChemHistory",
     "Green Precision Analytics",
     "Kaycha Labs",
+    "Lightscale Labs",
     "external-lab-001",
     "external-lab-002"
   ],
   "PRODUCERS": [
     "8th Avenue",
-    "8th Avenue / ChemHistory",
     "BakPak",
     "Desert Green Farm",
     "Grams Brooklyn",
-    "Grams Brooklyn / ACT Laboratories",
-    "OpenCOA",
+    "Grön Chocolate",
     "Show-Me GP",
     "Texas Original"
   ],
@@ -51,14 +49,14 @@
   "FULL_MAPPINGS": 0,
   "PARTIAL_MAPPINGS": 50,
   "FAILED_MAPPINGS": 0,
-  "SOURCE_UNAVAILABLE": 3,
+  "SOURCE_UNAVAILABLE": 0,
   "gap_stats": [
     {
       "gap_key": "nd_not_representable",
       "cases_count": 48,
       "cases_percent": 96.0,
-      "independent_labs_count": 5,
-      "jurisdictions_count": 8,
+      "independent_labs_count": 6,
+      "jurisdictions_count": 7,
       "product_types_count": 12,
       "severity": "CRITICAL_INTEROPERABILITY",
       "existing_issue": 3,
@@ -116,10 +114,10 @@
     },
     {
       "gap_key": "multi_unit_cannabinoid",
-      "cases_count": 40,
-      "cases_percent": 80.0,
-      "independent_labs_count": 6,
-      "jurisdictions_count": 7,
+      "cases_count": 43,
+      "cases_percent": 86.0,
+      "independent_labs_count": 7,
+      "jurisdictions_count": 6,
       "product_types_count": 11,
       "severity": "CRITICAL_INTEROPERABILITY",
       "existing_issue": 4,
@@ -164,14 +162,17 @@
         "COA-038",
         "COA-039",
         "COA-040",
-        "COA-041"
+        "COA-041",
+        "COA-043",
+        "COA-044",
+        "COA-046"
       ]
     },
     {
       "gap_key": "below_reporting_limit_qualifier",
-      "cases_count": 32,
-      "cases_percent": 64.0,
-      "independent_labs_count": 6,
+      "cases_count": 35,
+      "cases_percent": 70.0,
+      "independent_labs_count": 7,
       "jurisdictions_count": 6,
       "product_types_count": 8,
       "severity": "CRITICAL_INTEROPERABILITY",
@@ -209,19 +210,22 @@
         "COA-038",
         "COA-039",
         "COA-040",
-        "COA-041"
+        "COA-041",
+        "COA-043",
+        "COA-044",
+        "COA-046"
       ]
     },
     {
       "gap_key": "regulatory_tracking",
-      "cases_count": 27,
-      "cases_percent": 54.0,
-      "independent_labs_count": 4,
+      "cases_count": 30,
+      "cases_percent": 60.0,
+      "independent_labs_count": 5,
       "jurisdictions_count": 3,
       "product_types_count": 8,
       "severity": "JURISDICTION_SPECIFIC",
       "existing_issue": null,
-      "evidence_class": "CROSS_JURISDICTION",
+      "evidence_class": "JURISDICTION_SPECIFIC",
       "case_ids": [
         "COA-004",
         "COA-005",
@@ -249,16 +253,19 @@
         "COA-038",
         "COA-039",
         "COA-040",
-        "COA-041"
+        "COA-041",
+        "COA-043",
+        "COA-044",
+        "COA-046"
       ]
     },
     {
       "gap_key": "sample_lifecycle_metadata",
-      "cases_count": 24,
-      "cases_percent": 48.0,
-      "independent_labs_count": 4,
+      "cases_count": 27,
+      "cases_percent": 54.0,
+      "independent_labs_count": 5,
       "jurisdictions_count": 4,
-      "product_types_count": 7,
+      "product_types_count": 8,
       "severity": "IMPORTANT",
       "existing_issue": null,
       "evidence_class": "CROSS_JURISDICTION",
@@ -286,15 +293,18 @@
         "COA-038",
         "COA-039",
         "COA-040",
-        "COA-041"
+        "COA-041",
+        "COA-043",
+        "COA-044",
+        "COA-046"
       ]
     },
     {
       "gap_key": "analyte_level_not_performed",
-      "cases_count": 20,
-      "cases_percent": 40.0,
+      "cases_count": 22,
+      "cases_percent": 44.0,
       "independent_labs_count": 3,
-      "jurisdictions_count": 4,
+      "jurisdictions_count": 3,
       "product_types_count": 8,
       "severity": "CRITICAL_INTEROPERABILITY",
       "existing_issue": 2,
@@ -319,19 +329,21 @@
         "COA-027",
         "COA-029",
         "COA-031",
-        "COA-033"
+        "COA-033",
+        "COA-043",
+        "COA-044"
       ]
     },
     {
       "gap_key": "foreign_material",
-      "cases_count": 20,
-      "cases_percent": 40.0,
+      "cases_count": 22,
+      "cases_percent": 44.0,
       "independent_labs_count": 5,
       "jurisdictions_count": 4,
       "product_types_count": 6,
-      "severity": "IMPORTANT",
+      "severity": "OPTIONAL",
       "existing_issue": null,
-      "evidence_class": "CROSS_JURISDICTION",
+      "evidence_class": "OPTIONAL_METADATA",
       "case_ids": [
         "COA-001",
         "COA-002",
@@ -352,19 +364,21 @@
         "COA-028",
         "COA-030",
         "COA-031",
-        "COA-033"
+        "COA-033",
+        "COA-043",
+        "COA-044"
       ]
     },
     {
       "gap_key": "moisture_not_in_core",
-      "cases_count": 19,
-      "cases_percent": 38.0,
+      "cases_count": 21,
+      "cases_percent": 42.0,
       "independent_labs_count": 4,
-      "jurisdictions_count": 3,
+      "jurisdictions_count": 2,
       "product_types_count": 6,
       "severity": "OPTIONAL",
       "existing_issue": null,
-      "evidence_class": "CROSS_JURISDICTION",
+      "evidence_class": "OPTIONAL_METADATA",
       "case_ids": [
         "COA-001",
         "COA-012",
@@ -384,19 +398,21 @@
         "COA-038",
         "COA-039",
         "COA-040",
-        "COA-041"
+        "COA-041",
+        "COA-043",
+        "COA-044"
       ]
     },
     {
       "gap_key": "not_reported",
-      "cases_count": 14,
-      "cases_percent": 28.0,
+      "cases_count": 16,
+      "cases_percent": 32.0,
       "independent_labs_count": 2,
-      "jurisdictions_count": 2,
+      "jurisdictions_count": 1,
       "product_types_count": 5,
       "severity": "IMPORTANT",
       "existing_issue": null,
-      "evidence_class": "CROSS_JURISDICTION",
+      "evidence_class": "CROSS_LAB",
       "case_ids": [
         "COA-012",
         "COA-013",
@@ -411,19 +427,21 @@
         "COA-038",
         "COA-039",
         "COA-040",
-        "COA-041"
+        "COA-041",
+        "COA-043",
+        "COA-044"
       ]
     },
     {
       "gap_key": "water_activity_not_in_core",
-      "cases_count": 12,
-      "cases_percent": 24.0,
+      "cases_count": 14,
+      "cases_percent": 28.0,
       "independent_labs_count": 2,
       "jurisdictions_count": 2,
       "product_types_count": 5,
       "severity": "OPTIONAL",
       "existing_issue": null,
-      "evidence_class": "CROSS_JURISDICTION",
+      "evidence_class": "OPTIONAL_METADATA",
       "case_ids": [
         "COA-012",
         "COA-013",
@@ -436,24 +454,23 @@
         "COA-024",
         "COA-029",
         "COA-031",
-        "COA-033"
+        "COA-033",
+        "COA-043",
+        "COA-044"
       ]
     },
     {
       "gap_key": "batch_id_missing_placeholder",
-      "cases_count": 8,
-      "cases_percent": 16.0,
+      "cases_count": 5,
+      "cases_percent": 10.0,
       "independent_labs_count": 0,
       "jurisdictions_count": 3,
-      "product_types_count": 6,
-      "severity": "IMPORTANT",
+      "product_types_count": 5,
+      "severity": "PIPELINE_LIMITATION",
       "existing_issue": null,
-      "evidence_class": "CROSS_JURISDICTION",
+      "evidence_class": "PIPELINE_LIMITATIONS",
       "case_ids": [
-        "COA-043",
-        "COA-044",
         "COA-045",
-        "COA-046",
         "COA-047",
         "COA-048",
         "COA-049",
@@ -467,9 +484,9 @@
       "independent_labs_count": 0,
       "jurisdictions_count": 3,
       "product_types_count": 5,
-      "severity": "IMPORTANT",
+      "severity": "PIPELINE_LIMITATION",
       "existing_issue": null,
-      "evidence_class": "CROSS_JURISDICTION",
+      "evidence_class": "PIPELINE_LIMITATIONS",
       "case_ids": [
         "COA-045",
         "COA-047",
@@ -479,28 +496,12 @@
       ]
     },
     {
-      "gap_key": "source_unavailable_or_unparsed",
-      "cases_count": 3,
-      "cases_percent": 6.0,
-      "independent_labs_count": 0,
-      "jurisdictions_count": 2,
-      "product_types_count": 2,
-      "severity": "IMPORTANT",
-      "existing_issue": null,
-      "evidence_class": "CROSS_JURISDICTION",
-      "case_ids": [
-        "COA-043",
-        "COA-044",
-        "COA-046"
-      ]
-    },
-    {
       "gap_key": "extended_cannabinoid_vocabulary",
       "cases_count": 1,
       "cases_percent": 2.0,
       "independent_labs_count": 1,
       "jurisdictions_count": 1,
-      "product_types_count": 1,
+      "product_types_count": 0,
       "severity": "IMPORTANT",
       "existing_issue": null,
       "evidence_class": "SINGLE_CASE",
@@ -514,10 +515,10 @@
       "cases_percent": 2.0,
       "independent_labs_count": 1,
       "jurisdictions_count": 1,
-      "product_types_count": 1,
+      "product_types_count": 0,
       "severity": "OPTIONAL",
       "existing_issue": null,
-      "evidence_class": "SINGLE_CASE",
+      "evidence_class": "OPTIONAL_METADATA",
       "case_ids": [
         "COA-002"
       ]
@@ -528,26 +529,90 @@
       "cases_percent": 2.0,
       "independent_labs_count": 1,
       "jurisdictions_count": 1,
-      "product_types_count": 1,
+      "product_types_count": 0,
       "severity": "IMPORTANT",
       "existing_issue": null,
       "evidence_class": "SINGLE_CASE",
       "case_ids": [
         "COA-003"
       ]
+    },
+    {
+      "gap_key": "potency_spec_failure_not_native",
+      "cases_count": 1,
+      "cases_percent": 2.0,
+      "independent_labs_count": 1,
+      "jurisdictions_count": 1,
+      "product_types_count": 1,
+      "severity": "IMPORTANT",
+      "existing_issue": null,
+      "evidence_class": "SINGLE_CASE",
+      "case_ids": [
+        "COA-046"
+      ]
+    },
+    {
+      "gap_key": "homogeneity_not_in_core",
+      "cases_count": 1,
+      "cases_percent": 2.0,
+      "independent_labs_count": 1,
+      "jurisdictions_count": 1,
+      "product_types_count": 1,
+      "severity": "IMPORTANT",
+      "existing_issue": null,
+      "evidence_class": "OPTIONAL_METADATA",
+      "case_ids": [
+        "COA-046"
+      ]
+    },
+    {
+      "gap_key": "labeled_vs_measured_dosing",
+      "cases_count": 1,
+      "cases_percent": 2.0,
+      "independent_labs_count": 1,
+      "jurisdictions_count": 1,
+      "product_types_count": 1,
+      "severity": "IMPORTANT",
+      "existing_issue": null,
+      "evidence_class": "SINGLE_CASE",
+      "case_ids": [
+        "COA-046"
+      ]
     }
   ],
   "occurrences": {
-    "ND": 48,
+    "ND": 46,
     "below_limit": 32,
-    "NOT_TESTED_OR_NOT_PERFORMED": 20,
-    "NOT_REPORTED": 14,
-    "multi_unit": 40,
-    "sample_lifecycle": 24,
-    "regulatory_tracking": 28,
-    "water_activity": 11,
-    "moisture": 19,
-    "foreign_material": 19,
-    "FAIL": 0
-  }
+    "NOT_TESTED_OR_NOT_PERFORMED": 21,
+    "NOT_REPORTED": 16,
+    "multi_unit": 43,
+    "sample_lifecycle": 26,
+    "regulatory_tracking": 30,
+    "water_activity": 13,
+    "moisture": 20,
+    "foreign_material": 18,
+    "FAIL": 1
+  },
+  "ACTUAL_FAIL_CASES": 1,
+  "FAIL_CASE_IDS": [
+    "COA-046"
+  ],
+  "FAIL_TYPES": {
+    "COA-046": {
+      "overall_batch_failure": true,
+      "failure_types": [
+        "potency_spec",
+        "homogeneity"
+      ],
+      "panel_results": {
+        "potency": "FAIL",
+        "homogeneity": "FAIL"
+      },
+      "contaminant_safety_fail": false,
+      "potency_spec_fail": true,
+      "homogeneity_fail": true
+    }
+  },
+  "schema_sha256": "31b0bdab4585954bebb9af1b06ac8b2d5a7b513ad1ca9694070836f1c723b5ee",
+  "computed_at": "2026-09-18T17:33:41Z"
 }

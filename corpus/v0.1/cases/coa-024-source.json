@@ -7,7 +7,7 @@
   "fetch_status": 200,
   "fetch_ok": true,
   "source_unavailable": false,
-  "jurisdiction_hint": "Louisiana brand",
+  "jurisdiction_hint": "Louisiana",
   "producer_or_brand": "BakPak",
   "laboratory": null,
   "product_name": "Rest Extra Strength edible",
@@ -35,5 +35,5 @@
   "has_sample_lifecycle": false,
   "detail_level": "medium",
   "verification_method": "Live public-content fetch on 2026-09-18",
-  "notes": "Interoperability metadata extracted from the public source; full numeric analyte mapping remains for the schema-validation batch step."
+  "notes": "Interoperability metadata extracted from the public source; full numeric analyte mapping remains for the schema-validation batch step. jurisdiction_note: Louisiana brand; lab not always confirmed in corpus metadata"
 }

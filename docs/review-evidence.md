@@ -141,3 +141,9 @@ No fabricated reviewers. Empty categories remain until real evidence is submitte
 ---
 
 Machine-readable mirror: [../review-tracker.json](../review-tracker.json).
+
+## Public COA Corpus v0.1 (QA baseline)
+- Path: `corpus/v0.1/`
+- TOTAL_CASES=50; SOURCE_UNAVAILABLE=0; ACTUAL_FAIL_CASES=1 (['COA-046'])
+- Schema SHA256 `31b0bdab4585954bebb9af1b06ac8b2d5a7b513ad1ca9694070836f1c723b5ee`; tag `v0.1-alpha` unchanged.
+- Stats: `corpus/v0.1/build_stats.json` (canonical).

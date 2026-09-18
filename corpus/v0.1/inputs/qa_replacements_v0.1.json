@@ -1,0 +1,20 @@
+{
+  "qa_patch_at": "2026-09-18T17:31:32Z",
+  "replacements": [
+    {
+      "case_id": "COA-043",
+      "new_url": "https://www.gramsbk.com/coa/COA-SNYTCO0903PPRE0030487-ChampagneKillerHybrid5PackPreroll25g-TCR5PCK901-002.pdf",
+      "reason": "SOURCE_UNAVAILABLE OpenCOA 429; primary Grams/ACT PDF"
+    },
+    {
+      "case_id": "COA-044",
+      "new_url": "https://www.gramsbk.com/coa/COA-SNYTCO0903PFCU0030482-GramsBousseraLemonsSativaFlower28g-TCRFBLOZ901-002.pdf",
+      "reason": "SOURCE_UNAVAILABLE OpenCOA 429; primary Grams/ACT PDF"
+    },
+    {
+      "case_id": "COA-046",
+      "new_url": "https://eatgron.com/wp-content/uploads/2026/05/LSL-260513-007.pdf",
+      "reason": "SOURCE_UNAVAILABLE OpenCOA 429; primary Grön/Lightscale FAIL COA"
+    }
+  ]
+}

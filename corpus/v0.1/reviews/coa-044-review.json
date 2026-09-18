@@ -3,29 +3,71 @@
   "schema_version": "0.1-alpha",
   "mapped_record_valid": true,
   "mapping_result": "PARTIAL",
-  "exact_mapping_count": 0,
-  "partial_mapping_count": 1,
-  "not_representable_count": 3,
+  "exact_mapping_count": 22,
+  "partial_mapping_count": 4,
+  "not_representable_count": 10,
   "gaps": [
     {
-      "gap_key": "batch_id_missing_placeholder",
-      "observed_source_semantics": "No batch/sample id; deterministic placeholder",
-      "severity": "IMPORTANT",
-      "existing_issue_if_any": null
-    },
-    {
       "gap_key": "nd_not_representable",
-      "observed_source_semantics": "ND examples=[]",
+      "observed_source_semantics": "ND examples=['CBDV', 'CBD', 'CBC', 'D8-THC', 'Total D10-THC', 'Total CBD']",
       "severity": "CRITICAL_INTEROPERABILITY",
       "existing_issue_if_any": 3
     },
     {
-      "gap_key": "source_unavailable_or_unparsed",
-      "observed_source_semantics": "SOURCE_UNAVAILABLE at fetch time",
+      "gap_key": "below_reporting_limit_qualifier",
+      "observed_source_semantics": "Below-limit examples=['CBDa', 'THCV', 'CBN']",
+      "severity": "CRITICAL_INTEROPERABILITY",
+      "existing_issue_if_any": 1
+    },
+    {
+      "gap_key": "multi_unit_cannabinoid",
+      "observed_source_semantics": "units_observed=['%', 'mg/g', 'mg/unit', 'CFU/g', 'µg/g', 'ng/g']",
+      "severity": "CRITICAL_INTEROPERABILITY",
+      "existing_issue_if_any": 4
+    },
+    {
+      "gap_key": "analyte_level_not_performed",
+      "observed_source_semantics": "NOT TESTED: residual solvents; homogeneity",
+      "severity": "CRITICAL_INTEROPERABILITY",
+      "existing_issue_if_any": 2
+    },
+    {
+      "gap_key": "not_reported",
+      "observed_source_semantics": "NT/NR vocabulary on ACT Labs COA",
       "severity": "IMPORTANT",
+      "existing_issue_if_any": null
+    },
+    {
+      "gap_key": "regulatory_tracking",
+      "observed_source_semantics": "METRC batch/sample/manifest",
+      "severity": "JURISDICTION_SPECIFIC",
+      "existing_issue_if_any": null
+    },
+    {
+      "gap_key": "sample_lifecycle_metadata",
+      "observed_source_semantics": "Date Sampled / Sample Received / Report Created",
+      "severity": "IMPORTANT",
+      "existing_issue_if_any": null
+    },
+    {
+      "gap_key": "foreign_material",
+      "observed_source_semantics": "Foreign Matter=pass",
+      "severity": "OPTIONAL",
+      "existing_issue_if_any": null
+    },
+    {
+      "gap_key": "moisture_not_in_core",
+      "observed_source_semantics": "Moisture 11.0%",
+      "severity": "OPTIONAL",
+      "existing_issue_if_any": null
+    },
+    {
+      "gap_key": "water_activity_not_in_core",
+      "observed_source_semantics": "Water activity 0.59",
+      "severity": "OPTIONAL",
       "existing_issue_if_any": null
     }
   ],
-  "source_unavailable": true,
-  "notes": "Automated corpus mapping against frozen v0.1-alpha; numeric values only when parseable; no fabrication."
+  "source_unavailable": false,
+  "notes": "QA hand-mapped from ACT Labs (NY) PDF text; ND/<LOQ omitted from core; multi-unit alts in extensions."
 }

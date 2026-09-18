@@ -7,8 +7,7 @@ Build a 50-case public COA corpus testing WeedDAO Cultivation Record **v0.1-alph
 1. `corpus/v0.1/inputs/weeddao_verified_manifest_v0.1.json` — official verified case list (`verified_total_cases=50`).
 2. `corpus/v0.1/inputs/weeddao_extracted_coa_data_v0.1.jsonl` — interoperability metadata.
 3. Seed mappings in `review-data/coa-00{1,2,3}-weeddao-record.json`.
-
-`replacement_case_ids` in the verified manifest are historical (already applied); this build does not re-replace sources.
+4. `corpus/v0.1/inputs/qa_replacements_v0.1.json` — QA replacements for COA-043/044/046.
 
 ## Freeze rules
 - Do not modify the v0.1-alpha schema
@@ -17,28 +16,24 @@ Build a 50-case public COA corpus testing WeedDAO Cultivation Record **v0.1-alph
 - Do not design v0.2 schema here
 
 ## Fetch policy
-- Fetch **only** the exact `source_url` from the verified manifest
-- User-Agent: `WeedDAOCorpusBot/0.1 (+research)`
-- Timeout ~35s
-- OpenCOA: cookie `age_verified=1`
-- TagLeaf: HTML scrape
-- PDF hosts: download → `pdftotext -layout` → parse; **do not commit PDF binaries**
-- On failure: `SOURCE_UNAVAILABLE` and continue (no replacement search)
+- Fetch **only** the exact `source_url` (or QA-authorized replacement URLs)
+- PDF hosts: download → `pdftotext -layout` → parse; **do not commit PDF binaries** (cache gitignored)
+- On OpenCOA 429: QA replaced three slots with authorized primary PDFs (Grams/ACT ×2, Grön/Lightscale FAIL)
 
 ## Mapping rules
 - Required: `schema_version`, `record_id`, `cultivation_batch_id`, `created_at`
-- `cultivation_batch_id`: batch_observed OR sample_observed OR deterministic `corpus-coa-NNN-unknown-batch`
-- Detected numeric cannabinoids → CannabinoidMeasurement with unit ∈ {%, mg/g, mg/ml, mg/serving}; prefer `%` when multi-unit; alts in `extensions.weeddao_corpus`
+- Detected numeric cannabinoids → CannabinoidMeasurement with unit ∈ {%, mg/g, mg/ml, mg/serving}; prefer `%` when multi-unit; alts + labeled targets in `extensions.weeddao_corpus`
 - ND cannabinoids/terpenes: **omit**; gap (issue #3)
 - `<LOQ`/`<LOD`/`<n`: **omit**; gap (issue #1)
-- Panel PASS/FAIL/NOT_TESTED → `lab_results.safety.*.status`
-- Mycotoxins panel status is first-class; moisture / water activity / foreign material → extensions + gaps
-- `mapping_result`: FULL only if no important semantics dropped; else PARTIAL; FAILED if no valid record
+- Panel PASS/FAIL/NOT_TESTED → `lab_results.safety.*.status` when native; never invent PASS
+- Potency-spec / homogeneity FAIL: **not** mapped as contaminant safety FAIL; document in extensions + review gaps
+- Taxonomy: `producer_or_brand` is never OpenCOA/lab composite; `jurisdiction` is never a cross-state composite string
 
-## Limitations
-- Best-effort parsers; some PDFs are layout-noisy
-- Seed labs remain redacted (`external-lab-00x`)
-- Corpus is WeedDAO-authored mappings, not external software adoption
+## Gap classes used in analysis
+- **INTEROPERABILITY_GAPS** — semantics v0.1-alpha cannot represent (issues #1–#4 and related)
+- **OPTIONAL_METADATA_GAPS** — moisture, water activity, foreign material, etc.
+- **JURISDICTION_SPECIFIC_FIELDS** — METRC / regulatory tracking
+- **PIPELINE_LIMITATIONS** — fetch/parse/QA limits (`analyte_tables_unparsed`, `source_unavailable_or_unparsed`, unverified `batch_id_missing_placeholder`)
 
-## Pipeline
-`corpus/v0.1/scripts/build_corpus.py`
+## Canonical counts
+All summary numbers are emitted by `corpus/v0.1/scripts/recompute_stats.py` → `build_stats.json`. Docs must not hand-copy conflicting figures.

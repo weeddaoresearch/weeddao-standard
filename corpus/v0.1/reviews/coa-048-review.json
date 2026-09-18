@@ -9,8 +9,8 @@
   "gaps": [
     {
       "gap_key": "batch_id_missing_placeholder",
-      "observed_source_semantics": "No batch/sample id; deterministic placeholder",
-      "severity": "IMPORTANT",
+      "observed_source_semantics": "No batch/sample id; deterministic placeholder [evidence_class=PIPELINE_LIMITATIONS: may reflect parser/metadata limits, not confirmed domain absence]",
+      "severity": "PIPELINE_LIMITATION",
       "existing_issue_if_any": null
     },
     {
@@ -22,7 +22,7 @@
     {
       "gap_key": "analyte_tables_unparsed",
       "observed_source_semantics": "Fetch ok but analyte tables not reliably parsed",
-      "severity": "IMPORTANT",
+      "severity": "PIPELINE_LIMITATION",
       "existing_issue_if_any": null
     }
   ],

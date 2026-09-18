@@ -7,7 +7,7 @@
   "fetch_status": 200,
   "fetch_ok": true,
   "source_unavailable": false,
-  "jurisdiction_hint": "Louisiana brand / California lab",
+  "jurisdiction_hint": null,
   "producer_or_brand": "BakPak",
   "laboratory": null,
   "product_name": "Space Debris Cherry Limeade Drink",
@@ -35,5 +35,5 @@
   "has_sample_lifecycle": false,
   "detail_level": "medium",
   "verification_method": "Live public-content fetch on 2026-09-18",
-  "notes": "Interoperability metadata extracted from the public source; full numeric analyte mapping remains for the schema-validation batch step."
+  "notes": "Interoperability metadata extracted from the public source; full numeric analyte mapping remains for the schema-validation batch step. jurisdiction_note: Louisiana brand / California lab (cross-state; jurisdiction left null)"
 }

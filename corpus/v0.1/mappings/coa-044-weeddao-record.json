@@ -1,49 +1,209 @@
 {
   "schema_version": "0.1-alpha",
   "record_id": "corpus-coa-044",
-  "cultivation_batch_id": "corpus-coa-044-unknown-batch",
+  "cultivation_batch_id": "TCR-F-BLOZ-901",
   "created_at": "2026-09-18T17:00:00Z",
   "updated_at": "2026-09-18T17:00:00Z",
   "producer": {
-    "organization_name": "OpenCOA",
-    "jurisdiction": "US-MA"
+    "organization_name": "Grams Brooklyn",
+    "jurisdiction": "US-NY"
   },
   "cultivar": {
-    "reported_name": "Cloud Cover White 99 bulk flower",
+    "reported_name": "Boussera Lemons Sativa Flower 28g",
     "identity_status": "reported"
   },
   "lab_results": {
-    "lab_name": null,
-    "sample_id": null,
-    "provenance": "derived",
-    "notes": "Mapped from public COA corpus case COA-044. WeedDAO does not independently re-verify laboratory measurements. SOURCE_UNAVAILABLE at corpus fetch time."
+    "lab_name": "ACT Laboratories (NY)",
+    "sample_id": "SNYTCO0903-PFCU-0030482",
+    "provenance": "laboratory_verified",
+    "notes": "Mapped from public COA corpus case COA-044. WeedDAO does not independently re-verify laboratory measurements.",
+    "cannabinoids": {
+      "cbga": {
+        "value": 1.667,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "cbg": {
+        "value": 0.416,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "thc": {
+        "value": 11.973,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "thca": {
+        "value": 19.492,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "total_thc": {
+        "value": 29.068,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      },
+      "total_cannabinoids": {
+        "value": 33.549,
+        "unit": "%",
+        "provenance": "laboratory_verified"
+      }
+    },
+    "terpenes": [
+      {
+        "name": "terpinolene",
+        "value": 0.9319,
+        "unit": "%"
+      },
+      {
+        "name": "b-caryophyllene",
+        "value": 0.5088,
+        "unit": "%"
+      },
+      {
+        "name": "trans-b-ocimene",
+        "value": 0.3652,
+        "unit": "%"
+      },
+      {
+        "name": "valencene",
+        "value": 0.2806,
+        "unit": "%"
+      },
+      {
+        "name": "a-humulene",
+        "value": 0.1466,
+        "unit": "%"
+      },
+      {
+        "name": "b-myrcene",
+        "value": 0.1374,
+        "unit": "%"
+      },
+      {
+        "name": "a-bisabolol",
+        "value": 0.082,
+        "unit": "%"
+      },
+      {
+        "name": "limonene",
+        "value": 0.0699,
+        "unit": "%"
+      },
+      {
+        "name": "b-pinene",
+        "value": 0.0474,
+        "unit": "%"
+      }
+    ],
+    "total_terpenes": {
+      "value": 2.8273,
+      "unit": "%"
+    },
+    "safety": {
+      "microbials": {
+        "status": "pass"
+      },
+      "pesticides": {
+        "status": "pass"
+      },
+      "heavy_metals": {
+        "status": "pass"
+      },
+      "mycotoxins": {
+        "status": "pass"
+      },
+      "residual_solvents": {
+        "status": "not_tested"
+      }
+    }
   },
   "provenance": {
     "record": "derived",
-    "lab_results": "derived",
+    "lab_results": "laboratory_verified",
     "notes": "Public COA corpus mapping by WeedDAO Research. Not an external implementation claim."
   },
   "extensions": {
     "weeddao_corpus": {
       "case_id": "COA-044",
-      "source_url": "https://opencoa.org/coa/01a086f4-f32e-7053-b0f7-ce099f9e5f43/w99-3-24-8-12-26",
-      "source_tier": "secondary",
-      "source_group": "OpenCOA",
-      "product_hint": "Cloud Cover White 99 bulk flower",
+      "source_url": "https://www.gramsbk.com/coa/COA-SNYTCO0903PFCU0030482-GramsBousseraLemonsSativaFlower28g-TCRFBLOZ901-002.pdf",
+      "source_tier": "primary",
+      "source_group": "Grams Brooklyn",
+      "product_hint": "Boussera Lemons Sativa Flower 28g",
       "product_type_hint": "flower",
-      "title_verified": "Cloud Cover White 99 bulk flower",
+      "title_verified": "Grams | Boussera Lemons | Sativa | Flower | 28g",
       "overall_result_observed": null,
       "units_observed": [
-        "%"
+        "%",
+        "mg/g",
+        "mg/unit",
+        "CFU/g",
+        "µg/g",
+        "ng/g"
       ],
       "panels_observed": [
         "cannabinoid",
         "terpene",
         "microbial",
         "pesticide",
-        "heavy_metal"
+        "heavy_metal",
+        "residual_solvent",
+        "mycotoxin",
+        "moisture",
+        "water_activity",
+        "foreign_matter"
       ],
-      "source_unavailable": true
+      "cannabinoids_alt_units": {
+        "cbga": {
+          "mg/g": 16.67,
+          "mg/unit": 466.82
+        },
+        "cbg": {
+          "mg/g": 4.16,
+          "mg/unit": 116.61
+        },
+        "thc": {
+          "mg/g": 119.73,
+          "mg/unit": 3352.43
+        },
+        "thca": {
+          "mg/g": 194.92,
+          "mg/unit": 5457.89
+        },
+        "total_thc": {
+          "mg/g": 290.68,
+          "mg/unit": 8139.0
+        },
+        "total_cannabinoids": {
+          "mg/g": 335.49,
+          "mg/unit": 9393.76
+        }
+      },
+      "foreign_material": "pass",
+      "moisture_percent": 11.0,
+      "water_activity": 0.59,
+      "homogeneity_status": "not_tested",
+      "metrc_batch": "1A412030000164C000002215",
+      "metrc_sample": "1A412030000164C000002234",
+      "metrc_manifest": "0000384492",
+      "dates": {
+        "sampled": "2026-09-03",
+        "received": "2026-09-03",
+        "report_created": "2026-09-09"
+      },
+      "nd_cannabinoids_omitted": [
+        "CBDV",
+        "CBD",
+        "CBC",
+        "D8-THC",
+        "Total D10-THC",
+        "Total CBD"
+      ],
+      "below_loq_cannabinoids_omitted": [
+        "CBDa",
+        "THCV",
+        "CBN"
+      ]
     }
   }
 }

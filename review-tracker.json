@@ -101,6 +101,11 @@
     "total_cases": 50,
     "seed_cases": 3,
     "new_public_cases": 47,
+    "source_unavailable": 0,
+    "actual_fail_cases": 1,
+    "fail_case_ids": [
+      "COA-046"
+    ],
     "note": "Public evidence collection mapped by WeedDAO Research. Not industry adoption. Not FIRST_EXTERNAL_IMPLEMENTATION.",
     "first_external_implementation": false,
     "mapping_counts": {

@@ -7,7 +7,7 @@
   "fetch_status": 200,
   "fetch_ok": true,
   "source_unavailable": false,
-  "jurisdiction_hint": "Texas retail / Oregon laboratory",
+  "jurisdiction_hint": null,
   "producer_or_brand": "8th Avenue",
   "laboratory": "ChemHistory",
   "product_name": "Ghost Train Haze",
@@ -36,5 +36,5 @@
   "has_sample_lifecycle": true,
   "detail_level": "medium",
   "verification_method": "Live public-content fetch on 2026-09-18",
-  "notes": "Interoperability metadata extracted from the public source; full numeric analyte mapping remains for the schema-validation batch step."
+  "notes": "Interoperability metadata extracted from the public source; full numeric analyte mapping remains for the schema-validation batch step. jurisdiction_note: Texas retail / Oregon laboratory (ChemHistory OR lab; jurisdiction left null)"
 }
