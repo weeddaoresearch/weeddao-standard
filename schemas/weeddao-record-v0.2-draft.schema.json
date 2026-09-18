@@ -570,49 +570,80 @@
     "SampleLifecycle": {
       "type": "object",
       "additionalProperties": false,
-      "description": "Optional sample lifecycle metadata under lab_results.sample.",
+      "description": "Optional sample lifecycle metadata under lab_results.sample. Lifecycle events collected_at, received_at, lab_results.tested_at, and reported_at are distinct and must never be silently substituted for one another.",
       "properties": {
         "sample_id": {
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "description": "Laboratory or client sample identifier."
         },
         "collected_at": {
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "description": "When the sample was collected. Distinct from received_at, tested_at, and reported_at; never silently substitute those events."
         },
         "received_at": {
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "description": "When the laboratory received the sample. Distinct from collected_at, tested_at, and reported_at."
+        },
+        "reported_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Report/certification date-time when provided by the source. Distinct from collected_at, received_at, and tested_at; never silently substitute those events."
         },
         "produced_at": {
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "description": "Optional production/manufacture datetime when provided by the source."
         },
         "harvested_at": {
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "description": "Optional harvest datetime when provided by the source."
         },
         "matrix": {
           "type": [
             "string",
             "null"
+          ],
+          "description": "Sample matrix as reported (extensible string)."
+        },
+        "collection_party": {
+          "description": "Categorical who collected the sample. Use only when the source establishes the collection event party. Prefer omit when not established. Use 'unknown' only when a collection event is established but party identity cannot be classified. Must not require personal names.",
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "client",
+                "laboratory",
+                "third_party",
+                "unknown"
+              ]
+            },
+            {
+              "type": "null"
+            }
           ]
         },
         "collector": {
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "description": "Optional free-text / source label for collector (draft compatibility). Must not require personal names. Prefer collection_party for categorical semantics."
         },
         "notes": {
           "type": [
@@ -841,7 +872,7 @@
             "string",
             "null"
           ],
-          "format": "date-time"
+          "description": "When testing was performed. Distinct from sample.collected_at, sample.received_at, and sample.reported_at; never silently substitute those events."
         },
         "sample_id": {
           "type": [
