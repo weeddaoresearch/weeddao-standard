@@ -4,6 +4,8 @@
 
 An open, proposed data standard for cannabis cultivation records. This project defines a shared JSON shape so growers, laboratories, researchers, and software systems can exchange cultivation and lab data without inventing incompatible formats.
 
+**WeedDAO = Weed Data Alliance Organization.** The name refers to an alliance around open cannabis data interoperability; WeedDAO is not a decentralized autonomous organization and has no token.
+
 > **Different platforms. Different organizations. One shared data language.**
 
 This is a **coordination / data layer**. It does not replace growers, labs, researchers, or software products. It is **not** a regulatory standard, **not** a certification program, **not** finalized, and makes **no claim of industry adoption**.
