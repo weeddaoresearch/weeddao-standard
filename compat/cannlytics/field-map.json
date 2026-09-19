@@ -1,0 +1,823 @@
+{
+  "bridge_version": "0.2.0-compat-draft",
+  "upstream_schema_commit": "a4e05a9f7367ac0b1637bd84773875b3bd1453ec",
+  "upstream_schema_path": "config/results_schema.py",
+  "classifications": [
+    "CORE_EXACT",
+    "CORE_TRANSFORMED",
+    "EXTENSION",
+    "AMBIGUOUS",
+    "NO_EQUIVALENT",
+    "SOURCE_METADATA"
+  ],
+  "fields": [
+    {
+      "cannlytics_field": "id",
+      "weeddao_path": "record_id",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "id\u2192record_id when present else bridge-generated",
+      "lossiness": "lossy_if_generated",
+      "notes": "Generated IDs are not upstream"
+    },
+    {
+      "cannlytics_field": "sample_id",
+      "weeddao_path": "subject.external_identifiers[lab.sample] + lab_results.sample_id",
+      "classification": "CORE_EXACT",
+      "mapping_rule": "sample identity",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "sample_hash",
+      "weeddao_path": "extensions.cannlytics_source_fields.sample_hash",
+      "classification": "SOURCE_METADATA",
+      "mapping_rule": "stash",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "results_hash",
+      "weeddao_path": "extensions.cannlytics_source_fields.results_hash",
+      "classification": "SOURCE_METADATA",
+      "mapping_rule": "stash",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "product_name",
+      "weeddao_path": "subject.name",
+      "classification": "CORE_EXACT",
+      "mapping_rule": "trade/product name only; NEVER cultivar",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "product_type",
+      "weeddao_path": "subject.product_type (+ subject_type heuristic)",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "drives conservative subject_type",
+      "lossiness": "lossy_subject_type",
+      "notes": "flower\u2192other+AMBIGUOUS unless harvest/lot metadata"
+    },
+    {
+      "cannlytics_field": "product_subtype",
+      "weeddao_path": "subject.matrix / extension",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "matrix when present",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "strain_name",
+      "weeddao_path": "cultivar.reported_name",
+      "classification": "CORE_EXACT",
+      "mapping_rule": "only genetics source; identity_status=reported",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "batch_number",
+      "weeddao_path": "subject.subject_id (priority 1)",
+      "classification": "CORE_EXACT",
+      "mapping_rule": "preferred subject_id",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "batch_size",
+      "weeddao_path": "extensions.cannlytics_source_fields.batch_size",
+      "classification": "EXTENSION",
+      "mapping_rule": "no core mass field assumed",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "product_size",
+      "weeddao_path": "extensions.cannlytics_source_fields.product_size",
+      "classification": "EXTENSION",
+      "mapping_rule": "no direct core",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "serving_size",
+      "weeddao_path": "extensions.cannlytics_source_fields.serving_size",
+      "classification": "EXTENSION",
+      "mapping_rule": "no direct core",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "servings_per_package",
+      "weeddao_path": "extensions.cannlytics_source_fields.servings_per_package",
+      "classification": "EXTENSION",
+      "mapping_rule": "no direct core",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "producer",
+      "weeddao_path": "producer.organization_name",
+      "classification": "CORE_EXACT",
+      "mapping_rule": "map name",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "producer_license_number",
+      "weeddao_path": "producer.license_id",
+      "classification": "CORE_EXACT",
+      "mapping_rule": "map license",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "producer_address",
+      "weeddao_path": "extensions.cannlytics_source_fields",
+      "classification": "EXTENSION",
+      "mapping_rule": "conservative; not forced into core",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "producer_street",
+      "weeddao_path": "extensions.cannlytics_source_fields",
+      "classification": "EXTENSION",
+      "mapping_rule": "conservative",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "producer_city",
+      "weeddao_path": "extensions.cannlytics_source_fields",
+      "classification": "EXTENSION",
+      "mapping_rule": "conservative",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "producer_state",
+      "weeddao_path": "producer.jurisdiction",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "jurisdiction string",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "producer_zipcode",
+      "weeddao_path": "extensions.cannlytics_source_fields",
+      "classification": "EXTENSION",
+      "mapping_rule": "conservative",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "distributor",
+      "weeddao_path": "extensions.cannlytics_source_fields",
+      "classification": "EXTENSION",
+      "mapping_rule": "no distributor object in v0.2-draft core",
+      "lossiness": "unmappable_core",
+      "notes": "REQUIRES_EXTENSION"
+    },
+    {
+      "cannlytics_field": "distributor_license_number",
+      "weeddao_path": "extensions.cannlytics_source_fields",
+      "classification": "EXTENSION",
+      "mapping_rule": "no distributor object in v0.2-draft core",
+      "lossiness": "unmappable_core",
+      "notes": "REQUIRES_EXTENSION"
+    },
+    {
+      "cannlytics_field": "distributor_address",
+      "weeddao_path": "extensions.cannlytics_source_fields",
+      "classification": "EXTENSION",
+      "mapping_rule": "no distributor object in v0.2-draft core",
+      "lossiness": "unmappable_core",
+      "notes": "REQUIRES_EXTENSION"
+    },
+    {
+      "cannlytics_field": "lab",
+      "weeddao_path": "lab_results.lab_name",
+      "classification": "CORE_EXACT",
+      "mapping_rule": "lab name",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "lab_license_number",
+      "weeddao_path": "extensions.cannlytics_source_fields",
+      "classification": "EXTENSION",
+      "mapping_rule": "no dedicated lab license core field",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "lab_address",
+      "weeddao_path": "extensions.cannlytics_source_fields",
+      "classification": "EXTENSION",
+      "mapping_rule": "stash",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "lab_state",
+      "weeddao_path": "extensions.cannlytics_source_fields",
+      "classification": "EXTENSION",
+      "mapping_rule": "stash",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "lab_id",
+      "weeddao_path": "lab_results.lab_id",
+      "classification": "CORE_EXACT",
+      "mapping_rule": "lab internal id",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "date_tested",
+      "weeddao_path": "lab_results.tested_at",
+      "classification": "CORE_EXACT",
+      "mapping_rule": "distinct lifecycle",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "date_collected",
+      "weeddao_path": "lab_results.sample.collected_at",
+      "classification": "CORE_EXACT",
+      "mapping_rule": "distinct lifecycle",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "date_received",
+      "weeddao_path": "lab_results.sample.received_at",
+      "classification": "CORE_EXACT",
+      "mapping_rule": "distinct lifecycle",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "date_produced",
+      "weeddao_path": "lab_results.sample.produced_at",
+      "classification": "CORE_EXACT",
+      "mapping_rule": "distinct lifecycle",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "date_packaged",
+      "weeddao_path": "extensions.cannlytics_source_fields",
+      "classification": "EXTENSION",
+      "mapping_rule": "no packaged_at in SampleLifecycle",
+      "lossiness": "unmappable_core",
+      "notes": null
+    },
+    {
+      "cannlytics_field": "date_expires",
+      "weeddao_path": "OMIT (not best_by)",
+      "classification": "AMBIGUOUS",
+      "mapping_rule": "expiration\u2260best_by without confirmation",
+      "lossiness": "lossy",
+      "notes": "equivalence unsupported \u2192 omit"
+    },
+    {
+      "cannlytics_field": "delta_9_thc",
+      "weeddao_path": "lab_results.cannabinoids.thc",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "numeric % \u2192 detected+measurements[{value,unit:%}]; null omitted (never 0/ND)",
+      "lossiness": "null_ambiguous",
+      "notes": "Optional[float] null is missing vs ND vs not tested"
+    },
+    {
+      "cannlytics_field": "thca",
+      "weeddao_path": "lab_results.cannabinoids.thca",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "numeric % \u2192 detected+measurements[{value,unit:%}]; null omitted (never 0/ND)",
+      "lossiness": "null_ambiguous",
+      "notes": "Optional[float] null is missing vs ND vs not tested"
+    },
+    {
+      "cannlytics_field": "total_thc",
+      "weeddao_path": "lab_results.cannabinoids.total_thc",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "numeric % \u2192 detected+measurements[{value,unit:%}]; null omitted (never 0/ND)",
+      "lossiness": "null_ambiguous",
+      "notes": "Optional[float] null is missing vs ND vs not tested"
+    },
+    {
+      "cannlytics_field": "cbd",
+      "weeddao_path": "lab_results.cannabinoids.cbd",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "numeric % \u2192 detected+measurements[{value,unit:%}]; null omitted (never 0/ND)",
+      "lossiness": "null_ambiguous",
+      "notes": "Optional[float] null is missing vs ND vs not tested"
+    },
+    {
+      "cannlytics_field": "cbda",
+      "weeddao_path": "lab_results.cannabinoids.cbda",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "numeric % \u2192 detected+measurements[{value,unit:%}]; null omitted (never 0/ND)",
+      "lossiness": "null_ambiguous",
+      "notes": "Optional[float] null is missing vs ND vs not tested"
+    },
+    {
+      "cannlytics_field": "total_cbd",
+      "weeddao_path": "lab_results.cannabinoids.total_cbd",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "numeric % \u2192 detected+measurements[{value,unit:%}]; null omitted (never 0/ND)",
+      "lossiness": "null_ambiguous",
+      "notes": "Optional[float] null is missing vs ND vs not tested"
+    },
+    {
+      "cannlytics_field": "cbg",
+      "weeddao_path": "lab_results.cannabinoids.cbg",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "numeric % \u2192 detected+measurements[{value,unit:%}]; null omitted (never 0/ND)",
+      "lossiness": "null_ambiguous",
+      "notes": "Optional[float] null is missing vs ND vs not tested"
+    },
+    {
+      "cannlytics_field": "cbga",
+      "weeddao_path": "lab_results.cannabinoids.cbga",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "numeric % \u2192 detected+measurements[{value,unit:%}]; null omitted (never 0/ND)",
+      "lossiness": "null_ambiguous",
+      "notes": "Optional[float] null is missing vs ND vs not tested"
+    },
+    {
+      "cannlytics_field": "cbn",
+      "weeddao_path": "lab_results.cannabinoids.cbn",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "numeric % \u2192 detected+measurements[{value,unit:%}]; null omitted (never 0/ND)",
+      "lossiness": "null_ambiguous",
+      "notes": "Optional[float] null is missing vs ND vs not tested"
+    },
+    {
+      "cannlytics_field": "cbc",
+      "weeddao_path": "lab_results.cannabinoids.cbc",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "numeric % \u2192 detected+measurements[{value,unit:%}]; null omitted (never 0/ND)",
+      "lossiness": "null_ambiguous",
+      "notes": "Optional[float] null is missing vs ND vs not tested"
+    },
+    {
+      "cannlytics_field": "thcv",
+      "weeddao_path": "lab_results.cannabinoids.thcv",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "numeric % \u2192 detected+measurements[{value,unit:%}]; null omitted (never 0/ND)",
+      "lossiness": "null_ambiguous",
+      "notes": "Optional[float] null is missing vs ND vs not tested"
+    },
+    {
+      "cannlytics_field": "total_cannabinoids",
+      "weeddao_path": "lab_results.cannabinoids.total_cannabinoids",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "numeric % \u2192 detected+measurements[{value,unit:%}]; null omitted (never 0/ND)",
+      "lossiness": "null_ambiguous",
+      "notes": "Optional[float] null is missing vs ND vs not tested"
+    },
+    {
+      "cannlytics_field": "delta_8_thc",
+      "weeddao_path": "lab_results.cannabinoids.other[delta_8_thc]",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "no named delta_8 core field",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "cbdv",
+      "weeddao_path": "lab_results.cannabinoids.other[cbdv]",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "via other[]",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "beta_myrcene",
+      "weeddao_path": "lab_results.terpenes[]",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "numeric % \u2192 NamedAnalyteResult detected",
+      "lossiness": "null_ambiguous",
+      "notes": null
+    },
+    {
+      "cannlytics_field": "d_limonene",
+      "weeddao_path": "lab_results.terpenes[]",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "numeric % \u2192 NamedAnalyteResult detected",
+      "lossiness": "null_ambiguous",
+      "notes": null
+    },
+    {
+      "cannlytics_field": "beta_caryophyllene",
+      "weeddao_path": "lab_results.terpenes[]",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "numeric % \u2192 NamedAnalyteResult detected",
+      "lossiness": "null_ambiguous",
+      "notes": null
+    },
+    {
+      "cannlytics_field": "alpha_pinene",
+      "weeddao_path": "lab_results.terpenes[]",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "numeric % \u2192 NamedAnalyteResult detected",
+      "lossiness": "null_ambiguous",
+      "notes": null
+    },
+    {
+      "cannlytics_field": "beta_pinene",
+      "weeddao_path": "lab_results.terpenes[]",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "numeric % \u2192 NamedAnalyteResult detected",
+      "lossiness": "null_ambiguous",
+      "notes": null
+    },
+    {
+      "cannlytics_field": "linalool",
+      "weeddao_path": "lab_results.terpenes[]",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "numeric % \u2192 NamedAnalyteResult detected",
+      "lossiness": "null_ambiguous",
+      "notes": null
+    },
+    {
+      "cannlytics_field": "alpha_humulene",
+      "weeddao_path": "lab_results.terpenes[]",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "numeric % \u2192 NamedAnalyteResult detected",
+      "lossiness": "null_ambiguous",
+      "notes": null
+    },
+    {
+      "cannlytics_field": "terpinolene",
+      "weeddao_path": "lab_results.terpenes[]",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "numeric % \u2192 NamedAnalyteResult detected",
+      "lossiness": "null_ambiguous",
+      "notes": null
+    },
+    {
+      "cannlytics_field": "ocimene",
+      "weeddao_path": "lab_results.terpenes[]",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "numeric % \u2192 NamedAnalyteResult detected",
+      "lossiness": "null_ambiguous",
+      "notes": null
+    },
+    {
+      "cannlytics_field": "alpha_bisabolol",
+      "weeddao_path": "lab_results.terpenes[]",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "numeric % \u2192 NamedAnalyteResult detected",
+      "lossiness": "null_ambiguous",
+      "notes": null
+    },
+    {
+      "cannlytics_field": "camphene",
+      "weeddao_path": "lab_results.terpenes[]",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "numeric % \u2192 NamedAnalyteResult detected",
+      "lossiness": "null_ambiguous",
+      "notes": null
+    },
+    {
+      "cannlytics_field": "geraniol",
+      "weeddao_path": "lab_results.terpenes[]",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "numeric % \u2192 NamedAnalyteResult detected",
+      "lossiness": "null_ambiguous",
+      "notes": null
+    },
+    {
+      "cannlytics_field": "nerolidol",
+      "weeddao_path": "lab_results.terpenes[]",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "numeric % \u2192 NamedAnalyteResult detected",
+      "lossiness": "null_ambiguous",
+      "notes": null
+    },
+    {
+      "cannlytics_field": "guaiol",
+      "weeddao_path": "lab_results.terpenes[]",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "numeric % \u2192 NamedAnalyteResult detected",
+      "lossiness": "null_ambiguous",
+      "notes": null
+    },
+    {
+      "cannlytics_field": "caryophyllene_oxide",
+      "weeddao_path": "lab_results.terpenes[]",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "numeric % \u2192 NamedAnalyteResult detected",
+      "lossiness": "null_ambiguous",
+      "notes": null
+    },
+    {
+      "cannlytics_field": "total_terpenes",
+      "weeddao_path": "lab_results.total_terpenes",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "numeric % \u2192 AnalyteResult",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "pesticides_status",
+      "weeddao_path": "lab_results.safety.pesticides.status",
+      "classification": "AMBIGUOUS",
+      "mapping_rule": "pass/fail map; nt OMITTED + PANEL_NT_AMBIGUOUS",
+      "lossiness": "lossy_nt",
+      "notes": "normalize_status collapses not tested/n/a/na/-/''\u2192nt"
+    },
+    {
+      "cannlytics_field": "heavy_metals_status",
+      "weeddao_path": "lab_results.safety.heavy_metals.status",
+      "classification": "AMBIGUOUS",
+      "mapping_rule": "pass/fail map; nt OMITTED + PANEL_NT_AMBIGUOUS",
+      "lossiness": "lossy_nt",
+      "notes": "normalize_status collapses not tested/n/a/na/-/''\u2192nt"
+    },
+    {
+      "cannlytics_field": "microbials_status",
+      "weeddao_path": "lab_results.safety.microbials.status",
+      "classification": "AMBIGUOUS",
+      "mapping_rule": "pass/fail map; nt OMITTED + PANEL_NT_AMBIGUOUS",
+      "lossiness": "lossy_nt",
+      "notes": "normalize_status collapses not tested/n/a/na/-/''\u2192nt"
+    },
+    {
+      "cannlytics_field": "mycotoxins_status",
+      "weeddao_path": "lab_results.safety.mycotoxins.status",
+      "classification": "AMBIGUOUS",
+      "mapping_rule": "pass/fail map; nt OMITTED + PANEL_NT_AMBIGUOUS",
+      "lossiness": "lossy_nt",
+      "notes": "normalize_status collapses not tested/n/a/na/-/''\u2192nt"
+    },
+    {
+      "cannlytics_field": "residual_solvents_status",
+      "weeddao_path": "lab_results.safety.residual_solvents.status",
+      "classification": "AMBIGUOUS",
+      "mapping_rule": "pass/fail map; nt OMITTED + PANEL_NT_AMBIGUOUS",
+      "lossiness": "lossy_nt",
+      "notes": "normalize_status collapses not tested/n/a/na/-/''\u2192nt"
+    },
+    {
+      "cannlytics_field": "foreign_matter_status",
+      "weeddao_path": "lab_results.foreign_material",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "assessment only when pass/fail; nt omitted",
+      "lossiness": "lossy",
+      "notes": "WeedDAO foreign_material is AnalyteResult not SafetyPanel"
+    },
+    {
+      "cannlytics_field": "moisture_content",
+      "weeddao_path": "lab_results.moisture",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "numeric % \u2192 detected",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "water_activity",
+      "weeddao_path": "lab_results.water_activity",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "numeric \u2192 detected unit aw",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "overall_status",
+      "weeddao_path": "outcomes.cannlytics_overall_status",
+      "classification": "EXTENSION",
+      "mapping_rule": "never map to panel fail",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "metrc_ids",
+      "weeddao_path": "subject.external_identifiers[metrc.tag]",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "list \u2192 metrc.tag",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "metrc_lab_id",
+      "weeddao_path": "subject.external_identifiers[metrc.lab]",
+      "classification": "CORE_EXACT",
+      "mapping_rule": "scheme metrc.lab",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "metrc_source_id",
+      "weeddao_path": "subject.external_identifiers[metrc.source]",
+      "classification": "CORE_EXACT",
+      "mapping_rule": "scheme metrc.source",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "traceability_ids",
+      "weeddao_path": "extensions.cannlytics_source_fields",
+      "classification": "AMBIGUOUS",
+      "mapping_rule": "structure unclear \u2192 TRACEABILITY_STRUCTURE_AMBIGUOUS",
+      "lossiness": "lossy",
+      "notes": null
+    },
+    {
+      "cannlytics_field": "coa_url",
+      "weeddao_path": "extensions.cannlytics_source_fields",
+      "classification": "SOURCE_METADATA",
+      "mapping_rule": "links/files not core COA number (never fabricate)",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "coa_urls",
+      "weeddao_path": "extensions.cannlytics_source_fields",
+      "classification": "SOURCE_METADATA",
+      "mapping_rule": "links/files not core COA number (never fabricate)",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "coa_pdf",
+      "weeddao_path": "extensions.cannlytics_source_fields",
+      "classification": "SOURCE_METADATA",
+      "mapping_rule": "links/files not core COA number (never fabricate)",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "lab_results_url",
+      "weeddao_path": "extensions.cannlytics_source_fields",
+      "classification": "SOURCE_METADATA",
+      "mapping_rule": "links/files not core COA number (never fabricate)",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "images",
+      "weeddao_path": "extensions.cannlytics_source_fields",
+      "classification": "SOURCE_METADATA",
+      "mapping_rule": "links/files not core COA number (never fabricate)",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "indica_percentage",
+      "weeddao_path": "extensions.cannlytics_source_fields",
+      "classification": "NO_EQUIVALENT",
+      "mapping_rule": "not used for cultivar genetics",
+      "lossiness": null,
+      "notes": "must not invent cultivar.reported_type"
+    },
+    {
+      "cannlytics_field": "sativa_percentage",
+      "weeddao_path": "extensions.cannlytics_source_fields",
+      "classification": "NO_EQUIVALENT",
+      "mapping_rule": "not used for cultivar genetics",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "classification",
+      "weeddao_path": "extensions.cannlytics_source_fields",
+      "classification": "NO_EQUIVALENT",
+      "mapping_rule": "not mapped to cultivar.reported_type",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "results",
+      "weeddao_path": "lab_results.cannabinoids|terpenes|safety.*.analytes",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "ResultDetail array routing by analysis",
+      "lossiness": "partial",
+      "notes": "see ResultDetail fields"
+    },
+    {
+      "cannlytics_field": "results[].analysis",
+      "weeddao_path": "routing key",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "cannabinoids/terpenes/safety panel",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "results[].key",
+      "weeddao_path": "analyte identity",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "maps to named core or name",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "results[].name",
+      "weeddao_path": "NamedAnalyteResult.name",
+      "classification": "CORE_EXACT",
+      "mapping_rule": "display name",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "results[].value",
+      "weeddao_path": "result_state + measurements|reported_as",
+      "classification": "AMBIGUOUS",
+      "mapping_rule": "numeric/ND/NT/<LOQ/null handled per rule 8",
+      "lossiness": "lossy",
+      "notes": "nt\u2260not_tested; null\u2260ND"
+    },
+    {
+      "cannlytics_field": "results[].mg_g",
+      "weeddao_path": "measurements[{unit:mg/g}]",
+      "classification": "CORE_EXACT",
+      "mapping_rule": "second unit when present",
+      "lossiness": null,
+      "notes": "MULTI_UNIT_PRESERVED"
+    },
+    {
+      "cannlytics_field": "results[].units",
+      "weeddao_path": "measurements[].unit / limits[].unit",
+      "classification": "CORE_EXACT",
+      "mapping_rule": "unit string",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "results[].limit",
+      "weeddao_path": "limits[{type:other}]",
+      "classification": "AMBIGUOUS",
+      "mapping_rule": "generic limit \u2192 LIMIT_TYPE_AMBIGUOUS",
+      "lossiness": "lossy",
+      "notes": null
+    },
+    {
+      "cannlytics_field": "results[].lod",
+      "weeddao_path": "limits[{type:LOD}]",
+      "classification": "CORE_EXACT",
+      "mapping_rule": "LOD",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "results[].loq",
+      "weeddao_path": "limits[{type:LOQ}]",
+      "classification": "CORE_EXACT",
+      "mapping_rule": "LOQ",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "results[].status",
+      "weeddao_path": "assessment (pass/fail only)",
+      "classification": "AMBIGUOUS",
+      "mapping_rule": "never auto result_state; nt\u2192AMBIGUOUS_NT",
+      "lossiness": "lossy",
+      "notes": null
+    },
+    {
+      "cannlytics_field": "state",
+      "weeddao_path": "producer.jurisdiction / extensions",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "jurisdiction when producer present",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "source",
+      "weeddao_path": "extensions.cannlytics_bridge.upstream_source",
+      "classification": "SOURCE_METADATA",
+      "mapping_rule": "provenance",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "created_at",
+      "weeddao_path": "created_at",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "record created_at",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "updated_at",
+      "weeddao_path": "updated_at",
+      "classification": "CORE_TRANSFORMED",
+      "mapping_rule": "optional",
+      "lossiness": null,
+      "notes": null
+    },
+    {
+      "cannlytics_field": "data_refreshed_date",
+      "weeddao_path": "extensions.cannlytics_source_fields",
+      "classification": "SOURCE_METADATA",
+      "mapping_rule": "stash",
+      "lossiness": null,
+      "notes": null
+    }
+  ]
+}

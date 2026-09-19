@@ -1,0 +1,60 @@
+{
+  "id": "synth-detail-004",
+  "sample_id": "LAB-SMPL-004",
+  "product_name": "Synthetic Concentrate Live Rosin",
+  "product_type": "concentrate",
+  "strain_name": "Synthetic Haze",
+  "batch_number": "CONC-004",
+  "producer": "Synthetic Extracts Co",
+  "lab": "Synthetic Analytics Lab",
+  "date_tested": "2026-03-12T12:00:00",
+  "date_expires": "2027-03-12T00:00:00",
+  "delta_9_thc": 5.2,
+  "thca": 72.0,
+  "total_thc": 68.4,
+  "cbd": null,
+  "pesticides_status": "pass",
+  "state": "WA",
+  "source": "synthetic_fixture",
+  "metrc_lab_id": "1A4FF0000000000000000400",
+  "metrc_source_id": "1A4FF0000000000000000401",
+  "results": [
+    {
+      "analysis": "cannabinoids",
+      "key": "thca",
+      "name": "THCA",
+      "value": 72.0,
+      "mg_g": 720.0,
+      "units": "%",
+      "status": "pass"
+    },
+    {
+      "analysis": "cannabinoids",
+      "key": "cbc",
+      "name": "CBC",
+      "value": null,
+      "units": "%",
+      "loq": 0.1,
+      "lod": 0.03,
+      "status": "pass"
+    },
+    {
+      "analysis": "cannabinoids",
+      "key": "cbdv",
+      "name": "CBDV",
+      "value": "<LOQ",
+      "units": "%",
+      "loq": 0.1,
+      "status": "pass"
+    },
+    {
+      "analysis": "terpenes",
+      "key": "linalool",
+      "name": "Linalool",
+      "value": 0.8,
+      "mg_g": 8.0,
+      "units": "%",
+      "status": "pass"
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "RECORDS_AUDITED": 2000,
+  "STATES_AUDITED": [
+    "CA",
+    "FL",
+    "HI",
+    "MA",
+    "MD",
+    "MI",
+    "NV",
+    "NY"
+  ],
+  "STATES_COUNT": 8,
+  "STRUCTURALLY_VALID_OUTPUTS": 1250,
+  "STRUCTURALLY_UNMAPPABLE": 750,
+  "SCHEMA_VALIDATION_FAILURES": 0,
+  "LOSSLESS_FOR_AVAILABLE_SEMANTICS": 35,
+  "SEMANTICALLY_PARTIAL": 1215,
+  "SUBJECT_TYPE_DETERMINATE": 642,
+  "SUBJECT_TYPE_AMBIGUOUS": 608,
+  "ND_EXPLICIT": 34421,
+  "ND_UNRECOVERABLE": 999,
+  "BELOW_LIMIT_EXPLICIT": 5165,
+  "BELOW_LIMIT_STATE_AMBIGUOUS": 0,
+  "NT_AMBIGUOUS": 2,
+  "PANEL_NT_AMBIGUOUS": 0,
+  "MULTI_UNIT_SOURCE_RECORDS": 129,
+  "MULTI_UNIT_PRESERVED": 129,
+  "LOD_PRESENT": 42370,
+  "LOD_PRESERVED": 554,
+  "LOQ_PRESENT": 47375,
+  "LOQ_PRESERVED": 425,
+  "GENERIC_LIMIT_PRESENT": 0,
+  "LIMIT_TYPE_AMBIGUOUS": 272,
+  "TRACEABILITY_PRESENT": 197,
+  "TRACEABILITY_CORE_MAPPED": 197,
+  "EXTENSION_USAGE_RECORDS": 1250,
+  "TOP_SEMANTIC_AMBIGUITIES": [
+    [
+      "ND_UNRECOVERABLE",
+      999
+    ],
+    [
+      "SUBJECT_TYPE_AMBIGUOUS",
+      608
+    ],
+    [
+      "LIMIT_TYPE_AMBIGUOUS",
+      272
+    ],
+    [
+      "MULTI_UNIT_PRESERVED",
+      129
+    ],
+    [
+      "AMBIGUOUS_NT",
+      2
+    ]
+  ],
+  "PRODUCT_TYPES_TOP": [
+    [
+      "Flower",
+      450
+    ],
+    [
+      "None",
+      279
+    ],
+    [
+      "Buds",
+      250
+    ],
+    [
+      "Concentrate",
+      222
+    ],
+    [
+      "Flower Lot",
+      182
+    ],
+    [
+      "Marijuana Flowers/Buds",
+      159
+    ],
+    [
+      "Derivative",
+      153
+    ],
+    [
+      "Shake/Trim",
+      64
+    ],
+    [
+      "Concentrate, Product Inhalable",
+      53
+    ],
+    [
+      "Plant, Flower - Cured",
+      24
+    ],
+    [
+      "Liquid Marijuana Infused Edible",
+      23
+    ],
+    [
+      "Plant, Preroll",
+      22
+    ],
+    [
+      "Infused Edible",
+      20
+    ],
+    [
+      "Marijuana Extract for Inhalation",
+      19
+    ],
+    [
+      "Ingestible, Gummy",
+      12
+    ]
+  ],
+  "AUDIT_CLASSES": {
+    "SEMANTICALLY_PARTIAL": 1215,
+    "STRUCTURALLY_UNMAPPABLE": 750,
+    "LOSSLESS_FOR_AVAILABLE_SEMANTICS": 35
+  },
+  "WEEDDAO_GAPS_SAMPLE": [
+    "distributor",
+    "distributor_license_number",
+    "distributor_address",
+    "date_packaged",
+    "date_expires",
+    "pesticides_status",
+    "heavy_metals_status",
+    "microbials_status",
+    "mycotoxins_status",
+    "residual_solvents_status",
+    "traceability_ids",
+    "indica_percentage",
+    "sativa_percentage",
+    "classification",
+    "results[].value",
+    "results[].limit",
+    "results[].status"
+  ]
+}

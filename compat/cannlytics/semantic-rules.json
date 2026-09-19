@@ -1,0 +1,57 @@
+{
+  "bridge_version": "0.2.0-compat-draft",
+  "upstream_schema_commit": "a4e05a9f7367ac0b1637bd84773875b3bd1453ec",
+  "weeddao_schema_version": "0.2-draft",
+  "rules": [
+    {
+      "id": 1,
+      "name": "IDENTITY",
+      "statement": "Cannlytics.id \u2192 record_id when present; else deterministic bridge ID. Bridge-generated IDs must not be implied to be upstream identifiers."
+    },
+    {
+      "id": 2,
+      "name": "SUBJECT_REQUIRED",
+      "statement": "Require subject_type + subject_id. subject_id priority: batch_number else sample_id else id. If none \u2192 STRUCTURALLY_UNMAPPABLE."
+    },
+    {
+      "id": 3,
+      "name": "SUBJECT_TYPE_CONSERVATIVE",
+      "statement": "Do NOT blindly infer subject_type. product_batch ONLY when product_type clearly manufactured/finished. flower/bud/biomass: never auto cultivation_batch; harvest_lot ONLY if metadata supports lot/harvest; else other + SUBJECT_TYPE_AMBIGUOUS. If only sample identity: subject_type=sample. product_name\u2192subject.name only; NEVER product_name\u2192cultivar."
+    },
+    {
+      "id": 4,
+      "name": "CULTIVAR_STRAIN_ONLY",
+      "statement": "strain_name\u2192cultivar.reported_name with identity_status=reported only when strain_name present. Do not derive genetics from product_name, classification, indica_percentage, or sativa_percentage."
+    },
+    {
+      "id": 5,
+      "name": "DATES_DISTINCT",
+      "statement": "date_collected\u2192collected_at; date_received\u2192received_at; date_tested\u2192tested_at; date_produced\u2192produced_at. Never manufacture reported_at. date_expires\u2192best_by ONLY if equivalence supported; otherwise omit."
+    },
+    {
+      "id": 6,
+      "name": "TRACEABILITY_METRC",
+      "statement": "metrc_lab_id\u2192metrc.lab; metrc_source_id\u2192metrc.source; metrc_ids\u2192metrc.tag. Ambiguous traceability_ids \u2192 extension + TRACEABILITY_STRUCTURE_AMBIGUOUS."
+    },
+    {
+      "id": 7,
+      "name": "NUMERIC_POTENCY_AND_TERPENES",
+      "statement": "Top-level numeric % cannabinoids/terpenes \u2192 detected + unit %. Core keys mapped; others\u2192cannabinoids.other[]. Never drop present numerics. No zero-fill for absent/null fields."
+    },
+    {
+      "id": 8,
+      "name": "RESULTDETAIL_STATES",
+      "statement": "Numeric value\u2192detected (+ mg_g second unit). lod\u2192LOD; loq\u2192LOQ; generic limit\u2192type=other + LIMIT_TYPE_AMBIGUOUS. status pass/fail\u2192assessment ONLY (never auto result_state). status nt without raw 'Not Tested'\u2192result_state=unknown, reported_as='nt', AMBIGUOUS_NT (never not_tested). Explicit ND\u2192not_detected. Null without ND\u2192unknown/omit + ND_UNRECOVERABLE. Explicit <LOQ/<LOD\u2192below_reporting_limit. LOQ/LOD without qualifier\u2192DO NOT infer below_limit (BELOW_LIMIT_STATE_AMBIGUOUS)."
+    },
+    {
+      "id": 9,
+      "name": "PANEL_STATUS_NT",
+      "statement": "Panel pass/fail map to WeedDAO panel status. Panel nt\u2192OMIT WeedDAO panel status + PANEL_NT_AMBIGUOUS; preserve nt in extensions.cannlytics_bridge.panel_nt_preserved. overall_status\u2192outcomes/extension only; never map overall fail onto panel fail."
+    },
+    {
+      "id": 10,
+      "name": "PROVENANCE_AND_AUDIT_CLASS",
+      "statement": "extensions.cannlytics_bridge carries upstream_project, upstream_record_id, upstream_source, upstream_schema_commit, bridge_version. laboratory_verified only when indicated; bridge uses provenance=derived. Audit classes: LOSSLESS_FOR_AVAILABLE_SEMANTICS | SEMANTICALLY_PARTIAL | STRUCTURALLY_UNMAPPABLE. LOSSLESS means normalized Cannlytics semantics represented without guessing \u2014 NOT that the original COA was lossless."
+    }
+  ]
+}

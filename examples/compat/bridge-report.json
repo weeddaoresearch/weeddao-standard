@@ -1,0 +1,71 @@
+{
+  "mapped": [
+    "id\u2192record_id",
+    "product_name\u2192subject.name",
+    "product_type\u2192subject.product_type",
+    "metrc_lab_id\u2192external_identifiers[metrc.lab]",
+    "metrc_source_id\u2192external_identifiers[metrc.source]",
+    "metrc_ids\u2192external_identifiers[metrc.tag]",
+    "sample_id\u2192external_identifiers[lab.sample]",
+    "producer\u2192producer.organization_name",
+    "producer_license_number\u2192producer.license_id",
+    "state/producer_state\u2192producer.jurisdiction",
+    "strain_name\u2192cultivar.reported_name",
+    "lab\u2192lab_results.lab_name",
+    "lab_id\u2192lab_results.lab_id",
+    "date_collected\u2192lab_results.sample.collected_at",
+    "date_received\u2192lab_results.sample.received_at",
+    "date_produced\u2192lab_results.sample.produced_at",
+    "date_tested\u2192lab_results.tested_at",
+    "delta_9_thc\u2192lab_results.cannabinoids.thc",
+    "thca\u2192lab_results.cannabinoids.thca",
+    "total_thc\u2192lab_results.cannabinoids.total_thc",
+    "cbd\u2192lab_results.cannabinoids.cbd",
+    "cbda\u2192lab_results.cannabinoids.cbda",
+    "cbg\u2192lab_results.cannabinoids.cbg",
+    "cbn\u2192lab_results.cannabinoids.cbn",
+    "total_cannabinoids\u2192lab_results.cannabinoids.total_cannabinoids",
+    "beta_myrcene\u2192lab_results.terpenes",
+    "d_limonene\u2192lab_results.terpenes",
+    "total_terpenes\u2192lab_results.total_terpenes",
+    "moisture_content\u2192lab_results.moisture",
+    "water_activity\u2192lab_results.water_activity",
+    "results[] value\u2192detected (delta_9_thc)",
+    "delta_9_thc\u2192lab_results.cannabinoids.thc",
+    "delta_9_thc\u2192lab_results.cannabinoids.thc",
+    "results[] value\u2192detected (thca)",
+    "thca\u2192lab_results.cannabinoids.thca",
+    "thca\u2192lab_results.cannabinoids.thca",
+    "pesticides_status\u2192safety.pesticides.status=pass",
+    "heavy_metals_status\u2192safety.heavy_metals.status=pass",
+    "microbials_status\u2192safety.microbials.status=pass",
+    "mycotoxins_status\u2192safety.mycotoxins.status=pass",
+    "foreign_matter_status\u2192foreign_material (assessment only)",
+    "overall_status\u2192outcomes.cannlytics_overall_status (not panel fail)"
+  ],
+  "unmapped": [
+    "lab_license_number",
+    "state"
+  ],
+  "gaps": {
+    "subject_type": "flowerish_without_harvest_lot_metadata",
+    "panel_nt:residual_solvents": "PANEL_NT_AMBIGUOUS"
+  },
+  "flags": {
+    "SUBJECT_TYPE_AMBIGUOUS": true,
+    "AMBIGUOUS_NT": false,
+    "PANEL_NT_AMBIGUOUS": true,
+    "ND_UNRECOVERABLE": false,
+    "BELOW_LIMIT_STATE_AMBIGUOUS": false,
+    "LIMIT_TYPE_AMBIGUOUS": false,
+    "TRACEABILITY_STRUCTURE_AMBIGUOUS": false,
+    "MULTI_UNIT_PRESERVED": true,
+    "STRUCTURALLY_UNMAPPABLE": false,
+    "audit_class": "SEMANTICALLY_PARTIAL"
+  },
+  "notes": [
+    "SUBJECT_TYPE_AMBIGUOUS: flower/bud/biomass without harvest/lot metadata; using subject_type=other (not cultivation_batch)",
+    "PANEL_NT_AMBIGUOUS: residual_solvents_status='n/a' omitted from WeedDAO panel status",
+    "overall_status not mapped onto individual WeedDAO panel statuses"
+  ]
+}

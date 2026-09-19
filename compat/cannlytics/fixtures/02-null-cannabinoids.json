@@ -1,0 +1,21 @@
+{
+  "id": "synth-null-002",
+  "sample_id": "LAB-SMPL-002",
+  "product_name": "Synthetic Null Potency Sample",
+  "product_type": "flower",
+  "strain_name": "Unknown Strain",
+  "batch_number": "BATCH-NULL-002",
+  "producer": "Synthetic Farms LLC",
+  "lab": "Synthetic Analytics Lab",
+  "date_tested": "2026-03-05T12:00:00",
+  "delta_9_thc": null,
+  "thca": null,
+  "total_thc": null,
+  "cbd": null,
+  "cbda": null,
+  "pesticides_status": "pass",
+  "heavy_metals_status": "pass",
+  "state": "OR",
+  "source": "synthetic_fixture",
+  "results": []
+}

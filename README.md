@@ -122,3 +122,8 @@ weeddao-standard/
 ## License
 
 Copyright 2026 WeedDAO Contributors. Licensed under the [Apache License 2.0](LICENSE).
+
+
+## Compatibility experiments (branch `cannlytics-compat`)
+
+This branch adds an **experimental** Cannlytics → WeedDAO `0.2-draft` compatibility bridge under [`compat/cannlytics/`](compat/cannlytics/) and [`bridges/cannlytics_to_weeddao.py`](bridges/cannlytics_to_weeddao.py). It does **not** change the v0.2-draft schema, does **not** modify the corpus, and is **not** a release. See the compat README for `nt` / null-float defects and run instructions.

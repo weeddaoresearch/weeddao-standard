@@ -1,0 +1,248 @@
+{
+  "schema_version": "0.2-draft",
+  "record_id": "synth-flower-001",
+  "created_at": "2026-09-19T17:46:30Z",
+  "subject": {
+    "subject_type": "other",
+    "subject_id": "BATCH-HZ-2026-001",
+    "name": "Synthetic Orange Zkittlez Flower",
+    "product_type": "flower",
+    "external_identifiers": [
+      {
+        "scheme": "metrc.lab",
+        "value": "1A4FF0000000000000000999",
+        "scope": "sample"
+      },
+      {
+        "scheme": "metrc.source",
+        "value": "1A4FF0000000000000000888",
+        "scope": "source"
+      },
+      {
+        "scheme": "metrc.tag",
+        "value": "1A4FF0000000000000000001",
+        "scope": "package"
+      },
+      {
+        "scheme": "lab.sample",
+        "value": "LAB-SMPL-001",
+        "scope": "sample"
+      }
+    ]
+  },
+  "producer": {
+    "organization_name": "Synthetic Farms LLC",
+    "license_id": "C11-0000001-LIC",
+    "jurisdiction": "CA"
+  },
+  "cultivar": {
+    "reported_name": "Orange Zkittlez",
+    "identity_status": "reported"
+  },
+  "lab_results": {
+    "provenance": "derived",
+    "lab_name": "Synthetic Analytics Lab",
+    "lab_id": "SAL-001",
+    "sample_id": "LAB-SMPL-001",
+    "sample": {
+      "sample_id": "LAB-SMPL-001",
+      "collected_at": "2026-03-01T10:00:00Z",
+      "received_at": "2026-03-01T15:00:00Z",
+      "produced_at": "2026-02-20T00:00:00Z"
+    },
+    "tested_at": "2026-03-02T12:00:00Z",
+    "total_terpenes": {
+      "result_state": "detected",
+      "measurements": [
+        {
+          "value": 1.8,
+          "unit": "%"
+        }
+      ],
+      "provenance": "derived"
+    },
+    "moisture": {
+      "result_state": "detected",
+      "measurements": [
+        {
+          "value": 11.2,
+          "unit": "%"
+        }
+      ],
+      "provenance": "derived"
+    },
+    "water_activity": {
+      "result_state": "detected",
+      "measurements": [
+        {
+          "value": 0.55,
+          "unit": "aw"
+        }
+      ],
+      "provenance": "derived"
+    },
+    "cannabinoids": {
+      "thc": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.91,
+            "unit": "%"
+          },
+          {
+            "value": 9.1,
+            "unit": "mg/g"
+          }
+        ],
+        "provenance": "derived"
+      },
+      "thca": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 26.64,
+            "unit": "%"
+          },
+          {
+            "value": 266.4,
+            "unit": "mg/g"
+          }
+        ],
+        "provenance": "derived"
+      },
+      "total_thc": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 24.27,
+            "unit": "%"
+          }
+        ],
+        "provenance": "derived"
+      },
+      "cbd": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.11,
+            "unit": "%"
+          }
+        ],
+        "provenance": "derived"
+      },
+      "cbda": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.05,
+            "unit": "%"
+          }
+        ],
+        "provenance": "derived"
+      },
+      "cbg": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.2,
+            "unit": "%"
+          }
+        ],
+        "provenance": "derived"
+      },
+      "cbn": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.02,
+            "unit": "%"
+          }
+        ],
+        "provenance": "derived"
+      },
+      "total_cannabinoids": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 28.1,
+            "unit": "%"
+          }
+        ],
+        "provenance": "derived"
+      }
+    },
+    "terpenes": [
+      {
+        "name": "beta_myrcene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.45,
+            "unit": "%"
+          }
+        ],
+        "provenance": "derived"
+      },
+      {
+        "name": "d_limonene",
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.32,
+            "unit": "%"
+          }
+        ],
+        "provenance": "derived"
+      }
+    ],
+    "safety": {
+      "pesticides": {
+        "status": "pass"
+      },
+      "heavy_metals": {
+        "status": "pass"
+      },
+      "microbials": {
+        "status": "pass"
+      },
+      "mycotoxins": {
+        "status": "pass"
+      }
+    },
+    "foreign_material": {
+      "result_state": "unknown",
+      "assessment": "pass",
+      "reported_as": "pass",
+      "notes": "Panel/visual status only; no numeric foreign-material measurement"
+    }
+  },
+  "outcomes": {
+    "cannlytics_overall_status": "pass"
+  },
+  "extensions": {
+    "cannlytics_bridge": {
+      "upstream_project": "cannlytics/cannabis_results",
+      "upstream_record_id": "synth-flower-001",
+      "upstream_source": "synthetic_fixture",
+      "upstream_schema_commit": "a4e05a9f7367ac0b1637bd84773875b3bd1453ec",
+      "bridge_version": "0.2.0-compat-draft",
+      "panel_nt_preserved": {
+        "residual_solvents": {
+          "cannlytics_status": "n/a"
+        }
+      },
+      "flags": {
+        "SUBJECT_TYPE_AMBIGUOUS": true,
+        "PANEL_NT_AMBIGUOUS": true,
+        "MULTI_UNIT_PRESERVED": true
+      }
+    },
+    "cannlytics_source_fields": {
+      "lab_license_number": "L12-0000099",
+      "state": "CA"
+    }
+  },
+  "data_gaps": {
+    "subject.subject_type_precision": "not_measured"
+  }
+}

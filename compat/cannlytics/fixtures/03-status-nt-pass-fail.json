@@ -1,0 +1,53 @@
+{
+  "id": "synth-status-003",
+  "sample_id": "LAB-SMPL-003",
+  "product_name": "Synthetic Vape Cart Mint",
+  "product_type": "vape",
+  "product_subtype": "distillate cartridge",
+  "strain_name": null,
+  "batch_number": "VAPE-BATCH-003",
+  "producer": "Synthetic Extracts Co",
+  "lab": "Synthetic Analytics Lab",
+  "date_tested": "2026-03-10T12:00:00",
+  "delta_9_thc": 78.5,
+  "thca": 0.1,
+  "total_thc": 78.6,
+  "cbd": 0.0,
+  "pesticides_status": "pass",
+  "heavy_metals_status": "fail",
+  "microbials_status": "nt",
+  "mycotoxins_status": "nt",
+  "residual_solvents_status": "pass",
+  "overall_status": "fail",
+  "state": "MI",
+  "source": "synthetic_fixture",
+  "results": [
+    {
+      "analysis": "heavy_metals",
+      "key": "lead",
+      "name": "Lead",
+      "value": 2.5,
+      "units": "ppm",
+      "limit": 0.5,
+      "status": "fail"
+    },
+    {
+      "analysis": "pesticides",
+      "key": "myclobutanil",
+      "name": "Myclobutanil",
+      "value": "ND",
+      "units": "ppm",
+      "loq": 0.1,
+      "status": "pass"
+    },
+    {
+      "analysis": "mycotoxins",
+      "key": "aflatoxin",
+      "name": "Aflatoxin",
+      "value": "NT",
+      "units": "ppb",
+      "limit": 20.0,
+      "status": "nt"
+    }
+  ]
+}
