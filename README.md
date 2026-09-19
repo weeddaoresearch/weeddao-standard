@@ -18,6 +18,8 @@ It is **not** a release, **not** an industry standard, **not** a regulatory spec
 | Evidence log | [docs/v0.2-review-evidence.md](docs/v0.2-review-evidence.md) (empty until real external evidence) |
 | Conceptual board | [STATUS.md](STATUS.md) |
 
+**WeedDAO = Weed Data Alliance Organization.** The name refers to an alliance around open cannabis data interoperability; WeedDAO is not a decentralized autonomous organization and has no token.
+
 > **Different platforms. Different organizations. One shared data language.**
 
 This is a **coordination / data layer**. It does not replace growers, labs, researchers, dispensaries, or software products.
