@@ -1,0 +1,266 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://weeddao.org/schemas/weeddao-method-assurance-0.1-draft.schema.json",
+  "title": "WeedDAO Method Assurance Sidecar 0.1 Draft",
+  "description": "Experimental sidecar for analytical method identity, scope, validation, verification, transfer, and deviations. This does not modify WeedDAO v0.2-draft.",
+  "type": "object",
+  "required": ["method_assurance_version", "status", "record_ref", "methods", "result_links"],
+  "additionalProperties": false,
+  "properties": {
+    "method_assurance_version": { "const": "0.1-draft" },
+    "status": { "const": "experimental" },
+    "record_ref": { "$ref": "#/$defs/RecordRef" },
+    "methods": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/MethodRecord" }
+    },
+    "result_links": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/ResultMethodLink" }
+    },
+    "notes": { "type": ["string", "null"] }
+  },
+  "$defs": {
+    "RecordRef": {
+      "type": "object",
+      "required": ["schema_version"],
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": { "type": "string", "minLength": 1 },
+        "record_id": { "type": ["string", "null"] },
+        "source_id": { "type": ["string", "null"] }
+      }
+    },
+    "Quantity": {
+      "type": "object",
+      "required": ["value", "unit"],
+      "additionalProperties": false,
+      "properties": {
+        "value": { "type": "number" },
+        "unit": { "type": "string", "minLength": 1 }
+      }
+    },
+    "MethodIdentity": {
+      "type": "object",
+      "required": ["method_id"],
+      "additionalProperties": false,
+      "properties": {
+        "method_id": { "type": "string", "minLength": 1 },
+        "title": { "type": ["string", "null"] },
+        "method_type": {
+          "type": ["string", "null"],
+          "enum": [
+            "standard_method",
+            "official_method",
+            "laboratory_developed",
+            "modified_standard_method",
+            "manufacturer_method",
+            "regulatory_method",
+            "research_method",
+            "source_reported",
+            "other",
+            "unknown",
+            null
+          ]
+        },
+        "standard_reference": { "type": ["string", "null"] },
+        "internal_sop_id": { "type": ["string", "null"] },
+        "revision": { "type": ["string", "null"] },
+        "effective_date": { "type": ["string", "null"] },
+        "technique": { "type": ["string", "null"] },
+        "instrument_platform": { "type": ["string", "null"] },
+        "source_reference": { "type": ["string", "null"] },
+        "reported_as": { "type": ["string", "null"] }
+      }
+    },
+    "MethodScope": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "analytes": {
+          "type": ["array", "null"],
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "matrices": {
+          "type": ["array", "null"],
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "product_types": {
+          "type": ["array", "null"],
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "lower_range": {
+          "anyOf": [
+            { "$ref": "#/$defs/Quantity" },
+            { "type": "null" }
+          ]
+        },
+        "upper_range": {
+          "anyOf": [
+            { "$ref": "#/$defs/Quantity" },
+            { "type": "null" }
+          ]
+        },
+        "qualitative_or_quantitative": {
+          "type": ["string", "null"],
+          "enum": ["qualitative", "quantitative", "both", "unknown", null]
+        },
+        "limitations": { "type": ["string", "null"] },
+        "source_reference": { "type": ["string", "null"] }
+      }
+    },
+    "PerformanceCharacteristic": {
+      "type": "object",
+      "required": ["characteristic"],
+      "additionalProperties": false,
+      "properties": {
+        "characteristic": {
+          "type": "string",
+          "enum": [
+            "accuracy",
+            "bias",
+            "precision",
+            "repeatability",
+            "intermediate_precision",
+            "reproducibility",
+            "recovery",
+            "selectivity",
+            "specificity",
+            "linearity",
+            "working_range",
+            "lod",
+            "loq",
+            "robustness",
+            "measurement_uncertainty",
+            "probability_of_detection",
+            "other"
+          ]
+        },
+        "result_value": { "type": ["number", "null"] },
+        "unit": { "type": ["string", "null"] },
+        "reported_as": { "type": ["string", "null"] },
+        "acceptance_criterion": { "type": ["string", "null"] },
+        "outcome": {
+          "type": ["string", "null"],
+          "enum": ["met", "not_met", "not_evaluated", "unknown", null]
+        },
+        "source_reference": { "type": ["string", "null"] },
+        "notes": { "type": ["string", "null"] }
+      }
+    },
+    "QualificationEvent": {
+      "type": "object",
+      "required": ["event_type"],
+      "additionalProperties": false,
+      "properties": {
+        "event_type": {
+          "type": "string",
+          "enum": [
+            "characterization",
+            "validation",
+            "verification",
+            "method_transfer",
+            "revalidation",
+            "source_reported",
+            "other"
+          ]
+        },
+        "study_design": {
+          "type": ["string", "null"],
+          "enum": [
+            "single_laboratory",
+            "multi_laboratory",
+            "on_site_verification",
+            "comparative",
+            "source_reported",
+            "other",
+            "unknown",
+            null
+          ]
+        },
+        "status": {
+          "type": ["string", "null"],
+          "enum": [
+            "completed",
+            "partial",
+            "in_progress",
+            "not_demonstrated",
+            "unknown",
+            null
+          ]
+        },
+        "performed_at": { "type": ["string", "null"] },
+        "performed_by": { "type": ["string", "null"] },
+        "acceptance_framework": { "type": ["string", "null"] },
+        "scope": {
+          "anyOf": [
+            { "$ref": "#/$defs/MethodScope" },
+            { "type": "null" }
+          ]
+        },
+        "performance_characteristics": {
+          "type": ["array", "null"],
+          "items": { "$ref": "#/$defs/PerformanceCharacteristic" }
+        },
+        "source_reference": { "type": ["string", "null"] },
+        "notes": { "type": ["string", "null"] }
+      }
+    },
+    "Deviation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "deviation_id": { "type": ["string", "null"] },
+        "description": { "type": ["string", "null"] },
+        "authorized": { "type": ["boolean", "null"] },
+        "impact_assessed": { "type": ["boolean", "null"] },
+        "impact_summary": { "type": ["string", "null"] },
+        "source_reference": { "type": ["string", "null"] }
+      }
+    },
+    "MethodRecord": {
+      "type": "object",
+      "required": ["identity"],
+      "additionalProperties": false,
+      "properties": {
+        "identity": { "$ref": "#/$defs/MethodIdentity" },
+        "claimed_scope": {
+          "anyOf": [
+            { "$ref": "#/$defs/MethodScope" },
+            { "type": "null" }
+          ]
+        },
+        "qualification_events": {
+          "type": ["array", "null"],
+          "items": { "$ref": "#/$defs/QualificationEvent" }
+        },
+        "deviations": {
+          "type": ["array", "null"],
+          "items": { "$ref": "#/$defs/Deviation" }
+        },
+        "notes": { "type": ["string", "null"] }
+      }
+    },
+    "ResultMethodLink": {
+      "type": "object",
+      "required": ["result_path", "method_id"],
+      "additionalProperties": false,
+      "properties": {
+        "result_path": {
+          "type": "string",
+          "pattern": "^/",
+          "description": "JSON Pointer to the WeedDAO result object produced using the method."
+        },
+        "method_id": { "type": "string", "minLength": 1 },
+        "within_claimed_scope": {
+          "type": ["boolean", "null"],
+          "description": "Only populate when the source evidence is sufficient to determine this."
+        },
+        "scope_evidence": { "type": ["string", "null"] },
+        "notes": { "type": ["string", "null"] }
+      }
+    }
+  }
+}
