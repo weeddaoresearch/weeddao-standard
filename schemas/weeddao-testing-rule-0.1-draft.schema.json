@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WeedDAO Testing Rule Record 0.1-draft",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "registry_version",
+    "rule_id",
+    "jurisdiction",
+    "authority",
+    "status",
+    "effective",
+    "scope",
+    "requirements",
+    "sources"
+  ],
+  "properties": {
+    "registry_version": { "const": "0.1-draft" },
+    "rule_id": {
+      "type": "string",
+      "pattern": "^WDA-RULE-[A-Z0-9-]+$"
+    },
+    "jurisdiction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["country", "name"],
+      "properties": {
+        "country": { "type": "string", "minLength": 2 },
+        "subdivision": { "type": ["string", "null"] },
+        "name": { "type": "string", "minLength": 1 }
+      }
+    },
+    "authority": { "type": "string", "minLength": 1 },
+    "status": {
+      "enum": ["future", "active", "superseded", "withdrawn"]
+    },
+    "effective": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["start_date"],
+      "properties": {
+        "published_date": { "type": ["string", "null"], "format": "date" },
+        "start_date": { "type": "string", "format": "date" },
+        "end_date": { "type": ["string", "null"], "format": "date" }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "program": { "type": ["string", "null"] },
+        "product_types": {
+          "type": "array",
+          "items": { "type": "string" },
+          "uniqueItems": true
+        },
+        "matrices": {
+          "type": "array",
+          "items": { "type": "string" },
+          "uniqueItems": true
+        },
+        "notes": { "type": ["string", "null"] }
+      }
+    },
+    "requirements": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["requirement_id", "requirement_type"],
+        "properties": {
+          "requirement_id": { "type": "string", "minLength": 1 },
+          "requirement_type": {
+            "enum": [
+              "required_test",
+              "action_limit",
+              "reporting_requirement",
+              "lod_loq_requirement",
+              "method_requirement",
+              "sampling_rule",
+              "retest_rule",
+              "other"
+            ]
+          },
+          "analyte_id": {
+            "type": ["string", "null"],
+            "pattern": "^WDA-AN-[0-9]{6}$"
+          },
+          "test_category": { "type": ["string", "null"] },
+          "comparator": {
+            "type": ["string", "null"],
+            "enum": ["<", "<=", ">", ">=", "=", null]
+          },
+          "threshold": {
+            "type": ["object", "null"],
+            "additionalProperties": false,
+            "required": ["value", "unit"],
+            "properties": {
+              "value": { "type": "number" },
+              "unit": { "type": "string", "minLength": 1 },
+              "unit_system": { "type": ["string", "null"] },
+              "reported_as": { "type": ["string", "null"] }
+            }
+          },
+          "source_text_summary": { "type": ["string", "null"] },
+          "notes": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["title", "url"],
+        "properties": {
+          "title": { "type": "string", "minLength": 1 },
+          "url": { "type": "string", "format": "uri" },
+          "citation": { "type": ["string", "null"] },
+          "retrieved_at": { "type": ["string", "null"], "format": "date-time" },
+          "source_hash": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "supersedes": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    }
+  }
+}
