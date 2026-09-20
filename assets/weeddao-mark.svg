@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">WeedDAO mark</title>
+  <desc id="desc">A geometric green leaf with a data-network vein.</desc>
+  <path d="M50.8 7.5C31.4 7.7 16.2 18.8 10.8 34.7 7.4 44.7 10.7 54.1 20 56c8.8 1.8 18-4.3 23.8-13.4 6.1-9.6 8.5-21.6 7-35.1Z" fill="#2F5A42"/>
+  <path d="M14 51C23.5 40.6 32.3 31.1 45.5 19.1" fill="none" stroke="#EAF3ED" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M24.6 39.7l-3.2-9.1M32.8 32.2l8.6 1.1M37.7 27.6l-1.7-8.2" fill="none" stroke="#EAF3ED" stroke-width="2.3" stroke-linecap="round"/>
+  <circle cx="21.4" cy="30.4" r="2.7" fill="#EAF3ED"/>
+  <circle cx="41.5" cy="33.3" r="2.7" fill="#EAF3ED"/>
+  <circle cx="36" cy="19.2" r="2.7" fill="#EAF3ED"/>
+  <circle cx="14.4" cy="50.9" r="2.7" fill="#EAF3ED"/>
+</svg>
