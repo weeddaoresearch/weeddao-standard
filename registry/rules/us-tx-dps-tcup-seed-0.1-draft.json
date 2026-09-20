@@ -1,0 +1,196 @@
+{
+  "registry_version": "0.1-draft",
+  "status": "seed",
+  "jurisdiction": "Texas",
+  "as_of": "2026-09-19",
+  "source_note": "Narrow seed for Texas Compassionate-Use Program testing and reporting requirements. This is not a complete Texas compliance ruleset and does not include consumable-hemp rules, which are a separate regulatory program.",
+  "records": [
+    {
+      "registry_version": "0.1-draft",
+      "rule_id": "WDA-RULE-US-TX-DPS-TCUP-TESTING",
+      "jurisdiction": {
+        "country": "US",
+        "subdivision": "US-TX",
+        "name": "Texas"
+      },
+      "authority": "Texas Department of Public Safety",
+      "status": "active",
+      "effective": {
+        "published_date": null,
+        "start_date": "2017-03-15",
+        "end_date": null
+      },
+      "scope": {
+        "program": "Texas Compassionate-Use Program",
+        "product_types": [
+          "processed low-THC cannabis products"
+        ],
+        "matrices": [],
+        "notes": "Representative samples of processed products are subject to the testing categories in 37 TAC §12.7(b)."
+      },
+      "requirements": [
+        {
+          "requirement_id": "thc-levels-required",
+          "requirement_type": "required_test",
+          "analyte_id": null,
+          "test_category": "tetrahydrocannabinol",
+          "comparator": null,
+          "threshold": null,
+          "source_text_summary": "Processed-product representative samples must be tested for tetrahydrocannabinol levels.",
+          "notes": "The administrative rule uses the generic term tetrahydrocannabinol; WeedDAO does not silently narrow this to delta-9 THC."
+        },
+        {
+          "requirement_id": "cbd-levels-required",
+          "requirement_type": "required_test",
+          "analyte_id": "WDA-AN-000003",
+          "test_category": "cannabinoid",
+          "comparator": null,
+          "threshold": null,
+          "source_text_summary": "Processed-product representative samples must be tested for cannabidiol levels.",
+          "notes": null
+        },
+        {
+          "requirement_id": "residual-solvents-required",
+          "requirement_type": "required_test",
+          "analyte_id": null,
+          "test_category": "residual_solvents",
+          "comparator": null,
+          "threshold": null,
+          "source_text_summary": "Residual-solvent testing is required.",
+          "notes": null
+        },
+        {
+          "requirement_id": "pesticides-required",
+          "requirement_type": "required_test",
+          "analyte_id": null,
+          "test_category": "pesticides",
+          "comparator": null,
+          "threshold": null,
+          "source_text_summary": "Pesticide testing is required.",
+          "notes": null
+        },
+        {
+          "requirement_id": "fungicides-required",
+          "requirement_type": "required_test",
+          "analyte_id": null,
+          "test_category": "fungicides",
+          "comparator": null,
+          "threshold": null,
+          "source_text_summary": "Fungicide testing is required.",
+          "notes": null
+        },
+        {
+          "requirement_id": "fertilizers-required",
+          "requirement_type": "required_test",
+          "analyte_id": null,
+          "test_category": "fertilizers",
+          "comparator": null,
+          "threshold": null,
+          "source_text_summary": "Fertilizer testing is required.",
+          "notes": null
+        },
+        {
+          "requirement_id": "mold-required",
+          "requirement_type": "required_test",
+          "analyte_id": null,
+          "test_category": "mold",
+          "comparator": null,
+          "threshold": null,
+          "source_text_summary": "Mold testing is required.",
+          "notes": null
+        },
+        {
+          "requirement_id": "heavy-metals-required",
+          "requirement_type": "required_test",
+          "analyte_id": null,
+          "test_category": "heavy_metals",
+          "comparator": null,
+          "threshold": null,
+          "source_text_summary": "Heavy-metal testing is required.",
+          "notes": null
+        },
+        {
+          "requirement_id": "label-potency-reporting",
+          "requirement_type": "reporting_requirement",
+          "analyte_id": null,
+          "test_category": "potency",
+          "comparator": null,
+          "threshold": null,
+          "source_text_summary": "Final package labeling must report product potency including THC and CBD levels.",
+          "notes": null
+        },
+        {
+          "requirement_id": "label-contaminant-findings",
+          "requirement_type": "reporting_requirement",
+          "analyte_id": null,
+          "test_category": "contaminants",
+          "comparator": null,
+          "threshold": null,
+          "source_text_summary": "Final package labeling must state that the product was tested for contaminants, indicate findings, and include the testing date.",
+          "notes": null
+        }
+      ],
+      "sources": [
+        {
+          "title": "Texas DPS Administrative Rules — Chapter 12, §12.7 Testing, Production, and Packaging",
+          "url": "https://www.dps.texas.gov/RSD/CUP/Laws/adminRules.pdf",
+          "citation": "37 TAC §12.7(b), §12.7(p)(7)-(8)",
+          "retrieved_at": "2026-09-19T00:00:00Z",
+          "source_hash": null
+        }
+      ],
+      "supersedes": []
+    },
+    {
+      "registry_version": "0.1-draft",
+      "rule_id": "WDA-RULE-US-TX-OC-LOWTHC-2025",
+      "jurisdiction": {
+        "country": "US",
+        "subdivision": "US-TX",
+        "name": "Texas"
+      },
+      "authority": "Texas Legislature",
+      "status": "active",
+      "effective": {
+        "published_date": "2025-06-20",
+        "start_date": "2025-09-01",
+        "end_date": null
+      },
+      "scope": {
+        "program": "Texas Compassionate-Use Program",
+        "product_types": [
+          "low-THC cannabis dosage units"
+        ],
+        "matrices": [],
+        "notes": "Current statutory definition of low-THC cannabis in Texas Occupations Code §169.001(3)."
+      },
+      "requirements": [
+        {
+          "requirement_id": "low-thc-dosage-unit-maximum",
+          "requirement_type": "other",
+          "analyte_id": null,
+          "test_category": "tetrahydrocannabinols",
+          "comparator": "<=",
+          "threshold": {
+            "value": 10,
+            "unit": "mg/dosage_unit",
+            "unit_system": "source_native",
+            "reported_as": "not more than 10 milligrams of tetrahydrocannabinols in each dosage unit"
+          },
+          "source_text_summary": "Texas statutory definition uses a dosage-unit THC maximum.",
+          "notes": "This seed preserves the statute's aggregate tetrahydrocannabinols wording and does not map it to a specific THC isomer."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Texas Occupations Code Chapter 169",
+          "url": "https://tcss.legis.texas.gov/resources/OC/htm/OC.169.htm",
+          "citation": "Tex. Occ. Code §169.001(3), amended by Acts 2025, 89th Leg., R.S., Ch. 710 (H.B. 46), Sec. 14",
+          "retrieved_at": "2026-09-19T00:00:00Z",
+          "source_hash": null
+        }
+      ],
+      "supersedes": []
+    }
+  ]
+}
