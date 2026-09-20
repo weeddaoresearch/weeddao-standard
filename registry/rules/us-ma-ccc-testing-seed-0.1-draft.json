@@ -1,0 +1,428 @@
+{
+  "registry_version": "0.1-draft",
+  "status": "seed",
+  "jurisdiction": "Massachusetts",
+  "as_of": "2026-09-19",
+  "source_note": "Narrow seed for Massachusetts Cannabis Control Commission testing requirements, current protocol limits, and full-panel submission rules. The Commission is actively reviewing testing protocols in 2026; proposals are not encoded as active requirements unless already effective.",
+  "records": [
+    {
+      "registry_version": "0.1-draft",
+      "rule_id": "WDA-RULE-US-MA-CCC-TESTING-FRAMEWORK",
+      "jurisdiction": {
+        "country": "US",
+        "subdivision": "US-MA",
+        "name": "Massachusetts"
+      },
+      "authority": "Massachusetts Cannabis Control Commission",
+      "status": "active",
+      "effective": {
+        "published_date": "2026-04-19",
+        "start_date": "2026-04-19",
+        "end_date": null
+      },
+      "scope": {
+        "program": "Adult-use and medical cannabis testing",
+        "product_types": [
+          "marijuana",
+          "marijuana products"
+        ],
+        "matrices": [],
+        "notes": "Current framework reflects M.G.L. c.94G §15 and 935 CMR 500.160 as reviewed in 2026."
+      },
+      "requirements": [
+        {
+          "requirement_id": "independent-testing-before-sale",
+          "requirement_type": "other",
+          "analyte_id": null,
+          "test_category": "market_release",
+          "comparator": null,
+          "threshold": null,
+          "source_text_summary": "Marijuana and marijuana products must be tested by an Independent Testing Laboratory and meet Commission testing protocols before sale or marketing.",
+          "notes": null
+        },
+        {
+          "requirement_id": "cannabinoid-profile-required",
+          "requirement_type": "required_test",
+          "analyte_id": null,
+          "test_category": "cannabinoid_profile",
+          "comparator": null,
+          "threshold": null,
+          "source_text_summary": "Testing protocols address characterization of the cannabinoid profile.",
+          "notes": null
+        },
+        {
+          "requirement_id": "pesticides-required",
+          "requirement_type": "required_test",
+          "analyte_id": null,
+          "test_category": "pesticides",
+          "comparator": null,
+          "threshold": null,
+          "source_text_summary": "Testing protocols address pesticides.",
+          "notes": null
+        },
+        {
+          "requirement_id": "plant-growth-regulators-required",
+          "requirement_type": "required_test",
+          "analyte_id": null,
+          "test_category": "plant_growth_regulators",
+          "comparator": null,
+          "threshold": null,
+          "source_text_summary": "Testing protocols address plant growth regulators.",
+          "notes": null
+        },
+        {
+          "requirement_id": "metals-required",
+          "requirement_type": "required_test",
+          "analyte_id": null,
+          "test_category": "heavy_metals",
+          "comparator": null,
+          "threshold": null,
+          "source_text_summary": "Testing protocols address metals.",
+          "notes": null
+        },
+        {
+          "requirement_id": "microbiological-contaminants-required",
+          "requirement_type": "required_test",
+          "analyte_id": null,
+          "test_category": "microbiological_contaminants",
+          "comparator": null,
+          "threshold": null,
+          "source_text_summary": "Testing protocols address microbiological contaminants.",
+          "notes": null
+        },
+        {
+          "requirement_id": "mycotoxins-required",
+          "requirement_type": "required_test",
+          "analyte_id": null,
+          "test_category": "mycotoxins",
+          "comparator": null,
+          "threshold": null,
+          "source_text_summary": "Testing protocols address mycotoxins.",
+          "notes": null
+        },
+        {
+          "requirement_id": "residual-solvents-required",
+          "requirement_type": "required_test",
+          "analyte_id": null,
+          "test_category": "residual_solvents",
+          "comparator": null,
+          "threshold": null,
+          "source_text_summary": "Testing protocols address residual solvents.",
+          "notes": null
+        },
+        {
+          "requirement_id": "contamination-reporting-72h",
+          "requirement_type": "reporting_requirement",
+          "analyte_id": null,
+          "test_category": "contamination",
+          "comparator": null,
+          "threshold": null,
+          "source_text_summary": "An Independent Testing Laboratory must report results indicating contamination to the Commission within 72 hours of identification.",
+          "notes": null
+        },
+        {
+          "requirement_id": "iso-17025-independent-lab",
+          "requirement_type": "other",
+          "analyte_id": null,
+          "test_category": "laboratory_qualification",
+          "comparator": null,
+          "threshold": null,
+          "source_text_summary": "Independent Testing Laboratories are licensed by the Commission and accredited to the current ISO/IEC 17025 standard by an accepted third-party accrediting body or otherwise approved by the Commission.",
+          "notes": "Registry models this as a laboratory-qualification rule rather than a test-result threshold."
+        },
+        {
+          "requirement_id": "single-serving-potency-variance",
+          "requirement_type": "other",
+          "analyte_id": null,
+          "test_category": "potency",
+          "comparator": "<=",
+          "threshold": {
+            "value": 10,
+            "unit": "percent_variance",
+            "unit_system": "source_native",
+            "reported_as": "+/- 10%"
+          },
+          "source_text_summary": "Single servings of marijuana products tested for potency are subject to a potency variance of no greater than +/- 10%.",
+          "notes": null
+        }
+      ],
+      "sources": [
+        {
+          "title": "Massachusetts General Laws c.94G §15",
+          "url": "https://www.mass.gov/info-details/mass-general-laws-c94g-ss-15",
+          "citation": "M.G.L. c.94G §15(a), amended effective April 19, 2026",
+          "retrieved_at": "2026-09-19T00:00:00Z",
+          "source_hash": null
+        },
+        {
+          "title": "935 CMR 500 — Adult Use of Marijuana",
+          "url": "https://www.mass.gov/doc/935-cmr-500-adult-use-of-marijuana/download",
+          "citation": "935 CMR 500.160",
+          "retrieved_at": "2026-09-19T00:00:00Z",
+          "source_hash": null
+        },
+        {
+          "title": "Massachusetts General Laws c.94G §1",
+          "url": "https://www.mass.gov/info-details/mass-general-laws-c94g-ss-1",
+          "citation": "Definition of Independent Testing Laboratory",
+          "retrieved_at": "2026-09-19T00:00:00Z",
+          "source_hash": null
+        }
+      ],
+      "supersedes": []
+    },
+    {
+      "registry_version": "0.1-draft",
+      "rule_id": "WDA-RULE-US-MA-CCC-METALS-ALL-USES",
+      "jurisdiction": {
+        "country": "US",
+        "subdivision": "US-MA",
+        "name": "Massachusetts"
+      },
+      "authority": "Massachusetts Cannabis Control Commission",
+      "status": "active",
+      "effective": {
+        "published_date": "2021-12-30",
+        "start_date": "2021-12-30",
+        "end_date": null
+      },
+      "scope": {
+        "program": "Adult-use and medical cannabis testing",
+        "product_types": [
+          "finished plant material",
+          "cannabis resin",
+          "cannabis concentrates intended for ingestion, inhalation, or dermal application"
+        ],
+        "matrices": [],
+        "notes": "Exhibit 4(a), All Uses. Source-native upper limits are preserved in µg/kg."
+      },
+      "requirements": [
+        {
+          "requirement_id": "arsenic-all-uses-upper-limit",
+          "requirement_type": "action_limit",
+          "analyte_id": "WDA-AN-000012",
+          "test_category": "heavy_metals",
+          "comparator": "<=",
+          "threshold": {
+            "value": 200,
+            "unit": "µg/kg",
+            "unit_system": "source_native",
+            "reported_as": "200 µg/kg"
+          },
+          "source_text_summary": "Upper limit for inorganic arsenic for All Uses.",
+          "notes": "The protocol specifies inorganic arsenic."
+        },
+        {
+          "requirement_id": "cadmium-all-uses-upper-limit",
+          "requirement_type": "action_limit",
+          "analyte_id": "WDA-AN-000013",
+          "test_category": "heavy_metals",
+          "comparator": "<=",
+          "threshold": {
+            "value": 200,
+            "unit": "µg/kg",
+            "unit_system": "source_native",
+            "reported_as": "200 µg/kg"
+          },
+          "source_text_summary": "Upper limit for cadmium for All Uses.",
+          "notes": null
+        },
+        {
+          "requirement_id": "lead-all-uses-upper-limit",
+          "requirement_type": "action_limit",
+          "analyte_id": "WDA-AN-000014",
+          "test_category": "heavy_metals",
+          "comparator": "<=",
+          "threshold": {
+            "value": 500,
+            "unit": "µg/kg",
+            "unit_system": "source_native",
+            "reported_as": "500 µg/kg"
+          },
+          "source_text_summary": "Upper limit for lead for All Uses.",
+          "notes": null
+        },
+        {
+          "requirement_id": "mercury-all-uses-upper-limit",
+          "requirement_type": "action_limit",
+          "analyte_id": "WDA-AN-000015",
+          "test_category": "heavy_metals",
+          "comparator": "<=",
+          "threshold": {
+            "value": 100,
+            "unit": "µg/kg",
+            "unit_system": "source_native",
+            "reported_as": "100 µg/kg"
+          },
+          "source_text_summary": "Upper limit for total mercury for All Uses.",
+          "notes": "The protocol specifies total mercury."
+        }
+      ],
+      "sources": [
+        {
+          "title": "CCC Exhibit 4 — Analysis Requirements and Recommended Limits for Metals",
+          "url": "https://masscannabiscontrol.com/document/exhibit-4-analysis-requirements-and-recommended-limits-for-metals-in-finished-medical-marijuana-products-implemented-march-11-2021-and-revised-june-2-2021/",
+          "citation": "Exhibit 4(a), revised December 30, 2021",
+          "retrieved_at": "2026-09-19T00:00:00Z",
+          "source_hash": null
+        }
+      ],
+      "supersedes": []
+    },
+    {
+      "registry_version": "0.1-draft",
+      "rule_id": "WDA-RULE-US-MA-CCC-METALS-INGESTION",
+      "jurisdiction": {
+        "country": "US",
+        "subdivision": "US-MA",
+        "name": "Massachusetts"
+      },
+      "authority": "Massachusetts Cannabis Control Commission",
+      "status": "active",
+      "effective": {
+        "published_date": "2021-12-30",
+        "start_date": "2021-12-30",
+        "end_date": null
+      },
+      "scope": {
+        "program": "Adult-use and medical cannabis testing",
+        "product_types": [
+          "finished plant material",
+          "cannabis resin",
+          "cannabis concentrates intended for ingestion only"
+        ],
+        "matrices": [],
+        "notes": "Exhibit 4(b), Ingestion Only. Products relying on these limits must carry the protocol's additional oral-consumption-only label."
+      },
+      "requirements": [
+        {
+          "requirement_id": "arsenic-ingestion-upper-limit",
+          "requirement_type": "action_limit",
+          "analyte_id": "WDA-AN-000012",
+          "test_category": "heavy_metals",
+          "comparator": "<=",
+          "threshold": {
+            "value": 1500,
+            "unit": "µg/kg",
+            "unit_system": "source_native",
+            "reported_as": "1500 µg/kg"
+          },
+          "source_text_summary": "Upper limit for inorganic arsenic for Ingestion Only.",
+          "notes": "The protocol specifies inorganic arsenic."
+        },
+        {
+          "requirement_id": "cadmium-ingestion-upper-limit",
+          "requirement_type": "action_limit",
+          "analyte_id": "WDA-AN-000013",
+          "test_category": "heavy_metals",
+          "comparator": "<=",
+          "threshold": {
+            "value": 500,
+            "unit": "µg/kg",
+            "unit_system": "source_native",
+            "reported_as": "500 µg/kg"
+          },
+          "source_text_summary": "Upper limit for cadmium for Ingestion Only.",
+          "notes": null
+        },
+        {
+          "requirement_id": "lead-ingestion-upper-limit",
+          "requirement_type": "action_limit",
+          "analyte_id": "WDA-AN-000014",
+          "test_category": "heavy_metals",
+          "comparator": "<=",
+          "threshold": {
+            "value": 1000,
+            "unit": "µg/kg",
+            "unit_system": "source_native",
+            "reported_as": "1000 µg/kg"
+          },
+          "source_text_summary": "Upper limit for lead for Ingestion Only.",
+          "notes": null
+        },
+        {
+          "requirement_id": "mercury-ingestion-upper-limit",
+          "requirement_type": "action_limit",
+          "analyte_id": "WDA-AN-000015",
+          "test_category": "heavy_metals",
+          "comparator": "<=",
+          "threshold": {
+            "value": 1500,
+            "unit": "µg/kg",
+            "unit_system": "source_native",
+            "reported_as": "1500 µg/kg"
+          },
+          "source_text_summary": "Upper limit for total mercury for Ingestion Only.",
+          "notes": "The protocol specifies total mercury."
+        },
+        {
+          "requirement_id": "oral-only-warning-label",
+          "requirement_type": "reporting_requirement",
+          "analyte_id": null,
+          "test_category": "heavy_metals",
+          "comparator": null,
+          "threshold": null,
+          "source_text_summary": "Products evaluated under the Ingestion Only metal limits must bear the protocol's additional oral-consumption-only warning.",
+          "notes": null
+        }
+      ],
+      "sources": [
+        {
+          "title": "CCC Exhibit 4 — Analysis Requirements and Recommended Limits for Metals",
+          "url": "https://masscannabiscontrol.com/document/exhibit-4-analysis-requirements-and-recommended-limits-for-metals-in-finished-medical-marijuana-products-implemented-march-11-2021-and-revised-june-2-2021/",
+          "citation": "Exhibit 4(b), revised December 30, 2021",
+          "retrieved_at": "2026-09-19T00:00:00Z",
+          "source_hash": null
+        }
+      ],
+      "supersedes": []
+    },
+    {
+      "registry_version": "0.1-draft",
+      "rule_id": "WDA-RULE-US-MA-CCC-AO4-FULL-PANEL",
+      "jurisdiction": {
+        "country": "US",
+        "subdivision": "US-MA",
+        "name": "Massachusetts"
+      },
+      "authority": "Massachusetts Cannabis Control Commission",
+      "status": "active",
+      "effective": {
+        "published_date": "2024-12-12",
+        "start_date": "2025-04-01",
+        "end_date": null
+      },
+      "scope": {
+        "program": "Adult-use and medical cannabis compliance testing",
+        "product_types": [
+          "marijuana",
+          "marijuana products"
+        ],
+        "matrices": [],
+        "notes": "Administrative Order No. 4 full-panel submission requirement."
+      },
+      "requirements": [
+        {
+          "requirement_id": "single-itl-full-panel-package",
+          "requirement_type": "sampling_rule",
+          "analyte_id": null,
+          "test_category": "full_panel_compliance",
+          "comparator": null,
+          "threshold": null,
+          "source_text_summary": "A licensee must submit one test sample package to a single Independent Testing Laboratory for all required compliance testing.",
+          "notes": null
+        }
+      ],
+      "sources": [
+        {
+          "title": "Administrative Order No. 4 — One Full Panel Test Sample for Required Compliance Testing",
+          "url": "https://masscannabiscontrol.com/2025/03/administrative-order-no-4/",
+          "citation": "Effective April 1, 2025",
+          "retrieved_at": "2026-09-19T00:00:00Z",
+          "source_hash": null
+        }
+      ],
+      "supersedes": []
+    }
+  ]
+}
