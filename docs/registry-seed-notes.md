@@ -92,3 +92,22 @@ Texas DPS also states that only licensed dispensing organizations may test low-T
 An apparent mismatch remains between the current statute and older administrative-rule text in §12.7(q). WeedDAO preserves this as a review issue instead of silently resolving it.
 
 Consumable-hemp rules under 25 TAC Chapter 300 are not imported into the TCUP seed.
+
+
+## Massachusetts seed
+
+Massachusetts is the fourth jurisdiction and adds a lab-centric regulatory model.
+
+The seed records:
+
+- Independent Testing Laboratory / market-release requirements;
+- required testing categories and the statutory 72-hour contamination-reporting rule;
+- ISO/IEC 17025-based laboratory qualification;
+- +/-10% single-serving potency variance;
+- heavy-metal upper limits for All Uses and Ingestion Only;
+- the ingestion-only warning-label requirement;
+- Administrative Order No. 4's single-ITL full-panel sample-package rule.
+
+Massachusetts is actively reviewing testing protocols in 2026. Proposed recommendations are not treated as active requirements.
+
+The Commission also publishes machine-readable testing datasets, making Massachusetts a strong candidate for future large-scale WeedDAO registry and validation testing.
