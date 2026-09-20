@@ -54,6 +54,7 @@ The design goal is to create reusable identifiers and rules without forcing labo
 - [OpenTHC result-semantics interoperability crosswalk](docs/wcia-openthc-result-semantics.md)
 - [Machine-readable result-semantics crosswalk](compatibility/wcia-openthc-result-semantics-0.1-draft.json)
 - [Result-semantics crosswalk query CLI](scripts/crosswalk_result_semantics.py)
+- [Laboratory measurement-assurance roadmap](docs/laboratory-measurement-assurance-roadmap.md)
 
 ## Current scope
 
