@@ -55,6 +55,9 @@ The design goal is to create reusable identifiers and rules without forcing labo
 - [Machine-readable result-semantics crosswalk](compatibility/wcia-openthc-result-semantics-0.1-draft.json)
 - [Result-semantics crosswalk query CLI](scripts/crosswalk_result_semantics.py)
 - [Laboratory measurement-assurance roadmap](docs/laboratory-measurement-assurance-roadmap.md)
+- [Measurement assurance example](examples/registries/measurement-assurance-example.json)
+- [Measurement assurance draft schema](schemas/weeddao-measurement-assurance-0.1-draft.schema.json)
+- [Measurement assurance RFC](docs/measurement-assurance-rfc.md)
 
 ## Current scope
 
