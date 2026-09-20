@@ -48,6 +48,9 @@ The design goal is to create reusable identifiers and rules without forcing labo
 - [Authoritative source watch index](registry/source-watch-0.1-draft.json) — manual index only; no automated-monitoring claim
 - [Registry seed notes](docs/registry-seed-notes.md)
 - [Registry validator](scripts/validate_registries.py)
+- [WCIA / OpenTHC interoperability crosswalk](docs/wcia-openthc-crosswalk.md)
+- [Machine-readable WCIA crosswalk](compatibility/wcia-analyte-crosswalk-0.1-draft.json)
+- [Identifier crosswalk CLI](scripts/crosswalk_analyte_ids.py)
 
 ## Current scope
 
