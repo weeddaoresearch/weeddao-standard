@@ -1,0 +1,572 @@
+{
+  "registry_version": "0.1-draft",
+  "status": "seed",
+  "generated_from": [
+    "corpus/v0.1/mappings/coa-001-weeddao-record.json",
+    "corpus/v0.1/mappings/coa-002-weeddao-record.json",
+    "corpus/v0.1/mappings/coa-003-weeddao-record.json",
+    "corpus/v0.1/mappings/coa-046-weeddao-record.json",
+    "California DCC DCC-2025-03-R final pesticide regulation"
+  ],
+  "records": [
+    {
+      "registry_version": "0.1-draft",
+      "analyte_id": "WDA-AN-000001",
+      "canonical_name": "Delta-9 tetrahydrocannabinol",
+      "target_type": "chemical",
+      "category": "cannabinoid",
+      "status": "provisional",
+      "aliases": [
+        {
+          "label": "THC",
+          "context": "Observed as delta-9 THC in reviewed COA mappings; context-sensitive alias",
+          "source": "COA-002/003/046"
+        },
+        {
+          "label": "Δ9-THC",
+          "context": "Explicit delta-9 notation",
+          "source": "COA-046"
+        }
+      ],
+      "external_identifiers": [],
+      "measurement_dimensions": [
+        "mass_fraction",
+        "mass_per_mass",
+        "mass_per_serving",
+        "mass_per_package",
+        "mass_per_unit"
+      ],
+      "replaced_by": null,
+      "references": [
+        {
+          "title": "WeedDAO public COA corpus",
+          "url": null,
+          "note": "Observed in COA-002, COA-003, and COA-046."
+        }
+      ]
+    },
+    {
+      "registry_version": "0.1-draft",
+      "analyte_id": "WDA-AN-000002",
+      "canonical_name": "Tetrahydrocannabinolic acid",
+      "target_type": "chemical",
+      "category": "cannabinoid",
+      "status": "provisional",
+      "aliases": [
+        {
+          "label": "THCA",
+          "context": "Source-native COA label",
+          "source": "COA-001/002/003/046"
+        }
+      ],
+      "external_identifiers": [],
+      "measurement_dimensions": [
+        "mass_fraction",
+        "mass_per_mass",
+        "mass_per_unit"
+      ],
+      "replaced_by": null,
+      "references": [
+        {
+          "title": "WeedDAO public COA corpus",
+          "url": null,
+          "note": "THCA observed across reviewed COA evidence."
+        }
+      ]
+    },
+    {
+      "registry_version": "0.1-draft",
+      "analyte_id": "WDA-AN-000003",
+      "canonical_name": "Cannabidiol",
+      "target_type": "chemical",
+      "category": "cannabinoid",
+      "status": "provisional",
+      "aliases": [
+        {
+          "label": "CBD",
+          "context": "Source-native COA label",
+          "source": "COA-002/003/046"
+        }
+      ],
+      "external_identifiers": [],
+      "measurement_dimensions": [
+        "mass_fraction",
+        "mass_per_mass",
+        "mass_per_unit"
+      ],
+      "replaced_by": null,
+      "references": [
+        {
+          "title": "WeedDAO public COA corpus",
+          "url": null,
+          "note": "CBD appears as ND/<LOQ vocabulary in reviewed COAs."
+        }
+      ]
+    },
+    {
+      "registry_version": "0.1-draft",
+      "analyte_id": "WDA-AN-000004",
+      "canonical_name": "Cannabidiolic acid",
+      "target_type": "chemical",
+      "category": "cannabinoid",
+      "status": "provisional",
+      "aliases": [
+        {
+          "label": "CBDA",
+          "context": "Source-native COA label",
+          "source": "COA-002/003/046"
+        }
+      ],
+      "external_identifiers": [],
+      "measurement_dimensions": [
+        "mass_fraction",
+        "mass_per_mass",
+        "mass_per_unit"
+      ],
+      "replaced_by": null,
+      "references": [
+        {
+          "title": "WeedDAO public COA corpus",
+          "url": null,
+          "note": "CBDA observed in reviewed COA evidence."
+        }
+      ]
+    },
+    {
+      "registry_version": "0.1-draft",
+      "analyte_id": "WDA-AN-000005",
+      "canonical_name": "Cannabigerol",
+      "target_type": "chemical",
+      "category": "cannabinoid",
+      "status": "provisional",
+      "aliases": [
+        {
+          "label": "CBG",
+          "context": "Source-native COA label",
+          "source": "COA-002/003/046"
+        }
+      ],
+      "external_identifiers": [],
+      "measurement_dimensions": [
+        "mass_fraction",
+        "mass_per_mass",
+        "mass_per_unit"
+      ],
+      "replaced_by": null,
+      "references": [
+        {
+          "title": "WeedDAO public COA corpus",
+          "url": null,
+          "note": "CBG detected in COA-002 and observed as ND/<LOQ elsewhere."
+        }
+      ]
+    },
+    {
+      "registry_version": "0.1-draft",
+      "analyte_id": "WDA-AN-000006",
+      "canonical_name": "Cannabigerolic acid",
+      "target_type": "chemical",
+      "category": "cannabinoid",
+      "status": "provisional",
+      "aliases": [
+        {
+          "label": "CBGA",
+          "context": "Source-native COA label",
+          "source": "COA-001/002/003/046"
+        }
+      ],
+      "external_identifiers": [],
+      "measurement_dimensions": [
+        "mass_fraction",
+        "mass_per_mass",
+        "mass_per_unit"
+      ],
+      "replaced_by": null,
+      "references": [
+        {
+          "title": "WeedDAO public COA corpus",
+          "url": null,
+          "note": "CBGA detected in COA-001 and observed elsewhere."
+        }
+      ]
+    },
+    {
+      "registry_version": "0.1-draft",
+      "analyte_id": "WDA-AN-000007",
+      "canonical_name": "Cannabinol",
+      "target_type": "chemical",
+      "category": "cannabinoid",
+      "status": "provisional",
+      "aliases": [
+        {
+          "label": "CBN",
+          "context": "Source-native COA label",
+          "source": "COA-002/003/046"
+        }
+      ],
+      "external_identifiers": [],
+      "measurement_dimensions": [
+        "mass_fraction",
+        "mass_per_mass",
+        "mass_per_unit"
+      ],
+      "replaced_by": null,
+      "references": [
+        {
+          "title": "WeedDAO public COA corpus",
+          "url": null,
+          "note": "CBN detected in COA-003 and observed in other reviewed COAs."
+        }
+      ]
+    },
+    {
+      "registry_version": "0.1-draft",
+      "analyte_id": "WDA-AN-000008",
+      "canonical_name": "Cannabichromene",
+      "target_type": "chemical",
+      "category": "cannabinoid",
+      "status": "provisional",
+      "aliases": [
+        {
+          "label": "CBC",
+          "context": "Source-native COA label",
+          "source": "COA-002/003/046"
+        }
+      ],
+      "external_identifiers": [],
+      "measurement_dimensions": [
+        "mass_fraction",
+        "mass_per_mass",
+        "mass_per_unit"
+      ],
+      "replaced_by": null,
+      "references": [
+        {
+          "title": "WeedDAO public COA corpus",
+          "url": null,
+          "note": "CBC observed as ND/<LOQ in reviewed COAs."
+        }
+      ]
+    },
+    {
+      "registry_version": "0.1-draft",
+      "analyte_id": "WDA-AN-000009",
+      "canonical_name": "Cannabidivarin",
+      "target_type": "chemical",
+      "category": "cannabinoid",
+      "status": "provisional",
+      "aliases": [
+        {
+          "label": "CBDV",
+          "context": "Source-native COA label",
+          "source": "COA-001/002/003/046"
+        }
+      ],
+      "external_identifiers": [],
+      "measurement_dimensions": [
+        "mass_fraction",
+        "mass_per_mass",
+        "mass_per_unit"
+      ],
+      "replaced_by": null,
+      "references": [
+        {
+          "title": "WeedDAO public COA corpus",
+          "url": null,
+          "note": "CBDV observed in the extended cannabinoid vocabulary."
+        }
+      ]
+    },
+    {
+      "registry_version": "0.1-draft",
+      "analyte_id": "WDA-AN-000010",
+      "canonical_name": "Tetrahydrocannabivarin",
+      "target_type": "chemical",
+      "category": "cannabinoid",
+      "status": "provisional",
+      "aliases": [
+        {
+          "label": "THCV",
+          "context": "Source-native COA label",
+          "source": "COA-002/003/046"
+        }
+      ],
+      "external_identifiers": [],
+      "measurement_dimensions": [
+        "mass_fraction",
+        "mass_per_mass",
+        "mass_per_unit"
+      ],
+      "replaced_by": null,
+      "references": [
+        {
+          "title": "WeedDAO public COA corpus",
+          "url": null,
+          "note": "THCV observed in reviewed COA evidence."
+        }
+      ]
+    },
+    {
+      "registry_version": "0.1-draft",
+      "analyte_id": "WDA-AN-000011",
+      "canonical_name": "Total THC",
+      "target_type": "derived_metric",
+      "category": "cannabinoid_aggregate",
+      "status": "provisional",
+      "aliases": [
+        {
+          "label": "Total_THC",
+          "context": "Machine/source field form",
+          "source": "COA-002/003"
+        },
+        {
+          "label": "TOTAL THC",
+          "context": "Display/source label form",
+          "source": "COA-046"
+        }
+      ],
+      "external_identifiers": [],
+      "measurement_dimensions": [
+        "mass_fraction",
+        "mass_per_mass",
+        "mass_per_serving",
+        "mass_per_package",
+        "mass_per_unit"
+      ],
+      "replaced_by": null,
+      "references": [
+        {
+          "title": "WeedDAO public COA corpus",
+          "url": null,
+          "note": "Total THC occurs across multiple units and includes labeled-vs-measured use cases."
+        }
+      ]
+    },
+    {
+      "registry_version": "0.1-draft",
+      "analyte_id": "WDA-AN-000012",
+      "canonical_name": "Arsenic",
+      "target_type": "chemical",
+      "category": "heavy_metal",
+      "status": "provisional",
+      "aliases": [
+        {
+          "label": "As",
+          "context": "Element symbol used in COA below-limit result",
+          "source": "COA-002/003"
+        }
+      ],
+      "external_identifiers": [],
+      "measurement_dimensions": [
+        "mass_per_mass"
+      ],
+      "replaced_by": null,
+      "references": [
+        {
+          "title": "WeedDAO public COA corpus",
+          "url": null,
+          "note": "Observed as <0.008 ppm in COA-002 and COA-003."
+        }
+      ]
+    },
+    {
+      "registry_version": "0.1-draft",
+      "analyte_id": "WDA-AN-000013",
+      "canonical_name": "Cadmium",
+      "target_type": "chemical",
+      "category": "heavy_metal",
+      "status": "provisional",
+      "aliases": [
+        {
+          "label": "Cd",
+          "context": "Element symbol used in COA below-limit result",
+          "source": "COA-002/003"
+        }
+      ],
+      "external_identifiers": [],
+      "measurement_dimensions": [
+        "mass_per_mass"
+      ],
+      "replaced_by": null,
+      "references": [
+        {
+          "title": "WeedDAO public COA corpus",
+          "url": null,
+          "note": "Observed as <0.008 ppm in COA-002 and COA-003."
+        }
+      ]
+    },
+    {
+      "registry_version": "0.1-draft",
+      "analyte_id": "WDA-AN-000014",
+      "canonical_name": "Lead",
+      "target_type": "chemical",
+      "category": "heavy_metal",
+      "status": "provisional",
+      "aliases": [
+        {
+          "label": "Pb",
+          "context": "Element symbol used in COA below-limit result",
+          "source": "COA-002/003"
+        }
+      ],
+      "external_identifiers": [],
+      "measurement_dimensions": [
+        "mass_per_mass"
+      ],
+      "replaced_by": null,
+      "references": [
+        {
+          "title": "WeedDAO public COA corpus",
+          "url": null,
+          "note": "Observed as <0.008 ppm in COA-002 and COA-003."
+        }
+      ]
+    },
+    {
+      "registry_version": "0.1-draft",
+      "analyte_id": "WDA-AN-000015",
+      "canonical_name": "Mercury",
+      "target_type": "chemical",
+      "category": "heavy_metal",
+      "status": "provisional",
+      "aliases": [
+        {
+          "label": "Hg",
+          "context": "Element symbol used in COA below-limit result",
+          "source": "COA-002/003"
+        }
+      ],
+      "external_identifiers": [],
+      "measurement_dimensions": [
+        "mass_per_mass"
+      ],
+      "replaced_by": null,
+      "references": [
+        {
+          "title": "WeedDAO public COA corpus",
+          "url": null,
+          "note": "Observed as <0.008 ppm in COA-002 and COA-003."
+        }
+      ]
+    },
+    {
+      "registry_version": "0.1-draft",
+      "analyte_id": "WDA-AN-000016",
+      "canonical_name": "Abamectin",
+      "target_type": "chemical",
+      "category": "pesticide",
+      "status": "provisional",
+      "aliases": [],
+      "external_identifiers": [
+        {
+          "scheme": "CAS",
+          "value": "65195-55-3"
+        }
+      ],
+      "measurement_dimensions": [
+        "mass_per_mass"
+      ],
+      "replaced_by": null,
+      "references": [
+        {
+          "title": "California DCC DCC-2025-03-R Final Text of Regulations",
+          "url": "https://www.cannabis.ca.gov/cannabis-laws/rulemaking/dcc-2025-03-r-pesticide-testing/final-text/",
+          "note": "California pesticide tables list Abamectin and CAS 65195-55-3."
+        }
+      ]
+    },
+    {
+      "registry_version": "0.1-draft",
+      "analyte_id": "WDA-AN-000017",
+      "canonical_name": "Acephate",
+      "target_type": "chemical",
+      "category": "pesticide",
+      "status": "provisional",
+      "aliases": [],
+      "external_identifiers": [
+        {
+          "scheme": "CAS",
+          "value": "30560-19-1"
+        }
+      ],
+      "measurement_dimensions": [
+        "mass_per_mass"
+      ],
+      "replaced_by": null,
+      "references": [
+        {
+          "title": "California DCC DCC-2025-03-R Final Text of Regulations",
+          "url": "https://www.cannabis.ca.gov/cannabis-laws/rulemaking/dcc-2025-03-r-pesticide-testing/final-text/",
+          "note": "California pesticide tables list Acephate and CAS 30560-19-1."
+        }
+      ]
+    },
+    {
+      "registry_version": "0.1-draft",
+      "analyte_id": "WDA-AN-000018",
+      "canonical_name": "Total cannabinoids",
+      "target_type": "derived_metric",
+      "category": "cannabinoid_aggregate",
+      "status": "provisional",
+      "aliases": [
+        {
+          "label": "total_cannabinoids",
+          "context": "WeedDAO v0.1 mapped field",
+          "source": "COA-001/046"
+        }
+      ],
+      "external_identifiers": [],
+      "measurement_dimensions": [
+        "mass_fraction",
+        "mass_per_mass",
+        "mass_per_serving",
+        "mass_per_package"
+      ],
+      "replaced_by": null,
+      "references": [
+        {
+          "title": "WeedDAO public COA corpus",
+          "url": null,
+          "note": "Observed as an aggregate result in reviewed COAs."
+        }
+      ]
+    },
+    {
+      "registry_version": "0.1-draft",
+      "analyte_id": "WDA-AN-000019",
+      "canonical_name": "Total CBD",
+      "target_type": "derived_metric",
+      "category": "cannabinoid_aggregate",
+      "status": "provisional",
+      "aliases": [
+        {
+          "label": "TOTAL CBD",
+          "context": "Source-native aggregate label",
+          "source": "COA-046"
+        },
+        {
+          "label": "total_cbd",
+          "context": "Mapped/source field form",
+          "source": "COA-002/003"
+        }
+      ],
+      "external_identifiers": [],
+      "measurement_dimensions": [
+        "mass_fraction",
+        "mass_per_mass",
+        "mass_per_serving",
+        "mass_per_package",
+        "mass_per_unit"
+      ],
+      "replaced_by": null,
+      "references": [
+        {
+          "title": "WeedDAO public COA corpus",
+          "url": null,
+          "note": "Observed as ND/<LOQ aggregate vocabulary in reviewed COAs."
+        }
+      ]
+    }
+  ]
+}
