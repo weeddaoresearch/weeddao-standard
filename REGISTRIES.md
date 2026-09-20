@@ -30,9 +30,21 @@ The design goal is to create reusable identifiers and rules without forcing labo
 - [Testing Rule draft schema](schemas/weeddao-testing-rule-0.1-draft.schema.json)
 - [Illustrative analyte record](examples/registries/analyte-example.json)
 - [Illustrative testing rule](examples/registries/testing-rule-example.json)
+- [Initial analyte seed](registry/analytes/seed-0.1-draft.json) — 19 provisional IDs grounded in existing COA evidence plus two DCC pesticide targets
+- [California pesticide rule seed](registry/rules/us-ca-dcc-pesticides-seed-0.1-draft.json) — narrow Phase I/II example from authoritative DCC final text
+- [Registry seed notes](docs/registry-seed-notes.md)
+- [Registry validator](scripts/validate_registries.py)
 
 ## Current scope
 
-This branch defines structure only. It does **not** claim that WeedDAO currently maintains a complete analyte registry or complete regulatory rules database.
+This branch now includes a **small evidence-grounded seed**, but it does **not** claim that WeedDAO maintains a complete analyte registry or complete regulatory rules database.
 
-Population should be evidence-driven, starting with analytes and requirements encountered in public COAs, external implementations, and paid customer work.
+The current seed contains 19 provisional analyte IDs and a deliberately narrow California pesticide rules example. Population remains evidence-driven, starting with analytes and requirements encountered in public COAs, authoritative regulatory sources, external implementations, and paid customer work.
+
+## Validate
+
+```bash
+python scripts/validate_registries.py
+```
+
+The validator checks schema validity, duplicate identifiers, and rule-to-analyte references.
