@@ -1,0 +1,73 @@
+{
+  "traceability_assurance_version": "0.1-draft",
+  "status": "experimental",
+  "record_ref": {
+    "schema_version": "0.2-draft",
+    "record_id": "illustrative-traceability-record",
+    "source_id": "illustrative-only"
+  },
+  "reference_materials": [
+    {
+      "reference_material_id": "RM-EXAMPLE-001",
+      "material_type": "RM",
+      "producer": "Illustrative producer",
+      "catalog_number": "EX-001",
+      "lot_or_batch": "LOT-1",
+      "certificate_id": "CERT-1",
+      "certificate_revision": "1",
+      "expiration_or_valid_through": null,
+      "intended_use": "Illustrative control/calibration support",
+      "storage_conditions": "Illustrative only",
+      "assigned_values": [
+        {
+          "measurand": "delta-9 THC",
+          "value": 1.0,
+          "unit": "mg/g",
+          "uncertainty": 0.05,
+          "uncertainty_unit": "mg/g",
+          "coverage_factor": 2,
+          "confidence_level_percent": 95,
+          "basis": "illustrative assigned value",
+          "source_reference": "illustrative example"
+        }
+      ],
+      "traceability_statement_reported": "Illustrative source-reported statement only",
+      "source_reference": "illustrative example",
+      "notes": "Not a real NIST or commercial material."
+    }
+  ],
+  "calibrations": [
+    {
+      "calibration_id": "CAL-001",
+      "instrument_or_system_id": "LC-SYSTEM-1",
+      "performed_at": "2026-01-05",
+      "performed_by": "illustrative laboratory",
+      "certificate_id": "CAL-CERT-001",
+      "reference_standard_ids": ["RM-EXAMPLE-001"],
+      "measurands": ["delta-9 THC"],
+      "uncertainty_reported": "Illustrative uncertainty statement",
+      "valid_from": "2026-01-05",
+      "valid_through": null,
+      "source_reference": "illustrative example",
+      "notes": "Calibration evidence alone does not establish traceability of downstream results."
+    }
+  ],
+  "result_links": [
+    {
+      "result_path": "/lab_results/cannabinoids/thc",
+      "reference_material_ids": ["RM-EXAMPLE-001"],
+      "calibration_ids": ["CAL-001"],
+      "traceability_claim": {
+        "claim_status": "evidence_partial",
+        "reference": "illustrative reference",
+        "chain_description": "Illustrative partial chain from reference material to calibration event to result.",
+        "uncertainty_chain_documented": false,
+        "measurement_assurance_program_evidence": null,
+        "source_reference": "illustrative example",
+        "notes": "No independent traceability determination is made."
+      },
+      "notes": "Illustrative only."
+    }
+  ],
+  "notes": "Example only; no NIST, accreditation, or traceability claim."
+}
