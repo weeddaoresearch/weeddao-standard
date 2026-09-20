@@ -1,0 +1,207 @@
+{
+  "bundle_version": "0.1-draft",
+  "status": "experimental",
+  "bundle_id": "weeddao-assurance-bundle-coa-046",
+  "purpose": "End-to-end integration fixture for existing WeedDAO laboratory assurance layers. This is an evidence-coverage bundle, not a laboratory validity score.",
+  "core_record": {
+    "path": "corpus/v0.2-draft/mappings/coa-046-weeddao-record.json",
+    "schema_version": "0.2-draft",
+    "record_id": "corpus-v02-coa-046",
+    "source_case_id": "COA-046",
+    "source_url": "https://eatgron.com/wp-content/uploads/2026/05/LSL-260513-007.pdf",
+    "laboratory": "Lightscale Labs",
+    "producer_or_brand": "Grön Chocolate",
+    "subject_id": "ORMCF2B0626",
+    "sample_id": "LSL-260513-007"
+  },
+  "focus_results": [
+    {
+      "result_path": "/lab_results/cannabinoids/total_thc",
+      "source_evidence_status": "represented",
+      "observed_facts": {
+        "result_state": "detected",
+        "assessment": "fail",
+        "measurements": [
+          { "value": 0.2531, "unit": "%" },
+          { "value": 2.531, "unit": "mg/g" },
+          { "value": 11.39, "unit": "mg/serving" },
+          { "value": 113.9, "unit": "mg/package" }
+        ],
+        "labeled_target_per_serving_mg": 11,
+        "labeled_target_per_package_mg": 110
+      }
+    },
+    {
+      "result_path": "/lab_results/homogeneity",
+      "source_evidence_status": "represented",
+      "observed_facts": {
+        "status": "fail",
+        "analyte": "TOTAL THC RPD",
+        "metric": "RPD",
+        "measurement": { "value": 10.1, "unit": "%" },
+        "action_limit": { "operator": "<=", "value": 10, "unit": "%" }
+      }
+    },
+    {
+      "result_path": "/lab_results/cannabinoids/cbc",
+      "source_evidence_status": "represented",
+      "observed_facts": {
+        "result_state": "below_reporting_limit",
+        "reported_as": "<LOQ"
+      }
+    },
+    {
+      "result_path": "/lab_results/cannabinoids/other/0",
+      "source_evidence_status": "represented",
+      "observed_facts": {
+        "result_state": "not_detected",
+        "reported_as": "ND"
+      }
+    }
+  ],
+  "assurance_layers": [
+    {
+      "layer": "core_result_semantics",
+      "status": "represented",
+      "evidence": [
+        "Multi-unit Total THC preserved in v0.2 core.",
+        "Potency-spec FAIL remains separate from contaminant safety.",
+        "Homogeneity FAIL remains a distinct outcome.",
+        "<LOQ and ND source semantics are represented without coercion to zero."
+      ],
+      "missing_evidence": []
+    },
+    {
+      "layer": "sampling_assurance",
+      "status": "partial_source_evidence",
+      "evidence": [
+        "Sample ID LSL-260513-007 is present.",
+        "Collected date 2026-05-13 is present.",
+        "Subject/product-batch identity and METRC package/source identifiers are present."
+      ],
+      "missing_evidence": [
+        "Sampling plan",
+        "Selection/randomization method",
+        "Increment count and locations",
+        "Composite-sample formation",
+        "Collection party",
+        "Sample mass",
+        "Representativeness basis",
+        "Test-specimen reduction/homogenization details"
+      ],
+      "interpretation": "The public record identifies the sample and collection date but does not establish how representative the sample is of the product batch."
+    },
+    {
+      "layer": "method_assurance",
+      "status": "not_demonstrated_in_available_corpus_evidence",
+      "evidence": [],
+      "missing_evidence": [
+        "Exact analytical method/SOP identity",
+        "Revision/version",
+        "Analytical technique",
+        "Analyte x matrix x range scope",
+        "Validation/verification evidence",
+        "Method deviations"
+      ],
+      "interpretation": "Do not infer method fitness from the existence of a laboratory result."
+    },
+    {
+      "layer": "traceability_assurance",
+      "status": "not_demonstrated_in_available_corpus_evidence",
+      "evidence": [],
+      "missing_evidence": [
+        "Reference material identity",
+        "Reference material certificate/lot",
+        "Assigned values and uncertainty",
+        "Calibration event/certificate",
+        "Calibration chain",
+        "Result-specific metrological traceability statement"
+      ],
+      "interpretation": "No NIST or other metrological traceability claim should be generated from the available corpus facts."
+    },
+    {
+      "layer": "analytical_batch_qc",
+      "status": "partial_semantic_hint_only",
+      "evidence": [
+        "The v0.1 review records ND vocabulary observed on Lightscale Labs COA/QC blanks."
+      ],
+      "missing_evidence": [
+        "Analytical batch identifier",
+        "Control identities",
+        "Blank measurements",
+        "Spike recoveries",
+        "Duplicate precision",
+        "Calibration verification",
+        "Acceptance criteria",
+        "Batch disposition",
+        "Nonconforming-work handling"
+      ],
+      "interpretation": "The source corpus confirms QC vocabulary but does not provide enough structured evidence to assert analytical-batch control status."
+    },
+    {
+      "layer": "measurement_uncertainty",
+      "status": "not_demonstrated_in_available_corpus_evidence",
+      "evidence": [],
+      "missing_evidence": [
+        "Uncertainty value",
+        "Uncertainty type",
+        "Coverage factor",
+        "Coverage probability/confidence",
+        "Evaluation method"
+      ],
+      "interpretation": "Do not infer uncertainty from precision, homogeneity RPD, or reporting limits."
+    },
+    {
+      "layer": "conformity_decision",
+      "status": "partial_source_evidence",
+      "evidence": [
+        "Total THC result is assessed FAIL against labeled potency targets.",
+        "Homogeneity RPD 10.1% is assessed FAIL against an observed <=10% action limit."
+      ],
+      "missing_evidence": [
+        "Formal decision-rule identity",
+        "Whether measurement uncertainty was considered",
+        "Guard band if any",
+        "Rounding rule used for conformity",
+        "Authoritative specification source for the potency decision in the current corpus mapping"
+      ],
+      "interpretation": "The source outcome and relevant measured/target values are preserved, but the full conformity-decision procedure is not established."
+    }
+  ],
+  "cross_layer_findings": [
+    {
+      "finding": "assessment_is_not_batch_validity",
+      "detail": "COA-046 FAIL describes product potency/homogeneity outcomes. It must not be interpreted as evidence that the analytical batch QC failed."
+    },
+    {
+      "finding": "homogeneity_is_not_measurement_uncertainty",
+      "detail": "Total THC RPD 10.1% is a homogeneity metric and must not be reused as analytical measurement uncertainty."
+    },
+    {
+      "finding": "sample_identity_is_not_representativeness",
+      "detail": "A sample ID and collection date do not establish a statistically or procedurally representative sample."
+    },
+    {
+      "finding": "laboratory_verified_is_not_metrological_traceability",
+      "detail": "WeedDAO provenance=laboratory_verified describes source provenance, not an ISO/NIST traceability claim."
+    },
+    {
+      "finding": "public_coa_evidence_is_sparser_than_private_lab_evidence",
+      "detail": "The current sidecars are expected to remain mostly empty for many public COAs and become richer in laboratory/customer integrations."
+    }
+  ],
+  "coverage_summary": {
+    "represented_layers": 1,
+    "partially_evidenced_layers": 3,
+    "not_demonstrated_layers": 3,
+    "total_layers_reviewed": 7,
+    "warning": "These counts describe available evidence coverage only. They are not a quality, validity, compliance, or laboratory score."
+  },
+  "architecture_result": {
+    "sidecar_overlap_detected": false,
+    "core_schema_change_justified": false,
+    "monolithic_schema_justified": false,
+    "new_sidecar_justified": false,
+    "next_evidence_need": "Obtain one laboratory/customer dataset containing method identity, QC controls, uncertainty, and calibration/reference evidence for the same analytical result."
+  }
+}
