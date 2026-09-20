@@ -6,7 +6,8 @@
     "corpus/v0.1/mappings/coa-002-weeddao-record.json",
     "corpus/v0.1/mappings/coa-003-weeddao-record.json",
     "corpus/v0.1/mappings/coa-046-weeddao-record.json",
-    "California DCC DCC-2025-03-R final pesticide regulation"
+    "California DCC DCC-2025-03-R final pesticide regulation",
+    "Oregon OAR 333-007-0400 Exhibit A Table 3 effective March 31, 2022"
   ],
   "records": [
     {
@@ -461,7 +462,15 @@
       "external_identifiers": [
         {
           "scheme": "CAS",
-          "value": "65195-55-3"
+          "value": "65195-55-3",
+          "context": "California DCC DCC-2025-03-R identifier for the analyte labeled Abamectin",
+          "source": "California Department of Cannabis Control final text"
+        },
+        {
+          "scheme": "CAS",
+          "value": "71751-41-2",
+          "context": "Oregon OAR 333-007-0400 Table 3 identifier for the analyte labeled Abamectin",
+          "source": "Oregon Health Authority Exhibit A Table 3"
         }
       ],
       "measurement_dimensions": [
@@ -472,7 +481,12 @@
         {
           "title": "California DCC DCC-2025-03-R Final Text of Regulations",
           "url": "https://www.cannabis.ca.gov/cannabis-laws/rulemaking/dcc-2025-03-r-pesticide-testing/final-text/",
-          "note": "California pesticide tables list Abamectin and CAS 65195-55-3."
+          "note": "California final text labels the target Abamectin and updates its CAS identifier to 65195-55-3."
+        },
+        {
+          "title": "Oregon OAR 333-007-0400 Exhibit A Table 3",
+          "url": "https://www.oregon.gov/oha/PH/DISEASESCONDITIONS/CHRONICDISEASE/MEDICALMARIJUANAPROGRAM/Documents/rules/333-007-0400_0410_0415_0425_Exhibit_A_eff_March312022.pdf",
+          "note": "Oregon Table 3 labels the target Abamectin and lists CAS 71751-41-2. WeedDAO preserves both regulator-specific identifiers rather than silently choosing one."
         }
       ]
     },
@@ -487,7 +501,9 @@
       "external_identifiers": [
         {
           "scheme": "CAS",
-          "value": "30560-19-1"
+          "value": "30560-19-1",
+          "context": "Consistent identifier in California DCC and Oregon OHA pesticide tables",
+          "source": "California DCC / Oregon OHA"
         }
       ],
       "measurement_dimensions": [
@@ -498,7 +514,12 @@
         {
           "title": "California DCC DCC-2025-03-R Final Text of Regulations",
           "url": "https://www.cannabis.ca.gov/cannabis-laws/rulemaking/dcc-2025-03-r-pesticide-testing/final-text/",
-          "note": "California pesticide tables list Acephate and CAS 30560-19-1."
+          "note": "California pesticide table lists Acephate and CAS 30560-19-1."
+        },
+        {
+          "title": "Oregon OAR 333-007-0400 Exhibit A Table 3",
+          "url": "https://www.oregon.gov/oha/PH/DISEASESCONDITIONS/CHRONICDISEASE/MEDICALMARIJUANAPROGRAM/Documents/rules/333-007-0400_0410_0415_0425_Exhibit_A_eff_March312022.pdf",
+          "note": "Oregon pesticide table also lists Acephate and CAS 30560-19-1."
         }
       ]
     },
