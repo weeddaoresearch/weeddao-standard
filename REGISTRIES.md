@@ -56,6 +56,9 @@ The design goal is to create reusable identifiers and rules without forcing labo
 - [Result-semantics crosswalk query CLI](scripts/crosswalk_result_semantics.py)
 - [Laboratory measurement-assurance roadmap](docs/laboratory-measurement-assurance-roadmap.md)
 - [Measurement assurance example](examples/registries/measurement-assurance-example.json)
+- [Sampling assurance example](examples/registries/sampling-assurance-example.json)
+- [Sampling assurance draft schema](schemas/weeddao-sampling-assurance-0.1-draft.schema.json)
+- [Sampling assurance RFC](docs/sampling-assurance-rfc.md)
 - [Measurement assurance draft schema](schemas/weeddao-measurement-assurance-0.1-draft.schema.json)
 - [Measurement assurance RFC](docs/measurement-assurance-rfc.md)
 
