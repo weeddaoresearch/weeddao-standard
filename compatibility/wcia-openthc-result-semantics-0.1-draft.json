@@ -1,0 +1,272 @@
+{
+  "crosswalk_version": "0.1-draft",
+  "status": "experimental",
+  "source_system": "WeedDAO v0.2-draft result semantics",
+  "target_system": "OpenTHC public Lab_Result_Metric model",
+  "reviewed_at": "2026-09-19",
+  "target_sources": [
+    {
+      "repository": "openthc/api",
+      "ref": "2fe04debbf80ac463dbac21c56106cfb469d7b1a",
+      "path": "openapi/components/schema/Lab_Result_Metric.yaml"
+    },
+    {
+      "repository": "openthc/api",
+      "ref": "2fe04debbf80ac463dbac21c56106cfb469d7b1a",
+      "path": "etc/lab-metric-qom.yaml"
+    },
+    {
+      "repository": "openthc/api",
+      "ref": "2fe04debbf80ac463dbac21c56106cfb469d7b1a",
+      "path": "json-example/openthc/lab-result.json"
+    }
+  ],
+  "principles": [
+    "Identifier interoperability and result-semantic interoperability are separate problems.",
+    "Do not coerce ND to numeric zero.",
+    "Do not coerce NOT_PERFORMED to NOT_TESTED.",
+    "Do not infer a specific LOD/LOQ interval from a generic source qualifier such as <LOQ.",
+    "Preserve source literals, units, limits and assessment separately when the target model cannot express them losslessly.",
+    "OpenTHC status values combine concerns that WeedDAO keeps separate: analytical state and assessment."
+  ],
+  "relationship_vocabulary": [
+    "exact",
+    "compatible",
+    "broader_than",
+    "narrower_than",
+    "requires_context",
+    "related",
+    "no_exact_match"
+  ],
+  "summary": {
+    "exact": 2,
+    "compatible": 9,
+    "broader_than": 1,
+    "narrower_than": 2,
+    "requires_context": 2,
+    "related": 1,
+    "no_exact_match": 6,
+    "schema_change_justified": false
+  },
+  "mappings": [
+    {
+      "weeddao_concept": "result_state=detected",
+      "openthc_concept": "numeric qom with uom",
+      "relationship": "compatible",
+      "lossy": false,
+      "guidance": "Map a WeedDAO numeric measurement to qom/uom when exactly one target measurement is selected. Keep assessment separate during transformation.",
+      "evidence": "OpenTHC Lab_Result_Metric defines qom as Quantity of Measure and uom as Unit of Measure."
+    },
+    {
+      "weeddao_concept": "result_state=not_detected",
+      "openthc_concept": "status=nd",
+      "relationship": "compatible",
+      "lossy": true,
+      "guidance": "status=nd can represent WeedDAO not_detected. Do not create qom=0. Preserve WeedDAO reported_as externally if round-trip fidelity is required.",
+      "evidence": "OpenTHC Lab_Result_Metric status enum includes nd; OpenTHC example data uses status=nd."
+    },
+    {
+      "weeddao_concept": "result_state=below_reporting_limit",
+      "openthc_concept": "special qom LT-LOD",
+      "relationship": "narrower_than",
+      "lossy": true,
+      "direction_note": "The OpenTHC concept is more specific than the WeedDAO generic below_reporting_limit state.",
+      "guidance": "Use only when the source establishes below LOD. A generic <LOQ value is insufficient.",
+      "evidence": "OpenTHC lab-metric-qom.yaml defines LT-LOD as Less Than Level of Detection."
+    },
+    {
+      "weeddao_concept": "result_state=below_reporting_limit",
+      "openthc_concept": "special qom GT-LOD / LT-LOQ",
+      "relationship": "narrower_than",
+      "lossy": true,
+      "direction_note": "The OpenTHC concept asserts a specific interval that WeedDAO below_reporting_limit alone does not.",
+      "guidance": "Use only when evidence establishes greater than LOD and below LOQ. Never infer this interval from the literal <LOQ alone.",
+      "evidence": "OpenTHC lab-metric-qom.yaml defines GT-LOD / LT-LOQ as trace amounts between LOD and LOQ-LB."
+    },
+    {
+      "weeddao_concept": "result_state=not_tested",
+      "openthc_concept": "status=nt",
+      "relationship": "compatible",
+      "lossy": false,
+      "guidance": "Map only when the source meaning is Not Tested.",
+      "evidence": "OpenTHC Lab_Result_Metric status enum includes nt; lab-metric-qom.yaml separately defines N/T as Not Tested."
+    },
+    {
+      "weeddao_concept": "result_state=not_tested",
+      "openthc_concept": "special qom N/T",
+      "relationship": "compatible",
+      "lossy": false,
+      "guidance": "N/T is directly compatible with WeedDAO not_tested.",
+      "evidence": "OpenTHC lab-metric-qom.yaml names N/T Not Tested."
+    },
+    {
+      "weeddao_concept": "result_state=not_performed",
+      "openthc_concept": null,
+      "relationship": "no_exact_match",
+      "lossy": true,
+      "guidance": "Do not map to nt unless the source explicitly means Not Tested. Preserve not_performed in an extension or leave unmapped.",
+      "evidence": "No distinct Not Performed value was identified in the reviewed OpenTHC result schema or special-qom list."
+    },
+    {
+      "weeddao_concept": "result_state=not_reported",
+      "openthc_concept": "status=nr",
+      "relationship": "requires_context",
+      "lossy": true,
+      "guidance": "The published enum exposes nr but the reviewed schema does not expand its meaning. Treat nr as a candidate mapping only after implementation/source semantics establish Not Reported.",
+      "evidence": "OpenTHC Lab_Result_Metric status enum includes nr without an expanded definition in the reviewed schema."
+    },
+    {
+      "weeddao_concept": "result_state=not_applicable",
+      "openthc_concept": "status=na",
+      "relationship": "compatible",
+      "lossy": false,
+      "guidance": "Map when na is established as Not Applicable by implementation context.",
+      "evidence": "OpenTHC status enum includes na; its special-qom list explicitly defines N/A as Not Applicable."
+    },
+    {
+      "weeddao_concept": "result_state=not_applicable",
+      "openthc_concept": "special qom N/A",
+      "relationship": "compatible",
+      "lossy": false,
+      "guidance": "N/A is compatible with WeedDAO not_applicable.",
+      "evidence": "OpenTHC lab-metric-qom.yaml names N/A Not Applicable."
+    },
+    {
+      "weeddao_concept": "result_state=withheld",
+      "openthc_concept": null,
+      "relationship": "no_exact_match",
+      "lossy": true,
+      "guidance": "Preserve as an extension or source-native field. Do not map to nr without evidence."
+    },
+    {
+      "weeddao_concept": "result_state=unknown",
+      "openthc_concept": null,
+      "relationship": "no_exact_match",
+      "lossy": true,
+      "guidance": "Do not invent a target status. Preserve the unknown state outside the core OpenTHC fields."
+    },
+    {
+      "weeddao_concept": "measurements[].value",
+      "openthc_concept": "qom",
+      "relationship": "compatible",
+      "lossy": false,
+      "guidance": "Direct for a selected single measurement, subject to unit compatibility."
+    },
+    {
+      "weeddao_concept": "measurements[].unit",
+      "openthc_concept": "uom",
+      "relationship": "broader_than",
+      "lossy": true,
+      "direction_note": "WeedDAO permits extensible units and multiple concurrent measurements; the reviewed OpenTHC schema documents a narrower uom enum.",
+      "guidance": "Do not silently normalize or discard source units. The OpenTHC example data also contains uom values outside the published enum, so validate implementation behavior before transformation."
+    },
+    {
+      "weeddao_concept": "limits[type=LOD]",
+      "openthc_concept": "lod",
+      "relationship": "exact",
+      "lossy": false,
+      "guidance": "Map numeric LOD with the applicable unit."
+    },
+    {
+      "weeddao_concept": "limits[type=LOQ]",
+      "openthc_concept": "loq",
+      "relationship": "exact",
+      "lossy": false,
+      "guidance": "Map numeric LOQ with the applicable unit."
+    },
+    {
+      "weeddao_concept": "limits[type=action_limit|regulatory_limit|reporting_limit|other]",
+      "openthc_concept": "limit",
+      "relationship": "requires_context",
+      "lossy": true,
+      "guidance": "OpenTHC limit is described generically as an upper limit below which a sample passes. It does not preserve WeedDAO's limit type distinctions. Map only with explicit context and retain the original limit type externally."
+    },
+    {
+      "weeddao_concept": "assessment=pass",
+      "openthc_concept": "status=pass",
+      "relationship": "compatible",
+      "lossy": true,
+      "guidance": "Pass assessment can map to status=pass, but WeedDAO separately preserves analytical result_state. Round-trip conversion cannot assume status=pass means detected."
+    },
+    {
+      "weeddao_concept": "assessment=fail",
+      "openthc_concept": "status=fail",
+      "relationship": "compatible",
+      "lossy": true,
+      "guidance": "Fail assessment can map to status=fail, but preserve WeedDAO result_state and all measurements outside the compact status."
+    },
+    {
+      "weeddao_concept": "reported_as",
+      "openthc_concept": null,
+      "relationship": "no_exact_match",
+      "lossy": true,
+      "guidance": "No raw source-literal field was identified in the reviewed Lab_Result_Metric schema. Retain reported_as in an extension for round-trip fidelity."
+    },
+    {
+      "weeddao_concept": "measurements[] with multiple concurrent units",
+      "openthc_concept": "single qom/uom pair per Lab_Result_Metric",
+      "relationship": "no_exact_match",
+      "lossy": true,
+      "guidance": "Do not arbitrarily select one unit for archival conversion. A target implementation needs repeated metrics or an extension if it must preserve all reported units."
+    },
+    {
+      "weeddao_concept": "limits[].operator",
+      "openthc_concept": "special qom interval concepts",
+      "relationship": "related",
+      "lossy": true,
+      "guidance": "OpenTHC special qom concepts can encode some directional meaning, but they are not a general numeric comparison-operator field."
+    },
+    {
+      "weeddao_concept": "report-only semantic",
+      "openthc_concept": null,
+      "relationship": "no_exact_match",
+      "lossy": true,
+      "guidance": "No explicit report-only marker was identified in the reviewed OpenTHC Lab_Result_Metric model. Preserve report-only requirements in rule/context metadata rather than fabricating pass/fail."
+    }
+  ],
+  "corpus_tests": [
+    {
+      "case_id": "COA-002",
+      "feature": "ND",
+      "weeddao_example": "result_state=not_detected; reported_as=ND",
+      "weeddao_to_openthc": "status=nd is compatible; reported_as is not represented in the reviewed target core.",
+      "openthc_to_weeddao": "status=nd can become result_state=not_detected; do not synthesize a numeric zero.",
+      "loss": "source literal may be lost unless retained as extension"
+    },
+    {
+      "case_id": "COA-001",
+      "feature": "<LOQ",
+      "weeddao_example": "result_state=below_reporting_limit; reported_as=<LOQ",
+      "weeddao_to_openthc": "No safe automatic special-qom selection because <LOQ does not prove whether the value is below LOD or between LOD and LOQ.",
+      "openthc_to_weeddao": "LT-LOD and GT-LOD/LT-LOQ can both map to below_reporting_limit while preserving their literal/specific threshold context.",
+      "loss": "OpenTHC-specific interval precision is lost if converted to the generic WeedDAO state without reported_as/limits; WeedDAO source literal is lost in the target core in the other direction"
+    },
+    {
+      "case_id": "COA-001",
+      "feature": "NOT_PERFORMED",
+      "weeddao_example": "lab_results.moisture result_state=not_performed; reported_as=Not Performed",
+      "weeddao_to_openthc": "No exact mapping identified. status=nt/N/T means Not Tested and must not be substituted automatically.",
+      "loss": "not_performed versus not_tested distinction"
+    },
+    {
+      "case_id": "COA-029",
+      "feature": "multiple concurrent units",
+      "weeddao_example": "cannabinoid results preserve both % and mg/g measurements",
+      "weeddao_to_openthc": "Reviewed target core exposes one qom/uom pair per metric.",
+      "loss": "one representation must be dropped or an extension/repeated target metric is required"
+    },
+    {
+      "case_id": "COA-046",
+      "feature": "numeric result plus FAIL assessment plus four concurrent units",
+      "weeddao_example": "total_thc result_state=detected, assessment=fail, measurements in %, mg/g, mg/serving and mg/package",
+      "weeddao_to_openthc": "status=fail preserves the assessment signal but not the independent detected state or all four measurements in one core metric.",
+      "loss": "separation of analytical state from assessment and multi-unit fidelity"
+    }
+  ],
+  "conclusion": {
+    "weeddao_preserves_more_information_in_tested_cases": true,
+    "schema_gap_revealed": false,
+    "schema_change": "NOT JUSTIFIED",
+    "next_action": "Validate these semantics with an external OpenTHC/WCIA implementer or real customer export before adding transformation logic."
+  }
+}
