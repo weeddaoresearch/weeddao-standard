@@ -1,0 +1,104 @@
+{
+  "method_assurance_version": "0.1-draft",
+  "status": "experimental",
+  "record_ref": {
+    "schema_version": "0.2-draft",
+    "record_id": "illustrative-method-record",
+    "source_id": "illustrative-only"
+  },
+  "methods": [
+    {
+      "identity": {
+        "method_id": "LAB-SOP-CAN-004-R7",
+        "title": "Illustrative cannabinoid quantitation method",
+        "method_type": "laboratory_developed",
+        "standard_reference": null,
+        "internal_sop_id": "SOP-CAN-004",
+        "revision": "7",
+        "effective_date": "2026-01-15",
+        "technique": "LC-UV",
+        "instrument_platform": null,
+        "source_reference": "illustrative example",
+        "reported_as": "SOP-CAN-004 Rev 7"
+      },
+      "claimed_scope": {
+        "analytes": ["delta-9 THC", "THCA", "CBD", "CBDA"],
+        "matrices": ["cannabis flower"],
+        "product_types": ["flower"],
+        "lower_range": {
+          "value": 0.1,
+          "unit": "%"
+        },
+        "upper_range": {
+          "value": 35,
+          "unit": "%"
+        },
+        "qualitative_or_quantitative": "quantitative",
+        "limitations": "Illustrative only.",
+        "source_reference": "illustrative example"
+      },
+      "qualification_events": [
+        {
+          "event_type": "validation",
+          "study_design": "single_laboratory",
+          "status": "completed",
+          "performed_at": "2026-01-10",
+          "performed_by": "illustrative laboratory",
+          "acceptance_framework": "source-reported internal validation plan",
+          "scope": {
+            "analytes": ["delta-9 THC", "THCA", "CBD", "CBDA"],
+            "matrices": ["cannabis flower"],
+            "product_types": ["flower"],
+            "lower_range": {
+              "value": 0.1,
+              "unit": "%"
+            },
+            "upper_range": {
+              "value": 35,
+              "unit": "%"
+            },
+            "qualitative_or_quantitative": "quantitative",
+            "limitations": null,
+            "source_reference": "illustrative example"
+          },
+          "performance_characteristics": [
+            {
+              "characteristic": "recovery",
+              "result_value": 98.7,
+              "unit": "%",
+              "reported_as": "Mean recovery 98.7%",
+              "acceptance_criterion": "illustrative criterion only",
+              "outcome": "met",
+              "source_reference": "illustrative example",
+              "notes": null
+            },
+            {
+              "characteristic": "precision",
+              "result_value": 3.1,
+              "unit": "% RSD",
+              "reported_as": "Precision 3.1% RSD",
+              "acceptance_criterion": "illustrative criterion only",
+              "outcome": "met",
+              "source_reference": "illustrative example",
+              "notes": null
+            }
+          ],
+          "source_reference": "illustrative validation summary",
+          "notes": "Example only; not evidence of actual method performance."
+        }
+      ],
+      "deviations": null,
+      "notes": "Illustrative structure only."
+    }
+  ],
+  "result_links": [
+    {
+      "result_path": "/lab_results/cannabinoids/total_thc",
+      "method_id": "LAB-SOP-CAN-004-R7",
+      "within_claimed_scope": true,
+      "scope_evidence": "Illustrative analyte/matrix/range match.",
+      "notes": "Illustrative only."
+    }
+  ],
+  "notes": "Example only; no validation, accreditation, or compliance claim."
+}
