@@ -1,0 +1,52 @@
+{
+  "registry_version": "0.1-draft",
+  "status": "manual_source_index",
+  "note": "This file is an index of authoritative sources used by the RFC seed. It is not an automated monitoring claim.",
+  "sources": [
+    {
+      "jurisdiction": "California",
+      "subdivision": "US-CA",
+      "authority": "California Department of Cannabis Control",
+      "source_family": "pesticide_testing_rulemaking",
+      "url": "https://www.cannabis.ca.gov/cannabis-laws/rulemaking/dcc-2025-03-r-pesticide-testing/final-text/",
+      "monitoring_status": "manual",
+      "last_reviewed": "2026-09-19"
+    },
+    {
+      "jurisdiction": "Oregon",
+      "subdivision": "US-OR",
+      "authority": "Oregon Health Authority",
+      "source_family": "cannabis_testing_rules",
+      "url": "https://www.oregon.gov/oha/PH/DISEASESCONDITIONS/CHRONICDISEASE/MEDICALMARIJUANAPROGRAM/Pages/rules.aspx",
+      "monitoring_status": "manual",
+      "last_reviewed": "2026-09-19"
+    },
+    {
+      "jurisdiction": "Texas",
+      "subdivision": "US-TX",
+      "authority": "Texas Department of Public Safety",
+      "source_family": "compassionate_use_rules",
+      "url": "https://www.dps.texas.gov/section/compassionate-use-program",
+      "monitoring_status": "manual",
+      "last_reviewed": "2026-09-19"
+    },
+    {
+      "jurisdiction": "Massachusetts",
+      "subdivision": "US-MA",
+      "authority": "Massachusetts Cannabis Control Commission",
+      "source_family": "testing_protocols_and_guidance",
+      "url": "https://masscannabiscontrol.com/public-documents/guidance-documents/",
+      "monitoring_status": "manual",
+      "last_reviewed": "2026-09-19"
+    },
+    {
+      "jurisdiction": "New York",
+      "subdivision": "US-NY",
+      "authority": "New York State Office of Cannabis Management",
+      "source_family": "laboratory_testing_limits",
+      "url": "https://cannabis.ny.gov/laboratory-testing-limits",
+      "monitoring_status": "manual",
+      "last_reviewed": "2026-09-19"
+    }
+  ]
+}
