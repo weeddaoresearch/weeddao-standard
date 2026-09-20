@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://weeddao.org/schemas/weeddao-traceability-assurance-0.1-draft.schema.json",
+  "title": "WeedDAO Traceability Assurance Sidecar 0.1 Draft",
+  "description": "Experimental sidecar for reference materials, calibration evidence, and metrological traceability claims. This does not modify WeedDAO v0.2-draft.",
+  "type": "object",
+  "required": ["traceability_assurance_version", "status", "record_ref", "result_links"],
+  "additionalProperties": false,
+  "properties": {
+    "traceability_assurance_version": { "const": "0.1-draft" },
+    "status": { "const": "experimental" },
+    "record_ref": { "$ref": "#/$defs/RecordRef" },
+    "reference_materials": {
+      "type": ["array", "null"],
+      "items": { "$ref": "#/$defs/ReferenceMaterial" }
+    },
+    "calibrations": {
+      "type": ["array", "null"],
+      "items": { "$ref": "#/$defs/CalibrationEvent" }
+    },
+    "result_links": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/ResultTraceabilityLink" }
+    },
+    "notes": { "type": ["string", "null"] }
+  },
+  "$defs": {
+    "RecordRef": {
+      "type": "object",
+      "required": ["schema_version"],
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": { "type": "string", "minLength": 1 },
+        "record_id": { "type": ["string", "null"] },
+        "source_id": { "type": ["string", "null"] }
+      }
+    },
+    "AssignedValue": {
+      "type": "object",
+      "required": ["measurand", "value", "unit"],
+      "additionalProperties": false,
+      "properties": {
+        "measurand": { "type": "string", "minLength": 1 },
+        "value": { "type": "number" },
+        "unit": { "type": "string", "minLength": 1 },
+        "uncertainty": { "type": ["number", "null"] },
+        "uncertainty_unit": { "type": ["string", "null"] },
+        "coverage_factor": { "type": ["number", "null"] },
+        "confidence_level_percent": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+        "basis": { "type": ["string", "null"] },
+        "source_reference": { "type": ["string", "null"] }
+      }
+    },
+    "ReferenceMaterial": {
+      "type": "object",
+      "required": ["reference_material_id"],
+      "additionalProperties": false,
+      "properties": {
+        "reference_material_id": { "type": "string", "minLength": 1 },
+        "material_type": {
+          "type": ["string", "null"],
+          "enum": ["CRM", "RM", "SRM", "calibration_standard", "control_material", "in_house_reference", "other", "unknown", null]
+        },
+        "producer": { "type": ["string", "null"] },
+        "catalog_number": { "type": ["string", "null"] },
+        "lot_or_batch": { "type": ["string", "null"] },
+        "certificate_id": { "type": ["string", "null"] },
+        "certificate_revision": { "type": ["string", "null"] },
+        "expiration_or_valid_through": { "type": ["string", "null"] },
+        "intended_use": { "type": ["string", "null"] },
+        "storage_conditions": { "type": ["string", "null"] },
+        "assigned_values": {
+          "type": ["array", "null"],
+          "items": { "$ref": "#/$defs/AssignedValue" }
+        },
+        "traceability_statement_reported": { "type": ["string", "null"] },
+        "source_reference": { "type": ["string", "null"] },
+        "notes": { "type": ["string", "null"] }
+      }
+    },
+    "CalibrationEvent": {
+      "type": "object",
+      "required": ["calibration_id"],
+      "additionalProperties": false,
+      "properties": {
+        "calibration_id": { "type": "string", "minLength": 1 },
+        "instrument_or_system_id": { "type": ["string", "null"] },
+        "performed_at": { "type": ["string", "null"] },
+        "performed_by": { "type": ["string", "null"] },
+        "certificate_id": { "type": ["string", "null"] },
+        "reference_standard_ids": {
+          "type": ["array", "null"],
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "measurands": {
+          "type": ["array", "null"],
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "uncertainty_reported": { "type": ["string", "null"] },
+        "valid_from": { "type": ["string", "null"] },
+        "valid_through": { "type": ["string", "null"] },
+        "source_reference": { "type": ["string", "null"] },
+        "notes": { "type": ["string", "null"] }
+      }
+    },
+    "TraceabilityClaim": {
+      "type": "object",
+      "required": ["claim_status"],
+      "additionalProperties": false,
+      "properties": {
+        "claim_status": {
+          "type": "string",
+          "enum": ["source_claimed", "evidence_partial", "evidence_complete", "not_demonstrated", "unknown"]
+        },
+        "reference": { "type": ["string", "null"] },
+        "chain_description": { "type": ["string", "null"] },
+        "uncertainty_chain_documented": { "type": ["boolean", "null"] },
+        "measurement_assurance_program_evidence": { "type": ["string", "null"] },
+        "source_reference": { "type": ["string", "null"] },
+        "notes": { "type": ["string", "null"] }
+      }
+    },
+    "ResultTraceabilityLink": {
+      "type": "object",
+      "required": ["result_path"],
+      "additionalProperties": false,
+      "properties": {
+        "result_path": { "type": "string", "pattern": "^/" },
+        "reference_material_ids": {
+          "type": ["array", "null"],
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "calibration_ids": {
+          "type": ["array", "null"],
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "traceability_claim": {
+          "anyOf": [
+            { "$ref": "#/$defs/TraceabilityClaim" },
+            { "type": "null" }
+          ]
+        },
+        "notes": { "type": ["string", "null"] }
+      }
+    }
+  }
+}
