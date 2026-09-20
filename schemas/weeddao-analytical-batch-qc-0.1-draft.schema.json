@@ -1,0 +1,226 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://weeddao.org/schemas/weeddao-analytical-batch-qc-0.1-draft.schema.json",
+  "title": "WeedDAO Analytical Batch QC Sidecar 0.1 Draft",
+  "description": "Experimental sidecar for analytical-batch quality-control evidence, validity-of-results controls, nonconforming work, and batch disposition. This does not modify WeedDAO v0.2-draft.",
+  "type": "object",
+  "required": ["qc_version", "status", "record_ref", "analytical_batches"],
+  "additionalProperties": false,
+  "properties": {
+    "qc_version": { "const": "0.1-draft" },
+    "status": { "const": "experimental" },
+    "record_ref": { "$ref": "#/$defs/RecordRef" },
+    "analytical_batches": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/AnalyticalBatch" }
+    },
+    "notes": { "type": ["string", "null"] }
+  },
+  "$defs": {
+    "RecordRef": {
+      "type": "object",
+      "required": ["schema_version"],
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": { "type": "string", "minLength": 1 },
+        "record_id": { "type": ["string", "null"] },
+        "source_id": { "type": ["string", "null"] }
+      }
+    },
+    "Quantity": {
+      "type": "object",
+      "required": ["value", "unit"],
+      "additionalProperties": false,
+      "properties": {
+        "value": { "type": "number" },
+        "unit": { "type": "string", "minLength": 1 }
+      }
+    },
+    "AcceptanceCriterion": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "criterion_type": {
+          "type": ["string", "null"],
+          "enum": [
+            "range",
+            "maximum",
+            "minimum",
+            "target_plus_minus",
+            "qualitative",
+            "source_reported",
+            "other",
+            "unknown",
+            null
+          ]
+        },
+        "lower": {
+          "anyOf": [
+            { "$ref": "#/$defs/Quantity" },
+            { "type": "null" }
+          ]
+        },
+        "upper": {
+          "anyOf": [
+            { "$ref": "#/$defs/Quantity" },
+            { "type": "null" }
+          ]
+        },
+        "target": {
+          "anyOf": [
+            { "$ref": "#/$defs/Quantity" },
+            { "type": "null" }
+          ]
+        },
+        "reported_as": { "type": ["string", "null"] },
+        "source_reference": { "type": ["string", "null"] }
+      }
+    },
+    "QCObservation": {
+      "type": "object",
+      "required": ["control_id", "control_type"],
+      "additionalProperties": false,
+      "properties": {
+        "control_id": { "type": "string", "minLength": 1 },
+        "control_type": {
+          "type": "string",
+          "enum": [
+            "reagent_blank",
+            "method_blank",
+            "calibration_blank",
+            "matrix_blank",
+            "negative_control",
+            "positive_control",
+            "laboratory_control_sample",
+            "matrix_spike",
+            "matrix_spike_duplicate",
+            "sample_duplicate",
+            "surrogate",
+            "internal_standard",
+            "initial_calibration_verification",
+            "continuing_calibration_verification",
+            "continuing_calibration_blank",
+            "reference_material_control",
+            "other"
+          ]
+        },
+        "analyte_or_metric": { "type": ["string", "null"] },
+        "sample_or_control_ref": { "type": ["string", "null"] },
+        "measured": {
+          "anyOf": [
+            { "$ref": "#/$defs/Quantity" },
+            { "type": "null" }
+          ]
+        },
+        "calculated_metric": {
+          "anyOf": [
+            { "$ref": "#/$defs/Quantity" },
+            { "type": "null" }
+          ],
+          "description": "Recovery, RPD, response ratio, drift, or another source-reported QC metric."
+        },
+        "metric_name": { "type": ["string", "null"] },
+        "acceptance_criterion": {
+          "anyOf": [
+            { "$ref": "#/$defs/AcceptanceCriterion" },
+            { "type": "null" }
+          ]
+        },
+        "outcome": {
+          "type": ["string", "null"],
+          "enum": ["pass", "fail", "warning", "not_evaluated", "unknown", null]
+        },
+        "reported_as": { "type": ["string", "null"] },
+        "source_reference": { "type": ["string", "null"] },
+        "notes": { "type": ["string", "null"] }
+      }
+    },
+    "NonconformingWork": {
+      "type": "object",
+      "required": ["event_id"],
+      "additionalProperties": false,
+      "properties": {
+        "event_id": { "type": "string", "minLength": 1 },
+        "trigger_control_ids": {
+          "type": ["array", "null"],
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "description": { "type": ["string", "null"] },
+        "impact_assessment": { "type": ["string", "null"] },
+        "affected_result_paths": {
+          "type": ["array", "null"],
+          "items": { "type": "string", "pattern": "^/" }
+        },
+        "immediate_action": { "type": ["string", "null"] },
+        "corrective_action": { "type": ["string", "null"] },
+        "reanalysis_performed": { "type": ["boolean", "null"] },
+        "authorized_disposition": { "type": ["string", "null"] },
+        "source_reference": { "type": ["string", "null"] },
+        "notes": { "type": ["string", "null"] }
+      }
+    },
+    "BatchDisposition": {
+      "type": "object",
+      "required": ["status"],
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "accepted",
+            "accepted_with_qualification",
+            "rejected",
+            "reprocessed",
+            "retested",
+            "pending",
+            "unknown"
+          ]
+        },
+        "basis": { "type": ["string", "null"] },
+        "authorized_by_role": { "type": ["string", "null"] },
+        "authorized_at": { "type": ["string", "null"] },
+        "source_reference": { "type": ["string", "null"] },
+        "notes": { "type": ["string", "null"] }
+      }
+    },
+    "AnalyticalBatch": {
+      "type": "object",
+      "required": ["batch_id"],
+      "additionalProperties": false,
+      "properties": {
+        "batch_id": { "type": "string", "minLength": 1 },
+        "method_ids": {
+          "type": ["array", "null"],
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "instrument_or_system_ids": {
+          "type": ["array", "null"],
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "started_at": { "type": ["string", "null"] },
+        "completed_at": { "type": ["string", "null"] },
+        "result_paths": {
+          "type": ["array", "null"],
+          "items": { "type": "string", "pattern": "^/" }
+        },
+        "controls": {
+          "type": ["array", "null"],
+          "items": { "$ref": "#/$defs/QCObservation" }
+        },
+        "nonconforming_work": {
+          "type": ["array", "null"],
+          "items": { "$ref": "#/$defs/NonconformingWork" }
+        },
+        "disposition": {
+          "anyOf": [
+            { "$ref": "#/$defs/BatchDisposition" },
+            { "type": "null" }
+          ]
+        },
+        "source_reference": { "type": ["string", "null"] },
+        "notes": { "type": ["string", "null"] }
+      }
+    }
+  }
+}
