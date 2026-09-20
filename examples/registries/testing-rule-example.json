@@ -1,0 +1,49 @@
+{
+  "registry_version": "0.1-draft",
+  "rule_id": "WDA-RULE-EXAMPLE-001",
+  "jurisdiction": {
+    "country": "US",
+    "subdivision": "US-XX",
+    "name": "Illustrative jurisdiction"
+  },
+  "authority": "Illustrative Cannabis Authority",
+  "status": "active",
+  "effective": {
+    "published_date": "2026-01-01",
+    "start_date": "2026-02-01",
+    "end_date": null
+  },
+  "scope": {
+    "program": "illustrative only",
+    "product_types": ["flower"],
+    "matrices": ["plant_material"],
+    "notes": "Synthetic example. Not a real regulatory requirement."
+  },
+  "requirements": [
+    {
+      "requirement_id": "req-001",
+      "requirement_type": "action_limit",
+      "analyte_id": "WDA-AN-000001",
+      "test_category": "potency",
+      "comparator": "<=",
+      "threshold": {
+        "value": 1,
+        "unit": "%",
+        "unit_system": "source_native",
+        "reported_as": "<= 1%"
+      },
+      "source_text_summary": "Synthetic example only.",
+      "notes": "Do not use for compliance."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Synthetic example source",
+      "url": "https://example.invalid/testing-rule",
+      "citation": "Illustrative only",
+      "retrieved_at": "2026-09-19T00:00:00Z",
+      "source_hash": null
+    }
+  ],
+  "supersedes": []
+}
