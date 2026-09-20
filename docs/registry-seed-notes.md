@@ -111,3 +111,26 @@ The seed records:
 Massachusetts is actively reviewing testing protocols in 2026. Proposed recommendations are not treated as active requirements.
 
 The Commission also publishes machine-readable testing datasets, making Massachusetts a strong candidate for future large-scale WeedDAO registry and validation testing.
+
+
+## New York seed
+
+New York is the fifth jurisdiction and adds a revision-heavy OCM testing model.
+
+The seed records:
+
+- ISO/IEC 17025 laboratory accreditation and proficiency-testing requirements;
+- Abamectin and Acephate pesticide limits;
+- route-specific heavy-metal limits;
+- Total THC reporting and potency/homogeneity requirements;
+- a regulator-defined TIC reporting state for certain pesticide results;
+- report-results-only microbial testing for specified adult-use unextracted products.
+
+The current source is the OCM Cannabis Testing Limits revision dated February 9, 2026. New York's revision history makes it a strong candidate for future automated rule-change monitoring.
+
+
+## Query layer
+
+A first public query CLI now exists at `scripts/query_registry.py`.
+
+It can filter by jurisdiction, analyte ID, requirement type, test category, and effective date, and can emit JSON. This is a proof-of-utility layer, not a hosted regulatory-compliance service.
