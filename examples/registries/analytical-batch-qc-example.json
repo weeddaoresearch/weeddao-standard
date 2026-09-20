@@ -1,0 +1,90 @@
+{
+  "qc_version": "0.1-draft",
+  "status": "experimental",
+  "record_ref": {
+    "schema_version": "0.2-draft",
+    "record_id": "illustrative-qc-record",
+    "source_id": "illustrative-only"
+  },
+  "analytical_batches": [
+    {
+      "batch_id": "AN-BATCH-001",
+      "method_ids": ["LAB-SOP-CAN-004-R7"],
+      "instrument_or_system_ids": ["LC-SYSTEM-1"],
+      "started_at": "2026-01-20T09:00:00Z",
+      "completed_at": "2026-01-20T12:00:00Z",
+      "result_paths": ["/lab_results/cannabinoids/total_thc"],
+      "controls": [
+        {
+          "control_id": "MB-001",
+          "control_type": "method_blank",
+          "analyte_or_metric": "delta-9 THC",
+          "sample_or_control_ref": "method-blank-001",
+          "measured": {
+            "value": 0.01,
+            "unit": "mg/g"
+          },
+          "calculated_metric": null,
+          "metric_name": null,
+          "acceptance_criterion": {
+            "criterion_type": "maximum",
+            "lower": null,
+            "upper": {
+              "value": 0.05,
+              "unit": "mg/g"
+            },
+            "target": null,
+            "reported_as": "<=0.05 mg/g",
+            "source_reference": "illustrative example"
+          },
+          "outcome": "pass",
+          "reported_as": "PASS",
+          "source_reference": "illustrative example",
+          "notes": "Example only."
+        },
+        {
+          "control_id": "MS-001",
+          "control_type": "matrix_spike",
+          "analyte_or_metric": "delta-9 THC recovery",
+          "sample_or_control_ref": "sample-example",
+          "measured": null,
+          "calculated_metric": {
+            "value": 101.5,
+            "unit": "%"
+          },
+          "metric_name": "recovery",
+          "acceptance_criterion": {
+            "criterion_type": "range",
+            "lower": {
+              "value": 80,
+              "unit": "%"
+            },
+            "upper": {
+              "value": 120,
+              "unit": "%"
+            },
+            "target": null,
+            "reported_as": "80-120%",
+            "source_reference": "illustrative example"
+          },
+          "outcome": "pass",
+          "reported_as": "PASS",
+          "source_reference": "illustrative example",
+          "notes": "Example only."
+        }
+      ],
+      "nonconforming_work": null,
+      "disposition": {
+        "status": "accepted",
+        "basis": "Illustrative controls met source-reported criteria.",
+        "authorized_by_role": "laboratory reviewer",
+        "authorized_at": "2026-01-20T12:30:00Z",
+        "source_reference": "illustrative example",
+        "notes": "Not a real laboratory disposition."
+      },
+      "source_reference": "illustrative example",
+      "notes": "Example only; no laboratory-validity or accreditation claim."
+    }
+  ],
+  "notes": "Illustrative analytical-batch QC sidecar."
+}
