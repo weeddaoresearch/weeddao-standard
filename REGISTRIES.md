@@ -38,11 +38,14 @@ The design goal is to create reusable identifiers and rules without forcing labo
 - [New York OCM rule seed](registry/rules/us-ny-ocm-testing-seed-0.1-draft.json) — lab qualification, pesticides, metals, potency/homogeneity, and report-only microbial semantics
 - [California vs Oregon cross-jurisdiction proof](docs/cross-jurisdiction-ca-or.md)
 - [Texas regulatory-model / drift finding](docs/texas-regulatory-model.md)
-- [Three-jurisdiction testing-model comparison](docs/jurisdiction-model-comparison.md)
+- [Five-jurisdiction testing-model comparison](docs/jurisdiction-model-comparison.md)
 - [Massachusetts testing-model / open-data proof](docs/massachusetts-testing-model.md)
 - [New York testing-model / change-monitoring proof](docs/new-york-testing-model.md)
 - [Registry query quickstart](docs/registry-query-quickstart.md)
 - [Cross-jurisdiction query CLI](scripts/query_registry.py)
+- [Effective-date change diff CLI](scripts/diff_registry.py)
+- [Change-monitoring utility proof](docs/registry-change-monitoring-proof.md)
+- [Authoritative source watch index](registry/source-watch-0.1-draft.json) — manual index only; no automated-monitoring claim
 - [Registry seed notes](docs/registry-seed-notes.md)
 - [Registry validator](scripts/validate_registries.py)
 
