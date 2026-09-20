@@ -1,0 +1,276 @@
+{
+  "registry_version": "0.1-draft",
+  "status": "seed",
+  "jurisdiction": "California",
+  "source_note": "Seeded from California Department of Cannabis Control DCC-2025-03-R final regulation. This is not a complete California ruleset.",
+  "records": [
+    {
+      "registry_version": "0.1-draft",
+      "rule_id": "WDA-RULE-US-CA-DCC-PES-P1-INHALABLE",
+      "jurisdiction": {
+        "country": "US",
+        "subdivision": "US-CA",
+        "name": "California"
+      },
+      "authority": "California Department of Cannabis Control",
+      "status": "future",
+      "effective": {
+        "published_date": "2026-07-27",
+        "start_date": "2026-10-01",
+        "end_date": "2028-03-31"
+      },
+      "scope": {
+        "program": "Licensed cannabis laboratory testing",
+        "product_types": [
+          "inhalable cannabis and cannabis products"
+        ],
+        "matrices": [],
+        "notes": "Phase I residual pesticide action limits under DCC-2025-03-R."
+      },
+      "requirements": [
+        {
+          "requirement_id": "abamectin-action-limit",
+          "requirement_type": "action_limit",
+          "analyte_id": "WDA-AN-000016",
+          "test_category": "residual_pesticides",
+          "comparator": "<=",
+          "threshold": {
+            "value": 0.1,
+            "unit": "µg/g",
+            "unit_system": "source_native",
+            "reported_as": "0.10 µg/g"
+          },
+          "source_text_summary": "Table 1 action level for inhalable products.",
+          "notes": null
+        },
+        {
+          "requirement_id": "acephate-action-limit",
+          "requirement_type": "action_limit",
+          "analyte_id": "WDA-AN-000017",
+          "test_category": "residual_pesticides",
+          "comparator": "<=",
+          "threshold": {
+            "value": 0.1,
+            "unit": "µg/g",
+            "unit_system": "source_native",
+            "reported_as": "0.10 µg/g"
+          },
+          "source_text_summary": "Table 1 action level for inhalable products.",
+          "notes": null
+        }
+      ],
+      "sources": [
+        {
+          "title": "DCC-2025-03-R: Final Text of Regulations",
+          "url": "https://www.cannabis.ca.gov/cannabis-laws/rulemaking/dcc-2025-03-r-pesticide-testing/final-text/",
+          "citation": "California DCC §15719, Table 1",
+          "retrieved_at": "2026-09-19T00:00:00Z",
+          "source_hash": null
+        }
+      ],
+      "supersedes": []
+    },
+    {
+      "registry_version": "0.1-draft",
+      "rule_id": "WDA-RULE-US-CA-DCC-PES-P1-NONINHALABLE",
+      "jurisdiction": {
+        "country": "US",
+        "subdivision": "US-CA",
+        "name": "California"
+      },
+      "authority": "California Department of Cannabis Control",
+      "status": "future",
+      "effective": {
+        "published_date": "2026-07-27",
+        "start_date": "2026-10-01",
+        "end_date": "2028-03-31"
+      },
+      "scope": {
+        "program": "Licensed cannabis laboratory testing",
+        "product_types": [
+          "non-inhalable cannabis products"
+        ],
+        "matrices": [],
+        "notes": "Phase I residual pesticide action limits under DCC-2025-03-R."
+      },
+      "requirements": [
+        {
+          "requirement_id": "abamectin-action-limit",
+          "requirement_type": "action_limit",
+          "analyte_id": "WDA-AN-000016",
+          "test_category": "residual_pesticides",
+          "comparator": "<=",
+          "threshold": {
+            "value": 0.3,
+            "unit": "µg/g",
+            "unit_system": "source_native",
+            "reported_as": "0.3 µg/g"
+          },
+          "source_text_summary": "Table 1 action level for non-inhalable products.",
+          "notes": null
+        },
+        {
+          "requirement_id": "acephate-action-limit",
+          "requirement_type": "action_limit",
+          "analyte_id": "WDA-AN-000017",
+          "test_category": "residual_pesticides",
+          "comparator": "<=",
+          "threshold": {
+            "value": 5,
+            "unit": "µg/g",
+            "unit_system": "source_native",
+            "reported_as": "5.0 µg/g"
+          },
+          "source_text_summary": "Table 1 action level for non-inhalable products.",
+          "notes": null
+        }
+      ],
+      "sources": [
+        {
+          "title": "DCC-2025-03-R: Final Text of Regulations",
+          "url": "https://www.cannabis.ca.gov/cannabis-laws/rulemaking/dcc-2025-03-r-pesticide-testing/final-text/",
+          "citation": "California DCC §15719, Table 1",
+          "retrieved_at": "2026-09-19T00:00:00Z",
+          "source_hash": null
+        }
+      ],
+      "supersedes": []
+    },
+    {
+      "registry_version": "0.1-draft",
+      "rule_id": "WDA-RULE-US-CA-DCC-PES-P2-INHALABLE",
+      "jurisdiction": {
+        "country": "US",
+        "subdivision": "US-CA",
+        "name": "California"
+      },
+      "authority": "California Department of Cannabis Control",
+      "status": "future",
+      "effective": {
+        "published_date": "2026-07-27",
+        "start_date": "2028-04-01",
+        "end_date": null
+      },
+      "scope": {
+        "program": "Licensed cannabis laboratory testing",
+        "product_types": [
+          "inhalable cannabis and cannabis products"
+        ],
+        "matrices": [],
+        "notes": "Phase II residual pesticide action limits under DCC-2025-03-R."
+      },
+      "requirements": [
+        {
+          "requirement_id": "abamectin-action-limit",
+          "requirement_type": "action_limit",
+          "analyte_id": "WDA-AN-000016",
+          "test_category": "residual_pesticides",
+          "comparator": "<=",
+          "threshold": {
+            "value": 0.1,
+            "unit": "µg/g",
+            "unit_system": "source_native",
+            "reported_as": "0.10 µg/g"
+          },
+          "source_text_summary": "Table 2 action level for inhalable products beginning April 1, 2028.",
+          "notes": null
+        },
+        {
+          "requirement_id": "acephate-action-limit",
+          "requirement_type": "action_limit",
+          "analyte_id": "WDA-AN-000017",
+          "test_category": "residual_pesticides",
+          "comparator": "<=",
+          "threshold": {
+            "value": 0.1,
+            "unit": "µg/g",
+            "unit_system": "source_native",
+            "reported_as": "0.10 µg/g"
+          },
+          "source_text_summary": "Table 2 action level for inhalable products beginning April 1, 2028.",
+          "notes": null
+        }
+      ],
+      "sources": [
+        {
+          "title": "DCC-2025-03-R: Final Text of Regulations",
+          "url": "https://www.cannabis.ca.gov/cannabis-laws/rulemaking/dcc-2025-03-r-pesticide-testing/final-text/",
+          "citation": "California DCC §15719, Table 2",
+          "retrieved_at": "2026-09-19T00:00:00Z",
+          "source_hash": null
+        }
+      ],
+      "supersedes": [
+        "WDA-RULE-US-CA-DCC-PES-P1-INHALABLE"
+      ]
+    },
+    {
+      "registry_version": "0.1-draft",
+      "rule_id": "WDA-RULE-US-CA-DCC-PES-P2-NONINHALABLE",
+      "jurisdiction": {
+        "country": "US",
+        "subdivision": "US-CA",
+        "name": "California"
+      },
+      "authority": "California Department of Cannabis Control",
+      "status": "future",
+      "effective": {
+        "published_date": "2026-07-27",
+        "start_date": "2028-04-01",
+        "end_date": null
+      },
+      "scope": {
+        "program": "Licensed cannabis laboratory testing",
+        "product_types": [
+          "non-inhalable cannabis products"
+        ],
+        "matrices": [],
+        "notes": "Phase II residual pesticide action limits under DCC-2025-03-R."
+      },
+      "requirements": [
+        {
+          "requirement_id": "abamectin-action-limit",
+          "requirement_type": "action_limit",
+          "analyte_id": "WDA-AN-000016",
+          "test_category": "residual_pesticides",
+          "comparator": "<=",
+          "threshold": {
+            "value": 0.1,
+            "unit": "µg/g",
+            "unit_system": "source_native",
+            "reported_as": "0.10 µg/g"
+          },
+          "source_text_summary": "Table 2 action level for non-inhalable products beginning April 1, 2028.",
+          "notes": null
+        },
+        {
+          "requirement_id": "acephate-action-limit",
+          "requirement_type": "action_limit",
+          "analyte_id": "WDA-AN-000017",
+          "test_category": "residual_pesticides",
+          "comparator": "<=",
+          "threshold": {
+            "value": 0.18,
+            "unit": "µg/g",
+            "unit_system": "source_native",
+            "reported_as": "0.18 µg/g"
+          },
+          "source_text_summary": "Table 2 action level for non-inhalable products beginning April 1, 2028.",
+          "notes": null
+        }
+      ],
+      "sources": [
+        {
+          "title": "DCC-2025-03-R: Final Text of Regulations",
+          "url": "https://www.cannabis.ca.gov/cannabis-laws/rulemaking/dcc-2025-03-r-pesticide-testing/final-text/",
+          "citation": "California DCC §15719, Table 2",
+          "retrieved_at": "2026-09-19T00:00:00Z",
+          "source_hash": null
+        }
+      ],
+      "supersedes": [
+        "WDA-RULE-US-CA-DCC-PES-P1-NONINHALABLE"
+      ]
+    }
+  ]
+}
