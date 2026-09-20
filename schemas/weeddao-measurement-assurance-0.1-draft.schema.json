@@ -1,0 +1,238 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://weeddao.org/schemas/weeddao-measurement-assurance-0.1-draft.schema.json",
+  "title": "WeedDAO Measurement Assurance Sidecar 0.1 Draft",
+  "description": "Experimental sidecar for measurement uncertainty and conformity decision-rule evidence. This does not modify WeedDAO v0.2-draft.",
+  "type": "object",
+  "required": ["assurance_version", "status", "record_ref", "entries"],
+  "additionalProperties": false,
+  "properties": {
+    "assurance_version": {
+      "const": "0.1-draft"
+    },
+    "status": {
+      "const": "experimental"
+    },
+    "record_ref": {
+      "$ref": "#/$defs/RecordRef"
+    },
+    "entries": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/AssuranceEntry"
+      }
+    },
+    "notes": {
+      "type": ["string", "null"]
+    }
+  },
+  "$defs": {
+    "RecordRef": {
+      "type": "object",
+      "required": ["schema_version"],
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "record_id": {
+          "type": ["string", "null"]
+        },
+        "source_id": {
+          "type": ["string", "null"],
+          "description": "Optional external source/COA identifier."
+        }
+      }
+    },
+    "Quantity": {
+      "type": "object",
+      "required": ["value", "unit"],
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": "number"
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "MeasurementUncertainty": {
+      "type": "object",
+      "required": ["kind", "value", "unit"],
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "expanded",
+            "standard",
+            "relative",
+            "interval_half_width",
+            "source_reported",
+            "unknown"
+          ]
+        },
+        "value": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "coverage_factor": {
+          "type": ["number", "null"],
+          "exclusiveMinimum": 0
+        },
+        "coverage_probability": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "confidence_level_percent": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "evaluation_method": {
+          "type": ["string", "null"],
+          "enum": [
+            "GUM",
+            "top_down",
+            "validation_and_qc",
+            "source_reported",
+            "other",
+            "unknown",
+            null
+          ]
+        },
+        "reported_as": {
+          "type": ["string", "null"],
+          "description": "Literal uncertainty expression when preserving source representation is useful."
+        },
+        "source_reference": {
+          "type": ["string", "null"],
+          "description": "Source page, section, file or other evidence pointer."
+        },
+        "notes": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "Specification": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "operator": {
+          "type": ["string", "null"],
+          "enum": ["<", "<=", ">", ">=", "=", "between", null]
+        },
+        "value": {
+          "type": ["number", "null"]
+        },
+        "lower_value": {
+          "type": ["number", "null"]
+        },
+        "upper_value": {
+          "type": ["number", "null"]
+        },
+        "unit": {
+          "type": ["string", "null"]
+        },
+        "source": {
+          "type": ["string", "null"],
+          "description": "Regulation, specification, label claim, contract or other source."
+        },
+        "effective_date": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "DecisionRule": {
+      "type": "object",
+      "required": ["rule_type", "uncertainty_considered"],
+      "additionalProperties": false,
+      "properties": {
+        "rule_type": {
+          "type": "string",
+          "enum": [
+            "simple_acceptance",
+            "guard_band",
+            "shared_risk",
+            "source_reported",
+            "other",
+            "unknown"
+          ]
+        },
+        "uncertainty_considered": {
+          "type": ["boolean", "null"],
+          "description": "Null means the source does not establish whether uncertainty was considered."
+        },
+        "specification": {
+          "anyOf": [
+            { "$ref": "#/$defs/Specification" },
+            { "type": "null" }
+          ]
+        },
+        "guard_band": {
+          "anyOf": [
+            { "$ref": "#/$defs/Quantity" },
+            { "type": "null" }
+          ]
+        },
+        "rounding_rule": {
+          "type": ["string", "null"]
+        },
+        "assessment": {
+          "type": ["string", "null"],
+          "enum": ["pass", "fail", "inconclusive", "not_applicable", null]
+        },
+        "reported_as": {
+          "type": ["string", "null"],
+          "description": "Literal or concise source statement when preservation is useful."
+        },
+        "source_reference": {
+          "type": ["string", "null"]
+        },
+        "notes": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "AssuranceEntry": {
+      "type": "object",
+      "required": ["result_path"],
+      "additionalProperties": false,
+      "properties": {
+        "result_path": {
+          "type": "string",
+          "pattern": "^/",
+          "description": "JSON Pointer to the v0.2-draft result object this assurance evidence qualifies."
+        },
+        "uncertainty": {
+          "anyOf": [
+            { "$ref": "#/$defs/MeasurementUncertainty" },
+            { "type": "null" }
+          ]
+        },
+        "decision_rule": {
+          "anyOf": [
+            { "$ref": "#/$defs/DecisionRule" },
+            { "type": "null" }
+          ]
+        },
+        "notes": {
+          "type": ["string", "null"]
+        }
+      },
+      "anyOf": [
+        { "required": ["uncertainty"] },
+        { "required": ["decision_rule"] }
+      ]
+    }
+  }
+}
