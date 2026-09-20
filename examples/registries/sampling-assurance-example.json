@@ -1,0 +1,77 @@
+{
+  "sampling_assurance_version": "0.1-draft",
+  "status": "experimental",
+  "record_ref": {
+    "schema_version": "0.2-draft",
+    "record_id": "illustrative-sampling-record",
+    "subject_id": "harvest-batch-example",
+    "sample_id": "sample-example",
+    "source_id": "illustrative-only"
+  },
+  "sampling_events": [
+    {
+      "event_id": "sampling-event-001",
+      "population": {
+        "population_type": "harvest_batch",
+        "population_id": "harvest-batch-example",
+        "declared_size": {
+          "value": 10,
+          "unit": "kg"
+        },
+        "description": "Illustrative harvested cannabis batch."
+      },
+      "plan": {
+        "plan_id": "illustrative-plan",
+        "plan_type": "consensus_standard",
+        "procedure_reference": "Illustrative only",
+        "selection_method": "composite_protocol",
+        "target_confidence_level_percent": null,
+        "target_exceedance_fraction_percent": null,
+        "source_reference": "illustrative example",
+        "notes": "Do not treat as a regulatory sampling protocol."
+      },
+      "collection_party": "third_party",
+      "collector_role": "sampler",
+      "collected_at": null,
+      "sample_id": "sample-example",
+      "composite_sample": {
+        "is_composite": true,
+        "increment_count": 5,
+        "combined_mass": {
+          "value": 50,
+          "unit": "g"
+        },
+        "formation_method": "five increments combined before laboratory preparation",
+        "increments": null,
+        "notes": "Illustrative structure only."
+      },
+      "test_specimen_preparation": {
+        "whole_received_sample_processed": true,
+        "drying_method": null,
+        "drying_endpoint": null,
+        "grinding_method": "source-reported grinding",
+        "homogenization_method": "source-reported homogenization",
+        "particle_size_min": null,
+        "particle_size_max": null,
+        "test_specimen_mass": {
+          "value": 1,
+          "unit": "g"
+        },
+        "retain_specimen_created": true,
+        "retain_specimen_mass": null,
+        "subsampling_method": "source-reported",
+        "source_reference": "illustrative example",
+        "notes": "Example only; not evidence of compliance."
+      },
+      "representativeness": {
+        "source_claim": "Representative composite sample",
+        "claim_type": "representative",
+        "statistical_basis_reported": false,
+        "limitations": "No statistical basis is provided in this illustrative example.",
+        "source_reference": "illustrative example"
+      },
+      "notes": "Illustrative sidecar showing that population, collection, composite formation and test-specimen preparation remain separate."
+    }
+  ],
+  "notes": "Illustrative only."
+}
