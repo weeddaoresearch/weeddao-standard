@@ -60,6 +60,8 @@ The design goal is to create reusable identifiers and rules without forcing labo
 - [Method assurance example](examples/registries/method-assurance-example.json)
 - [Traceability assurance example](examples/registries/traceability-assurance-example.json)
 - [Laboratory assurance architecture](docs/laboratory-assurance-architecture.md)
+- [COA-046 assurance bundle](examples/assurance-bundles/coa-046-assurance-bundle.json)
+- [COA-046 assurance integration review](docs/coa-046-assurance-integration.md)
 - [Analytical batch QC example](examples/registries/analytical-batch-qc-example.json)
 - [Analytical batch QC draft schema](schemas/weeddao-analytical-batch-qc-0.1-draft.schema.json)
 - [Analytical batch QC RFC](docs/analytical-batch-qc-rfc.md)
