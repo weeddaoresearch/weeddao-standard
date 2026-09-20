@@ -73,3 +73,22 @@ The validator checks:
 - each rule record against the testing-rule schema;
 - duplicate IDs;
 - rule-to-analyte referential integrity.
+
+
+## Texas TCUP seed
+
+Texas was added as the third jurisdiction because its model differs from the numeric pesticide examples in California and Oregon.
+
+The seed records:
+
+- required processed-product testing categories under 37 TAC §12.7(b);
+- package-label potency and contaminant-test reporting requirements under §12.7(p);
+- the current statutory low-THC definition of no more than 10 mg tetrahydrocannabinols per dosage unit under Occupations Code §169.001(3).
+
+The seed does not invent contaminant action limits where the cited Texas TCUP provision does not provide them.
+
+Texas DPS also states that only licensed dispensing organizations may test low-THC products; this structural difference is documented in `docs/texas-regulatory-model.md`.
+
+An apparent mismatch remains between the current statute and older administrative-rule text in §12.7(q). WeedDAO preserves this as a review issue instead of silently resolving it.
+
+Consumable-hemp rules under 25 TAC Chapter 300 are not imported into the TCUP seed.
