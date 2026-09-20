@@ -51,6 +51,8 @@ The design goal is to create reusable identifiers and rules without forcing labo
 - [WCIA / OpenTHC interoperability crosswalk](docs/wcia-openthc-crosswalk.md)
 - [Machine-readable WCIA crosswalk](compatibility/wcia-analyte-crosswalk-0.1-draft.json)
 - [Identifier crosswalk CLI](scripts/crosswalk_analyte_ids.py)
+- [OpenTHC result-semantics interoperability crosswalk](docs/wcia-openthc-result-semantics.md)
+- [Machine-readable result-semantics crosswalk](compatibility/wcia-openthc-result-semantics-0.1-draft.json)
 
 ## Current scope
 
