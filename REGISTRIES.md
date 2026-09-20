@@ -33,7 +33,10 @@ The design goal is to create reusable identifiers and rules without forcing labo
 - [Initial analyte seed](registry/analytes/seed-0.1-draft.json) — 19 provisional IDs grounded in existing COA evidence plus two DCC pesticide targets
 - [California pesticide rule seed](registry/rules/us-ca-dcc-pesticides-seed-0.1-draft.json) — narrow Phase I/II example from authoritative DCC final text
 - [Oregon pesticide rule seed](registry/rules/us-or-oha-pesticides-seed-0.1-draft.json) — active OHA/OAR Table 3 example
+- [Texas TCUP rule seed](registry/rules/us-tx-dps-tcup-seed-0.1-draft.json) — required testing categories, reporting requirements, and current dosage-unit definition
 - [California vs Oregon cross-jurisdiction proof](docs/cross-jurisdiction-ca-or.md)
+- [Texas regulatory-model / drift finding](docs/texas-regulatory-model.md)
+- [Three-jurisdiction testing-model comparison](docs/jurisdiction-model-comparison.md)
 - [Registry seed notes](docs/registry-seed-notes.md)
 - [Registry validator](scripts/validate_registries.py)
 
@@ -41,7 +44,7 @@ The design goal is to create reusable identifiers and rules without forcing labo
 
 This branch now includes a **small evidence-grounded seed**, but it does **not** claim that WeedDAO maintains a complete analyte registry or complete regulatory rules database.
 
-The current seed contains 19 provisional analyte IDs plus deliberately narrow California and Oregon pesticide-rule examples. Population remains evidence-driven, starting with analytes and requirements encountered in public COAs, authoritative regulatory sources, external implementations, and paid customer work.
+The current seed contains 19 provisional analyte IDs plus deliberately narrow California, Oregon, and Texas rule examples. Population remains evidence-driven, starting with analytes and requirements encountered in public COAs, authoritative regulatory sources, external implementations, and paid customer work.
 
 ## Validate
 
