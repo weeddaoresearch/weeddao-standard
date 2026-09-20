@@ -1,0 +1,28 @@
+{
+  "registry_version": "0.1-draft",
+  "analyte_id": "WDA-AN-000001",
+  "canonical_name": "Delta-9 tetrahydrocannabinol",
+  "target_type": "chemical",
+  "category": "cannabinoid",
+  "status": "provisional",
+  "aliases": [
+    {
+      "label": "Delta 9 THC",
+      "context": "illustrative source label",
+      "source": "example-lims"
+    },
+    {
+      "label": "D9 THC",
+      "context": "illustrative abbreviated label",
+      "source": "example-lims"
+    }
+  ],
+  "external_identifiers": [],
+  "measurement_dimensions": [
+    "mass_fraction",
+    "mass_per_mass",
+    "mass_per_unit"
+  ],
+  "replaced_by": null,
+  "references": []
+}
