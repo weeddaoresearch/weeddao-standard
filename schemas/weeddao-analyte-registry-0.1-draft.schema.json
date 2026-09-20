@@ -12,29 +12,62 @@
     "status"
   ],
   "properties": {
-    "registry_version": { "const": "0.1-draft" },
+    "registry_version": {
+      "const": "0.1-draft"
+    },
     "analyte_id": {
       "type": "string",
       "pattern": "^WDA-AN-[0-9]{6}$"
     },
-    "canonical_name": { "type": "string", "minLength": 1 },
-    "target_type": {
-      "enum": ["chemical", "microbial", "physical", "derived_metric", "other"]
+    "canonical_name": {
+      "type": "string",
+      "minLength": 1
     },
-    "category": { "type": "string", "minLength": 1 },
+    "target_type": {
+      "enum": [
+        "chemical",
+        "microbial",
+        "physical",
+        "derived_metric",
+        "other"
+      ]
+    },
+    "category": {
+      "type": "string",
+      "minLength": 1
+    },
     "status": {
-      "enum": ["provisional", "active", "deprecated"]
+      "enum": [
+        "provisional",
+        "active",
+        "deprecated"
+      ]
     },
     "aliases": {
       "type": "array",
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["label"],
+        "required": [
+          "label"
+        ],
         "properties": {
-          "label": { "type": "string", "minLength": 1 },
-          "context": { "type": ["string", "null"] },
-          "source": { "type": ["string", "null"] }
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "context": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "source": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
         }
       }
     },
@@ -43,20 +76,47 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["scheme", "value"],
+        "required": [
+          "scheme",
+          "value"
+        ],
         "properties": {
-          "scheme": { "type": "string", "minLength": 1 },
-          "value": { "type": "string", "minLength": 1 }
+          "scheme": {
+            "type": "string",
+            "minLength": 1
+          },
+          "value": {
+            "type": "string",
+            "minLength": 1
+          },
+          "context": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "source": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
         }
       }
     },
     "measurement_dimensions": {
       "type": "array",
-      "items": { "type": "string", "minLength": 1 },
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
       "uniqueItems": true
     },
     "replaced_by": {
-      "type": ["string", "null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "pattern": "^WDA-AN-[0-9]{6}$"
     },
     "references": {
@@ -64,11 +124,27 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["title"],
+        "required": [
+          "title"
+        ],
         "properties": {
-          "title": { "type": "string", "minLength": 1 },
-          "url": { "type": ["string", "null"], "format": "uri" },
-          "note": { "type": ["string", "null"] }
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uri"
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
         }
       }
     }
