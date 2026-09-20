@@ -7,7 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 ANALYTE_SCHEMA = ROOT / "schemas" / "weeddao-analyte-registry-0.1-draft.schema.json"
 RULE_SCHEMA = ROOT / "schemas" / "weeddao-testing-rule-0.1-draft.schema.json"
 ANALYTE_SEED = ROOT / "registry" / "analytes" / "seed-0.1-draft.json"
-RULE_SEED = ROOT / "registry" / "rules" / "us-ca-dcc-pesticides-seed-0.1-draft.json"
+RULE_DIR = ROOT / "registry" / "rules"
 
 def load(path):
     with path.open("r", encoding="utf-8") as fh:
@@ -23,16 +23,19 @@ def validate_records(records, schema, label):
 
 def main():
     analyte_bundle = load(ANALYTE_SEED)
-    rule_bundle = load(RULE_SEED)
+    rule_bundles = [(p, load(p)) for p in sorted(RULE_DIR.glob("*seed-0.1-draft.json"))]
     analyte_schema = load(ANALYTE_SCHEMA)
     rule_schema = load(RULE_SCHEMA)
 
     errors = []
     errors += validate_records(analyte_bundle["records"], analyte_schema, "analytes")
-    errors += validate_records(rule_bundle["records"], rule_schema, "rules")
+    all_rules = []
+    for path, bundle in rule_bundles:
+        errors += validate_records(bundle["records"], rule_schema, f"rules:{path.name}")
+        all_rules.extend(bundle["records"])
 
     analyte_ids = [r["analyte_id"] for r in analyte_bundle["records"]]
-    rule_ids = [r["rule_id"] for r in rule_bundle["records"]]
+    rule_ids = [r["rule_id"] for r in all_rules]
 
     if len(analyte_ids) != len(set(analyte_ids)):
         errors.append("duplicate analyte_id detected")
@@ -40,7 +43,7 @@ def main():
         errors.append("duplicate rule_id detected")
 
     known = set(analyte_ids)
-    for rule in rule_bundle["records"]:
+    for rule in all_rules:
         for req in rule.get("requirements", []):
             aid = req.get("analyte_id")
             if aid is not None and aid not in known:
@@ -54,6 +57,7 @@ def main():
 
     print("REGISTRY_VALIDATION=PASS")
     print(f"ANALYTES={len(analyte_ids)}")
+    print(f"RULE_BUNDLES={len(rule_bundles)}")
     print(f"RULE_RECORDS={len(rule_ids)}")
     print("RULE_ANALYTE_REFERENCES=RESOLVED")
 
