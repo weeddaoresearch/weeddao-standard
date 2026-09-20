@@ -1,3 +1,5 @@
+> **COMPANION REGISTRY RFC BRANCH** — Experimental analyte and testing-rules registry work lives here. This does **not** modify or supersede the v0.2-draft external-review candidate. See [REGISTRIES.md](REGISTRIES.md).
+
 <p align="center"><img src="assets/weeddao-mark.svg" alt="WeedDAO" width="92"></p>
 
 # WeedDAO Cannabis Data Record v0.2 Draft
