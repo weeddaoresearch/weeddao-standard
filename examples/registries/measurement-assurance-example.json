@@ -1,0 +1,43 @@
+{
+  "assurance_version": "0.1-draft",
+  "status": "experimental",
+  "record_ref": {
+    "schema_version": "0.2-draft",
+    "record_id": "example-near-limit-result",
+    "source_id": "illustrative-only"
+  },
+  "entries": [
+    {
+      "result_path": "/lab_results/cannabinoids/total_thc",
+      "uncertainty": {
+        "kind": "expanded",
+        "value": 0.6,
+        "unit": "mg/g",
+        "coverage_factor": 2,
+        "confidence_level_percent": 95,
+        "evaluation_method": "source_reported",
+        "reported_as": "±0.6 mg/g (k=2)",
+        "source_reference": "illustrative example",
+        "notes": "Example only; not copied from a WeedDAO corpus COA."
+      },
+      "decision_rule": {
+        "rule_type": "source_reported",
+        "uncertainty_considered": true,
+        "specification": {
+          "operator": "<=",
+          "value": 10.0,
+          "unit": "mg/g",
+          "source": "illustrative specification",
+          "effective_date": null
+        },
+        "guard_band": null,
+        "rounding_rule": null,
+        "assessment": "fail",
+        "reported_as": "Illustrative conformity decision using stated uncertainty",
+        "source_reference": "illustrative example",
+        "notes": "This file demonstrates structure only and is not a regulatory determination."
+      }
+    }
+  ],
+  "notes": "Illustrative sidecar showing that result value, uncertainty, specification and conformity decision remain separate."
+}
