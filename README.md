@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/weeddao-mark.svg" alt="WeedDAO" width="92"></p>
+
 # WeedDAO Open Cannabis Data Standard
 
 **Version:** `0.1-alpha` (experimental, proposed)
