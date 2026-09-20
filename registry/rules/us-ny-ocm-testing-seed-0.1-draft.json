@@ -1,0 +1,453 @@
+{
+  "registry_version": "0.1-draft",
+  "status": "seed",
+  "jurisdiction": "New York",
+  "as_of": "2026-09-19",
+  "source_note": "Narrow seed from the New York Office of Cannabis Management Cannabis Testing Limits revision dated February 9, 2026 and current Part 130 laboratory audit requirements. This is not a complete New York compliance ruleset.",
+  "records": [
+    {
+      "registry_version": "0.1-draft",
+      "rule_id": "WDA-RULE-US-NY-OCM-LAB-FRAMEWORK",
+      "jurisdiction": {
+        "country": "US",
+        "subdivision": "US-NY",
+        "name": "New York"
+      },
+      "authority": "New York State Office of Cannabis Management",
+      "status": "active",
+      "effective": {
+        "published_date": "2026-01-30",
+        "start_date": "2026-01-30",
+        "end_date": null
+      },
+      "scope": {
+        "program": "Adult-use and medical cannabis laboratory testing",
+        "product_types": [
+          "adult-use cannabis products",
+          "medical cannabis products"
+        ],
+        "matrices": [],
+        "notes": "Narrow laboratory-qualification and quality-system seed from the current OCM Part 130 audit checklist."
+      },
+      "requirements": [
+        {
+          "requirement_id": "iso-17025-accreditation",
+          "requirement_type": "other",
+          "analyte_id": null,
+          "test_category": "laboratory_qualification",
+          "comparator": null,
+          "threshold": null,
+          "source_text_summary": "Cannabis laboratories must maintain ISO/IEC 17025 accreditation or an Office-approved accreditation based on ISO/IEC 17025.",
+          "notes": "Modeled as a laboratory qualification rule, not an analyte threshold."
+        },
+        {
+          "requirement_id": "proficiency-testing-six-months",
+          "requirement_type": "other",
+          "analyte_id": null,
+          "test_category": "proficiency_testing",
+          "comparator": null,
+          "threshold": null,
+          "source_text_summary": "Cannabis laboratories must participate in ISO/IEC 17043-approved proficiency tests every six months (+/- 30 days) and meet the Part 130 pass-history requirement.",
+          "notes": "Frequency and pass-history requirement are preserved in the source summary."
+        }
+      ],
+      "sources": [
+        {
+          "title": "NYS OCM Part 130 Checklist, Version 5",
+          "url": "https://cannabis.ny.gov/part-130-checklist",
+          "citation": "§130.7(a), §130.10(a), §130.7(b); effective 2026-01-30",
+          "retrieved_at": "2026-09-19T00:00:00Z",
+          "source_hash": null
+        }
+      ],
+      "supersedes": []
+    },
+    {
+      "registry_version": "0.1-draft",
+      "rule_id": "WDA-RULE-US-NY-OCM-PES-2026",
+      "jurisdiction": {
+        "country": "US",
+        "subdivision": "US-NY",
+        "name": "New York"
+      },
+      "authority": "New York State Office of Cannabis Management",
+      "status": "active",
+      "effective": {
+        "published_date": "2026-02-09",
+        "start_date": "2026-02-09",
+        "end_date": null
+      },
+      "scope": {
+        "program": "Adult-use and medical cannabis testing",
+        "product_types": [
+          "all final cannabis products including beverages"
+        ],
+        "matrices": [],
+        "notes": "Table 8 pesticide limits, Cannabis Testing Limits revision February 9, 2026."
+      },
+      "requirements": [
+        {
+          "requirement_id": "abamectin-action-limit",
+          "requirement_type": "action_limit",
+          "analyte_id": "WDA-AN-000016",
+          "test_category": "pesticides",
+          "comparator": "<=",
+          "threshold": {
+            "value": 0.5,
+            "unit": "ppm",
+            "unit_system": "source_native",
+            "reported_as": "0.500 ppm = 1 µg/g"
+          },
+          "source_text_summary": "New York Table 8 action limit for Abamectin.",
+          "notes": "OCM lists CAS 71751-41-2 for the analyte labeled Abamectin."
+        },
+        {
+          "requirement_id": "acephate-action-limit",
+          "requirement_type": "action_limit",
+          "analyte_id": "WDA-AN-000017",
+          "test_category": "pesticides",
+          "comparator": "<=",
+          "threshold": {
+            "value": 0.4,
+            "unit": "ppm",
+            "unit_system": "source_native",
+            "reported_as": "0.400 ppm = 1 µg/g"
+          },
+          "source_text_summary": "New York Table 8 action limit for Acephate.",
+          "notes": "OCM lists CAS 30560-19-1."
+        },
+        {
+          "requirement_id": "declared-pesticides-targeted-testing",
+          "requirement_type": "required_test",
+          "analyte_id": null,
+          "test_category": "pesticides",
+          "comparator": null,
+          "threshold": null,
+          "source_text_summary": "Any pesticide, including growth regulators and myclobutanil, used during production must be declared for targeted testing in addition to the listed pesticide contaminants.",
+          "notes": null
+        },
+        {
+          "requirement_id": "tic-reporting",
+          "requirement_type": "reporting_requirement",
+          "analyte_id": null,
+          "test_category": "pesticides",
+          "comparator": null,
+          "threshold": null,
+          "source_text_summary": "Where individual/mixed standards do not support quantitative confirmation, applicable pesticide results should be reported as TIC and the term defined in the report footnote.",
+          "notes": "Demonstrates a regulator-defined result-state/reporting semantic."
+        }
+      ],
+      "sources": [
+        {
+          "title": "NYS OCM Cannabis Testing Limits",
+          "url": "https://cannabis.ny.gov/laboratory-testing-limits",
+          "citation": "Revision February 9, 2026, Table 8",
+          "retrieved_at": "2026-09-19T00:00:00Z",
+          "source_hash": null
+        }
+      ],
+      "supersedes": []
+    },
+    {
+      "registry_version": "0.1-draft",
+      "rule_id": "WDA-RULE-US-NY-OCM-METALS-2026",
+      "jurisdiction": {
+        "country": "US",
+        "subdivision": "US-NY",
+        "name": "New York"
+      },
+      "authority": "New York State Office of Cannabis Management",
+      "status": "active",
+      "effective": {
+        "published_date": "2026-02-09",
+        "start_date": "2026-02-09",
+        "end_date": null
+      },
+      "scope": {
+        "program": "Adult-use and medical cannabis testing",
+        "product_types": [
+          "oral cannabis products",
+          "inhaled cannabis products",
+          "topicals use oral limits"
+        ],
+        "matrices": [],
+        "notes": "Table 5 trace/heavy-metal limits. Source-native units are µg/g."
+      },
+      "requirements": [
+        {
+          "requirement_id": "arsenic-oral-limit",
+          "requirement_type": "action_limit",
+          "analyte_id": "WDA-AN-000012",
+          "test_category": "heavy_metals",
+          "comparator": "<=",
+          "threshold": {
+            "value": 1.5,
+            "unit": "µg/g",
+            "unit_system": "source_native",
+            "reported_as": "1.50 µg/g"
+          },
+          "source_text_summary": "Oral limit for total arsenic.",
+          "notes": null
+        },
+        {
+          "requirement_id": "arsenic-inhalation-limit",
+          "requirement_type": "action_limit",
+          "analyte_id": "WDA-AN-000012",
+          "test_category": "heavy_metals",
+          "comparator": "<=",
+          "threshold": {
+            "value": 0.2,
+            "unit": "µg/g",
+            "unit_system": "source_native",
+            "reported_as": "0.200 µg/g"
+          },
+          "source_text_summary": "Inhalation limit for total arsenic.",
+          "notes": null
+        },
+        {
+          "requirement_id": "cadmium-oral-limit",
+          "requirement_type": "action_limit",
+          "analyte_id": "WDA-AN-000013",
+          "test_category": "heavy_metals",
+          "comparator": "<=",
+          "threshold": {
+            "value": 0.5,
+            "unit": "µg/g",
+            "unit_system": "source_native",
+            "reported_as": "0.500 µg/g"
+          },
+          "source_text_summary": "Oral limit for cadmium.",
+          "notes": null
+        },
+        {
+          "requirement_id": "cadmium-inhalation-limit",
+          "requirement_type": "action_limit",
+          "analyte_id": "WDA-AN-000013",
+          "test_category": "heavy_metals",
+          "comparator": "<=",
+          "threshold": {
+            "value": 0.2,
+            "unit": "µg/g",
+            "unit_system": "source_native",
+            "reported_as": "0.200 µg/g"
+          },
+          "source_text_summary": "Inhalation limit for cadmium.",
+          "notes": null
+        },
+        {
+          "requirement_id": "lead-oral-limit",
+          "requirement_type": "action_limit",
+          "analyte_id": "WDA-AN-000014",
+          "test_category": "heavy_metals",
+          "comparator": "<=",
+          "threshold": {
+            "value": 0.5,
+            "unit": "µg/g",
+            "unit_system": "source_native",
+            "reported_as": "0.500 µg/g"
+          },
+          "source_text_summary": "Oral limit for lead.",
+          "notes": null
+        },
+        {
+          "requirement_id": "lead-inhalation-limit",
+          "requirement_type": "action_limit",
+          "analyte_id": "WDA-AN-000014",
+          "test_category": "heavy_metals",
+          "comparator": "<=",
+          "threshold": {
+            "value": 0.5,
+            "unit": "µg/g",
+            "unit_system": "source_native",
+            "reported_as": "0.500 µg/g"
+          },
+          "source_text_summary": "Inhalation limit for lead.",
+          "notes": null
+        },
+        {
+          "requirement_id": "mercury-oral-limit",
+          "requirement_type": "action_limit",
+          "analyte_id": "WDA-AN-000015",
+          "test_category": "heavy_metals",
+          "comparator": "<=",
+          "threshold": {
+            "value": 3,
+            "unit": "µg/g",
+            "unit_system": "source_native",
+            "reported_as": "3.00 µg/g"
+          },
+          "source_text_summary": "Oral limit for total mercury.",
+          "notes": null
+        },
+        {
+          "requirement_id": "mercury-inhalation-limit",
+          "requirement_type": "action_limit",
+          "analyte_id": "WDA-AN-000015",
+          "test_category": "heavy_metals",
+          "comparator": "<=",
+          "threshold": {
+            "value": 0.1,
+            "unit": "µg/g",
+            "unit_system": "source_native",
+            "reported_as": "0.100 µg/g"
+          },
+          "source_text_summary": "Inhalation limit for total mercury.",
+          "notes": null
+        }
+      ],
+      "sources": [
+        {
+          "title": "NYS OCM Cannabis Testing Limits",
+          "url": "https://cannabis.ny.gov/laboratory-testing-limits",
+          "citation": "Revision February 9, 2026, Table 5",
+          "retrieved_at": "2026-09-19T00:00:00Z",
+          "source_hash": null
+        }
+      ],
+      "supersedes": []
+    },
+    {
+      "registry_version": "0.1-draft",
+      "rule_id": "WDA-RULE-US-NY-OCM-POTENCY-2026",
+      "jurisdiction": {
+        "country": "US",
+        "subdivision": "US-NY",
+        "name": "New York"
+      },
+      "authority": "New York State Office of Cannabis Management",
+      "status": "active",
+      "effective": {
+        "published_date": "2026-02-09",
+        "start_date": "2026-02-09",
+        "end_date": null
+      },
+      "scope": {
+        "program": "Adult-use and medical cannabis testing",
+        "product_types": [
+          "final cannabis products"
+        ],
+        "matrices": [],
+        "notes": "Potency reporting and homogeneity requirements from Tables/sections in the February 9, 2026 testing-limits document."
+      },
+      "requirements": [
+        {
+          "requirement_id": "total-thc-always-reported",
+          "requirement_type": "reporting_requirement",
+          "analyte_id": "WDA-AN-000011",
+          "test_category": "phytocannabinoid_profile",
+          "comparator": null,
+          "threshold": null,
+          "source_text_summary": "Total THC must always be reported.",
+          "notes": "Individual delta-9, delta-8 and delta-10 results may also be reported."
+        },
+        {
+          "requirement_id": "medical-labeled-potency-variance",
+          "requirement_type": "other",
+          "analyte_id": "WDA-AN-000011",
+          "test_category": "potency",
+          "comparator": null,
+          "threshold": null,
+          "source_text_summary": "Medical cannabis labeled potency acceptance is 90-110%, subject to the stated low-dose laboratory-variability provision.",
+          "notes": "Stored as a non-scalar rule because the acceptance range has lower and upper bounds."
+        },
+        {
+          "requirement_id": "adult-use-labeled-potency-variance",
+          "requirement_type": "other",
+          "analyte_id": "WDA-AN-000011",
+          "test_category": "potency",
+          "comparator": null,
+          "threshold": null,
+          "source_text_summary": "Adult-use labeled potency acceptance is 85-115%.",
+          "notes": "Stored as a non-scalar rule because the acceptance range has lower and upper bounds."
+        },
+        {
+          "requirement_id": "homogeneity-five-samples",
+          "requirement_type": "sampling_rule",
+          "analyte_id": null,
+          "test_category": "homogeneity",
+          "comparator": null,
+          "threshold": null,
+          "source_text_summary": "Five samples across a cannabis product batch or lot must be tested for potency for applicable final concentrates and edible products.",
+          "notes": null
+        },
+        {
+          "requirement_id": "homogeneity-25-percent-of-mean",
+          "requirement_type": "other",
+          "analyte_id": "WDA-AN-000011",
+          "test_category": "homogeneity",
+          "comparator": null,
+          "threshold": null,
+          "source_text_summary": "For applicable products, each submitted sample's total THC and CBD concentration per single dose generally must be within 25% of the mean for the lot; a separate 0.5 mg rule applies to specified concentrations below 2 mg per dose.",
+          "notes": "Rule also applies to total CBD; only Total THC is linked here because the current seed has a stable Total THC ID and the range is not representable as one scalar threshold."
+        }
+      ],
+      "sources": [
+        {
+          "title": "NYS OCM Cannabis Testing Limits",
+          "url": "https://cannabis.ny.gov/laboratory-testing-limits",
+          "citation": "Revision February 9, 2026, phytocannabinoid profile and homogeneity sections",
+          "retrieved_at": "2026-09-19T00:00:00Z",
+          "source_hash": null
+        }
+      ],
+      "supersedes": []
+    },
+    {
+      "registry_version": "0.1-draft",
+      "rule_id": "WDA-RULE-US-NY-OCM-MICROBIAL-REPORTING-2026",
+      "jurisdiction": {
+        "country": "US",
+        "subdivision": "US-NY",
+        "name": "New York"
+      },
+      "authority": "New York State Office of Cannabis Management",
+      "status": "active",
+      "effective": {
+        "published_date": "2026-02-09",
+        "start_date": "2026-02-09",
+        "end_date": null
+      },
+      "scope": {
+        "program": "Adult-use and medical cannabis testing",
+        "product_types": [
+          "adult-use unextracted cannabis products",
+          "adult-use mixed unextracted/extracted or infused cannabis products"
+        ],
+        "matrices": [],
+        "notes": "Narrow record for the adult-use Total Viable Aerobic Bacteria Count and Total Yeast/Mold Count report-results-only treatment."
+      },
+      "requirements": [
+        {
+          "requirement_id": "adult-use-unextracted-tvab-report-only",
+          "requirement_type": "reporting_requirement",
+          "analyte_id": null,
+          "test_category": "total_viable_aerobic_bacteria_count",
+          "comparator": null,
+          "threshold": null,
+          "source_text_summary": "For specified adult-use unextracted cannabis products, Total Viable Aerobic Bacteria Count is required but has no defined limit and is report-results-only.",
+          "notes": "Important distinction: required test does not necessarily imply a pass/fail action limit."
+        },
+        {
+          "requirement_id": "adult-use-unextracted-tym-report-only",
+          "requirement_type": "reporting_requirement",
+          "analyte_id": null,
+          "test_category": "total_yeast_and_mold_count",
+          "comparator": null,
+          "threshold": null,
+          "source_text_summary": "For specified adult-use unextracted cannabis products, Total Yeast and Mold Count is required but has no defined limit and is report-results-only.",
+          "notes": "Important distinction: required test does not necessarily imply a pass/fail action limit."
+        }
+      ],
+      "sources": [
+        {
+          "title": "NYS OCM Cannabis Testing Limits",
+          "url": "https://cannabis.ny.gov/laboratory-testing-limits",
+          "citation": "Revision February 9, 2026, Table 3",
+          "retrieved_at": "2026-09-19T00:00:00Z",
+          "source_hash": null
+        }
+      ],
+      "supersedes": []
+    }
+  ]
+}
