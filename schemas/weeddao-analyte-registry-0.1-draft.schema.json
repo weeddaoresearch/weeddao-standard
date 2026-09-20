@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WeedDAO Canonical Analyte Registry Record 0.1-draft",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "registry_version",
+    "analyte_id",
+    "canonical_name",
+    "target_type",
+    "category",
+    "status"
+  ],
+  "properties": {
+    "registry_version": { "const": "0.1-draft" },
+    "analyte_id": {
+      "type": "string",
+      "pattern": "^WDA-AN-[0-9]{6}$"
+    },
+    "canonical_name": { "type": "string", "minLength": 1 },
+    "target_type": {
+      "enum": ["chemical", "microbial", "physical", "derived_metric", "other"]
+    },
+    "category": { "type": "string", "minLength": 1 },
+    "status": {
+      "enum": ["provisional", "active", "deprecated"]
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["label"],
+        "properties": {
+          "label": { "type": "string", "minLength": 1 },
+          "context": { "type": ["string", "null"] },
+          "source": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "external_identifiers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["scheme", "value"],
+        "properties": {
+          "scheme": { "type": "string", "minLength": 1 },
+          "value": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "measurement_dimensions": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "replaced_by": {
+      "type": ["string", "null"],
+      "pattern": "^WDA-AN-[0-9]{6}$"
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["title"],
+        "properties": {
+          "title": { "type": "string", "minLength": 1 },
+          "url": { "type": ["string", "null"], "format": "uri" },
+          "note": { "type": ["string", "null"] }
+        }
+      }
+    }
+  }
+}
