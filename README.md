@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/weeddao-mark.svg" alt="WeedDAO" width="92"></p>
+
 # WeedDAO Cannabis Data Record v0.2 Draft
 
 **Status:** **EXTERNAL REVIEW CANDIDATE** — experimental working draft on branch `v0.2-draft`
