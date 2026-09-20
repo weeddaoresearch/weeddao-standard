@@ -1,0 +1,83 @@
+{
+  "registry_version": "0.1-draft",
+  "status": "seed",
+  "jurisdiction": "Oregon",
+  "as_of": "2026-09-19",
+  "source_note": "Narrow seed from the active Oregon OAR 333-007-0400 Exhibit A Table 3 effective March 31, 2022. Oregon OHA is conducting separate 2026 rulemaking; proposed changes are not encoded here as active law.",
+  "records": [
+    {
+      "registry_version": "0.1-draft",
+      "rule_id": "WDA-RULE-US-OR-OHA-PES-ACTIVE",
+      "jurisdiction": {
+        "country": "US",
+        "subdivision": "US-OR",
+        "name": "Oregon"
+      },
+      "authority": "Oregon Health Authority",
+      "status": "active",
+      "effective": {
+        "published_date": "2022-03-15",
+        "start_date": "2022-03-31",
+        "end_date": null
+      },
+      "scope": {
+        "program": "Marijuana and industrial hemp-derived vapor item compliance testing",
+        "product_types": [
+          "marijuana items required to be tested for pesticides",
+          "industrial hemp-derived vapor items required to be tested for pesticides"
+        ],
+        "matrices": [],
+        "notes": "OAR 333-007-0400 requires testing for all analytes in Exhibit A Table 3; a batch fails if a pesticide is detected above the listed action level."
+      },
+      "requirements": [
+        {
+          "requirement_id": "abamectin-action-limit",
+          "requirement_type": "action_limit",
+          "analyte_id": "WDA-AN-000016",
+          "test_category": "pesticides",
+          "comparator": "<=",
+          "threshold": {
+            "value": 0.5,
+            "unit": "ppm",
+            "unit_system": "source_native",
+            "reported_as": "0.5 ppm"
+          },
+          "source_text_summary": "Oregon Exhibit A Table 3 action level for Abamectin.",
+          "notes": "Oregon source lists CAS 71751-41-2 for the analyte labeled Abamectin."
+        },
+        {
+          "requirement_id": "acephate-action-limit",
+          "requirement_type": "action_limit",
+          "analyte_id": "WDA-AN-000017",
+          "test_category": "pesticides",
+          "comparator": "<=",
+          "threshold": {
+            "value": 0.4,
+            "unit": "ppm",
+            "unit_system": "source_native",
+            "reported_as": "0.4 ppm"
+          },
+          "source_text_summary": "Oregon Exhibit A Table 3 action level for Acephate.",
+          "notes": "Oregon source lists CAS 30560-19-1."
+        }
+      ],
+      "sources": [
+        {
+          "title": "OAR 333-007-0400 Exhibit A, Table 3 — Pesticide analytes and action levels",
+          "url": "https://www.oregon.gov/oha/PH/DISEASESCONDITIONS/CHRONICDISEASE/MEDICALMARIJUANAPROGRAM/Documents/rules/333-007-0400_0410_0415_0425_Exhibit_A_eff_March312022.pdf",
+          "citation": "Oregon OAR 333-007-0400, Exhibit A, Table 3; effective March 31, 2022",
+          "retrieved_at": "2026-09-19T00:00:00Z",
+          "source_hash": null
+        },
+        {
+          "title": "Oregon Secretary of State — OAR 333-007-0400 Standards for Pesticides Compliance Testing",
+          "url": "https://secure.sos.state.or.us/oard/viewSingleRule.action?ruleVrsnRsn=287425",
+          "citation": "OAR 333-007-0400",
+          "retrieved_at": "2026-09-19T00:00:00Z",
+          "source_hash": null
+        }
+      ],
+      "supersedes": []
+    }
+  ]
+}
