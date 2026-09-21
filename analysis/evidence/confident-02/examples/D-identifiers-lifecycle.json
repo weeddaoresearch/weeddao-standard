@@ -1,0 +1,99 @@
+{
+  "schema_version": "0.2-draft",
+  "record_id": "confident-02-ex-D-ids-lifecycle",
+  "created_at": "2026-09-21T19:00:00Z",
+  "subject": {
+    "subject_type": "product_batch",
+    "subject_id": "BD-2026-03-A",
+    "name": "Blue Dream - Cured Flower",
+    "product_type": "flower",
+    "matrix": "Flower - Cured",
+    "external_identifiers": [
+      {
+        "scheme": "confident.sample_id",
+        "value": "2603CAL0142.0001"
+      },
+      {
+        "scheme": "metrc.tag",
+        "value": "1A4060300003B01000001234",
+        "jurisdiction": "US-OR",
+        "scope": "sample"
+      },
+      {
+        "scheme": "metrc.source",
+        "value": "1A4060300003B01000000987",
+        "jurisdiction": "US-OR",
+        "scope": "batch"
+      },
+      {
+        "scheme": "producer.lot",
+        "value": "LOT-2026-0311"
+      },
+      {
+        "scheme": "regulator.harvest",
+        "value": "HV-2026-01-BD"
+      },
+      {
+        "scheme": "regulator.manifest",
+        "value": "0000123456"
+      }
+    ]
+  },
+  "cultivar": {
+    "reported_name": "Blue Dream",
+    "identity_status": "reported"
+  },
+  "lab_results": {
+    "lab_name": "Cascade Analytical Labs",
+    "lab_id": "118",
+    "tested_at": "2026-03-17T00:00:00Z",
+    "sample": {
+      "sample_id": "2603CAL0142.0001",
+      "collected_at": "2026-03-10T00:00:00Z",
+      "produced_at": "2026-02-24T00:00:00Z",
+      "reported_at": "2026-03-18T14:05:51Z",
+      "matrix": "Flower - Cured",
+      "notes": "Lifecycle events kept distinct; date_published/last_modified not substituted (M025)."
+    },
+    "cannabinoids": {
+      "total_thc": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 21.4,
+            "unit": "%"
+          }
+        ],
+        "notes": "From lab_data.thc_total; calculation 'thca * 0.877 + d9_thc' in extensions",
+        "provenance": "laboratory_verified"
+      }
+    }
+  },
+  "extensions": {
+    "confident": {
+      "example": "D",
+      "date_published": "2026-03-18T14:05:51",
+      "calculations": {
+        "thc_total": "thca * 0.877 + d9_thc"
+      },
+      "sizes_intentionally_omitted": true,
+      "mappings_used": [
+        "M001",
+        "M003",
+        "M004",
+        "M005",
+        "M006",
+        "M007",
+        "M010",
+        "M012",
+        "M013",
+        "M017",
+        "M021",
+        "M022",
+        "M023",
+        "M024",
+        "M040"
+      ]
+    }
+  }
+}

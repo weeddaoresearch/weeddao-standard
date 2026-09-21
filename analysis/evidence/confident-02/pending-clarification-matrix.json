@@ -1,0 +1,28 @@
+{
+  "Q1": {
+    "topic": "ND / Not Detected and below LOQ/LOD representation",
+    "question": "How should ND / Not Detected and below-LOQ / below-LOD appear on GET /v0/clients/sample/{id} lab_data.categories.*.compounds \u2014 omitted row, value 0, empty string, qualifier, distinct token, or other? How do value, lod, loq, and qualifiers interact?",
+    "blocks_mappings": [
+      "M033",
+      "M034"
+    ],
+    "status": "PENDING_STEVE"
+  },
+  "Q2": {
+    "topic": "secondary_report_units vs second numeric",
+    "question": "When secondary_report_units is set, does GET ever return a second numeric for the same compound, or only a display conversion / category-level unit hint?",
+    "blocks_mappings": [
+      "M029",
+      "M035"
+    ],
+    "status": "PENDING_STEVE"
+  },
+  "Q3": {
+    "topic": "ordered/required analyte not run",
+    "question": "For an ordered/required panel analyte that was not run, is omission the only signal, or can status/qualifiers (or another field) mark not tested / not performed?",
+    "blocks_mappings": [
+      "M036"
+    ],
+    "status": "PENDING_STEVE"
+  }
+}

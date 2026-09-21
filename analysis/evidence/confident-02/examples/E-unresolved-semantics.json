@@ -1,0 +1,88 @@
+{
+  "schema_version": "0.2-draft",
+  "record_id": "confident-02-ex-E-unresolved-semantics",
+  "created_at": "2026-09-21T19:00:00Z",
+  "subject": {
+    "subject_type": "product_batch",
+    "subject_id": "SYNTH-UNRESOLVED-001",
+    "name": "Synthetic Unresolved Semantics Case",
+    "product_type": "flower"
+  },
+  "lab_results": {
+    "lab_name": "Example Lab",
+    "notes": "This record intentionally maps ONLY documented detected numeric for thca. ND, below-LOQ, multi-unit, and not-performed for omitted compounds are UNRESOLVED and are NOT invented (M033\u2013M036).",
+    "cannabinoids": {
+      "thca": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 18.5,
+            "unit": "%"
+          }
+        ],
+        "limits": [
+          {
+            "type": "LOD",
+            "value": 0.01,
+            "unit": "%"
+          },
+          {
+            "type": "LOQ",
+            "value": 0.05,
+            "unit": "%"
+          }
+        ],
+        "notes": "LOD/LOQ present; below-LOQ state NOT asserted (UNRESOLVED M034)."
+      }
+    }
+  },
+  "extensions": {
+    "confident": {
+      "example": "E",
+      "unresolved_semantics": {
+        "ND_or_not_detected": {
+          "mapping_ids": [
+            "M033"
+          ],
+          "status": "UNRESOLVED",
+          "action": "Do not emit result_state=not_detected without Confident clarification (Q1)."
+        },
+        "below_loq_or_lod": {
+          "mapping_ids": [
+            "M034"
+          ],
+          "status": "UNRESOLVED",
+          "action": "Do not emit result_state=below_reporting_limit from loq/lod presence alone (Q1)."
+        },
+        "concurrent_multi_unit": {
+          "mapping_ids": [
+            "M029",
+            "M035"
+          ],
+          "status": "UNRESOLVED",
+          "observed": {
+            "report_units": "%",
+            "secondary_report_units": "mg/g",
+            "compound_value_count": 1
+          },
+          "action": "Do not synthesize second Measurement from secondary_report_units (Q2)."
+        },
+        "ordered_analyte_not_run": {
+          "mapping_ids": [
+            "M036"
+          ],
+          "status": "UNRESOLVED",
+          "observed": {
+            "omitted_compound_example": "cbd not present in compounds array"
+          },
+          "action": "Do not emit not_tested/not_performed for omitted compounds (Q3)."
+        }
+      },
+      "pending_questions": [
+        "Q1",
+        "Q2",
+        "Q3"
+      ]
+    }
+  }
+}

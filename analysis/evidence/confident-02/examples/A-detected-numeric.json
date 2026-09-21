@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.2-draft",
+  "record_id": "confident-02-ex-A-detected",
+  "created_at": "2026-09-21T19:00:00Z",
+  "subject": {
+    "subject_type": "product_batch",
+    "subject_id": "BD-2026-03-A",
+    "name": "Blue Dream - Cured Flower",
+    "product_type": "flower",
+    "matrix": "Flower - Cured"
+  },
+  "cultivar": {
+    "reported_name": "Blue Dream",
+    "identity_status": "reported"
+  },
+  "lab_results": {
+    "lab_name": "Cascade Analytical Labs",
+    "lab_id": "118",
+    "tested_at": "2026-03-17T00:00:00Z",
+    "cannabinoids": {
+      "thca": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 23.85,
+            "unit": "%"
+          }
+        ],
+        "method": "HPLC-DAD",
+        "provenance": "laboratory_verified",
+        "notes": "Confident compound_key=thca; report_units=%"
+      }
+    }
+  },
+  "extensions": {
+    "confident": {
+      "example": "A",
+      "source": "synthetic from documented GET Sample shape",
+      "mappings_used": [
+        "M012",
+        "M013",
+        "M017",
+        "M018",
+        "M024",
+        "M027",
+        "M028",
+        "M039"
+      ]
+    }
+  }
+}

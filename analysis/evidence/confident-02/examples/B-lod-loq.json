@@ -1,0 +1,53 @@
+{
+  "schema_version": "0.2-draft",
+  "record_id": "confident-02-ex-B-lod-loq",
+  "created_at": "2026-09-21T19:00:00Z",
+  "subject": {
+    "subject_type": "product_batch",
+    "subject_id": "BD-2026-03-A",
+    "name": "Blue Dream - Cured Flower",
+    "product_type": "flower"
+  },
+  "lab_results": {
+    "lab_name": "Cascade Analytical Labs",
+    "cannabinoids": {
+      "thc": {
+        "result_state": "detected",
+        "measurements": [
+          {
+            "value": 0.48,
+            "unit": "%"
+          }
+        ],
+        "limits": [
+          {
+            "type": "LOD",
+            "value": 0.01,
+            "unit": "%"
+          },
+          {
+            "type": "LOQ",
+            "value": 0.03,
+            "unit": "%"
+          }
+        ],
+        "provenance": "laboratory_verified",
+        "notes": "Confident compound_key=d9_thc mapped to thc. LOD/LOQ present; result_state remains detected because below-LOQ state is UNRESOLVED (M034)."
+      }
+    }
+  },
+  "extensions": {
+    "confident": {
+      "example": "B",
+      "mappings_used": [
+        "M027",
+        "M028",
+        "M030",
+        "M031"
+      ],
+      "unresolved_not_applied": [
+        "M034"
+      ]
+    }
+  }
+}
