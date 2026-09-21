@@ -1,0 +1,300 @@
+{
+  "CONFIDENT_01_STATUS": "COMPLETE",
+  "sources": {
+    "official_docs_base": "https://api.confidentcannabis.com/v0/docs/",
+    "clients_get_sample": "https://api.confidentcannabis.com/v0/docs/clients/get-sample-details.md",
+    "labs_get_sample": "https://api.confidentcannabis.com/v0/docs/labs/get-sample-details.md",
+    "post_test_results": "https://api.confidentcannabis.com/v0/docs/labs/post-sample-test-results.md",
+    "compounds": "https://api.confidentcannabis.com/v0/docs/get-compound.md",
+    "order_lifecycle": "https://api.confidentcannabis.com/v0/docs/order-lifecycle.md",
+    "api_version_note": "v0 API under active development; docs indexed as v0.16.0 via llms.txt",
+    "weeddao_schema": "schemas/weeddao-record-v0.2-draft.schema.json",
+    "weeddao_branch_ref": "v0.2-draft @ ff294e7 (schema not modified by this task)",
+    "retrieved_at": "2026-09-21T19:51:34Z"
+  },
+  "counts": {
+    "CONFIDENT_FIELDS_REVIEWED": 42,
+    "EXACT": 14,
+    "PARTIAL": 19,
+    "NOT_REPRESENTABLE": 4,
+    "NOT_APPLICABLE": 5
+  },
+  "crosswalk": [
+    {
+      "confident": "sample.id",
+      "weeddao": "record_id and/or lab_results.sample.sample_id / ExternalIdentifier",
+      "class": "PARTIAL",
+      "notes": "Confident sample ID is Confident-scoped; map as record_id or lab.sample identifier, not cultivation_batch_id."
+    },
+    {
+      "confident": "sample public key / path sample_id aliases",
+      "weeddao": "ExternalIdentifier (scheme open)",
+      "class": "EXACT",
+      "notes": "Can carry confident.public_key / lab_internal_id as identifiers."
+    },
+    {
+      "confident": "regulator_sample_id",
+      "weeddao": "subject.external_identifiers / lab_results identifiers (e.g. metrc.tag)",
+      "class": "EXACT",
+      "notes": "Open ExternalIdentifier schemes fit Metrc/BioTrack/Leaf IDs."
+    },
+    {
+      "confident": "regulator_batch_id",
+      "weeddao": "subject.external_identifiers (e.g. metrc.source/package)",
+      "class": "EXACT",
+      "notes": ""
+    },
+    {
+      "confident": "harvest_id",
+      "weeddao": "subject.external_identifiers; may inform subject_type=harvest_lot",
+      "class": "PARTIAL",
+      "notes": "ID maps; subject_type inference still requires product/matrix context."
+    },
+    {
+      "confident": "batch_id (client IMS)",
+      "weeddao": "subject.subject_id (when product_batch/harvest_lot)",
+      "class": "PARTIAL",
+      "notes": "Good subject_id candidate; not always cultivation batch."
+    },
+    {
+      "confident": "lot_id / regulator_lot_id / production_run_id / manifest_id",
+      "weeddao": "ExternalIdentifier extensions",
+      "class": "EXACT",
+      "notes": "Preserve as identifiers; core subject has one subject_id."
+    },
+    {
+      "confident": "regulator_sample_id2 / regulator_batch_id2 (Leaf pre-transfer)",
+      "weeddao": "ExternalIdentifier",
+      "class": "EXACT",
+      "notes": "Jurisdiction-specific; open scheme strings."
+    },
+    {
+      "confident": "sample_name",
+      "weeddao": "subject.name",
+      "class": "EXACT",
+      "notes": "Do not put into cultivar."
+    },
+    {
+      "confident": "strain_name",
+      "weeddao": "cultivar.reported_name",
+      "class": "EXACT",
+      "notes": "Genetics only when present."
+    },
+    {
+      "confident": "sample_type_name / category / industry / classification / production_method",
+      "weeddao": "subject.product_type / matrix; classification\u2192OUT_OF_SCOPE or extension",
+      "class": "PARTIAL",
+      "notes": "Type/category/matrix map loosely; Hybrid classification is analytics/metadata, not core genetics verification."
+    },
+    {
+      "confident": "batch_size / lot_size / production_run_size (+ units)",
+      "weeddao": "no dedicated core quantity fields",
+      "class": "NOT_REPRESENTABLE",
+      "notes": "Optional extension only in v0.2-draft; not required for interop of results."
+    },
+    {
+      "confident": "units_per_serving / servings_per_container / unit_description / container_description",
+      "weeddao": "measurement.basis / basis_quantity; sample/category info_fields overlap",
+      "class": "PARTIAL",
+      "notes": "Serving/unit basis can be expressed on measurements; container marketing text is optional metadata."
+    },
+    {
+      "confident": "lab.id / lab.name",
+      "weeddao": "lab_results.lab_id / lab_name",
+      "class": "EXACT",
+      "notes": ""
+    },
+    {
+      "confident": "order_id / order_status_* / client_id",
+      "weeddao": "extensions / optional notes",
+      "class": "NOT_APPLICABLE",
+      "notes": "LIMS workflow state, not cannabis record core."
+    },
+    {
+      "confident": "test_packages / test_types",
+      "weeddao": "lab_results notes / extensions; panels via safety categories",
+      "class": "PARTIAL",
+      "notes": "Package catalog is Confident commercial; test_types align roughly to panel categories."
+    },
+    {
+      "confident": "has_coa / coa / coa_additions / images / public_url",
+      "weeddao": "extensions / provenance links",
+      "class": "PARTIAL",
+      "notes": "URLs expire for some file links; public_url is useful provenance, not core analyte semantics."
+    },
+    {
+      "confident": "date_samples_collected",
+      "weeddao": "lab_results.sample.collected_at",
+      "class": "EXACT",
+      "notes": ""
+    },
+    {
+      "confident": "production_date",
+      "weeddao": "lab_results.sample.produced_at",
+      "class": "EXACT",
+      "notes": ""
+    },
+    {
+      "confident": "lab_data.date_reported",
+      "weeddao": "lab_results.sample.reported_at",
+      "class": "EXACT",
+      "notes": "Confident: COA/data upload/report time."
+    },
+    {
+      "confident": "categories.*.info_fields.date_tested",
+      "weeddao": "lab_results.tested_at and/or per-panel notes",
+      "class": "PARTIAL",
+      "notes": "WeedDAO has one primary tested_at; multi-assay dates need notes/extensions or repeated panel metadata."
+    },
+    {
+      "confident": "date_published / last_modified / lab_data.date_created",
+      "weeddao": "created_at/updated_at or extensions",
+      "class": "PARTIAL",
+      "notes": "Platform timestamps \u2260 sample lifecycle events; do not conflate with collected/tested/reported."
+    },
+    {
+      "confident": "received_at",
+      "weeddao": "lab_results.sample.received_at",
+      "class": "NOT_APPLICABLE",
+      "notes": "Not observed as a first-class field on clients GET Sample docs reviewed."
+    },
+    {
+      "confident": "compounds[].name (compound_key) + GET /compounds synonyms",
+      "weeddao": "cannabinoid keys / terpenes[].name / NamedAnalyteResult; alias via registry later",
+      "class": "PARTIAL",
+      "notes": "Stable Confident keys exist; not WeedDAO analyte IDs. Synonym list helps mapping."
+    },
+    {
+      "confident": "compounds[].value (string numeric) + category report/input units",
+      "weeddao": "AnalyteResult.result_state=detected + measurements[]",
+      "class": "PARTIAL",
+      "notes": "Numeric detected maps cleanly. Docs require name+value; ND representation not documented as a distinct non-numeric state on GET Sample."
+    },
+    {
+      "confident": "input_units / report_units / secondary_report_units / unit_weight / ml_weight",
+      "weeddao": "measurements[].unit + basis/basis_quantity",
+      "class": "PARTIAL",
+      "notes": "Category-level dual display units \u2260 concurrent per-analyte multi-unit measurements. GET docs say most compound values converted to report unit."
+    },
+    {
+      "confident": "concurrent % and mg/g (or mg/serving) on same analyte in one payload",
+      "weeddao": "measurements[] multi-unit",
+      "class": "NOT_REPRESENTABLE",
+      "notes": "Public GET Sample shape exposes one compound value (in report units) plus category secondary_report_units\u2014not a second numeric per compound in the documented GET schema."
+    },
+    {
+      "confident": "compounds[].lod",
+      "weeddao": "limits[{type:LOD}]",
+      "class": "EXACT",
+      "notes": "When present and numeric."
+    },
+    {
+      "confident": "compounds[].loq",
+      "weeddao": "limits[{type:LOQ}]",
+      "class": "EXACT",
+      "notes": ""
+    },
+    {
+      "confident": "compounds[].limit",
+      "weeddao": "limits[{type:action_limit|regulatory_limit|other}]",
+      "class": "PARTIAL",
+      "notes": "Confident: fail threshold. WeedDAO should prefer action_limit/regulatory_limit when known; else other + ambiguity flag\u2014same pattern as Cannlytics generic limit."
+    },
+    {
+      "confident": "compounds[].max / limitrangelow / limitrangehigh",
+      "weeddao": "limits[] other / extensions",
+      "class": "PARTIAL",
+      "notes": "Range/ULOQ semantics not first-class named limit types in WeedDAO beyond other."
+    },
+    {
+      "confident": "compounds[].qualifiers",
+      "weeddao": "reported_as / notes",
+      "class": "PARTIAL",
+      "notes": "Free-text regulator qualifiers; may encode ND/<LOQ if used\u2014needs Confident clarification."
+    },
+    {
+      "confident": "compounds[].rsd/rpd/stdev/spike/purity_percent/regulatornotes",
+      "weeddao": "extensions / notes",
+      "class": "NOT_APPLICABLE",
+      "notes": "QC/regulatory posting metadata; not core interchange for WeedDAO v0.2-draft."
+    },
+    {
+      "confident": "ND / not detected as distinct semantic",
+      "weeddao": "result_state=not_detected",
+      "class": "NOT_REPRESENTABLE",
+      "notes": "Official POST docs: never include compounds not tested; value required as numeric string. No documented ND token on compound.value in reviewed pages. Risk: ND collapsed to omission or zero in practice\u2014ASK Confident."
+    },
+    {
+      "confident": "below LOQ / <LOQ as distinct semantic",
+      "weeddao": "result_state=below_reporting_limit + limits",
+      "class": "NOT_REPRESENTABLE",
+      "notes": "Not documented as a compound value mode in public GET/POST sample docs reviewed. loq field can exist alongside a numeric value without stating below-LOQ."
+    },
+    {
+      "confident": "not tested (omit compound)",
+      "weeddao": "result_state=not_tested OR omit analyte",
+      "class": "PARTIAL",
+      "notes": "Confident instructs omit untested compounds. WeedDAO can omit or use not_tested; omission loses explicit 'was in scope but not tested' vs 'not in panel'."
+    },
+    {
+      "confident": "not_performed as distinct from not_tested",
+      "weeddao": "result_state=not_performed",
+      "class": "NOT_APPLICABLE",
+      "notes": "Not present in Confident GET Sample docs reviewed."
+    },
+    {
+      "confident": "category info_fields.status 1/2/3",
+      "weeddao": "safety.*.status pass/fail; assessment; completed\u2192not_applicable-ish",
+      "class": "PARTIAL",
+      "notes": "1=passed,2=failed,3=completed (no pass/fail limits). Maps to panel status; completed\u2260not_tested."
+    },
+    {
+      "confident": "lab_data.status 1/2/3 overall",
+      "weeddao": "outcomes / extensions",
+      "class": "PARTIAL",
+      "notes": "Overall sample pass/fail/completed; WeedDAO should not invent panel fails from overall alone."
+    },
+    {
+      "confident": "thc_total / cbd_total / cannabinoid_total / terpene_total + *_calculation",
+      "weeddao": "total_thc / total_cbd / total_cannabinoids / total_terpenes + notes",
+      "class": "PARTIAL",
+      "notes": "Totals map; calculation formula strings are presentation/provenance\u2014keep in notes/extensions."
+    },
+    {
+      "confident": "info_fields.method",
+      "weeddao": "AnalyteResult.method or panel notes",
+      "class": "EXACT",
+      "notes": "String method eg HPLC."
+    },
+    {
+      "confident": "signatory_name / title / footnotes / wet_weight / dry_weight",
+      "weeddao": "extensions / notes",
+      "class": "NOT_APPLICABLE",
+      "notes": "CoA presentation/QC aliquot metadata."
+    }
+  ],
+  "SEMANTIC_LOSS_RISKS": [
+    "ND / not-detected may be invisible in GET Sample if Confident only stores numeric values and omits ND analytes\u2014or stores 0\u2014docs do not define an ND value token.",
+    "Below-LOQ may be indistinguishable from a low detected value unless qualifiers encode it.",
+    "Not-tested is omission-only; cannot distinguish 'panel not ordered' vs 'analyte not run' without test_packages/test_types context.",
+    "Multi-unit: secondary_report_units is category-level; GET payload does not document dual numeric measurements per compound.",
+    "Per-assay date_tested collapses awkwardly into a single lab_results.tested_at.",
+    "Generic compound.limit fail-threshold type is under-specified relative to WeedDAO action vs regulatory vs reporting limits."
+  ],
+  "TOP_GAPS": [
+    "Undocumented ND / below-limit compound value semantics on public API",
+    "No concurrent multi-measurement array per analyte on GET Sample",
+    "Omission-based not-tested loses explicit analyte-level NOT_PERFORMED/NOT_TESTED distinction",
+    "Batch/lot/run size quantities not in WeedDAO v0.2 core (optional\u2014not blocking results interop)"
+  ],
+  "QUESTIONS_FOR_CONFIDENT": [
+    "How should ND / Not Detected appear on GET /v0/clients/sample/{id} lab_data.categories.*.compounds\u2014omitted row, value 0, empty string, qualifier, or other?",
+    "How should below-LOQ / <LOQ / <LOD appear relative to compounds[].value, loq, lod, and qualifiers?",
+    "When secondary_report_units is set, does GET ever return a second numeric for the same compound, or only a display conversion client-side?",
+    "For a required panel analyte that was not run, is omission the only signal, or can status/qualifiers mark not tested / not performed?",
+    "Is compounds[].limit always an action/fail threshold, or can it mean reporting limit in some categories/states?",
+    "Are draft (unpublished) results ever visible to authorized third-party client API keys, or only published lab_data?"
+  ],
+  "SCHEMA_CHANGE_RECOMMENDED": "NO",
+  "RECOMMENDATION": "Treat Confident GET Sample as a strong structured source for identity, Metrc IDs, lifecycle dates, panel pass/fail, LOD/LOQ numerics, and detected values. Do not change WeedDAO v0.2-draft yet\u2014ask Steve the ND/below-limit/multi-unit questions first. Prefer mapping detected+limits+panel status with existing AnalyteResult; park sizes/signatories/Metrc-specific info_fields in extensions."
+}
