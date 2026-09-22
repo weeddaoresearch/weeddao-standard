@@ -8,8 +8,8 @@
 
 - **MAPPING_RECORDS** = 42
 - **EXACT** = 18
-- **PARTIAL** = 15
-- **UNRESOLVED** = 5
+- **PARTIAL** = 20
+- **UNRESOLVED** = 0
 - **NOT_APPLICABLE** = 4
 
 ## Classification note
