@@ -1,6 +1,6 @@
 # CONFIDENT-02 — Confident LIMS → WeedDAO v0.2-draft Mapping Artifact
 
-**Status:** COMPLETE. Evidence/mapping only. **No schema changes. No connector.**
+**Status:** COMPLETE + EXTERNAL CLARIFICATION RESOLVED (2026-09-22). Evidence/mapping only. **No schema changes. No connector.**
 
 **Baseline:** CONFIDENT-01 @ `f8bfa71` on `cannlytics-compat`. Schema: `schemas/weeddao-record-v0.2-draft.schema.json` unchanged.
 
@@ -14,7 +14,7 @@
 
 ## Classification note
 
-CONFIDENT-01 `NOT_REPRESENTABLE` for ND / below-limit / multi-unit / not-run are recorded here as **UNRESOLVED** (no invented behavior). Size quantities and LIMS workflow fields remain **NOT_APPLICABLE** to core.
+CONFIDENT-01 `NOT_REPRESENTABLE` for ND / below-limit / multi-unit / not-run were initially recorded here as **UNRESOLVED** (no invented behavior). On 2026-09-22, Steve Albarran (Confident LIMS) clarified those API semantics. The clarification does **not** require a WeedDAO schema change. Size quantities and LIMS workflow fields remain **NOT_APPLICABLE** to core.
 
 ## Mapping records
 
@@ -50,14 +50,14 @@ See `confident-02-mapping.json` for full machine-readable records (M001–M042).
 | M026 | received_at | **NOT_APPLICABLE** | `lab_results.sample.received_at` |
 | M027 | compounds[].name | **PARTIAL** | `lab_results.cannabinoids.<key> | terpenes[].name | safety.*.analytes[].name | cannabinoids.other[].name` |
 | M028 | compounds[].value + report/input units (detected numeric) | **PARTIAL** | `AnalyteResult.result_state=detected + measurements[{value,unit}]` |
-| M029 | secondary_report_units | **UNRESOLVED** | `extensions.confident.secondary_report_units OR second Measurement IF and only if a second numeric exists (not documented)` |
+| M029 | secondary_report_units | **PARTIAL** | API returns one canonical numeric unit per test category; primary/secondary report units are presentation targets and require downstream conversion using payload context |
 | M030 | compounds[].lod | **EXACT** | `AnalyteResult.limits[{type:LOD,value,unit}]` |
 | M031 | compounds[].loq | **EXACT** | `AnalyteResult.limits[{type:LOQ,value,unit}]` |
 | M032 | compounds[].limit (fail threshold) | **PARTIAL** | `AnalyteResult.limits[{type:action_limit|other,value,unit}]` |
-| M033 | ND / Not Detected | **UNRESOLVED** | `AnalyteResult.result_state=not_detected (TARGET if clarified)` |
-| M034 | below-LOQ / below-LOD state | **UNRESOLVED** | `AnalyteResult.result_state=below_reporting_limit (TARGET if clarified)` |
-| M035 | concurrent multi-unit numeric per compound | **UNRESOLVED** | `measurements[] (multi) — TARGET if clarified` |
-| M036 | ordered/required analyte not run | **UNRESOLVED** | `result_state=not_tested|not_performed OR omit — TARGET if clarified` |
+| M033 | ND / Not Detected | **PARTIAL** | API returns the underlying numeric value (including `0`) plus LOD/LOQ; COA may render ND/Not Detected, so report-facing state must not be inferred from numeric value alone |
+| M034 | below-LOQ / below-LOD state | **PARTIAL** | API returns numeric value and LOD/LOQ; consumer may derive below-limit interpretation, but the API does not supply a distinct below-limit state |
+| M035 | concurrent multi-unit numeric per compound | **PARTIAL** | API returns exactly one canonical numeric value per category; alternate report-unit values must be derived downstream from payload context |
+| M036 | ordered/required analyte not run | **PARTIAL** | analytes saved with null values are omitted from the API; COA may render NT/Not Tested, so omission requires panel/context awareness |
 | M037 | category info_fields.status 1/2/3 | **PARTIAL** | `lab_results.safety.<panel>.status OR analyte assessment` |
 | M038 | lab_data.status overall | **PARTIAL** | `extensions.confident.lab_data_status OR outcomes if later defined` |
 | M039 | info_fields.method | **EXACT** | `AnalyteResult.method and/or SafetyPanel.method / lab_results.method` |
@@ -90,13 +90,13 @@ See `confident-02-mapping.json` for full machine-readable records (M001–M042).
 - Batch/lot/run sizes (no core destination)
 - QC fields (rsd, rpd, stdev, spike, purity) from core
 - Signatory / CoA presentation fields from core
-- Invented ND / below-LOQ / multi-unit / not_performed analyte rows
+- Invented report-facing ND / below-LOQ / multi-unit / not-performed analyte rows where the API does not explicitly provide those states
 
-### Unresolved
-- ND / Not Detected (M033)
-- below-LOQ / below-LOD distinct state (M034)
-- Concurrent multi-unit numeric results (M029/M035)
-- Ordered/required analyte not run (M036)
+### Externally clarified 2026-09-22
+- ND / Not Detected: API preserves the underlying numeric value; COA display may differ.
+- Below LOQ/LOD: API supplies the numeric value plus LOD/LOQ; below-limit interpretation is downstream.
+- Multi-unit: API supplies one canonical numeric value per test category; alternate report units require downstream conversion using payload context.
+- Not tested: analytes saved with null values are omitted; COA may display NT / Not Tested.
 
 ## Synthetic examples
 
@@ -113,23 +113,23 @@ See `confident-02-mapping.json` for full machine-readable records (M001–M042).
 ### Q1: ND / Not Detected and below LOQ/LOD representation
 How should ND / Not Detected and below-LOQ / below-LOD appear on GET /v0/clients/sample/{id} lab_data.categories.*.compounds — omitted row, value 0, empty string, qualifier, distinct token, or other? How do value, lod, loq, and qualifiers interact?
 
-Blocks: M033, M034. Status: `PENDING_STEVE`.
+Blocks: M033, M034. Status: `ANSWERED_2026-09-22`. Answer: API returns the lab-saved numeric value in the standardized canonical unit. A `0` may correspond to a COA display of ND/Not Detected. LOD and LOQ are supplied separately; below-limit display/interpretation is downstream.
 
 ### Q2: secondary_report_units vs second numeric
 When secondary_report_units is set, does GET ever return a second numeric for the same compound, or only a display conversion / category-level unit hint?
 
-Blocks: M029, M035. Status: `PENDING_STEVE`.
+Blocks: M029, M035. Status: `ANSWERED_2026-09-22`. Answer: API returns exactly one canonical numeric unit per test category. Primary/secondary report units do not add second numeric values; downstream conversion uses payload context such as unit weight.
 
 ### Q3: ordered/required analyte not run
 For an ordered/required panel analyte that was not run, is omission the only signal, or can status/qualifiers (or another field) mark not tested / not performed?
 
-Blocks: M036. Status: `PENDING_STEVE`.
+Blocks: M036. Status: `ANSWERED_2026-09-22`. Answer: analytes saved with null values are omitted from the API. Confident's default COA presentation may show NT / Not Tested, though lab-specific presentation can vary.
 
 ## Gates
 
 - **SCHEMA_CHANGE_REQUIRED** = NO
 - **IMPLEMENTATION_RECOMMENDED** = NO
-- **NEXT_ACTION** = Send Q1–Q3 to Steve; wait before CONFIDENT-03 / bridge work.
+- **NEXT_ACTION** = Clarification incorporated. No CONFIDENT-03, bridge work, or schema change unless a customer or new external signal justifies it.
 
 ## Validation
 
