@@ -1,12 +1,13 @@
 {
   "Q1": {
     "topic": "ND / Not Detected and below LOQ/LOD representation",
-    "question": "How should ND / Not Detected and below-LOQ / below-LOD appear on GET /v0/clients/sample/{id} lab_data.categories.*.compounds \u2014 omitted row, value 0, empty string, qualifier, distinct token, or other? How do value, lod, loq, and qualifiers interact?",
+    "question": "How should ND / Not Detected and below-LOQ / below-LOD appear on GET /v0/clients/sample/{id} lab_data.categories.*.compounds — omitted row, value 0, empty string, qualifier, distinct token, or other? How do value, lod, loq, and qualifiers interact?",
     "blocks_mappings": [
       "M033",
       "M034"
     ],
-    "status": "PENDING_STEVE"
+    "status": "ANSWERED_2026-09-22",
+    "answer": "API returns the lab-saved numeric value in Confident, standardized to the category's canonical unit. A value of 0 can correspond to a COA display of ND/Not Detected. LOD and LOQ are returned separately; downstream consumers must derive any below-limit presentation."
   },
   "Q2": {
     "topic": "secondary_report_units vs second numeric",
@@ -15,7 +16,8 @@
       "M029",
       "M035"
     ],
-    "status": "PENDING_STEVE"
+    "status": "ANSWERED_2026-09-22",
+    "answer": "The API returns exactly one canonical numeric value per test category. primary_report_unit and secondary_report_unit do not create additional numeric results; downstream consumers perform conversions using payload context such as unit weight."
   },
   "Q3": {
     "topic": "ordered/required analyte not run",
@@ -23,6 +25,7 @@
     "blocks_mappings": [
       "M036"
     ],
-    "status": "PENDING_STEVE"
+    "status": "ANSWERED_2026-09-22",
+    "answer": "Analytes saved with null values are omitted from the API. Confident's default COA behavior may display NT/Not Tested, though labs may customize presentation."
   }
 }
